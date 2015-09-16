@@ -1,19 +1,76 @@
+$(document).ready(function () {
+    //stick in the fixed 100% height behind the navbar but don't wrap it
+    $('#slide-nav.navbar-inverse').after($('<div class="inverse" id="navbar-height-col"></div>'));
+  
+    $('#slide-nav.navbar-default').after($('<div id="navbar-height-col"></div>'));  
+
+    // Enter your ids or classes
+    var toggler = '.navbar-toggle';
+    var pagewrapper = '#page-content';
+    var navigationwrapper = '.navbar-header';
+    var menuwidth = '100%'; // the menu inside the slide menu itself
+    var slidewidth = '80%';
+    var menuneg = '-100%';
+    var slideneg = '-80%';
+
+
+    $("#slide-nav").on("click", toggler, function (e) {
+
+        var selected = $(this).hasClass('slide-active');
+
+        $('#slidemenu').stop().animate({
+            left: selected ? menuneg : '0px'
+        });
+
+        $('#navbar-height-col').stop().animate({
+            left: selected ? slideneg : '0px'
+        });
+
+        $(pagewrapper).stop().animate({
+            left: selected ? '0px' : slidewidth
+        });
+
+        $(navigationwrapper).stop().animate({
+            left: selected ? '0px' : slidewidth
+        });
+
+
+        $(this).toggleClass('slide-active', !selected);
+        $('#slidemenu').toggleClass('slide-active');
+        $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
+    });
+
+    var selected = '#slidemenu, #page-content, body, .navbar, .navbar-header';
+    $(window).on("resize", function () {
+
+        if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
+            $(selected).removeClass('slide-active');
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
 
         jQuery(document).ready(function() {
-
             jQuery('.anime-in').addClass("hidden2").viewportChecker({
                 classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
                 offset: 100    
                });   
 
-
-
             jQuery('.anime-left').addClass("hidden2").viewportChecker({
                 classToAdd: 'visible animated fadeInLeft', // Class to add to the elements when they are visible
                 offset: 100    
                });
-			   
-			   
+		   
             jQuery('.anime-right').addClass("hidden2").viewportChecker({
                 classToAdd: 'visible animated fadeInRight', // Class to add to the elements when they are visible
                 offset: 100    
@@ -41,8 +98,7 @@
                 classToAdd: 'visible animated pulse', // Class to add to the elements when they are visible
                 offset: 100    
                });   
-			   
-			   
+			      
 			jQuery('.anime-flipInY').addClass("hidden2").viewportChecker({
                 classToAdd: 'visible animated flipInY', // Class to add to the elements when they are visible
                 offset: 100    
@@ -63,31 +119,16 @@
                 classToAdd: 'visible animated bounceInDown', // Class to add to the elements when they are visible
                 offset: 100    
                });  
-			   
-
-
 
             jQuery('.anime-flash').addClass("hidden2").viewportChecker({
                 classToAdd: 'visible animated fadeInRight', // Class to add to the elements when they are visible
                 offset: 100    
                });   
 
-
-
             jQuery('.bounceInDown').addClass("hidden2").viewportChecker({
                 classToAdd: 'visible animated bounceInDown', // Class to add to the elements when they are visible
                 offset: 100    
-               });   
-
-
-
-
-
-
-
-
-
-
+               }); 
 		});
 
 
@@ -118,30 +159,14 @@
 
 
 ////////XTRA GPv3 SCRIPTS /////
-
-
-
 $('.carousel').carousel({
   interval: 8000
 })
 
 
-
-
-
-
-
-
-
-
-
-
-$('.testimoCarousel').carousel({
-  interval: 8000
-})
-
+/*
+//Multipal slide//
 $('.testimoCarousel .item').each(function(){
-	
   var next = $(this).next();
   if (!next.length) {
     next = $(this).siblings(':first');
@@ -181,35 +206,6 @@ $('.carousel[data-type="multi"] .item').each(function(){
 });
 
 
-
-
-
-//Stciky Header
-$(window).scroll(function() {
-if ($(this).scrollTop() > 1){  
-    $('.hdr').addClass("sticky-hdr");
-  }
-  else{
-    $('.hdr').removeClass("sticky-hdr");
-  }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Inner Pages Filler Script
 $(function () {
     $(window).scroll(function () {
@@ -245,20 +241,42 @@ function scroll() {
         }
     });
 }
-/*
-$('.case-screen').hover(function() {
-    amount = '+=50';
-    scroll();
-}, function() {
-    amount = '';
-});
-$('nav').hover(function() {
-    amount = '-=50';
-    scroll();
-}, function() {
-    amount = '';
-});
+
+
 */
+
+
+
+//Stciky Header
+$(window).scroll(function() {
+if ($(this).scrollTop() > 1){  
+    $('.hdr').addClass("sticky-hdr");
+  }
+  else{
+    $('.hdr').removeClass("sticky-hdr");
+  }
+});
+
+
+
+
+//Classes On Body tag//
+    $(document).ready(function () {
+        var url = window.location;
+        $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+        $('ul.nav a').filter(function() {
+             return this.href == url;
+        }).parent().addClass('active');
+    });
+
+
+
+
+
+
+
+
+
 
 //SLIDER ARROW BTN - HOME PAGE
 $(".dwn-scroll").click(function() {
@@ -285,7 +303,7 @@ $(document).ready(function(){
 
 
 
-//Scroll to TOP
+//Scroll to TOP//
 $(document).ready(function(){
 	//Check to see if the window is top if not then display button
 	$(window).scroll(function(){

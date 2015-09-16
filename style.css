@@ -1,0 +1,527 @@
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+@font-face {
+    font-family: 'nexabold';
+    src: url('css/NEXA BOLD-webfont.eot');
+    src: url('css/NEXA BOLD-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/NEXA BOLD-webfont.woff2') format('woff2'),
+         url('css/NEXA BOLD-webfont.woff') format('woff'),
+         url('css/NEXA BOLD-webfont.ttf') format('truetype'),
+         url('css/NEXA BOLD-webfont.svg#nexa_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/**********gmk classes***********/
+/*======== CONTENT ========*/
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+
+ font-family:"nexabold";
+ }
+
+body nav.navbar {   font-family: "Open Sans";}
+ 
+ 
+body{
+ font-family:"Open Sans";
+   overflow-x: hidden;
+}
+
+.hed-cntr .container > h2, .hed-cntr .container > p, .hed-cntr .container > .lnk-btn {
+    text-align: center;
+}
+.cr a {
+    color: #fff;
+
+}
+
+
+
+/*truncate string / limited text */
+.hed-lmt h3,
+.hed-lmt h4 {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.cont-lmt p{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+/*======== SPACING & ALIGNMENTS ========*/
+/*for flat icons*/
+body [class*="flaticon-"]::before {
+    margin: 0;
+}
+
+.pad0{    padding: 0;}
+
+.pad-l0{    padding-left: 0;}
+
+.pad-r0{    padding-right: 0;}
+
+.martop30{
+ margin-top:30px;
+ }
+
+.marbot30{
+ margin-bottom:30px;
+ }
+
+.wide-dvr,
+.dvr .container {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.pull-lft {
+    float: left;
+}
+.pull-rgt {
+    float: right;
+}
+.pull-cntr {
+    float: none;
+    margin: 0 auto;
+}
+
+.valign {
+    align-items: center;
+    display: flex;
+    min-height: 100px; /* define holder height */
+}
+
+
+/*========= IMG =========*/
+.ovrflw {
+    overflow: hidden;
+}
+
+.ovrimg {
+    overflow: hidden;
+}
+
+.ovrimg-mx img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ovrimg img{
+    width: 100%;
+}
+
+
+/*========= BG ========*/
+.wide-box-holder {
+ clear:both;
+    position: relative;
+ overflow:hidden;
+}.
+
+.ovrvis{ overflow:visible; }
+
+.section-bg {
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: -80;
+}
+
+.section-bg > img {
+    height: auto;
+    width:100%;
+}
+
+/*relative for inside of wide box*/
+.posrel {
+    overflow: hidden;
+    position: relative;
+}
+.posrel .section-bg ~ * {
+    position: relative;
+}
+
+/*========= LIST  ========*/
+
+.zebra-cross > *:nth-child(2n+1){
+ background-color:#eee;
+
+}
+
+
+.vcntrlist ul {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.clrlist ul {
+    padding: 0;
+    margin-bottom:0;
+}
+
+.clrlist li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.listview ul li {
+ display:block;
+ }
+
+
+.listdvr li + li {
+    border-left: 1px solid #eee;
+}
+
+[class*="list-col-"] ul { padding:0; }
+
+[class*="list-col-"] ul li {
+    display: inline-block;
+    float: left;
+}
+
+
+.list-col-2 ul li {    width: 50%;   }
+.list-col-3 ul li {    width: 33.33%;   }
+.list-col-4 ul li {    width: 25%;   }
+.list-col-5 ul li {    width: 20%;   }
+
+
+@media (max-width:768px){ .list-col-4 ul li{ width:50%; }  }
+@media (max-width:480px){ [class*="list-col-"] ul li{ width:100%; } }
+
+
+/* news paper style*/
+.listodr-col-2 ul{
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+ }
+
+[class*="listodr-col"] ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+@media only screen and (max-width : 667px) {
+.listodr ul{
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+ }
+}
+
+.li-col-3 ul li {
+    width: 33.33%;
+}
+.li-col-4 ul li {
+    width: 25%;
+}
+
+.alistdvr li a{
+    border-right: 1px solid #eee;
+   margin-right: 10px;
+    padding-right: 15px;
+}
+.alistdvr li:last-child a{
+    border: 0;
+}
+
+
+/*========= SLIDER =========*/
+.carousel-control {
+    background: transparent !important;
+    opacity: 1;
+}
+
+
+.slider .item > img {
+    margin: 0 auto;
+}
+
+/***reset slider arrows***/
+.slider .carousel-control {
+    background-color: #ffcc33 !important;
+    height: 50px;
+    left: 0;
+    top: 290px;
+    width: 50px;
+}
+
+.slider .right.carousel-control {
+    margin-left: 50px;
+}
+
+/*for slider caption*/
+.slider .container {
+    position: relative;
+}
+
+.caro-caps {
+    bottom: 10px;
+    position: absolute;
+    z-index: 10;
+}
+
+.slider.fad-eft .carousel-inner > .active.left {
+    background-color: #fff;
+    left: 0;
+}
+.slider.fad-eft .carousel-inner > .active.left img {
+    opacity: 0.8;
+}
+.slider.fad-eft .carousel-inner > .active.left .caro-caps{ left:20%; opacity:0; right:auto;}
+
+.slider.fad-eft .carousel-inner > .next .caro-caps{ left:0%; right:auto; opacity:0; }
+.slider.fad-eft .carousel-inner > .next {
+    left: 0;
+    z-index: 1;
+}
+.slider.fad-eft .carousel-inner > .next img {
+    opacity: 0;
+}
+
+
+/*======== FORM =========*/
+textarea {
+    min-height: 50px;
+    max-width:100%;
+}
+
+/*checkbox checked and uncheck*/
+.form-control:checked + label {    color: green; }
+.form-control:not(:checked) + label {    color: red; }
+
+.form-control:focus {
+    border-color: rgba(196, 11, 49, 1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(196, 11, 49, 0.5);
+    outline: 0 none;
+}
+
+[type="submit"] {
+    background-color: #ff6500;
+    color: #fff;
+}
+.form-control {
+    border: 1px solid #eee;
+    border-radius: 0;
+    height: 40px;
+}
+
+/*radio button*/
+[type="radio"]:checked + label {
+    color: #d00;
+}
+
+.form-control[type="radio"] {
+    background: none repeat scroll 0 0 yellow !important;
+    display: block;
+    float: left;
+    height: auto;
+    margin: 4px 10px 0 0;
+    width: auto;
+}
+
+/*select or Dropdown */
+option:hover {
+    background-color: #fafafa;
+}
+
+/*Placeholder*/
+.form-control::-moz-placeholder {
+ color:#ccc;
+}
+
+.form-control:-ms-input-placeholder {
+ color:#ccc;
+}
+
+.form-control::-webkit-input-placeholder {
+ color:#ccc;
+}
+
+
+body,
+body *,
+body *:after,
+body *:before,
+.transition, .transition *, .transition *:after,  .transition *:before,
+.transition *:hover{
+ transition:all 0.3s ease 0s !important;
+ /*
+    transition: all 500ms ease 0s; */
+}
+
+
+
+/*====== NAVBAR ======*/
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+    background-color: yellow;
+}
+
+
+.navbar.navbar-default {
+    background-color: yellow;
+    border: 0 none;
+    margin: 0;
+}
+
+.nav-cntr .navbar-nav > li {
+    display: inline-block;
+    float: none;
+}
+.nav-cntr .navbar-nav.nav {
+    text-align: center;
+    width: 100%;
+}
+
+
+@media only screen and (max-width : 768px) {
+body .nav.navbar-nav {
+    margin: 0;
+}
+
+.navbar-toggle {
+    border-color: #ffcc33 !important;
+	min-height:35px;
+}
+
+.navbar-toggle:hover,.navbar-toggle:focus {
+    background-color: #ffcc33 !important;
+min-height:35px;
+
+}
+
+
+/***close icon on navbar***/
+.navbar .icon-bar:nth-child(2) {
+    position: relative;
+    top: 6px;
+    transform: rotate(45deg);
+}
+.navbar .icon-bar:nth-child(3) {
+    display: none;
+}
+.navbar .icon-bar:nth-child(4) {
+    top: -3px;
+    transform: rotate(-45deg);
+}
+/***need to add collapsed on navbar-toggle***/
+.navbar-toggle.collapsed .icon-bar {
+    top: auto;
+    transform: none;
+    display: block;
+}
+/***./close icon on navbar***/
+
+
+}
+
+
+/*dropdown-menu*/
+/*submenu for desktop*/
+.dropdown:hover  .dropdown-menu {
+    display: block;
+}
+
+.dropdown > a::before {
+    color: #ccc;
+    content: "?";
+    font-family: "Glyphicons Halflings";
+    font-size: 7px;
+    margin-left: 1%;
+    position: absolute;
+    right: 0;
+}
+.dropdown.open > a::before {
+    content: "?";
+}
+
+/*submenu for mobile*/
+@media only screen and (max-width : 768px) {
+
+body .dropdown.open .dropdown-menu {
+    border:2px solid #eee;
+    border-radius:0px;
+ float:left;
+ width:100%;
+ display:block !important;
+}
+
+.navbar a{ text-align:center; }
+.dropdown > a:hover + .dropdown-menu {
+    display: none;
+}
+}
+
+/*./dropdown-menu*/
+
+
+/*
+Note: see bottom note
+*/
+
+.sticky-hdr {
+    background-color: rgba(255, 255, 255, 1);
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #eee;
+    font-size: 12px;
+    position: fixed !important;
+    width: 100%;
+    z-index: 5555;
+}
+
+/*========LINKS========*/
+.strip-btn a {
+    animation: 2s linear 0s normal none infinite running progress-bar-stripes;
+ border-bottom:5px solid #cc4500;
+}
+
+.strip-btn a:hover {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+ color:#fff !important;
+    box-shadow:0 0 0 1% rgba(255, 69, 0, 0.5);;
+}
+
+.iln-btn {
+    display: inline-block;
+}
+
+/*========HOVER========*/
+body a, body a:active, body  a:focus, body  a:hover {
+   outline:none !important; /*for remove the dotted line around the clicked a*/
+   text-decoration:none;
+}
+
+.ftr-box a:hover {
+    border-left: 1px solid #777 !important;
+    padding-left: 8px;
+}
+
+/*
+For Mobile Friendly Navigation
+http://jsfiddle.net/gmkhussain/awqs01zc/
+*/
+/****Note: add above Class for hover***/
+
+/**********./gmk classes***********/
