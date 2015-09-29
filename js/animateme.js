@@ -1,8 +1,8 @@
-$(document).ready(function () {
+jQuery(document).ready(function () {
     //stick in the fixed 100% height behind the navbar but don't wrap it
-    $('#slide-nav.navbar-inverse').after($('<div class="inverse" id="navbar-height-col"></div>'));
+    jQuery('#slide-nav.navbar-inverse').after(jQuery('<div class="inverse" id="navbar-height-col"></div>'));
   
-    $('#slide-nav.navbar-default').after($('<div id="navbar-height-col"></div>'));  
+    jQuery('#slide-nav.navbar-default').after(jQuery('<div id="navbar-height-col"></div>'));  
 
     // Enter your ids or classes
     var toggler = '.navbar-toggle';
@@ -14,37 +14,37 @@ $(document).ready(function () {
     var slideneg = '-80%';
 
 
-    $("#slide-nav").on("click", toggler, function (e) {
+    jQuery("#slide-nav").on("click", toggler, function (e) {
 
-        var selected = $(this).hasClass('slide-active');
+        var selected = jQuery(this).hasClass('slide-active');
 
-        $('#slidemenu').stop().animate({
+        jQuery('#slidemenu').stop().animate({
             left: selected ? menuneg : '0px'
         });
 
-        $('#navbar-height-col').stop().animate({
+        jQuery('#navbar-height-col').stop().animate({
             left: selected ? slideneg : '0px'
         });
 
-        $(pagewrapper).stop().animate({
+        jQuery(pagewrapper).stop().animate({
             left: selected ? '0px' : slidewidth
         });
 
-        $(navigationwrapper).stop().animate({
+        jQuery(navigationwrapper).stop().animate({
             left: selected ? '0px' : slidewidth
         });
 
 
-        $(this).toggleClass('slide-active', !selected);
-        $('#slidemenu').toggleClass('slide-active');
-        $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
+        jQuery(this).toggleClass('slide-active', !selected);
+        jQuery('#slidemenu').toggleClass('slide-active');
+        jQuery('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
     });
 
     var selected = '#slidemenu, #page-content, body, .navbar, .navbar-header';
-    $(window).on("resize", function () {
+    jQuery(window).on("resize", function () {
 
-        if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
-            $(selected).removeClass('slide-active');
+        if (jQuery(window).width() > 767 && jQuery('.navbar-toggle').is(':hidden')) {
+            jQuery(selected).removeClass('slide-active');
         }
     });
 });
@@ -157,12 +157,12 @@ $(document).ready(function () {
 
 
 
-
+/*
 ////////XTRA GPv3 SCRIPTS /////
 $('.carousel').carousel({
   interval: 8000
 })
-
+*/
 
 /*
 //Multipal slide//
@@ -248,23 +248,23 @@ function scroll() {
 
 
 //Stciky Header
-$(window).scroll(function() {
-if ($(this).scrollTop() > 1){  
-    $('.hdr').addClass("sticky-hdr");
+jQuery(window).scroll(function() {
+if (jQuery(this).scrollTop() > 1){  
+    jQuery('.hdr').addClass("sticky-hdr");
   }
   else{
-    $('.hdr').removeClass("sticky-hdr");
+    jQuery('.hdr').removeClass("sticky-hdr");
   }
 });
 
 
 
 
-//Classes On Body tag//
-    $(document).ready(function () {
+//Classes On Body tag and Add ACTIVE Class on navbar link//
+    jQuery(document).ready(function () {
         var url = window.location;
-        $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
-        $('ul.nav a').filter(function() {
+        jQuery('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+        jQuery('ul.nav a').filter(function() {
              return this.href == url;
         }).parent().addClass('active');
     });
@@ -276,11 +276,9 @@ if ($(this).scrollTop() > 1){
 
 
 
-
-
 //SLIDER ARROW BTN - HOME PAGE
-$(".dwn-scroll").click(function() {
-    $('html, body').animate({
+jQuery(".dwn-scroll").click(function() {
+    jQuery('html, body').animate({
         scrollTop: $(".dwn-scroll").offset().top
     }, 1500);
 });
@@ -288,13 +286,13 @@ $(".dwn-scroll").click(function() {
 
 /*
 //MOVING WIDE-DIV BACKGROUND IMAGES
-$(document).ready(function(){
-  $('.wide-box-holder').mousemove(function(e){
+jQuery(document).ready(function(){
+  jQuery('.wide-box-holder').mousemove(function(e){
         var x = e.pageX - this.offsetLeft;
       if (x <= 600) {
 		  x = x - 700;
-       $(this).children('div.section-bg').css({'right': x }); 
-//	    $('div.section-bg').css({'right': x }); 
+       jQuery(this).children('div.section-bg').css({'right': x }); 
+//	    jQuery('div.section-bg').css({'right': x }); 
       }
   });
 });
@@ -302,15 +300,15 @@ $(document).ready(function(){
 
 
 
-
+/*
 //Scroll to TOP//
-$(document).ready(function(){
+jQuery(document).ready(function(){
 	//Check to see if the window is top if not then display button
-	$(window).scroll(function(){
+	jQuery(window).scroll(function(){
 		if ($(this).scrollTop() > 100) {
-			$('.scrollToTop').fadeIn();
+			jQuery('.scrollToTop').fadeIn();
 		} else {
-			$('.scrollToTop').fadeOut();
+			jQuery('.scrollToTop').fadeOut();
 		}
 	});
 	
@@ -321,7 +319,7 @@ $(document).ready(function(){
 	});
 	
 });
-
+*/
 
 
 
@@ -337,7 +335,7 @@ $(document).ready(function(){
 /*************/
 /* Demo Scripts for Bootstrap Carousel and Animate.css article
 * on SitePoint by Maria Antonietta Perna
-*/
+*//*
 (function( $ ) {
 
 	//Function to animate slider captions 
@@ -376,3 +374,4 @@ $(document).ready(function(){
 	
 })(jQuery);
 
+*/

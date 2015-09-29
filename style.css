@@ -410,25 +410,54 @@ min-height:35px;
 
 }
 
+/**arrow toggle icon-bar**/
+
+body .arr-toggle .navbar-toggle.collapsed .icon-bar{
+left:0px;
+top:0px;
+transform:unset;
+width:100% !important;
+}
+
+.arr-toggle .navbar .icon-bar:nth-child(3) {
+    left: 3px;
+    position: relative;
+}
+.arr-toggle .navbar .icon-bar:nth-child(2) {
+    left: 1px;
+    position: relative;
+    top: 2px;
+    transform: rotate(-50deg);
+    width: 50% !important;
+}
+.arr-toggle .navbar .icon-bar:nth-child(4) {
+    left: 1px;
+    position: relative;
+    top: -2px;
+    transform: rotate(50deg);
+    width: 50% !important;
+}
+/**./arrow toggle icon-bar**/
+
 
 /***close icon on navbar***/
-.navbar .icon-bar:nth-child(2) {
+.cross-toggle .navbar .icon-bar:nth-child(2) {
     position: relative;
     top: 6px;
     transform: rotate(45deg);
 }
-.navbar .icon-bar:nth-child(3) {
-    display: none;
+.cross-toggle .navbar .icon-bar:nth-child(3) {
+    display: none !important;
 }
-.navbar .icon-bar:nth-child(4) {
+.cross-toggle .navbar .icon-bar:nth-child(4) {
     top: -3px;
     transform: rotate(-45deg);
 }
 /***need to add collapsed on navbar-toggle***/
-.navbar-toggle.collapsed .icon-bar {
+.cross-toggle  .navbar-toggle.collapsed .icon-bar {
     top: auto;
     transform: none;
-    display: block;
+    display: block !important;
 }
 /***./close icon on navbar***/
 
