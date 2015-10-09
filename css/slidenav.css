@@ -9,7 +9,7 @@ body.slide-active {
 /*wrap the entire page content but not nav inside this div if not a fixed top, don't add any top padding */
 #page-content {
     position: relative;
-    padding-top: 70px;
+    padding-top: 0px;
     left: 0;
 }
 #page-content.slide-active {
@@ -83,7 +83,7 @@ body.slide-active {
 	}
 	#slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
 	    min-width: 0;
-	    width: 80%;
+/*	    width: 80%; */
 	    white-space: normal;
 	}
 	#slide-nav {
