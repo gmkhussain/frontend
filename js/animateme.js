@@ -13,7 +13,6 @@ jQuery(document).ready(function () {
     var menuneg = '-100%';
     var slideneg = '-80%';
 
-
     jQuery("#slide-nav").on("click", toggler, function (e) {
 
         var selected = jQuery(this).hasClass('slide-active');
@@ -48,6 +47,32 @@ jQuery(document).ready(function () {
         }
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**URL added on body tag as a Class**/
+jQuery(function() {
+  var loc = window.location.pathname; // returns the full URL
+	var split_loc = loc.split('/');
+	active_locLast = split_loc[split_loc.length-1]; 
+	active_locLastParent = split_loc[split_loc.length-2]; 
+	jQuery('body').addClass(active_locLastParent + "-page");
+	jQuery('body').addClass(active_locLast + "-page");
+	jQuery('body nav').addClass(active_locLast + "-nav");
+
+});
+
 
 
 

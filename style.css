@@ -375,7 +375,25 @@ option:hover {
 }
 
 
+.noklft:before {
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid #1b90b1;
+    position: absolute;
+    left: -15px;
+    content: "";
+    top: 0;
+    width: 15px;
+}
 
+.nokrgt:before {
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #1b90b1;
+    position: absolute;
+    right: -15px;
+    content: "";
+    top: 0;
+    width: 15px;
+}
 
 
 
@@ -503,15 +521,15 @@ width:100% !important;
 
 .dropdown > a::before {
     color: #ccc;
-    content: "?";
-    font-family: "Glyphicons Halflings";
+    content: "\f107";
+    font-family: "fontawesome";
     font-size: 7px;
     margin-left: 1%;
     position: absolute;
     right: 0;
 }
 .dropdown.open > a::before {
-    content: "?";
+    content: "\f105";
 }
 
 /*submenu for mobile*/
