@@ -1,3 +1,6 @@
+
+
+
 jQuery(document).ready(function () {
     //stick in the fixed 100% height behind the navbar but don't wrap it
     jQuery('#slide-nav.navbar-inverse').after(jQuery('<div class="inverse" id="navbar-height-col"></div>'));
@@ -390,13 +393,27 @@ jQuery(document).ready(function(){
 	//Pause carousel  
 	$myCarousel.carousel('pause');
 	
-	
+
 	//Other slides to be animated on carousel slide event 
 	$myCarousel.on('slide.bs.carousel', function (e) {
 		var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
 		doAnimations($animatingElems);
 	});  
-	
 })(jQuery);
 
 */
+
+
+
+
+
+
+
+
+
+/**broken images fix**/
+// Replace source
+jQuery('img').error(function(){
+        jQuery(this).attr('src', 'images/noimage.jpg');
+		jQuery(this).attr('alt', 'Broken Image Replaced');
+});
