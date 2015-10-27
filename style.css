@@ -414,6 +414,7 @@ body *:before,
 .transition, .transition *, .transition *:after,  .transition *:before,
 .transition *:hover{
  transition:all 0.3s ease 0s !important;
+ -webkit-transition:all 0.3s ease 0s !important;
  /*
     transition: all 500ms ease 0s; */
 }
