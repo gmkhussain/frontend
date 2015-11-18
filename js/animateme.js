@@ -1,6 +1,3 @@
-
-
-
 jQuery(document).ready(function () {
     //stick in the fixed 100% height behind the navbar but don't wrap it
     jQuery('#slide-nav.navbar-inverse').after(jQuery('<div class="inverse" id="navbar-height-col"></div>'));
@@ -417,3 +414,9 @@ jQuery('img').error(function(){
         jQuery(this).attr('src', 'images/noimage.jpg');
 		jQuery(this).attr('alt', 'Broken Image Replaced');
 });
+
+
+
+$('body').tooltip({    
+    selector: "a[rel=tooltip]"
+})
