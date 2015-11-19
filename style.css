@@ -625,6 +625,29 @@ http://jsfiddle.net/gmkhussain/awqs01zc/
 }
 /***./modal***/
 
+.fill-holder {
+    background-image: url("images/fill-def.jpg");
+    float: none;
+    height: 100%;
+    left: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 36px;
+    z-index: 100;
+}
+.fill-mask {
+    background-image: url("images/fill-mask.png");
+    background-repeat: repeat;
+    height: 100%;
+}
+
+.fill-move {
+    background-color: #4090d7;
+    background-repeat: repeat;
+    height: auto;
+}
 
 /**********./gmk classes***********/
 

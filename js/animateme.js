@@ -231,28 +231,6 @@ $('.carousel[data-type="multi"] .item').each(function(){
 });
 
 
-//Inner Pages Filler Script
-$(function () {
-    $(window).scroll(function () {
-        var $myDiv = $('.fill-mask');
-        var y = $(this).scrollTop();
-        $('#results').text(y);
-        x = y - 3;
-        $myDiv.animate({
-            height: x
-        }, 30);
-    }).scroll();
-});
-
-
-
-
-
-
-
-
-
-
 
 //Scroll TOP and Down CASE STUDIES PAGE
 var amount = '';
@@ -403,6 +381,36 @@ jQuery(document).ready(function(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Inner Pages Filler Script
+$(function () {
+    $(window).scroll(function () {
+        var $myDiv = $('.fill-mask');
+        var y = $(this).scrollTop();
+        $('#results').text(y);
+        x = y - 3;
+        $myDiv.animate({
+            height: x
+        }, 30);
+    }).scroll();
+});
 
 
 
