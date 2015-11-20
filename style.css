@@ -625,6 +625,12 @@ http://jsfiddle.net/gmkhussain/awqs01zc/
 }
 /***./modal***/
 
+
+
+section[class*="-area"] {
+    position: relative;
+}
+/*filler*/
 .fill-holder {
     background-image: url("images/fill-def.jpg");
     float: none;
@@ -632,7 +638,7 @@ http://jsfiddle.net/gmkhussain/awqs01zc/
     left: 0;
     margin: 0 auto;
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 36px;
     z-index: 100;
@@ -648,6 +654,7 @@ http://jsfiddle.net/gmkhussain/awqs01zc/
     background-repeat: repeat;
     height: auto;
 }
+/**./filler**/
 
 /**********./gmk classes***********/
 
