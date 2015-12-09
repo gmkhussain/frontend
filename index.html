@@ -16,6 +16,8 @@
 	<link rel="stylesheet" href="css/slidenav.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/foundation-icons.css">
+	
+	<link rel="stylesheet" href="css/swiper.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -117,6 +119,35 @@
 		  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
 			<span class="glyphicon glyphicon-chevron-right"></span>
 		  </a>
+		</div>
+	</section>
+	
+	
+	
+	<section class="product-alis">
+		<div class="container">
+
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="images/technoz1.jpg" alt="..."></div>
+					<div class="swiper-slide"><img src="images/technoz2.jpg" alt="..."></div>
+					<div class="swiper-slide"><img src="images/technoz3.jpg" alt="..."></div>
+					<div class="swiper-slide"><img src="images/technoz4.jpg" alt="..."></div>
+					<div class="swiper-slide"><img src="images/technoz5.jpg" alt="..."></div>
+					<div class="swiper-slide"><img src="images/technoz6.jpg" alt="..."></div>
+					<div class="swiper-slide"><img src="images/technoz7.jpg" alt="..."></div>
+					<div class="swiper-slide"><img src="images/technoz8.jpg" alt="..."></div>
+					<div class="swiper-slide"><img src="images/technoz9.jpg" alt="..."></div>
+					<div class="swiper-slide"><img src="images/technoz10.jpg" alt="..."></div>
+					<div class="swiper-slide"><img src="images/technoz11.jpg" alt="..."></div>
+					<div class="swiper-slide"><img src="images/technoz12.jpg" alt="..."></div>
+					<div class="swiper-slide"><img src="images/technoz13.jpg" alt="..."></div>
+					<div class="swiper-slide"><img src="images/technoz14.jpg" alt="..."></div>
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination hidden"></div>
+			</div>
+
 		</div>
 	</section>
 
@@ -254,6 +285,21 @@
 	<script src="js/viewportchecker.js"></script>
     <script src="js/animateme.js"></script>
 
+	
+	
+	<script src="js/swiper.jquery.min.js"></script>
+	<!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: '7',
+        centeredSlides: false,
+        paginationClickable: true,
+        spaceBetween: 15,
+		autoplay: 2500,
+		autoplayDisableOnInteraction: false
+    });
+    </script>
 
 	   </body>
 </html>
