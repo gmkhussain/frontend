@@ -169,9 +169,15 @@ jQuery(function() {
 
 
 
-
-
-
+//facny-fom label animation//
+	jQuery('.facny-fom .form-control').focusout(function(){
+	var text_value=$(this).val();
+     if(text_value!='')
+       {
+		jQuery(this).addClass("has-value");
+        }else{ $(this).removeClass("has-value"); }
+	});
+//./facny-fom label animation//
 
 
 

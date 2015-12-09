@@ -243,6 +243,9 @@ body img, .ovrimg-mx img {
 }
 
 /***reset slider arrows***/
+.no-ctrl .carousel-control { display: none; }
+.no-ctrl .carousel-indicators { display: none; }
+
 .slider.arr-rgtside .carousel-control {
     background-color: #ffcc33 !important;
     height: 50px;
@@ -251,9 +254,7 @@ body img, .ovrimg-mx img {
     width: 50px;
 }
 
-.slider.arr-rgtside .right.carousel-control {
-    margin-left: 50px;
-}
+.slider.arr-rgtside .right.carousel-control {margin-left: 50px;}
 
 /*for slider caption*/
 .slider .container {
@@ -368,6 +369,61 @@ option:hover {
     top: 0;
     width: 25px;
 }
+
+
+.facny-fom .form-group label {
+    color: #000 !important;
+    position: absolute;
+    text-transform: uppercase;
+    top: 10px;
+	left:10px
+}
+
+.facny-fom .form-control.has-value + label,
+.facny-fom .form-group .form-control:focus + label {
+    top: -20px;
+    font-size: 12px;
+    left: 10px;
+}
+
+.facny-fom form {
+    background-color: #eee;
+    margin: 40px 0;
+    padding: 30px;
+}
+.facny-fom .form-group {
+    margin-top: 30px;
+    position: relative;
+}
+
+
+/***-->label animation***/
+.facny-fom .form-group label {
+    color: #000 !important;
+    position: absolute;
+    text-transform: uppercase;
+    top: 10px;
+	left:10px
+}
+
+.facny-fom .form-control.has-value + label,
+.facny-fom .form-group .form-control:focus + label {
+    top: -20px;
+    font-size: 12px;
+    left: 10px;
+}
+
+.facny-fom form {
+    background-color: #eee;
+    margin: 40px 0;
+    padding: 30px;
+}
+.facny-fom .form-group {
+    margin-top: 30px;
+    position: relative;
+}
+/***./-->label animation***/
+
 
 .inputgroup {
     position: relative;
