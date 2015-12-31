@@ -1,10 +1,10 @@
 # Bootstrap 3 extended ver 1.3
 
 For [Frontend](#frontend) 
-Twitter [@GMKHussain](http://twitter.com/gmkhussain)
+
 
 Additional file list:
-* [Animateme.js](#Animateme.js) by Mike Bostock
+* [Animateme.js](#Animateme.js) by GMK Hussain [@GMKHussain](http://twitter.com/gmkhussain)
 
 ## Installing
 
