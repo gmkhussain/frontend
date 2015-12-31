@@ -16,26 +16,27 @@
 /**********gmk classes***********/
 /*======== CONTENT ========*/
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
-
  font-family:"nexabold";
  }
+ 
+/*clear heading margins*/
+.clrhm h1, .clrhm h2, .clrhm h3, .clrhm h4, .clrhm h5, .clrhm h6  { margin:0px; }
 
-body nav.navbar {   font-family: "Open Sans";}
- 
- 
+body nav.navbar { font-family: "Open Sans"; }
+
+
 body{
  font-family:"Open Sans";
    overflow-x: hidden;
 }
 
+/*center align H2 and P in section */
 .hed-cntr .container > h2, .hed-cntr .container > p, .hed-cntr .container > .lnk-btn {
     text-align: center;
 }
 .cr a {
     color: #fff;
-
 }
-
 
 
 /*truncate string / limited text */
@@ -47,7 +48,7 @@ body{
     white-space: nowrap;
 }
 
-
+/*truncate string P tag content */
 .cont-lmt p{
     display: block;
     overflow: hidden;
@@ -711,6 +712,9 @@ section[class*="-area"] {
     height: auto;
 }
 /**./filler**/
+
+
+
 
 /**********./gmk classes***********/
 
