@@ -1,4 +1,4 @@
-# Bootstrap 3 extended ver 1.3
+# <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" /> Bootstrap 3 extended ver 1.3 <small>Coded by: [@GMKHussain](http://twitter.com/gmkhussain) </small>
 
 For [Frontend](#frontend) 
 
@@ -21,6 +21,4 @@ Additional file list:
 
 
 <hr/>
-<img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" />
-<br/>
-Coded by: [@GMKHussain](http://twitter.com/gmkhussain)
+
