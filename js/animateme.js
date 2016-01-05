@@ -456,3 +456,19 @@ $(function(){
     });
 
 });
+
+
+
+
+
+
+/***TABLE TH TEXT ADD ON TDs for mobile reponsive****/
+jQuery('table th').each(function (i) {
+	//adding 0 to 1
+	i=i+1;
+	tableTitle = jQuery( "table th:nth-child("+i+")" ).html();
+	//alert(ttl);
+	//alert(i);
+	jQuery( "table td:nth-child("+i+")" ).attr("for", tableTitle);
+	//i=i+1;
+});

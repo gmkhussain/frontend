@@ -14,6 +14,10 @@
 }
 
 /**********gmk classes***********/
+/**for 100% heights**/
+body, html{ height: 100%; padding: 0;}
+
+
 /*======== CONTENT ========*/
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
  font-family:"nexabold";
@@ -55,6 +59,29 @@ body{
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+
+
+
+/*======TABLE Responsive=======*/
+@media only screen and (max-width : 768px) {
+	.table-area th {
+		display: none;
+	}
+	.table-area td::before {
+		content: attr(for);
+		display: block;
+		font-weight: 600;
+	}
+	.table-area td {
+		display: block;
+		text-align: center;
+	}
+}
+/*======./TABLE Responsive=======*/
+
+
+
 
 
 
