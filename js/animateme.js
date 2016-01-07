@@ -472,3 +472,40 @@ jQuery('table th').each(function (i) {
 	jQuery( "table td:nth-child("+i+")" ).attr("for", tableTitle);
 	//i=i+1;
 });
+
+
+
+
+
+
+
+
+
+
+
+/***More Navbar Item Limitation***/
+jQuery( document ).ready(function() {
+moreNavLimit = 6;
+jQuery(".nav > li").each(function (i) {
+	i=i+1; //Counting Total Nav Items
+	//alert(i);//  jQuery(".ttl").html(i);
+
+	//Adding Class for Extra ILs
+	if(i > moreNavLimit){
+    jQuery(this).addClass("moreMover");
+  }
+	
+  //Adding SubMenu for Extra ILs
+  if(i == moreNavLimit){
+  nv = "<li class='dropdown' id='moreMenu'><a href='#' class='dropdown-toggle' data-toggle='dropdown'>More... (Limit: " + moreNavLimit + ") </a><ul id='moreSubMenu' class='dropdown-menu'></ul></li>";
+   // nv="<li><a>MO</a></li>";
+  	jQuery( nv ).insertAfter( this );
+  	//jQuery( this ).append( "<li>d</li>" );
+  }
+  
+  jQuery("li.moreMover").appendTo("#moreSubMenu");
+  
+  jQuery(this).addClass("KNav" +i+"");
+});  
+});
+/***./More Navbar Item Limitation***/
