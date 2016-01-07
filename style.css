@@ -70,7 +70,10 @@ body{
     white-space: nowrap;
 }
 
-
+.blurtxt {
+   color: transparent;
+   text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
 
 
 /*======TABLE Responsive=======*/
