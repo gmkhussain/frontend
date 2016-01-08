@@ -482,14 +482,12 @@ jQuery('table th').each(function (i) {
 
 
 
-
 /***More Navbar Item Limitation***/
 jQuery( document ).ready(function() {
 moreNavLimit = jQuery(".hdr").attr("data-navitemlimit");
 
 jQuery(".navbar-nav > li").each(function (i) {
 	i=i+1; //Counting Total Nav Items
-	//alert(i);//  jQuery(".ttl").html(i);
 
 	//Adding Class for Extra ILs
 	if(i > moreNavLimit){
@@ -507,6 +505,38 @@ jQuery(".navbar-nav > li").each(function (i) {
   jQuery("li.moreMover").appendTo("#moreSubMenu");
   
   jQuery(this).addClass("KNav" +i+"");
+});  
+});
+/***./More Navbar Item Limitation***/
+
+
+
+
+
+
+
+/***More Tab Nav Item Limitation***/
+jQuery( document ).ready(function() {
+moreTabLimit = jQuery(".tabs-area").attr("data-navitemlimit");
+
+jQuery(".nav-tabs > li").each(function (i) {
+	i=i+1;
+	if(i > moreTabLimit){
+    jQuery(this).addClass("moreTabMover");
+  }
+	
+  //Adding SubMenu for Extra ILs
+  if(i == moreTabLimit){
+  Tabnv = "<li class='dropdown'><a href='#' id='myTabDrop1' class='dropdown-toggle' data-toggle='dropdown'>More... <b class='caret'></b></a><ul class='dropdown-menu' role='menu' aria-labelledby='myTabDrop1' id='moreTabSubMenu'></ul></li>";
+   // nv="<li><a>MO</a></li>";
+  	jQuery( Tabnv ).insertAfter( this );
+  	//jQuery( this ).append( "<li>d</li>" );
+  }
+  
+  jQuery("li.moreTabMover").appendTo("#moreTabSubMenu");
+  
+  jQuery(this).addClass("KNav" +i+"");
+  
 });  
 });
 /***./More Navbar Item Limitation***/
