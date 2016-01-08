@@ -79,7 +79,6 @@
 				</div>
 			  </div><!-- /.container-fluid -->
 			</nav>
-
 		</div>
 	</section>
 </header>
@@ -161,7 +160,7 @@
 	</section>
 
 
-		<section class="main-area">
+	<section class="main-area">
 		<div class="container">
 			<div class="fill-holder">
 				<div class="fill-move">
@@ -186,6 +185,29 @@
 				<br/>
 		</div>
 	</section>
+
+		<section class="tabs-area">
+		<div class="container">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs">
+			  <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+			  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+			  <li><a href="#messages" data-toggle="tab">Messages</a></li>
+			  <li><a href="#settings" data-toggle="tab">Settings</a></li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+			  <div class="tab-pane active" id="home">Quis integer euismod non purus adipiscing platea a a parturient proin.Suspendisse eu maecenas convallis magna scelerisque lacus.</div>
+			  <div class="tab-pane" id="profile">Don purus adipiscing platea a a parturient proin.Suspendisse eu maecenas convallis magna scelerisque lacus.</div>
+			  <div class="tab-pane" id="messages">Veuismod non purus adipiscing platea a a parturient proin.Suspendisse eu maecenas convallis magna scelerisque lacus.</div>
+			  <div class="tab-pane" id="settings">Purus adipiscing platea a a parturient proin.Suspendisse </div>
+			</div>
+		</div>
+	</section>
+	
+	
+	
 
 	<section class="list-area">
 		<div class="container">
@@ -334,6 +356,13 @@
 	</section>
 	
 	
+	
+	
+
+	
+	
+	
+	
 
 	
 	
@@ -435,7 +464,7 @@
 	
 	
 <!-- beforeExit -->
-<div class="modal fade " id="beforeExit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:block" >
+<div class="modal fade " id="beforeExit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none" >
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header ">
@@ -496,7 +525,7 @@
 	
 	<script>//When mouse out from website
 		jQuery('body').mouseleave(function() {
-			jQuery('#beforeExit').modal('show');
+		//	jQuery('#beforeExit').modal('show');
 		});
 	</script>
 	
