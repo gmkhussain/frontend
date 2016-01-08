@@ -528,9 +528,9 @@
     </script>
 
 	
-	<script>//When mouse out from website
-		jQuery('body').mouseleave(function() {
-		//	jQuery('#beforeExit').modal('show');
+	<script>//When mouse out from website * add 'leavepopup' on <body>
+		jQuery('body.leavepopup').mouseleave(function() {
+			jQuery('#beforeExit').modal('show');
 		});
 	</script>
 	
