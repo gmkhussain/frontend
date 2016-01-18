@@ -365,6 +365,34 @@ body img, .ovrimg-mx img {
 
 
 /*======== FORM =========*/
+.expand-search {
+    display: inline-block;
+    float: right;
+    padding: 5px 10px;
+}
+.expand-search [type="submit"] {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    background-color: transparent;
+    color: #39c;
+    border: 0;
+}
+
+.expand-search input {
+    width: 75px;
+    opacity: 0;
+    float: right;
+}
+
+.expand-search:hover input,
+.expand-search input:focus  {
+    width: 100%;
+    opacity: 1;
+}
+
+
+
 textarea {
     min-height: 50px;
     max-width:100%;
