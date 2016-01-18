@@ -35,7 +35,7 @@
   <body class="">
 
 <header>
-	<section class="hdr" data-navitemlimit="7">
+	<section class="hdr sticky-hdr" data-navitemlimit="7">
 		<div class="container">
 			<nav class="navbar navbar-default" role="navigation" id="slide-nav">
 			  <div class="container-fluid">
@@ -75,6 +75,15 @@
 						<li><a href="#c">Link 8.0</a></li>
 						<li><a href="_smoothstate.html">_smoothstate</a></li>
 					  </ul>
+					  
+            <form action="" class="search-form expand-search">
+                <div class="form-group has-feedback">
+                    <label for="search" class="sr-only">Search</label>
+                    <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                    <button type="submit"><i class="glyphicon glyphicon-search form-control-feedback">Search</i></button>
+                </div>
+            </form>
+
 					</div><!-- /.navbar-collapse -->
 				</div>
 			  </div><!-- /.container-fluid -->
@@ -533,6 +542,7 @@
 			jQuery('#beforeExit').modal('show');
 		});
 	</script>
+	
 	
 	   </body>
 </html>

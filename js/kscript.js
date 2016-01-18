@@ -256,13 +256,13 @@ function scroll() {
 
 
 
-//Stciky Header
+//Sticky Header
 jQuery(window).scroll(function() {
 if (jQuery(this).scrollTop() > 1){  
-    jQuery('.hdr').addClass("sticky-hdr");
+    jQuery('.sticky-hdr').addClass("sticky-hdr-active");
   }
   else{
-    jQuery('.hdr').removeClass("sticky-hdr");
+    jQuery('.sticky-hdr').removeClass("sticky-hdr-active");
   }
 });
 

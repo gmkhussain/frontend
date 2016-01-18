@@ -314,7 +314,8 @@ body img, .ovrimg-mx img {
     opacity: 1;
 }
 
-
+/***slider image center align**/
+.slider-area .item > img,
 .slider .item > img {
     margin: 0 auto;
 }
@@ -687,7 +688,7 @@ body .dropdown.open .dropdown-menu {
 /*
 Note: see bottom note
 */
-.sticky-hdr {
+.sticky-hdr-active {
     background-color: rgba(255, 255, 255, 1);
      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid #eee;
