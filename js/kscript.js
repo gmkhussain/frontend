@@ -561,3 +561,9 @@ jQuery( document ).ready(function() {
 	jQuery( ".menu-item-has-children ul" ).addClass( "dropdown-menu" );
 });
 /***./WordPress SubMenu Styling**/
+
+
+
+/***remove blank <P> tags***/
+jQuery('p:empty').remove();
+/***./remove blank P tags***/
