@@ -540,3 +540,24 @@ jQuery(".nav-tabs > li").each(function (i) {
 });  
 });
 /***./More Navbar Item Limitation***/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***WordPress SubMenu Styling**/
+jQuery( document ).ready(function() {
+	jQuery( ".menu-item-has-children" ).addClass( "dropdown gmk" );
+	jQuery( ".menu-item-has-children > a" ).addClass( "dropdown-toggle" );
+	jQuery( ".menu-item-has-children > a" ).attr( "data-toggle", "dropdown" );
+	jQuery( ".menu-item-has-children ul" ).addClass( "dropdown-menu" );
+});
+/***./WordPress SubMenu Styling**/
