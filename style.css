@@ -557,7 +557,26 @@ option:hover {
 }
 
 
-
+/**down scroll**/
+.dwn-scroll {
+    width: 110px;
+    margin: -20px auto 20px;
+    position: relative;
+    padding: 1px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+}
+.dwn-scroll i {
+    border: 1px solid #ccc;
+    color: #ccc;
+    width: 35px;
+    height: 35px;
+    background-color: #f7f7f7;
+    padding-top: 10px;
+    border-radius: 50%;
+}
+/**./down scroll**/
 
 
 
