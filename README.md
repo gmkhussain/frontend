@@ -65,6 +65,14 @@ $(function () {
 * Speed-less
 * Mess-up code
 
+```html
+//Can Delete
+_smoothState.js (folder)
+_angular.html
+_smoothstate.html
+_svg.html
+```
+
 
 ###Overload
 * Optional 
