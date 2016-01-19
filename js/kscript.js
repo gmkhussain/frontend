@@ -526,7 +526,7 @@ jQuery(".nav-tabs > li").each(function (i) {
   }
 	
   //Adding SubMenu for Extra ILs
-  if(i == moreTabLimit){
+  if(i == moreTabLimit+1){ //Fixed 'Blank 'Drop down' after 'moreTabLimit'
   Tabnv = "<li class='dropdown'><a href='#' id='myTabDrop1' class='dropdown-toggle' data-toggle='dropdown'>More... <b class='caret'></b></a><ul class='dropdown-menu' role='menu' aria-labelledby='myTabDrop1' id='moreTabSubMenu'></ul></li>";
    // nv="<li><a>MO</a></li>";
   	jQuery( Tabnv ).insertAfter( this );
