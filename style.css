@@ -779,7 +779,7 @@ body a, body a:active, body  a:focus, body  a:hover {
    text-decoration:none;
 }
 
-.ftr-box a:hover {
+.ftr-links a:hover {
     border-left: 1px solid #777 !important;
     padding-left: 8px;
 }
@@ -851,6 +851,14 @@ section[class*="-area"] {
 
 
 
+
+.fa-facebook{ color:#2b4687; }
+.fa-twitter{ color:#118ed3; }
+.fa-google, .fa-google-plus{ color:#cf4320; }
+.fa-youtube, .fa-youtube-play{ color:#ff3333; }
+.fa-instagram{ color:#476e93; }
+.fa-skype{ color:#139be1; }
+.fa-pinterest { color:#ba0f0b; }
 
 /**********./gmk classes***********/
 
