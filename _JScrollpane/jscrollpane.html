@@ -1,0 +1,60 @@
+<html>
+		<head>
+			<link href="jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+			<script type='text/javascript' src="../js/jquery1.11.1.min.js"></script>
+			<script type='text/javascript' src="jquery.jscrollpane.min.js"></script>
+		</head>
+		
+	<body>
+
+	
+	<div class="scroll-pane" style="height:600px">
+				<img src="http://farm5.static.flickr.com/4068/4502147230_61d4f18460_z.jpg" alt="Touring" />
+				<img src="http://farm5.static.flickr.com/4065/4501530717_8a7f9c8ce8_z.jpg" alt="Avalauncher" />
+				<img src="http://farm5.static.flickr.com/4034/4502145190_d7ae16127b_z.jpg" alt="Rockies" />
+				<img src="http://farm5.static.flickr.com/4003/4409969018_16cc9d8bf1_z.jpg" alt="Paper cranes" />
+				<img src="http://farm5.static.flickr.com/4064/4407630907_1430d32efa_z.jpg" alt="Icecream">
+			</div>
+			
+				
+		<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane(
+					{
+						autoReinitialise: true
+					}
+				);
+			});
+		</script>
+		
+		
+		
+				<style>
+				
+		body .jspDrag {
+			width: 15px;
+			height: 15px !important;
+			background-color: #ffcc33;
+			border-radius: 50%;
+			left:-5px;
+		}
+
+		body .jspTrack {
+			width: 4px;
+			position: relative;
+			left: 6px;
+		}
+
+		body .jspVerticalBar {
+			background-color: transparent;
+		}
+		.jspPane {
+			width: 96% !important;
+			padding: 0 3% !important;
+		}
+		</style>
+		
+	</body>
+	
+</html>

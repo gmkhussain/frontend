@@ -79,6 +79,17 @@ _svg.html
 * Extra files/scripts
 * [viewportchecker.js] (viewportchecker.js) - Detects if an element is in the viewport and DO SOMETHING.
 
+
+
+###Credits:
+* Bootstrap - http://getbootstrap.com
+* jQuery - http://jquery.com
+* Font awesome icon - http://fortawesome.github.io/Font-Awesome/
+* Animate.css - http://daneden.me/animate
+* FleXcroll.js - http://hesido.com/web.php?page=customscrollbar
+* JScrollpane.js - http://jscrollpane.kelvinluck.com/
+
+
 <hr/>
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/dd563b20465955.562fed481f5b4.gif" />
 <br/>
