@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 /*clear heading margins*/
 .clrhm h1, .clrhm h2, .clrhm h3, .clrhm h4, .clrhm h5, .clrhm h6  { margin:0px; }
 
-.ink{font-family:"Zeyada";}
+.inkd{font-family:"Zeyada";}
 
 body nav.navbar { font-family: "Open Sans"; }
 
