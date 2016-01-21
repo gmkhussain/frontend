@@ -552,14 +552,15 @@ jQuery('.moreless-area .moreless-btn').click(function() {
   if (jQuery(this).hasClass("less")) {
     jQuery(this).removeClass("less");
     jQuery(this).html("Read more");
-    jQuery(".moreless").addClass("on");
+    jQuery(this).parent().children(".moreless").addClass("on");
   } else {
     jQuery(this).addClass("less");
     jQuery(this).html("Read less");
-    jQuery(".moreless").removeClass("on");
+    jQuery(this).parent().children(".moreless").removeClass("on");
   }
 });
 /**./read more read less content**/
+/**https://jsfiddle.net/gmkhussain/kcr80c24/**/
 
 
 
