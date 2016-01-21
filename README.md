@@ -27,6 +27,14 @@ Additional file list:
 	</script>
 ```
 
+
+
+
+```html
+runtime nav color change
+demo: http://jsfiddle.net/gmkhussain/xd081nre/
+```
+
 * Script-less (HTML base)
 ```html
 <section class="hdr-area" data-navitemlimit="7">...

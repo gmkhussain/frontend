@@ -474,6 +474,16 @@ option:hover {
 	float:left;
 }
 
+.fnc-fom select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 2px 30px 2px 2px;
+    border: 1px solid #ccc;
+    background: #fff url("images/select_ctrl_down.png") no-repeat right center;
+}
+
+
 .fnc-fom input[type="checkbox"]:checked + label::before {
     background-color: #39c;
     color: #fff;
