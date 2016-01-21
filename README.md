@@ -29,6 +29,16 @@ Additional file list:
 
 
 
+```html
+//Find Tag Type *Optional
+selectype = jQuery(".form-group > select").prop('tagName'); 
+alert (selectype);
+jQuery(".form-group > label").html("I am " + selectype); 
+
+//Find Tag Type and Add Class on parent DIV
+jQuery( ".form-group" ).find( "select" ).parent().addClass( "selectype-area" );
+Demo: https://jsfiddle.net/gmkhussain/103bLo53/
+```
 
 ```html
 runtime nav color change
