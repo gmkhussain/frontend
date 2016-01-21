@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @import url("css/proxima-nova.css");
+@import url(https://fonts.googleapis.com/css?family=Zeyada);
 /*
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 @font-face {
@@ -37,6 +38,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 /*clear heading margins*/
 .clrhm h1, .clrhm h2, .clrhm h3, .clrhm h4, .clrhm h5, .clrhm h6  { margin:0px; }
 
+.ink{font-family:"Zeyada";}
+
 body nav.navbar { font-family: "Open Sans"; }
 
 
@@ -70,6 +73,20 @@ body{
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+/**read more read less content**/
+.moreless.on {
+  display: block;
+  height:4em; /* Fallback for non-webkit */
+  display: -webkit-box; /* Fallback for non-webkit */
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
 
 .blurtxt {
    color: transparent;
