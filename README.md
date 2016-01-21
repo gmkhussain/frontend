@@ -38,18 +38,35 @@ jQuery(".form-group > label").html("I am " + selectype);
 
 //Find Tag Type and Add Class on parent DIV
 jQuery( ".form-group" ).find( "select" ).parent().addClass( "selectype-area" );
-Demo: https://jsfiddle.net/gmkhussain/103bLo53/
 ```
+Demo: https://jsfiddle.net/gmkhussain/103bLo53/
+<hr/>
+
+
+```html
+//move out all element with content from p tag
+jQuery('footer p > *').unwrap();
+alert("remove extra p tags from footer")
+//remove extra p tags from footer
+jQuery('footer p').remove();
+```
+Demo: https://jsfiddle.net/gmkhussain/ksh7jueq/
+<hr/>
+
+
 
 ```html
 runtime nav color change
-demo: http://jsfiddle.net/gmkhussain/xd081nre/
 ```
+demo: http://jsfiddle.net/gmkhussain/xd081nre/
+<hr/>
+
 
 * Script-less (HTML base)
 ```html
 <section class="hdr-area" data-navitemlimit="7">...
 ```
+<hr/>
 
 ###Bootcamp™
 * Short Guideline
