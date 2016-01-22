@@ -3171,3 +3171,9 @@ Copyright (c) 2014 Daniel Eden
   animation-duration: 1s;
   animation-delay: 1.5s ;
 }
+
+/**animation delay speed**/
+.delay5ms{ animation-delay:500ms;}
+.delay1s{ animation-delay:1s; }
+.delay2s{ animation-delay:2s; }
+.delay3s{ animation-delay:3s; }
