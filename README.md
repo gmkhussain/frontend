@@ -1,5 +1,5 @@
-# Bootstrap 3 Extended ver 1.3
-For [Frontend](#frontend) 
+# Bootstrap 3 Extended ver 1.3 
+Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.github.io/frontend/)
 
 ###GH-Pages
 

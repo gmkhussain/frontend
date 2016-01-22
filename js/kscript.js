@@ -515,31 +515,35 @@ jQuery(".navbar-nav > li").each(function (i) {
 
 
 
-/***More Tab Nav Item Limitation***/
-jQuery( document ).ready(function() {
-moreTabLimit = jQuery(".tabs-area").attr("data-navitemlimit");
+jQuery(document).ready(function() {
+  //moreTabLimit = jQuery(".tabs-area").attr("data-navitemlimit");
+  //alert(moreTabLimit);
+  moreTabLimit = 4;
+  jQuery(".nav-tabs > li").each(function(i) {
+    i = i + 1;
+    if (i >= moreTabLimit) {
+      jQuery(this).addClass("moreTabMover");
+    }
+    if (i > moreTabLimit+1) {
+      jQuery(this).addClass("IMOK");
+    }
 
-jQuery(".nav-tabs > li").each(function (i) {
-	i=i+1;
-	if(i > moreTabLimit){
-    jQuery(this).addClass("moreTabMover");
+    //Adding SubMenu for Extra ILs
+    if (i == moreTabLimit+1) {
+      Tabnv = "<li class='dropdown'><a href='#' id='myTabDrop1' class='dropdown-toggle' data-toggle='dropdown'>More...</a><ul class='dropdown-menu' role='menu' aria-labelledby='myTabDrop1' id='moreTabSubMenu'></ul></li>";
+      // nv="<li><a>MO</a></li>";
+      jQuery(Tabnv).insertAfter(this);
+      //jQuery( this ).append( "<li>d</li>" );
+    }
+
+    jQuery(this).addClass("KNav" + i + "");
+    last = i;
+  });
+ // alert(last);
+  if (last >= moreTabLimit) {
+    jQuery("li.moreTabMover").appendTo("#moreTabSubMenu");
   }
-	
-  //Adding SubMenu for Extra ILs
-  if(i == moreTabLimit+1){ //Fixed 'Blank 'Drop down' after 'moreTabLimit'
-  Tabnv = "<li class='dropdown'><a href='#' id='myTabDrop1' class='dropdown-toggle' data-toggle='dropdown'>More... <b class='caret'></b></a><ul class='dropdown-menu' role='menu' aria-labelledby='myTabDrop1' id='moreTabSubMenu'></ul></li>";
-   // nv="<li><a>MO</a></li>";
-  	jQuery( Tabnv ).insertAfter( this );
-  	//jQuery( this ).append( "<li>d</li>" );
-  }
-  
-  jQuery("li.moreTabMover").appendTo("#moreTabSubMenu");
-  
-  jQuery(this).addClass("KNav" +i+"");
-  
-});  
 });
-/***./More Navbar Item Limitation***/
 
 
 
