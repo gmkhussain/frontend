@@ -119,7 +119,12 @@ body{
 
 
 
-
+/**tabs**/
+li.c_active.active a {
+    background-color: #39c;
+    color: #fff;
+}
+/****./tabs****/
 
 
 /****pinterest-style****/

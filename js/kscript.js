@@ -293,6 +293,20 @@ jQuery(".dwn-scroll").click(function() {
 });
 
 
+
+
+//Active Tab Nav move to center on click
+    jQuery(document).ready(function(){
+      $(".active-tab-move-area .nav-tabs li").click(function() {
+        $(".active-tab-move-area .nav-tabs li.active").removeClass("c_active"); //Remove any "active" class
+//        $(".our-values .nav-tabs li.active > div").css("display","block");
+	    var $active = $(this).detach().addClass("c_active"),
+            $lis = $(".active-tab-move-area .nav-tabs li");
+        $active.insertBefore($lis.eq(Math.floor($lis.length / 2)));
+      });
+    });
+	
+	
 /*
 //MOVING WIDE-DIV BACKGROUND IMAGES
 jQuery(document).ready(function(){
@@ -519,7 +533,7 @@ jQuery(document).ready(function() {
   //moreTabLimit = jQuery(".tabs-area").attr("data-navitemlimit");
   //alert(moreTabLimit);
   moreTabLimit = 4;
-  jQuery(".nav-tabs > li").each(function(i) {
+  jQuery(".tabs-more-area .nav-tabs > li").each(function(i) {
     i = i + 1;
     if (i >= moreTabLimit) {
       jQuery(this).addClass("moreTabMover");
