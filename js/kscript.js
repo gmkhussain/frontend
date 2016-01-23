@@ -603,10 +603,15 @@ jQuery('p:empty').remove();
 /***./remove blank P tags***/
 
 
-jQuery(window).hover(function () {
-  // returns width of browser viewport
-  var windowWidth = $(window).width();
+
+/***Live Detect Browser Size****/
+function LiveDetectWindowSize(){
+    // Get the dimensions of the viewport
+    var windowWidth = $(window).width();
+	
 	jQuery('body').addClass("width-"+windowWidth);
 	jQuery(document).prop('title', windowWidth );
-});
-
+};
+jQuery(document).ready(LiveDetectWindowSize);    // When the page first loads
+jQuery(window).resize(LiveDetectWindowSize);     // When the browser changes size
+/***./Live Detect Browser Size****/
