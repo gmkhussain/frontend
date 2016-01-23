@@ -601,3 +601,12 @@ jQuery( document ).ready(function() {
 /***remove blank <P> tags***/
 jQuery('p:empty').remove();
 /***./remove blank P tags***/
+
+
+jQuery(window).hover(function () {
+  // returns width of browser viewport
+  var windowWidth = $(window).width();
+	jQuery('body').addClass("width-"+windowWidth);
+	jQuery(document).prop('title', windowWidth );
+});
+
