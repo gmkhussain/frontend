@@ -605,6 +605,7 @@ jQuery('p:empty').remove();
 
 
 /***Live Detect Browser Size****/
+if (jQuery('html').hasClass("livewindowsize")) {
 function LiveDetectWindowSize(){
     // Get the dimensions of the viewport
     var windowWidth = $(window).width();
@@ -614,4 +615,5 @@ function LiveDetectWindowSize(){
 };
 jQuery(document).ready(LiveDetectWindowSize);    // When the page first loads
 jQuery(window).resize(LiveDetectWindowSize);     // When the browser changes size
+}
 /***./Live Detect Browser Size****/
