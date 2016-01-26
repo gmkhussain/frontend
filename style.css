@@ -533,6 +533,10 @@ option:hover {
 }
 
 
+.fnc-fom ::-webkit-input-placeholder{opacity: 0;}
+/**show placeholder when click on form-control**/
+.fnc-fom .form-control:focus::-webkit-input-placeholder{opacity: 1;}
+
 .fnc-fom .form-control:not(:placeholder-shown) + label{/**if .form-control haven't placeholder**/}
 
 .fnc-fom .form-control.has-value + label,
