@@ -532,6 +532,8 @@ option:hover {
 	left:10px
 }
 
+/**when placeholder hide**/
+.fnc-fom input:not(:placeholder-shown) + label,
 .fnc-fom .form-control.has-value + label,
 .fnc-fom .form-group .form-control:focus + label {
     top: -20px;
