@@ -4,10 +4,13 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 ###GH-Pages
 
 Additional file list:
-* [kscript.js](#kscript.js)
-* viewportchecker.js
-* css_browser_selector.js
-* swiper.jquery.min.js
++ <Root>
+    + <js>
+		+ [kscript.js](#kscript.js)
+		+ viewportchecker.js #viewportchecker.js
+		+ swiper.jquery.min.js
+    + <css>
+        + css_browser_selector.js
 
 
 ## Installing
