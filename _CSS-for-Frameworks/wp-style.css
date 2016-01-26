@@ -1,10 +1,14 @@
+/***sub-menu***/
+.sub-menu {
+    display: none;
+}
+/***./sub-menu***/
+
+/***contact from7***/
 div.wpcf7-validation-errors {
     clear: both;
 }
-
-
-
-
+/***./contact from7***/
 
 
 
@@ -62,6 +66,7 @@ body.search-results article[class*="type-"] {
     padding: 20px;
     margin: 30px 0;
 }
+
 article.type-post {
     min-height: 230px;
 }

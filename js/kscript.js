@@ -88,7 +88,8 @@ jQuery(function() {
         jQuery(document).ready(function() {
             jQuery('.anime-in').addClass("hidden2").viewportChecker({
                 classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
-                offset: 100    
+                offset: 100
+				
                });   
 
             jQuery('.anime-left').addClass("hidden2").viewportChecker({
