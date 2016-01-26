@@ -1,6 +1,10 @@
 @charset "utf-8";
 
 @import url("css/proxima-nova.css");
+
+/**decent hex colors collection **/
+@import url("css/colorized.css");
+
 @import url(https://fonts.googleapis.com/css?family=Zeyada);
 /*
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
@@ -250,6 +254,7 @@ body img, .ovrimg-mx img {
     width:100%;
 }
 
+
 /*relative for inside of wide box*/
 .posrel {
     overflow: hidden;
@@ -304,6 +309,7 @@ body img, .ovrimg-mx img {
 .list-col-3 ul li {    width: 33.33%;   }
 .list-col-4 ul li {    width: 25%;   }
 .list-col-5 ul li {    width: 20%;   }
+.list-col-6 ul li {    width:16.666666666%; }
 
 
 @media (max-width:768px){ .list-col-4 ul li{ width:50%; } .cols-5 { width:100%; }  }
