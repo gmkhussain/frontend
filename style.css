@@ -176,12 +176,17 @@ li.c_active.active a {
 body [class*="flaticon-"]::before {
     margin: 0;
 }
+/**paddings**/
+.p0{ padding: 0;}
+.pl0{ padding-left: 0;}
+.pr0{ padding-right: 0;}
 
-.pad0{ padding: 0;}
-.pad-l0{ padding-left: 0;}
-.pad-r0{ padding-right: 0;}
-.martop30{ margin-top:30px; }
-.marbot30{ margin-bottom:30px; }
+/**margins**/
+.m0{ margin:0px;}
+.ml0{ margin-left:0px;}
+.mr0{ margin-right:0px;}
+.mt30{ margin-top:30px;}
+.mb30{ margin-bottom:30px; }
 
 .wide-dvr,
 .dvr .container {
