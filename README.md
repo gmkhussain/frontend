@@ -1,22 +1,23 @@
-# Bootstrap 3 Extended ver 1.3 
+# Bootstrap 3 Extended ver 1.3
+###Low-level Front-End Toolkit
 Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.github.io/frontend/)
 
 ###GH-Pages
 
 Additional file list:
-+ <Root>
-    + <js>
-		+ [kscript.js](#kscript.js)
++ Root
+    + js
+		+ [kodeized.js](#kodeized.js) - Coding made effortless.
 		+ viewportchecker.js #viewportchecker.js
 		+ swiper.jquery.min.js
-    + <css>
+    + css
         + css_browser_selector.js
 
 
 ## Installing
 
 ```html
-<script src="js/kscript.js"></script>
+<script src="js/kodeized.js"></script>
 ```
 
 <img src="https://github.com/gmkhussain/frontend/blob/master/images/favicon.png" width="auto" height="40" alt="favicon">
