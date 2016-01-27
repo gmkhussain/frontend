@@ -260,10 +260,10 @@ function scroll() {
 //Sticky Header
 jQuery(window).scroll(function() {
 if (jQuery(this).scrollTop() > 1){  
-    jQuery('.sticky-hdr').addClass("sticky-hdr-active");
+    jQuery('.hdr--sticky').addClass("hdr--sticky-active");
   }
   else{
-    jQuery('.sticky-hdr').removeClass("sticky-hdr-active");
+    jQuery('.hdr--sticky').removeClass("hdr--sticky-active");
   }
 });
 

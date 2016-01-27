@@ -812,7 +812,7 @@ body .dropdown.open > .dropdown-menu {
 /*
 Note: see bottom note
 */
-.sticky-hdr-active {
+.hdr--sticky-active {
     background-color: rgba(255, 255, 255, 1);
      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid #eee;
@@ -843,7 +843,7 @@ body a, body a:active, body  a:focus, body  a:hover {
    outline:none !important; /*for remove the dotted line around the clicked a*/
    text-decoration:none;
 }
-
+.ftr__links a:hover,
 .ftr-links a:hover {
     border-left: 1px solid #777 !important;
     padding-left: 8px;
