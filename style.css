@@ -228,7 +228,16 @@ body img, .ovrimg-mx img {
     height: auto;
 }
 
+.gray-img img {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
 
+.drp-shad {
+	filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
+	-webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
+}
+		
 /*========= BG ========*/
 .wide-box-holder {
  clear:both;
