@@ -429,7 +429,7 @@ body img, .ovrimg-mx img {
     float: right;
     padding: 5px 10px;
 }
-.expand-search [type="submit"] {
+.search-fom.expand-search [type="submit"] {
     position: absolute;
     right: 0;
     top: 8px;
@@ -449,6 +449,20 @@ body img, .ovrimg-mx img {
     width: 100%;
     opacity: 1;
 }
+
+/***submit button on right***/
+.search-fom [type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border: 0;
+}
+
+.search-fom .form-group {
+    margin: 0.3em 0;
+}
+/***./submit button on right***/
 
 
 
