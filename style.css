@@ -695,6 +695,12 @@ body *:before,
 
 
 /*====== NAVBAR ======*/
+/**side nav bg transparent**/
+body  #navbar-height-col {background-color: #000;}
+body .navbar-default .navbar-collapse {background: transparent;}
+body #slide-nav #slidemenu {background-color: transparent;}
+/**./side nav bg transparent**/
+
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
     background-color: yellow;
 }
