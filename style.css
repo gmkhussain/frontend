@@ -937,6 +937,8 @@ http://jsfiddle.net/gmkhussain/awqs01zc/
 
 
 
+/***accordion active***/
+.active .panel-heading a {font-weight: bold;}
 /***accordion***/
 .accordion-plus .panel-title .panel-default:first-child a:before,
 .accordion-plus .panel-title a.collapsed:before {

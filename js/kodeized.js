@@ -584,6 +584,13 @@ jQuery('.moreless-area .moreless-btn').click(function() {
 
 
 
+/****.accordion active add class****/
+jQuery('.panel-heading a').click(function() {
+  jQuery('.panel-default').removeClass('active');
+  jQuery(this).parents('.panel-default').addClass('active');
+});
+/****./.accordion active add class****/
+
 
 
 
