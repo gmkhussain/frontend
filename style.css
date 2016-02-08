@@ -469,6 +469,24 @@ body img, .ovrimg-mx img {
 
 
 
+.lbl20 label {
+    width: 20%;
+    display: inline-block;
+    float: left;
+    line-height: 40px;
+}
+
+.lbl20 .form-control {
+    width: 80%;
+    display: inline-block;
+}
+.lbl20 .form-control[type="submit"],
+.lbl20 .form-control[type="button"] {
+    margin-left: 20%;
+}
+
+
+
 textarea {
     min-height: 50px;
     max-width:100%;
