@@ -919,6 +919,20 @@ http://jsfiddle.net/gmkhussain/awqs01zc/
 
 
 
+/***accordion***/
+.accordion-plus .panel-title .panel-default:first-child a:before,
+.accordion-plus .panel-title a.collapsed:before {
+    content: "+";
+}
+.accordion-plus .panel-title a:before{
+    text-align:center;
+    content: "-";
+    width: 20px;
+    display: inline-block;
+    line-height: 15px;
+    }
+/***./accordion***/	
+
 section[class*="-area"] {
     position: relative;
 }
