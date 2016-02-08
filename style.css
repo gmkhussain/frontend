@@ -33,6 +33,9 @@ src: local('Proxima Nova Regular'), url('css/ProximaNovaRegular.woff') format('w
 /**for 100% heights**/
 body, html{ height: 100%; padding: 0;}
 
+body .navbar-brand {
+    padding: 5px;
+}
 
 /*======== CONTENT ========*/
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
