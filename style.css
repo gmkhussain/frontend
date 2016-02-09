@@ -207,22 +207,15 @@ body [class*="flaticon-"]::before {
     padding-bottom: 30px;
 }
 
-.pul-lft {
-    float: left;
-}
-.pul-rgt {
-    float: right;
-}
-.pul-cntr {
-    float: none;
-    margin: 0 auto;
-}
+.pul-lft {float: left;}
+.pul-rgt {float: right;}
+.pul-cntr {float: none; margin: 0 auto;}
 
-.valign {
-    align-items: center;
-    display: flex;
-    min-height: 100px; /* define holder height */
-}
+.valign {align-items: center; display: flex; min-height: 100px; /* define holder height */}
+/***vertical align***/
+.valigner {min-height: 240px; display: table; text-align: center;}
+.valigner > *, .valigner .valign {display: table-cell;vertical-align: middle;}
+
 
 
 /*========= IMG =========*/
@@ -231,10 +224,7 @@ body [class*="flaticon-"]::before {
 .ovrimg { overflow: hidden; }
 .ovrimg img{ width: 100%;}
 
-body img, .ovrimg-mx img {
-    max-width: 100%;
-    height: auto;
-}
+body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
 .gray-img img {
   -webkit-filter: grayscale(1);
