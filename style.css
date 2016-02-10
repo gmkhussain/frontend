@@ -111,6 +111,27 @@ body{
     border: 1px solid #f7f7f7;
 }
 
+.label.new:before, .badge.new:before {
+    background-color: #d00;
+    content: "*";
+    position: absolute;
+    top: -4px;
+    display: block;
+    padding: 0px 2px;
+    right: -4px;
+    border-radius: 50%;
+    height: 0.8em;
+    width: 0.8em;
+}
+
+.label,
+.badge {
+    position: relative;
+    border-radius: 3px;
+    margin-left: 3px;
+}
+
+
 
 /*======TABLE Responsive=======*/
 @media only screen and (max-width : 768px) {
