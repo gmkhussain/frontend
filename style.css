@@ -36,6 +36,7 @@ body, html{ height: 100%; padding: 0;}
 body .navbar-brand {
     padding: 5px;
 }
+section {width: 100%;}
 
 /*======== CONTENT ========*/
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
@@ -881,13 +882,11 @@ body .dropdown.open > .dropdown-menu {
 /*
 Note: see bottom note
 */
+.hdr--sticky {position: fixed !important;z-index: 5555;}
 .hdr--sticky-active {
     background-color: rgba(255, 255, 255, 1);
-     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid #eee;
-    position: fixed !important;
-    width: 100%;
-    z-index: 5555;
 }
 
 /*========LINKS========*/
