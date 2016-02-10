@@ -396,6 +396,9 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
     margin: 0 auto;
 }
 
+/**safari carousel animation issue fixed**/
+.carousel-inner>.item {width: 100%;}
+
 /***reset slider arrows***/
 .no-ctrl .carousel-control { display: none; }
 .no-ctrl .carousel-indicators { display: none; }
