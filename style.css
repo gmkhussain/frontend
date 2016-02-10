@@ -509,10 +509,17 @@ textarea {
     min-height: 50px;
     max-width:100%;
 }
-
+/***radiocheckbox***/
+input[type=radio], input[type=checkbox] {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+}
 /*checkbox checked and uncheck*/
 .form-control:checked + label {    color: green; }
-.form-control:not(:checked) + label {    color: red; }
+.form-control:not(:checked) + label {    color: #333; }
 
 .form-control:focus {
     border-color: rgba(196, 11, 49, 1);
