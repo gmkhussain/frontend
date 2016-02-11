@@ -283,6 +283,11 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
     width:100%;
 }
 
+.bg-cntr {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 /*relative for inside of wide box*/
 .posrel {
