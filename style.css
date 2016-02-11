@@ -288,7 +288,6 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
     background-position: center;
 }
 
-
 /*relative for inside of wide box*/
 .posrel {
     overflow: hidden;
@@ -739,8 +738,11 @@ body *:before,
  /*
     transition: all 500ms ease 0s; */
 }
-
-
+/**shake-icon on hover**/
+.shake-icon .fa:hover  {-webkit-animation: link 0.5s;animation: link 0.5s;}
+@keyframes link {25%{-webkit-transform: rotate(10deg);transform: rotate(10deg);}
+				50% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg);}
+				}
 
 /*====== NAVBAR ======*/
 /**side nav bg transparent**/
