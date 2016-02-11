@@ -753,12 +753,12 @@ body #slide-nav #slidemenu {background-color: transparent;}
 /**./side nav bg transparent**/
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
-    background-color: yellow;
+    background-color: transparent;
 }
 
 
 .navbar.navbar-default {
-    background-color: yellow;
+    background-color: transparent;
     border: 0 none;
     margin: 0;
 }
