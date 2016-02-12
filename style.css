@@ -219,8 +219,23 @@ body [class*="flaticon-"]::before {
 .m0{ margin:0px;}
 .ml0{ margin-left:0px;}
 .mr0{ margin-right:0px;}
+.mt0{ margin-top:0px;}
+.mb0{ margin-bottom:0px;}
 .mt30{ margin-top:30px;}
 .mb30{ margin-bottom:30px; }
+
+
+/**widths**/
+.w10{width:10%;}
+.w20{width:20%;}
+.w30{width:30%;}
+.w40{width:40%;}
+.w50{width:50%;}
+.w60{width:60%;}
+.w70{width:70%;}
+.w80{width:80%;}
+.w90{width:90%;}
+.w100{width:100%;}
 
 .wide-dvr,
 .dvr .container {
