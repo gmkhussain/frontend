@@ -246,7 +246,7 @@ body [class*="flaticon-"]::before {
 
 .pul-lft {float: left;}
 .pul-rgt {float: right;}
-.pul-cntr {float: none; margin: 0 auto;}
+.pul-cntr {float: none; margin-left:auto; margin-right:auto;}
 
 .valign {align-items: center; display: flex; min-height: 100px; /* define holder height */}
 /***vertical align***/
