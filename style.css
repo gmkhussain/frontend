@@ -886,7 +886,7 @@ li.dropdown.moreMover ul.dropdown-menu {
 /*submenu for mobile*/
 @media only screen and (max-width : 768px) {
 
-.dropdown-menu:hover,
+.navbar-nav .dropdown-menu:hover,
 .dropdown > a:hover + .dropdown-menu,
 body .dropdown.open > .dropdown-menu {
     border:2px solid #eee;
