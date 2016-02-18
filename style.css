@@ -68,6 +68,10 @@ body{
 .dwnlod-btn > a {display: inline-block; background-color: #0a0; color: #fff; padding: 10px 15px;}
 .cr a {color: #fff;}
 
+/**alert-bar**/
+.alert-bar {margin: 0;border-bottom: 0px solid #eee;padding: 0;background-color: #f9f9f9;line-height: 3em;}
+.alert-bar button.close {background-color: transparent;opacity: 1;color: #333;}
+
 
 /*truncate string / limited text */
 .hed-lmt h3,
