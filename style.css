@@ -546,7 +546,9 @@ input[type=radio], input[type=checkbox] {
     outline: 0 none;
 }
 
-[type="submit"] {
+[type="button"],[type="reset"],[type="submit"],.inline-btns .form-control[type="button"], .inline-btns .form-control[type="submit"] {
+    display: inline-block;
+    width: auto;
     background-color: #ff6500;
     color: #fff;
 }

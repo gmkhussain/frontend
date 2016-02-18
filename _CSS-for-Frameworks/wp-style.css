@@ -185,3 +185,38 @@ body.single footer.entry-footer > span + span {
 }
 /***./single.php***/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**Woo Cart Page**/
+a.checkout-button.button.alt.wc-forward {
+    background-color: #D21026;
+}
+.woocommerce-cart table.cart th {
+    background-color: #eee;
+    font-weight: 200;
+}
+input.button:hover,
+input.button[name="apply_coupon"], input.button[name="update_cart"] {
+    background-color: #D21026;
+    color: #fff;
+    font-weight: 100;
+}
