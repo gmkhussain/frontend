@@ -65,9 +65,8 @@ body{
 .hed-cntr .container > h2, .hed-cntr .container > p, .hed-cntr .container > .lnk-btn {
     text-align: center;
 }
-.cr a {
-    color: #fff;
-}
+.dwnlod-btn > a {display: inline-block; background-color: #0a0; color: #fff; padding: 10px 15px;}
+.cr a {color: #fff;}
 
 
 /*truncate string / limited text */
@@ -546,7 +545,7 @@ input[type=radio], input[type=checkbox] {
     outline: 0 none;
 }
 
-[type="button"],[type="reset"],[type="submit"],.inline-btns .form-control[type="button"], .inline-btns .form-control[type="submit"] {
+[type="button"]:not(.navbar-toggle),[type="reset"],[type="submit"],.inline-btns .form-control[type="button"], .inline-btns .form-control[type="submit"] {
     display: inline-block;
     width: auto;
     background-color: #ff6500;
