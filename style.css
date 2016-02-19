@@ -1047,6 +1047,10 @@ section[class*="-area"] {
 .fa-skype{ color:#139be1; }
 .fa-pinterest { color:#ba0f0b; }
 
+
+.swiper-container * {transition: all 2s !important;-webkit-transition: all 2s !important;}
+body .dontfly.swiper-container .swiper-slide {display: inline-block;width: auto;margin-right:15px;}
+body .dontfly.swiper-container .swiper-slide img {max-width: 100%;max-height: 120px;}
 /**********./gmk classes***********/
 
 
