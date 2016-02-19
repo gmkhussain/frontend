@@ -909,7 +909,25 @@
 			prevButton: '.swiper-button-prev',
 			spaceBetween: 15,
 			autoplay: 2500,
-			autoplayDisableOnInteraction: false
+			autoplayDisableOnInteraction: false,
+			breakpoints: {
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 40
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            }
+        }
 		});
     </script>
 
