@@ -13,9 +13,41 @@ div.wpcf7-validation-errors {
 
 
 
+/*error-404 page*-html need to change-*/ 
+.error-404 i.fa-exclamation-triangle {
+    font-size: 6em;
+    color: #eeb40f;
+    border: 10px solid #eeb40f;
+    padding: 40px;
+    box-shadow: 0 0 0 10px #f7f7f7;
+    border-radius: 50%;
+}
 
+.error-404 h1.page-title, .error-404 p {
+    text-transform: uppercase;
+}
 
+.error-404 form.search-form {
+    border: 1px solid #eee;
+    width: 340px;
+    padding: 20px;
+    margin: 20px auto 0;
+    float: none;
+}
+.error-404  form.search-form input,form.search-form button {
+    height: 40px;
+    border: 1px solid #eee;
+}
 
+.er404icon {
+    text-align: center;
+}
+
+.error-404.not-found {
+    text-align: center;
+    margin: 50px 0;
+}
+/*./error-404 page*/
 
 
 
