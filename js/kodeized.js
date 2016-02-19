@@ -594,6 +594,24 @@ jQuery('.panel-heading a').click(function() {
 
 
 
+/*smart alert bar*/
+	jQuery('.alert-pin-btn').click(function() {
+		jQuery('.alert-bar').toggleClass('pinned');
+	});
+/*./smart alert bar*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /***WordPress SubMenu Styling**/
 jQuery( document ).ready(function() {
