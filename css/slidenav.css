@@ -94,9 +94,10 @@ body.slide-active {
 	}
 	/* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
 	#navbar-height-col {
-	    position: fixed;
+	    position: absolute;
 	    top: 0;
 	    height: 100%;
+		min-height:100vh;
       bottom:0;
 	    width: 80%;
 	    left: -80%;
