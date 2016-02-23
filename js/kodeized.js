@@ -601,8 +601,15 @@ jQuery('.panel-heading a').click(function() {
 /*./smart alert bar*/
 
 
-
-
+/**mutilang**/
+var multiLangLink = ".lang.btn-group .dropdown-menu li a";
+var multiLangLabel = ".lang.btn-group .btn span:not(.caret)";
+jQuery(multiLangLink).click(function() {
+  jQuery(multiLangLink).removeClass("selctd-lang");
+  jQuery(this).addClass("selctd-lang");
+  jQuery(multiLangLabel).html(jQuery(this).html());
+});
+/**./mutilang**/
 
 
 
