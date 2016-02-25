@@ -289,10 +289,8 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
     width:100%;
 }
 
-.bg-cntr {
-    background-repeat: no-repeat;
-    background-position: center;
-}
+.bg-cntr {background-repeat: no-repeat; background-position: center;}
+.bg-full,.bg-cvr {background-size: cover;}
 
 /*relative for inside of wide box*/
 .posrel {
@@ -455,6 +453,16 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
 
 /*======== FORM =========*/
+/*Placeholder*/
+.form-control::-moz-placeholder { color:#ccc;}
+.form-control:-ms-input-placeholder { color:#ccc;}
+.form-control::-webkit-input-placeholder { color:#ccc;}
+
+/*Change the white to Chrome autocomplete yellow color*/
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
 .expand-search {
     display: inline-block;
     float: right;
@@ -513,12 +521,8 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
     margin-left: 20%;
 }
 
+textarea {min-height: 50px; max-width:100%;}
 
-
-textarea {
-    min-height: 50px;
-    max-width:100%;
-}
 /***radiocheckbox***/
 input[type=radio], input[type=checkbox] {
     width: auto;
@@ -527,10 +531,10 @@ input[type=radio], input[type=checkbox] {
     float: left;
     margin-right: 5px;
 }
+
 /*checkbox checked and uncheck*/
 .form-control:checked + label {    color: green; }
 .form-control:not(:checked) + label {    color: #333; }
-
 .form-control:focus {
     border-color: rgba(196, 11, 49, 1);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(196, 11, 49, 0.5);
@@ -550,9 +554,7 @@ input[type=radio], input[type=checkbox] {
 }
 
 /*radio button*/
-[type="radio"]:checked + label {
-    color: #d00;
-}
+[type="radio"]:checked + label { color: #d00; }
 
 .form-control[type="radio"] {
     background: none repeat scroll 0 0 yellow !important;
@@ -564,15 +566,7 @@ input[type=radio], input[type=checkbox] {
 }
 
 /*select or Dropdown */
-option:hover {
-    background-color: #fafafa;
-}
-
-/*Placeholder*/
-.form-control::-moz-placeholder { color:#ccc;}
-.form-control:-ms-input-placeholder { color:#ccc;}
-.form-control::-webkit-input-placeholder { color:#ccc;}
-
+option:hover { background-color: #fafafa;}
 
 .fnc-fom input[type="checkbox"] + label::before {
     border: 1px solid #ccc;
