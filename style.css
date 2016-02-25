@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 @import url("css/proxima-nova.css");
 
 /**decent hex colors collection **/
@@ -33,33 +32,24 @@ src: local('Proxima Nova Regular'), url('css/ProximaNovaRegular.woff') format('w
 /**for 100% heights**/
 body, html{ height: 100%; padding: 0;}
 
-body .navbar-brand {
-    padding: 5px;
-}
+body .navbar-brand { padding: 5px; }
+
+body{font-family:"Open Sans"; overflow-x: hidden;}
+
+body nav.navbar { font-family: "Open Sans"; }
+
 section {width: 100%;}
 
 /*======== CONTENT ========*/
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
- font-family:"Proxima Nova";
- }
- .strong {
-    font-weight: bold;
-}
-.strike {
-    text-decoration: line-through;
-}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Proxima Nova";}
+.strong {font-weight: bold;}
+.strike {text-decoration: line-through;}
+.inline-block {display: inline-block;}
+
 /*clear heading margins*/
 .clrhm h1, .clrhm h2, .clrhm h3, .clrhm h4, .clrhm h5, .clrhm h6  { margin:0px; }
 
 .inkd{font-family:"Zeyada";}
-
-body nav.navbar { font-family: "Open Sans"; }
-
-
-body{
- font-family:"Open Sans";
-   overflow-x: hidden;
-}
 
 /*center align H2 and P in section */
 .hed-cntr .container > h2, .hed-cntr .container > p, .hed-cntr .container > .lnk-btn {
@@ -102,9 +92,6 @@ body{
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-
-
 
 .blurtxt {
    color: transparent;
@@ -202,11 +189,7 @@ li.c_active.active a {
  position:relative;
  display: block;
 }
-
 /****./pinterest-style****/
-
-
-
 
 
 
