@@ -124,6 +124,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Proxima Nova";
     margin-left: 3px;
 }
 
+/*==Buttons/Btn==*/
+.more-btn a {background-color: #39c; padding: 0.5em 0.5em; color: #fff;}
+[class*="-btn"] a {display: inline-block;}
 
 
 /*======TABLE Responsive=======*/
