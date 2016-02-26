@@ -107,6 +107,9 @@ div:not([class*="-btn"]) > a[href]:not([class]){color: #008000;text-decoration: 
     border: 1px solid #f7f7f7;
 }
 
+/*hide active language from dropdown list*/
+.lang a.selctd-lang {display: none;}
+
 .label.new:before, .badge.new:before {
     background-color: #d00;
     content: "*";
@@ -120,44 +123,23 @@ div:not([class*="-btn"]) > a[href]:not([class]){color: #008000;text-decoration: 
     width: 0.8em;
 }
 
-.label,
-.badge {
-    position: relative;
-    border-radius: 3px;
-    margin-left: 3px;
-}
+.label,.badge {position: relative; border-radius: 3px; margin-left: 3px;}
 
 /*==Buttons/Btn==*/
 .more-btn a {background-color: #39c; padding: 0.5em 0.5em; color: #fff;}
 [class*="-btn"] a {display: inline-block;}
 
-
 /*======TABLE Responsive=======*/
 @media only screen and (max-width : 768px) {
-	.table-area th {
-		display: none;
-	}
-	.table-area td::before {
-		content: attr(for);
-		display: block;
-		font-weight: 600;
-	}
-	.table-area td {
-		display: block;
-		text-align: center;
-	}
+.table-area th {display: none;}
+.table-area td::before {content: attr(for); display: block; font-weight: 600;}
+.table-area td {display: block;text-align: center;}
 }
 /*======./TABLE Responsive=======*/
 
-
-
 /**tabs**/
-li.c_active.active a {
-    background-color: #39c;
-    color: #fff;
-}
-/****./tabs****/
-
+li.c_active.active a {background-color: #39c; color: #fff;}
+/**./tabs**/
 
 /**scrollToTop**/
 .scrollToTop {
@@ -168,8 +150,8 @@ li.c_active.active a {
     position: fixed;
     right: 40px;
 	z-index:888;
-  padding: 0;
-      font-size: 2em;
+	padding: 0;
+    font-size: 2em;
 }
 /**./scrollToTop**/
 
