@@ -56,6 +56,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Proxima Nova";
     text-align: center;
 }
 .dwnlod-btn > a {display: inline-block; background-color: #0a0; color: #fff; padding: 10px 15px;}
+
+/*default links|complex*/
+div:not([class*="-btn"]) > a[href]:not([class]){color: #008000;text-decoration: underline;}
 .cr a {color: #fff;}
 
 /**alert-bar**/
