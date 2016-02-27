@@ -456,10 +456,11 @@ input:-webkit-autofill {
 .search-fom.expand-search [type="submit"] {
     position: absolute;
     right: 0;
-    top: 8px;
-    background-color: transparent;
-    color: #39c;
+    top: 0px;
     border: 0;
+    min-height: 2.8em;
+    color: #000;
+    background-color: rgba(0,150,255, 0.5);
 }
 
 .expand-search input {
@@ -595,6 +596,114 @@ option:hover { background-color: #fafafa;}
     top: 0;
     width: 25px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden-checkbox [type="checkbox"] {
+    display: none;
+}
+
+
+
+/*checkylbl*/
+/*Button is :CHECKED*/
+input[type="checkbox"]:checked ~ .checkylbl {
+  background: rgba(73,168,68,1);
+  box-shadow: 0 0 2px rgba(73,168,68,1);
+}
+
+input[type="checkbox"]:checked ~ .checkylbl label {
+  left: 110px;
+  transform: rotate(360deg);
+}
+/*Button is :CHECKED*/
+input[type="checkbox"]:checked ~ .checkylbl {
+  background: rgba(73,168,68,1);
+  box-shadow: 0 0 2px rgba(73,168,68,1);
+}
+
+input[type="checkbox"]:checked ~ .checkylbl label {
+  left: 110px;
+  transform: rotate(360deg);
+}
+.checkylbl, label {  border-radius: 50px;}
+.form-group.hidden-checkbox .checkylbl label { top: 1px;left: 2px;}
+
+/*'un':checked state*/
+.checkylbl {
+    height: 30px;
+    width: 80px;
+    background: rgba(43, 43, 43, 1);
+    position: relative;
+    box-shadow: 0 0 2px rgba(43,43,43,1);
+}
+
+.checkylbl label {
+  height: 28px;
+  width: 28px;
+  background: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  cursor: pointer;
+}
+
+.checkylbl label::before {
+  content: '';
+  height: 28px;
+  width: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.checkylbl label::after {
+  content: '';
+  height: 5px;
+  width: 28px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.checkylbl label::before,
+.checkylbl label::after{
+  background: rgba(43,43,43,1);
+  border-radius: 5px; display:none;
+}
+
+/* pesduo class on toggle */
+input[type="checkbox"]:checked ~ .checkylbl label {
+    left: auto;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    right: 2px;
+}
+input[type="checkbox"]:checked ~ .checkylbl label::after{
+  width: 20px;
+  top:0;
+  left: 0;
+  background: rgba(73,168,68,1);
+}
+/*./checkylbl*/
+
+
+
+
 
 
 .fnc-fom .form-group label {
