@@ -213,11 +213,11 @@ body [class*="flaticon-"]::before {
 .w90{width:90%;}
 .w100{width:100%;}
 
-.wide-dvr,
-.dvr .container {
-    border-bottom: 1px solid #eee;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+/*section divider - use w/<HR>*/
+.dvr, .dvr-cont .container {
+    margin: 30px 0;
+    height: 1px;
+    border-top: 1px solid #ccc;
 }
 
 .pul-lft {float: left;}
