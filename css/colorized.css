@@ -54,7 +54,8 @@
 .teal {color: #39CCCC;}
 
 .bg-white {background-color: #fff;}
-.white {color: #fff;}
+.white, .white a {color: #fff;}
+
 
 .bg-yellow {background-color: #FFDC00;}
 .yellow {color: #FFDC00;}

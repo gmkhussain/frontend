@@ -314,8 +314,10 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
  }
 
 
-.listdvr li + li {
-    border-left: 1px solid #eee;
+.listdvr li:not(:last-child) {
+    border-right: 1px solid hotpink;
+    margin-right: 1em;
+    padding-right: 1em;
 }
 
 [class*="list-col-"] ul { padding:0; }
