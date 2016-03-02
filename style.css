@@ -971,20 +971,17 @@ Note: see bottom note
     box-shadow:0 0 0 1% rgba(255, 69, 0, 0.5);;
 }
 
-.iln-btn {
-    display: inline-block;
-}
+.iln-btn { display: inline-block; }
 
 /*========HOVER========*/
 body a, body a:active, body  a:focus, body  a:hover {
    outline:none !important; /*for remove the dotted line around the clicked a*/
    text-decoration:none;
 }
-.ftr__links a:hover,
-.ftr-links a:hover {
-    border-left: 1px solid #777 !important;
-    padding-left: 8px;
-}
+.ftr__links a:hover, .ftr-links a:hover { border-left: 1px solid #777 !important; padding-left: 8px;}
+
+.imgzoom-hover [class*="__inr"]:hover [class*="__img"] img { transform: scale(1); }
+.imgzoom-hover [class*="__inr"] [class*="__img"] img { transform: scale(1.2); }
 
 /*
 For Mobile Friendly Navigation
