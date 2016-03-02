@@ -70,8 +70,7 @@ div:not([class*="-btn"]) > a[href]:not([class]){color: #008000;text-decoration: 
 .pinned .alert-pin-btn {margin-top: 0px;}
 
 /*truncate string / limited text */
-.hed-lmt h3,
-.hed-lmt h4 {
+.hed-lmt h3, .hed-lmt h4 {
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -159,38 +158,40 @@ li.c_active.active a {background-color: #39c; color: #fff;}
 
 /****pinterest-style****/
 .pinterest-style *, .pinterest-style  *:before, *:after {box-sizing:  border-box !important;}
-
-.pinterest-style .row {
- -moz-column-width: 18em;
- -webkit-column-width: 18em;
- -moz-column-gap: 1em;
- -webkit-column-gap:1em; 
-  
-}
-
-.pinterest-style .item {
- display: inline-block;
- padding:  .25rem;
- width:  100%; 
-}
-
-.pinterest-style .well {
- position:relative;
- display: block;
-}
+.pinterest-style .row {-moz-column-width: 18em; -webkit-column-width: 18em; -moz-column-gap: 1em; -webkit-column-gap:1em;}
+.pinterest-style .item { display: inline-block; padding:  .25rem; width:  100%; }
+.pinterest-style .well { position:relative; display: block;}
 /****./pinterest-style****/
 
 
-
-/*======== SPACING & ALIGNMENTS ========*/
+/*=== SPACING & ALIGNMENTS ===*/
 /*for flat icons*/
-body [class*="flaticon-"]::before {
-    margin: 0;
-}
+body [class*="flaticon-"]::before {margin: 0;}
+
 /**paddings**/
-.p0{ padding: 0;}
-.pl0{ padding-left: 0;}
-.pr0{ padding-right: 0;}
+.p0{ padding:0px;}
+.pl0{ padding-left:0px;}
+.pr0{ padding-right:0px;}
+.pt0{ padding-top:0px;}
+.pb0{ padding-bottom:0px;}
+
+.p10{ padding:10px;}
+.pl10{ padding-left:10px;}
+.pr10{ padding-right:10px;}
+.pt10{ padding-top:10px;}
+.pb10{ padding-bottom:10px;}
+
+.p20{ padding:20px;}
+.pl20{ padding-left:20px;}
+.pr20{ padding-right:20px;}
+.pt20{ padding-top:20px;}
+.pb20{ padding-bottom:20px;}
+
+.p30{ padding:30px;}
+.pl30{ padding-left:30px;}
+.pr30{ padding-right:30px;}
+.pt30{ padding-top:30px;}
+.pb30{ padding-bottom:30px;}
 
 /**margins**/
 .m0{ margin:0px;}
@@ -198,9 +199,24 @@ body [class*="flaticon-"]::before {
 .mr0{ margin-right:0px;}
 .mt0{ margin-top:0px;}
 .mb0{ margin-bottom:0px;}
-.mt30{ margin-top:30px;}
-.mb30{ margin-bottom:30px; }
 
+.m10{ margin:10px;}
+.ml10{ margin-left:10px;}
+.mr10{ margin-right:10px;}
+.mt10{ margin-top:10px;}
+.mb10{ margin-bottom:10px;}
+
+.m20{ margin:20px;}
+.ml20{ margin-left:20px;}
+.mr20{ margin-right:20px;}
+.mt20{ margin-top:20px;}
+.mb20{ margin-bottom:20px;}
+
+.m30{ margin:30px;}
+.ml30{ margin-left:30px;}
+.mr30{ margin-right:30px;}
+.mt30{ margin-top:30px;}
+.mb30{ margin-bottom:30px;}
 
 /**widths**/
 .w10{width:10%;}
@@ -215,11 +231,7 @@ body [class*="flaticon-"]::before {
 .w100{width:100%;}
 
 /*section divider - use w/<HR>*/
-.dvr, .dvr-cont .container {
-    margin: 30px 0;
-    height: 1px;
-    border-top: 1px solid #ccc;
-}
+.dvr, .dvr-cont .container {margin: 30px 0; height: 1px; border-top: 1px solid #ccc;}
 
 .pul-lft {float: left;}
 .pul-rgt {float: right;}
@@ -232,7 +244,7 @@ body [class*="flaticon-"]::before {
 
 
 
-/*========= IMG =========*/
+/*=== IMG ===*/
 .ovrflw { overflow: hidden; }
 
 .ovrimg { overflow: hidden; }
@@ -240,65 +252,31 @@ body [class*="flaticon-"]::before {
 
 body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
-.gray-img img {
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
-}
+.gray-img img {-webkit-filter: grayscale(1);filter: grayscale(1);}
 
-.drp-shad {
-	filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
-	-webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
-}
+.drp-shad {filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));	-webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));}
 		
-/*========= BG ========*/
-.wide-box-holder {
- clear:both;
-    position: relative;
- overflow:hidden;
-}.
+/*=== BG ===*/
+.wide-box-holder {clear:both;position: relative;overflow:hidden;}
 
-.ovrvis{ overflow:visible; }
+.ovrvis{overflow:visible;}
 
-.section-bg {
-    height: auto;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    z-index: -80;
-	text-align:center;
-}
+.section-bg {height:auto;left:0;position:absolute;right:0;top:0;width:100%;z-index:-80;text-align:center;}
 
-.section-bg > img {
-    height: auto;
-    width:100%;
-}
+.section-bg > img {height: auto; width:100%;}
 
 .bg-cntr {background-repeat: no-repeat; background-position: center;}
 .bg-full,.bg-cvr {background-size: cover;}
 
 /*relative for inside of wide box*/
-.posrel {
-    overflow: hidden;
-    position: relative;
-}
-.posrel .section-bg ~ * {
-    position: relative;
-}
+.posrel {overflow: hidden;position: relative;}
+.posrel .section-bg ~ * {position: relative;}
 
-/*========= LIST  ========*/
+/*=== LIST ===*/
 
-.zebra-cross > *:nth-child(2n+1){
- background-color:#eee;
-}
+.zebra-cross > *:nth-child(2n+1){background-color:#eee;}
 
-
-.vcntrlist ul {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
+.vcntrlist ul {align-items: center; display: flex; justify-content: center;}
 
 .clrlist ul {padding: 0; margin-bottom:0;}
 .clrlist li {display: inline-block;list-style-type: none;}
