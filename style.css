@@ -33,7 +33,7 @@ src: local('Proxima Nova Regular'), url('css/ProximaNovaRegular.woff') format('w
 /**for 100% heights**/
 body, html{ height: 100%; padding: 0;}
 
-body .navbar-brand { padding: 5px; }
+body .navbar-brand {padding: 5px; max-width: 200px;}
 
 body{font-family:"Open Sans"; overflow-x: hidden;}
 
