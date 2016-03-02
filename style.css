@@ -50,12 +50,15 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Proxima Nova";
 /*clear heading margins*/
 .clrhm h1, .clrhm h2, .clrhm h3, .clrhm h4, .clrhm h5, .clrhm h6  { margin:0px; }
 
+/*center align H2 and P in section */
+.hed-cntr .container > h2, .hed-cntr .container > p, .hed-cntr .container > .lnk-btn { text-align: center; }
+
+.hed.crossline {text-align: center;}
+.hed.crossline h2 {text-align: center; display: inline-block; background-color: #fff; padding: 0 0.4em;}
+.hed.crossline hr { margin-top: -28px; margin-bottom: 40px; border-color: #333;}
+
 .inkd{font-family:"Zeyada";}
 
-/*center align H2 and P in section */
-.hed-cntr .container > h2, .hed-cntr .container > p, .hed-cntr .container > .lnk-btn {
-    text-align: center;
-}
 .dwnlod-btn > a {display: inline-block; background-color: #0a0; color: #fff; padding: 10px 15px;}
 
 /*default links|complex*/
