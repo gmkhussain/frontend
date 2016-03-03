@@ -133,17 +133,22 @@ div:not([class*="-btn"]) > a[href]:not([class]){color: #008000;text-decoration: 
 .more-btn a {background-color: #39c; padding: 0.5em 0.5em; color: #fff;}
 [class*="-btn"] a {display: inline-block;}
 
-/*======TABLE Responsive=======*/
+/*===TABLE Responsive===*/
 @media only screen and (max-width : 768px) {
 .table-area th {display: none;}
 .table-area td::before {content: attr(for); display: block; font-weight: 600;}
 .table-area td {display: block;text-align: center;}
 }
-/*======./TABLE Responsive=======*/
+/*===./TABLE Responsive===*/
+
+
+/*===TABS===*/
+/*tab-content border,height*/ body .tab-content { border: 1px solid #ccc; border-top: 0; min-height: 150px;}
 
 /**tabs**/
 li.c_active.active a {background-color: #39c; color: #fff;}
 /**./tabs**/
+/*===./TABS===*/
 
 /**scrollToTop**/
 .scrollToTop {
