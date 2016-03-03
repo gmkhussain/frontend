@@ -51,7 +51,7 @@
   <body class="">
 
 <header>
-	<section class="hdr hdr--sticky cross-toggle bg-white" data-navitemlimit="6">
+	<section class="hdr hdr--sticky cross-toggle bg-white" data-navitemlimit="5">
 	
 	<div class="alert alert-bar">
 		<div class="container">
@@ -94,7 +94,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div id="slidemenu">
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					  <ul class="nav navbar-nav">
+					  <ul class="nav navbar-nav navbar-main">
 						<li class="active"><a href="#!1">Link One</a></li>
 						<li><a href="#!2">Link 2</a></li>
 						<li><a href="#!3">Link III<span class="new badge">2</span></a></li>
@@ -132,13 +132,39 @@
 						
 					  </ul>
 					  
-            <form action="#" class="search-fom expand-search pul-rgt">
+					  <ul class="nav navbar-nav pul-rgt ">
+					  		<li class="dropdown user user-menu pul-rgt">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							  <span class="usr-name">James Robert</span>
+							</a>
+									<ul class="dropdown-menu">
+									  <li class="user-header">
+										<span class="dp"><img src="images/usr.jpg" alt="user"></span>
+										<p>James Robert <small>- Web Developer</small></p>
+										<small>Member since 31 March. 2013</small>
+									  </li>
+									  <li class="user-footer">
+										<div class="pull-left">
+										  <a href="#" class="btn btn-default btn-flat">Profile</a>
+										</div>
+										<div class="pull-right">
+										  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+										</div>
+									  </li>
+									</ul>
+							</li>
+						</ul>
+						
+            <form action="#" class="search-fom expand-search0 pul-rgt">
                 <div class="form-group has-feedback">
                     <label for="search" class="sr-only">Search</label>
                     <input type="text" class="form-control" name="search" id="search" placeholder="search">
                     <button type="submit"><i class="glyphicon glyphicon-search"></i> Search</button>
                 </div>
             </form>
+			
+
+						
 							
 					</div><!-- /.navbar-collapse -->
 				</div>

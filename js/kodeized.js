@@ -501,7 +501,7 @@ jQuery('table th').each(function (i) {
 jQuery( document ).ready(function() {
 moreNavLimit = jQuery(".hdr").attr("data-navitemlimit");
 
-jQuery(".navbar-nav > li").each(function (i) {
+jQuery(".navbar-main > li").each(function (i) {
 	i=i+1; //Counting Total Nav Items
 
 	//Adding Class for Extra ILs

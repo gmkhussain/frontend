@@ -1104,6 +1104,14 @@ body .dontfly.swiper-container .swiper-slide img {max-width: 100%;max-height: 12
 .datepicker-dropdown span.month:nth-child(5), span.month:nth-child(9) { clear: both; }
 .datepicker-dropdown td.old.day, .datepicker-dropdown  td.new.day { opacity: .2; }
 /*===./datepicker===*/
+
+/**dashboard-user-menu**/
+li.dropdown.user-menu .dropdown-menu {min-width: 210px; padding: 0 !important; }
+li.dropdown.user-menu .user-header { background-color: #f7f7f7; padding: 10px; }
+li.dropdown.user-menu .dp { height: 90px; display: block; overflow: hidden; width: 90px; border: 3px solid #fff; border-radius: 50%; margin: 0 auto 10px;}
+li.dropdown.user-menu li.user-footer { padding: 10px; float: left; width: 100%;}
+/**./dashboard-user-menu**/
+
 /**********./gmk classes***********/
 
 
