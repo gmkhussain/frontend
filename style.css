@@ -127,6 +127,7 @@ div:not([class*="-btn"]) > a[href]:not([class]){color: #008000;text-decoration: 
 }
 
 .label,.badge {position: relative; border-radius: 3px; margin-left: 3px;}
+/*label less bolder*/ body label { font-weight: 600;}
 
 /*==Buttons/Btn==*/
 .more-btn a {background-color: #39c; padding: 0.5em 0.5em; color: #fff;}
@@ -170,6 +171,9 @@ li.c_active.active a {background-color: #39c; color: #fff;}
 /*=== SPACING & ALIGNMENTS ===*/
 /*for flat icons*/
 body [class*="flaticon-"]::before {margin: 0;}
+
+/**borders**/
+.bdr1 { border: 1px solid #ccc; }
 
 /**paddings**/
 .p0{ padding:0px;}
