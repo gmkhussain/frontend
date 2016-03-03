@@ -1084,6 +1084,17 @@ section[class*="-area"] {
 .swiper-container * {transition: all 2s !important;-webkit-transition: all 2s !important;}
 body .dontfly.swiper-container .swiper-slide {display: inline-block;width: auto;margin-right:15px;}
 body .dontfly.swiper-container .swiper-slide img {max-width: 100%;max-height: 120px;}
+
+/*===datepicker===*/
+.datepicker.datepicker-dropdown {background-color: #fff; padding: 10px; text-align: center;}
+.datepicker.datepicker-dropdown td, .datepicker.datepicker-dropdown th {border: 1px solid #fff;text-align: center;}
+.datepicker.datepicker-dropdown td, .datepicker.datepicker-dropdown th {border: 1px solid #ccc; text-align: center; padding: 10px !important;}
+.datepicker.datepicker-dropdown td.active.day,
+.datepicker.datepicker-dropdown td:hover { background-color: #39c; font-weight: bold; cursor: pointer; color:#fff;}
+.datepicker-dropdown span.month { border: 1px solid #ccc; padding: 5px; width: 60px; display: block; float: left; margin: -1px -1px 0 0; }
+.datepicker-dropdown span.month:nth-child(5), span.month:nth-child(9) { clear: both; }
+.datepicker-dropdown td.old.day, .datepicker-dropdown  td.new.day { opacity: .2; }
+/*===./datepicker===*/
 /**********./gmk classes***********/
 
 
