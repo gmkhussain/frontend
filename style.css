@@ -925,8 +925,8 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{
     content: "\f105";
 }
 
-/***multi level submenu spacing***/
-li.dropdown.moreMover ul.dropdown-menu {
+/***multi level submenu spacing*** -issue fixed .moreMover- **/
+.nav.navbar-nav ul.dropdown-menu ul.dropdown-menu {
     margin-left: 90%;
     margin-top: -20px;
 }
