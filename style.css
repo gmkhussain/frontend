@@ -292,7 +292,7 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
 .clrlist ul {padding: 0; margin-bottom:0;}
 .clrlist li {display: inline-block;list-style-type: none;}
-/*width issue fixed for inner UL LI*/ .clrlist li ul li {display: initial;} 
+/*width issue fixed for inner UL LI*/ .clrlist li ul li {display: inherit;} 
 
 .listview ul li {display:block;}
 
