@@ -408,6 +408,7 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 .slider.fadeft .carousel-inner > .next img {opacity: 0;}
 
 /*===FORM===*/
+/*overlapping issue fixed for random heights*/ .form-group {clear: both;}
 /*Placeholder*/
 .form-control::-moz-placeholder { color:#ccc;}
 .form-control:-ms-input-placeholder { color:#ccc;}
