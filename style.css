@@ -458,23 +458,9 @@ input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset;}
 }
 /***./submit button on right***/
 
-
-
-.lbl20 label {
-    width: 20%;
-    display: inline-block;
-    float: left;
-    line-height: 40px;
-}
-
-.lbl20 .form-group > .form-control {
-    width: 80%;
-    display: inline-block;
-}
-.lbl20 .form-control[type="submit"],
-.lbl20 .form-control[type="button"] {
-    margin-left: 20%;
-}
+.lbl20 label { width: 20%; display: inline-block; float: left; line-height: 40px; }
+.lbl20 .form-group > .form-control { width: 80%; display: inline-block; }
+.lbl20 .form-control[type="submit"], .lbl20 .form-control[type="button"] { margin-left: 20%; }
 
 textarea {min-height: 50px; max-width:100%;}
 
@@ -580,12 +566,7 @@ option:hover { background-color: #fafafa;}
 
 
 
-.hidden-checkbox [type="checkbox"] {
-    display: none;
-}
-
-
-
+.hidden-checkbox [type="checkbox"] { display: none; }
 /*checkylbl*/
 /*Button is :CHECKED*/
 input[type="checkbox"]:checked ~ .checkylbl {
@@ -736,9 +717,8 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 /***./-->label animation***/
 
 
-.inputgroup {
-    position: relative;
-}
+.inputgroup { position: relative; }
+.inline-control .form-group, .inline-control .form-control { display: inline-block; width: auto; margin-right: 1%; }
 
 
 .noklft:before {
