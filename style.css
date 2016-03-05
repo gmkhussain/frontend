@@ -467,7 +467,7 @@ input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset;}
     line-height: 40px;
 }
 
-.lbl20 .form-control {
+.lbl20 .form-group > .form-control {
     width: 80%;
     display: inline-block;
 }
