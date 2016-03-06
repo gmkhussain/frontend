@@ -286,6 +286,41 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 .posrel .section-bg ~ * {position: relative;}
 
 /*=== LIST ===*/
+/**package tag**/
+.tri-badge {
+    position: absolute;
+    top: -8px;
+    right: -50px;
+    transform: rotate(45deg);
+    width: 140px;
+    padding: 0px;
+    box-sizing: border-box;
+    height: 60px;
+    background-color: yellowgreen;
+    box-shadow: 0 0 10px 5px #eee;
+}
+
+.tri-badge .txt {
+    width: 60px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 600;
+}
+/**./package tag**/
+
+/**./list vertical align**/
+.listgrid-valign li {
+    border: 1px solid #f7f7f7;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 15px;
+	min-height:100px;
+}
+/**./list vertical align**/
 
 .zebra-cross > *:nth-child(2n+1){background-color:#eee;}
 
