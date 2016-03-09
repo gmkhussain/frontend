@@ -615,9 +615,9 @@ jQuery(multiLangLink).click(function() {
 
 
 
-
-
-
+jQuery(document).ready(function(){
+    jQuery(".mask4num").mask("(99) 9999-9999");
+});
 
 
 /***WordPress SubMenu Styling**/

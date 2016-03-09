@@ -706,6 +706,8 @@
 					 <label>Name</label>
 		        </div>
 				
+				
+				
 				<div class="form-group date0">
 		            <input type="text" class="form-control" name="fullname" data-provide="datepicker" />
 					 <label>Date</label>
@@ -788,7 +790,10 @@
 					 <label>Name</label>
 					 <input type="text" class="form-control" name="fullname" placeholder="GMK Hussain" required/>
 		        </div>
-				
+				<div class="form-group">
+		            <input type="text" class="form-control mask4num " name="fullname" placeholder="(99) 9999-9999" />
+					 <label>Date</label>
+		        </div>
 				<div class="form-group date0">
 		            <label>Date</label>
 					<input type="text" class="form-control" name="fullname" data-provide="datepicker" />
@@ -824,6 +829,73 @@
 				</div>
 				
 				<div class="clearfix"></div>
+				<hr>
+				
+				
+				<div class="masked-input">
+				
+				 <h1>Masked Input Examples</h1>
+					<form id="form1" method="post">
+    <div class="form-group col-sm-4">
+      <label for="phone" class="required">Phone Number</label>
+      <div class="control-input">
+        <input type="text" id="phone" name="phone" class="form-control" data-masked-input="999-999-9999" placeholder="XXX-XXX-XXXX" maxlength="12">
+      </div>
+    </div>
+
+    <div class="form-group col-sm-4">
+      <label for="cphone" class="required">Cell Number</label>
+      <div class="control-input">
+        <input type="text" id="cphone" name="cphone" class="form-control" data-masked-input="(999) 999-9999" placeholder="(XXX) XXX-XXXX" maxlength="14">
+      </div>
+    </div>
+
+    <div class="form-group col-sm-4">
+      <label for="dob">Birth Date</label>
+      <div class="control-input">
+        <input type="text" id="dob" name="dob" class="form-control" data-masked-input="99/99/9999" placeholder="MM/DD/YYYY" maxlength="10">
+      </div>
+    </div>
+
+    <div class="form-group col-sm-4">
+      <label for="expire-date">Expiry Date</label>
+      <div class="control-input">
+        <input type="text" id="expire-date" name="expire-date" class="form-control" data-masked-input="99/99" placeholder="MM/YY" maxlength="5">
+      </div>
+    </div>
+
+    <div class="form-group col-sm-4">
+      <label for="zip">Zip</label>
+      <div class="control-input">
+        <input type="text" id="zip" name="zip" class="form-control" data-masked-input="99999" placeholder="XXXXX" maxlength="5">
+      </div>
+    </div>
+
+    <div class="form-group col-sm-4">
+      <label for="test">Test</label>
+      <div class="control-input">
+        <input type="text" id="test" name="test" class="form-control" data-masked-input="XXX" placeholder="ABC" maxlength="3">
+      </div>
+    </div>
+
+    <div class="form-group col-sm-4">
+      <label for="test2">Test</label>
+      <div class="control-input">
+        <input type="text" id="test2" name="test2" class="form-control" data-masked-input="X-9" placeholder="X-9" maxlength="3">
+      </div>
+    </div>
+
+    <div class="form-group col-sm-4">
+      <label for="wildcard">Wildcard</label>
+      <div class="control-input">
+        <input type="text" id="wildcard" name="wildcard" class="form-control" data-masked-input="*X99" placeholder="*A99" >
+      </div>
+    </div>
+  </form>
+  
+				</div>
+				
+				
 				<hr>
 				
 				<div class="lnk-btn dwnlod-btn">
@@ -1174,68 +1246,72 @@
 
 </section>
     
-
+	<!--Bootstrap-->
     <script src="js/bootstrap.min.js"></script>
+	<!--./Bootstrap-->
 	
+	<!--Major Scripts-->
 	<script src="js/viewportchecker.js"></script>
     <script src="js/kodeized.js"></script>
+	<!--./Major Scripts-->
 
-	
-	
+	<!--Masked Inputs-->
+	<script src="js/masked-input.js"></script>
+		
+	<!--Text Animation-->
 	<script src="js/morphext.js"></script>
+		<script>
+			jQuery(".morphext").Morphext({
+			  animation: "bounceIn",
+			  separator: ",",
+			  speed: 2000,
+			  complete: function() {}
+			});
+		</script>
+	<!--./Text Animation-->
 	
-	<script>
-		jQuery(".morphext").Morphext({
-		  animation: "bounceIn",
-		  separator: ",",
-		  speed: 2000,
-		  complete: function() {}
-		});
-	</script>
-	
-	
-	
+	<!--Swiper Slider-->
 	<script src="js/swiper.jquery.min.js"></script>
-	<!-- Initialize Swiper -->
-    <script>
-		var swiper = new Swiper('.swiper-container', {
-			pagination: '.swiper-pagination',
-			slidesPerView: '7',
-			centeredSlides: false,
-			paginationClickable: true,
-			nextButton: '.swiper-button-next',
-			prevButton: '.swiper-button-prev',
-			spaceBetween: 15,
-			autoplay: 2500,
-			autoplayDisableOnInteraction: false,
-			breakpoints: {
-            1024: {
-                slidesPerView: 4,
-                spaceBetween: 40
-            },
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 30
-            },
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 10
-            }
-        }
-		});
-    </script>
-
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				pagination: '.swiper-pagination',
+				slidesPerView: '7',
+				centeredSlides: false,
+				paginationClickable: true,
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				spaceBetween: 15,
+				autoplay: 2500,
+				autoplayDisableOnInteraction: false,
+				breakpoints: {
+				1024: {
+					slidesPerView: 4,
+					spaceBetween: 40
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 30
+				},
+				640: {
+					slidesPerView: 2,
+					spaceBetween: 20
+				},
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 10
+				}
+			}
+			});
+		</script>
+	<!--./Swiper Slider -->
 	
+	<!--Leave popup-->
 	<script>//When mouse out from website * add 'leavepopup' on <body>
 		jQuery('body.leavepopup').mouseleave(function() {
 			jQuery('#beforeExit').modal('show');
 		});
 	</script>
-	
+	<!--./Leave popup-->
 	
 	   </body>
 </html>
