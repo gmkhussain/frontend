@@ -1145,6 +1145,28 @@ li.dropdown.user-menu .user-header .dp { height: 90px; display: block; overflow:
 li.dropdown.user-menu li.user-footer { padding: 10px; float: left; width: 100%;}
 /**./dashboard-user-menu**/
 
+
+img.broken-image { min-height: 70px; text-align: center;}
+img.broken-image:before,img.broken-image:after {  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+img.broken-image:before {
+  content: "\f127";
+  background-color: #eee;
+  border: 2px dotted #ccc;
+  font-family: FontAwesome;
+  font-size: 2em;
+  color:#d00;
+}
+img.broken-image:after {
+  content:  "Broken Image of " attr(alt);
+  padding-top: 2.5em;
+}
+
 /**********./gmk classes***********/
 
 

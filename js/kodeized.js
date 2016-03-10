@@ -415,6 +415,23 @@ jQuery(document).ready(function(){
 
 
 
+/**links scrolling animation**/
+	jQuery(function() {
+		jQuery('.scrolink a').click(function() {
+		  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = jQuery(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+			  jQuery('html, body').animate({
+				scrollTop: target.offset().top
+			  }, 1000);
+			  return false;
+			}
+		  }
+		});
+	  });
+/**./links scrolling animation**/
+
 
 
 
@@ -440,8 +457,9 @@ $(function () {
 /**broken images fix**/
 // Replace source
 jQuery('img').error(function(){
-        jQuery(this).attr('src', 'images/noimage.jpg');
-		jQuery(this).attr('alt', 'Broken Image Replaced');
+		jQuery(this).addClass('broken-image');
+		//jQuery(this).attr('src', 'images/noimage.jpg');
+		//jQuery(this).attr('alt', 'Broken Image Replaced');
 });
 
 
@@ -487,10 +505,6 @@ jQuery('table th').each(function (i) {
 	jQuery( "table td:nth-child("+i+")" ).attr("for", tableTitle);
 	//i=i+1;
 });
-
-
-
-
 
 
 
@@ -614,10 +628,6 @@ jQuery(multiLangLink).click(function() {
 
 
 
-
-jQuery(document).ready(function(){
-    jQuery(".mask4num").mask("(99) 9999-9999");
-});
 
 
 /***WordPress SubMenu Styling**/
