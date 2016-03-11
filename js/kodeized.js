@@ -451,7 +451,10 @@ $(function () {
 });
 
 
-
+/*section height =screen*/
+jQuery(document).ready(function(){
+    jQuery('.screen-area').css("min-height", $(window).height() + 10);
+});
 
 
 /**broken images fix**/

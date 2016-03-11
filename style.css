@@ -1111,8 +1111,6 @@ http://jsfiddle.net/gmkhussain/awqs01zc/
 /**./filler**/
 
 
-
-
 .fa-facebook{ color:#2b4687; }
 .fa-twitter{ color:#118ed3; }
 .fa-google, .fa-google-plus{ color:#cf4320; }
@@ -1146,7 +1144,7 @@ li.dropdown.user-menu li.user-footer { padding: 10px; float: left; width: 100%;}
 /**./dashboard-user-menu**/
 
 
-img.broken-image { min-height: 70px; text-align: center;}
+img.broken-image { min-height: 140px; text-align: center;}
 img.broken-image:before,img.broken-image:after {  position: absolute;
   top: 0px;
   left: 0px;
@@ -1155,16 +1153,17 @@ img.broken-image:before,img.broken-image:after {  position: absolute;
   display: block;
 }
 img.broken-image:before {
-  content: "\f127";
+  content: "\f127" " - " "\f030";
   background-color: #eee;
-  border: 2px dotted #ccc;
+  border: 1px dotted #ccc;
   font-family: FontAwesome;
-  font-size: 2em;
-  color:#d00;
+  font-size: 2.4em;
+  color:#ccc;
+  padding-top:0.8em;
 }
 img.broken-image:after {
   content:  "Broken Image of " attr(alt);
-  padding-top: 2.5em;
+  padding-top: 6em;
 }
 
 /**********./gmk classes***********/
