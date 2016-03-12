@@ -451,6 +451,15 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
 
 /*===FORM===*/
+/**gentleform.js**/
+form[novalidate] .form-control.is-invalid { border-color: red; }
+form[novalidate] .form-control.is-valid { border-color: green; }
+form[novalidate] .form-control~ins:before { position: absolute; right: 0.6em; font-family: FontAwesome; bottom: 0.8em;}
+form[novalidate] .form-control.is-invalid~ins:before { content: "\f00d"; color: #d00;}
+form[novalidate] .form-control.is-valid~ins:before {content: "\f00c"; color: #0d0;}
+form[novalidate] .form-control:focus { box-shadow: none; }
+/**./gentleform.js**/
+
 /*overlapping issue fixed for random heights*/ .form-group:not([class*="col-"]) {clear: both;}
 /*Placeholder*/
 .form-control::-moz-placeholder { color:#ccc;}
@@ -1165,6 +1174,7 @@ img.broken-image:after {
   content:  "Broken Image of " attr(alt);
   padding-top: 6em;
 }
+
 
 /**********./gmk classes***********/
 

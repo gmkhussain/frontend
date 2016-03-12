@@ -725,9 +725,15 @@
 
 					
 		<h2>Form Fancy Elements</h2>
+		
 			<div class="fnc-fom col-sm-4">
-			<form>
-				<div class=" inputgroup">
+			
+			
+			
+			<form id="myform" novalidate>
+			<p><b>gentleform.js</b> needed  < form novalidate > and < ins > after inputs for add-on icons</p>
+
+			<div class=" inputgroup">
 					 <input type="checkbox" value="donut" /><label>Donut</label>
 				 </div>
 				
@@ -745,14 +751,14 @@
 
 				<div class="form-group">
 		            <input type="text" class="form-control" name="fullname" placeholder="GMK Hussain" required/>
-					 <label>Name</label>
+					<label>Name</label><ins></ins>
 		        </div>
 				
 				
 				
 				<div class="form-group date0">
-		            <input type="text" class="form-control" name="fullname" data-provide="datepicker" />
-					 <label>Date</label>
+		            <input type="text" class="form-control" name="fullname" data-provide="datepicker" required />
+					 <label>Date</label><ins></ins>
 		        </div>
 								
 				<div class="form-group">
@@ -761,7 +767,7 @@
 						<option>Clusterized</option>
 						<option>GMK Hussain</option>
 					</select>
-					<label>Select your option</label>
+					<label>Select your option</label><ins></ins>
 				</div>
 
 			    <div class="form-group range-field">
@@ -769,7 +775,7 @@
 				</div>
 				 
 		        <div class="form-group"> 
-		            <textarea id="message" name="message" class="form-control" placeholder="gmk.hussain@yahoo.com" required></textarea><label>Message</label>
+		            <textarea id="message" name="message" class="form-control" placeholder="gmk.hussain@yahoo.com" required></textarea><label>Message</label><ins></ins>
 		        </div>
 
 		        <div class="form-group button-btn">
@@ -1299,6 +1305,17 @@
 
 	<!--Masked Inputs-->
 	<script src="js/masked-input.js"></script>
+	
+	<!--GentleForm-->
+	<script src="js/gentleform.js"></script>
+	<script>
+		  var element = document.getElementById('myform') /*form ID*/
+		  var form = GentleForm(element, function (event) {
+			event.preventDefault()
+			console.log(arguments, this)
+		  })
+	</script>
+	<!--./GentleForm-->
 		
 	<!--Text Animation-->
 	<script src="js/morphext.js"></script>
