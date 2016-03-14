@@ -172,11 +172,11 @@ jQuery(function() {
 
 //fnc-fom label animation//
 	jQuery('.fnc-fom .form-control').focusout(function(){
-	var text_value=$(this).val();
+	var text_value=jQuery(this).val();
      if(text_value!='')
        {
 		jQuery(this).addClass("has-value");
-        }else{ $(this).removeClass("has-value"); }
+        }else{ jQuery(this).removeClass("has-value"); }
 	});
 //./fnc-fom label animation//
 
@@ -289,7 +289,7 @@ if (jQuery(this).scrollTop() > 1){
 //SLIDER ARROW BTN - HOME PAGE
 jQuery(".dwn-scroll").click(function() {
     jQuery('html, body').animate({
-        scrollTop: $(".dwn-scroll").offset().top
+        scrollTop: jQuery(".dwn-scroll").offset().top
     }, 1500);
 });
 
@@ -438,11 +438,11 @@ jQuery(document).ready(function(){
 
 
 //Inner Pages Filler Script
-$(function () {
-    $(window).scroll(function () {
-        var $myDiv = $('.fill-mask');
+jQuery(function () {
+    jQuery(window).scroll(function () {
+        var $myDiv = jQuery('.fill-mask');
         var y = $(this).scrollTop();
-        $('#results').text(y);
+        jQuery('#results').text(y);
         x = y - 3;
         $myDiv.animate({
             height: x
