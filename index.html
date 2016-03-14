@@ -386,7 +386,7 @@
 				</ul>
 				
 				<br/><h1>I'm... <span class="blurtxt">Blur Text</span> </h1>
-				<br/>
+				<br/><kbd>cd</kbd>
 					<div class="col-sm-2 shad-dp20 pul-lft">I am Left <b>.pul-lft</b></div>
 				<br/>
 					<div class="col-sm-2 shad-dp20 pul-cntr">I am Center <b>.pul-cntr</b></div>
@@ -754,6 +754,11 @@
 					<label>Name</label><ins></ins>
 		        </div>
 				
+				<div class="form-group">
+		            <input type="text" class="form-control" name="fullname" placeholder="http//www.demo.com" pattern="https?://.+" />
+					<label>Website Url</label><ins></ins>
+		        </div>
+				
 				
 				
 				<div class="form-group date0">
@@ -1061,6 +1066,10 @@
 			<div class="broken-img col-sm-3">
 				<h2>Broken Image</h2>
 				<img src="images/broken-image.jpg" alt="Broken Image">
+			</div>
+			
+			<div id="zoomjs" class="col-sm-4">
+				<img src="images/slide1.jpg" alt="" data-action="zoom" />
 			</div>
 			
 			
@@ -1371,6 +1380,11 @@
 		});
 	</script>
 	<!--./Leave popup-->
+	
+	<!--ZoomJS-->
+	<script src="js/zoom.js"></script>
+	<style>.zoom-img-wrap{position: relative; z-index: 333;}</style>
+    <!--./ZoomJS-->
 	
 	   </body>
 </html>
