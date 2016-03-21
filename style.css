@@ -62,6 +62,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Proxima Nova";
 
 .dwnlod-btn > a {display: inline-block; background-color: #0a0; color: #fff; padding: 10px 15px;}
 
+.dropcaps > p:first-child:first-letter {font-size: 2em;}
+
 /*default links|complex*/
 div:not([class*="-btn"]) > a[href]:not([class]){color: #008000;text-decoration: underline;}
 .cr a {color: #fff;}
@@ -74,20 +76,9 @@ div:not([class*="-btn"]) > a[href]:not([class]){color: #008000;text-decoration: 
 .pinned .alert-pin-btn {margin-top: 0px;}
 
 /*truncate string / limited text */
-.hed-lmt h3, .hed-lmt h4 {
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
+.hed-lmt h3, .hed-lmt h4 {display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 /*truncate string P tag content */
-.cont-lmt p{
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
+.cont-lmt p{ display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /**read more read less content**/
 .moreless.on {
@@ -100,16 +91,9 @@ div:not([class*="-btn"]) > a[href]:not([class]){color: #008000;text-decoration: 
   text-overflow: ellipsis;
 }
 
-.blurtxt {
-   color: transparent;
-   text-shadow: 0 0 5px rgba(0,0,0,0.5);
-}
+.blurtxt { color: transparent; text-shadow: 0 0 5px rgba(0,0,0,0.5); }
 
-.shad-dp20 {
-    box-shadow: 0px 10px 20px 7px #eee;
-    padding: 10px;
-    border: 1px solid #f7f7f7;
-}
+.shad-dp20 { box-shadow: 0px 10px 20px 7px #eee; padding: 10px; border: 1px solid #f7f7f7; }
 
 /*hide active language from dropdown list*/
 .lang a.selctd-lang {display: none;}
