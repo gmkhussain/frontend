@@ -834,93 +834,41 @@ body .navbar-default .navbar-collapse {background: transparent;}
 body #slide-nav #slidemenu {background-color: transparent;}
 /**./side nav bg transparent**/
 
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
-    background-color: transparent;
-}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{ background-color: transparent; }
 
+.navbar.navbar-default { background-color: transparent; border: 0 none; margin: 0; }
 
-.navbar.navbar-default {
-    background-color: transparent;
-    border: 0 none;
-    margin: 0;
-}
-
-.nav-cntr .navbar-nav > li {
-    display: inline-block;
-    float: none;
-}
-.nav-cntr .navbar-nav.nav {
-    text-align: center;
-    width: 100%;
-}
+.nav-cntr .navbar-nav > li { display: inline-block; float: none; }
+.nav-cntr .navbar-nav.nav { text-align: center; width: 100%; }
 
 
 @media only screen and (max-width : 768px) {
-body .nav.navbar-nav {
-    margin: 0;
-}
+body .nav.navbar-nav { margin: 0; }
 
-.navbar-toggle {
-    border-color: transparent !important;
-	min-height:35px;
-}
-
-.navbar-toggle:hover,.navbar-toggle:focus {
-    background-color: transparent !important;
-	min-height:35px;
-}
+.navbar-toggle { border-color: transparent !important; min-height:35px;}
+.navbar-toggle:hover,.navbar-toggle:focus { background-color: transparent !important; min-height:35px;}
 
 /**arrow toggle icon-bar**/
-
-body .arr-toggle .navbar-toggle.collapsed .icon-bar{
-	left:0px;
-	top:0px;
-	transform:unset;
-	width:100% !important;
-}
-
-.arr-toggle .navbar .icon-bar:nth-child(3) {
-    left: 3px;
-    position: relative;
-}
-.arr-toggle .navbar .icon-bar:nth-child(2) {
-    left: 1px;
-    position: relative;
-    top: 2px;
-    transform: rotate(-50deg);
-    width: 50% !important;
-}
-.arr-toggle .navbar .icon-bar:nth-child(4) {
-    left: 1px;
-    position: relative;
-    top: -2px;
-    transform: rotate(50deg);
-    width: 50% !important;
-}
+body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transform:unset; width:100% !important;}
+.arr-toggle .navbar .icon-bar:nth-child(3) { left: 3px; position: relative; }
+.arr-toggle .navbar .icon-bar:nth-child(2) { left: 1px; position: relative; top: 2px; transform: rotate(-50deg); width: 50% !important;}
+.arr-toggle .navbar .icon-bar:nth-child(4) { left: 1px; position: relative; top: -2px; transform: rotate(50deg); width: 50% !important;}
 /**./arrow toggle icon-bar**/
 
 
 /***close icon on navbar***/
-.cross-toggle .navbar .icon-bar:nth-child(2) {
-    position: relative;
-    top: 6px;
-    transform: rotate(45deg);
-}
-.cross-toggle .navbar .icon-bar:nth-child(3) {
-    display: none !important;
-}
-.cross-toggle .navbar .icon-bar:nth-child(4) {
-    top: -3px;
-    transform: rotate(-45deg);
-}
+.cross-toggle .navbar .icon-bar:nth-child(2) { position: relative; top: 6px; transform: rotate(45deg); }
+.cross-toggle .navbar .icon-bar:nth-child(3) { display: none !important;}
+.cross-toggle .navbar .icon-bar:nth-child(4) { top: -3px; transform: rotate(-45deg); }
 /***need to add collapsed on navbar-toggle***/
-.cross-toggle  .navbar-toggle.collapsed .icon-bar {
-    top: auto;
-    transform: none;
-    display: block !important;
-}
+.cross-toggle  .navbar-toggle.collapsed .icon-bar { top: auto; transform: none; display: block !important; }
 /***./close icon on navbar***/
 
+
+/*navbar .sr-only visible for mobile screen*/
+.nav-lbl button.navbar-toggle { width: 100% !important; }
+.nav-lbl button.navbar-toggle .sr-only { position: static; width: auto; clip: inherit; overflow: visible; color: #aaa; font-size: 1.2em; font-weight: 600; text-transform: uppercase; float:right;}
+.nav-lbl #slide-nav .navbar-toggle > .icon-bar { width: 30px;}
 
 }
 
