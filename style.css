@@ -321,6 +321,7 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
     margin-right: 1em;
     padding-right: 1em;
 }
+.clrnav li>a { padding: 0em;} /*.clrnav clear spacing for .listdvr */
 
 [class*="list-col-"] ul { padding:0; }
 
