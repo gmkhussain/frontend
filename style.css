@@ -923,6 +923,10 @@ body .dropdown.open > .dropdown-menu {
 }
 /*./dropdown-menu*/
 
+/*navbar-move active navbar item*/
+.navbar-move #mark { background-color: #39c; display: inline-block; position: absolute; z-index: 159; height: 2px; left:-9999; }
+/*./navbar-move active navbar item*/
+
 
 /*
 Note: see bottom note

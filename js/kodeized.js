@@ -528,7 +528,7 @@ jQuery(".navbar-main > li").each(function (i) {
 	
   //Adding SubMenu for Extra ILs
   if(i == moreNavLimit){
-  nv = "<li class='dropdown' id='moreMenu'><a href='#' class='dropdown-toggle' data-toggle='dropdown'>More... (Limit: " + moreNavLimit + ") </a><ul id='moreSubMenu' class='dropdown-menu'></ul></li>";
+  nv = "<li class='dropdown' id='moreMenu'><a href='#' class='dropdown-toggle' data-toggle='dropdown'>More... <span class='new badge'>" + moreNavLimit + "</span></a><ul id='moreSubMenu' class='dropdown-menu'></ul></li>";
    // nv="<li><a>MO</a></li>";
   	jQuery( nv ).insertAfter( this );
   	//jQuery( this ).append( "<li>d</li>" );
@@ -616,6 +616,33 @@ jQuery('.panel-heading a').click(function() {
 		jQuery('.alert-bar').toggleClass('pinned');
 	});
 /*./smart alert bar*/
+
+
+
+/*navbar-move active navbar item*/
+jQuery(".navbar-move li").hover(function( event ) {
+  jQuery( ".navbar-move li" ).removeClass("yahan");
+  jQuery( this ).addClass("yahan");
+  var p = jQuery( ".yahan" );
+  var position = p.position();
+  //$( "p" ).text( "left: " + position.left + ", top: " + position.top );
+  
+  var offset = jQuery( this ).offset();
+  //event.stopPropagation();
+  var corlft = offset.left;
+  var corwid =  jQuery( this ).outerWidth();
+ // alert(corwid);
+  jQuery("#mark").css( "left", position.left);
+  jQuery("#mark").css("width", corwid);
+});
+
+jQuery(".navbar-move li").mouseout(function( event ) {
+  jQuery("#mark").css( "left", "-999px");
+  jQuery( ".navbar-move li" ).removeClass("yahan");
+});
+/*./navbar-move active navbar item*/
+
+
 
 
 /**mutilang**/
