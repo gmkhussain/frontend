@@ -975,28 +975,14 @@ http://jsfiddle.net/gmkhussain/awqs01zc/
 /***modal***/
 [data-toggle="modal"] {cursor: pointer; /*cursor for modal link*/ }
 
-.modal-dialog {
-    top: 20%;
-}
+/*modal onload jerking issue fixed */
+body.modal-open { overflow: visible; }
+body.modal-open .modal { margin-right: -1.2em;}
 
-.modal .close {
-    background-color: #d00;
-    color: #fff;
-    font-size: 2em;
-    height: 30px;
-    margin: 0;
-    opacity: 1;
-    position: absolute;
-    right: 0;
-    text-shadow: none;
-    top: 0;
-    width: 30px;
-}
-.modal-content {
-    border: 7px solid #eee;
-    border-radius: 0;
-    box-shadow: 0 20px 140px 13px #666;
-}
+
+.modal-dialog { top: 20%;}
+.modal .close { background-color: #d00; color: #fff; font-size: 2em; height: 30px; margin: 0; opacity: 1; position: absolute; right: 0; text-shadow: none; top: 0; width: 30px;}
+.modal-content { border: 7px solid #eee; border-radius: 0; box-shadow: 0 20px 140px 13px #666;}
 /***./modal***/
 
 
@@ -1031,29 +1017,9 @@ http://jsfiddle.net/gmkhussain/awqs01zc/
 
 
 /*filler*/
-.fill-holder {
-    background-image: url("images/fill-def.jpg");
-    float: none;
-    height: 100%;
-    left: 0;
-    margin: 0 auto;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    width: 36px;
-    z-index: 100;
-}
-.fill-mask {
-    background-image: url("images/fill-mask.png");
-    background-repeat: repeat;
-    height: 100%;
-}
-
-.fill-move {
-    background-color: #4090d7;
-    background-repeat: repeat;
-    height: auto;
-}
+.fill-holder { background-image: url("images/fill-def.jpg"); float: none; height: 100%; left: 0; margin: 0 auto; overflow: hidden; position: absolute; top: 0; width: 36px; z-index: 100;}
+.fill-mask { background-image: url("images/fill-mask.png"); background-repeat: repeat; height: 100%;}
+.fill-move { background-color: #4090d7; background-repeat: repeat; height: auto;}
 /**./filler**/
 
 
