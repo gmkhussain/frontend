@@ -619,28 +619,35 @@ jQuery('.panel-heading a').click(function() {
 
 
 
-/*navbar-move active navbar item*/
+
+/***navbar-move active navbar item***/
+/*hover mark to nav item*/
 jQuery(".navbar-move li").hover(function( event ) {
   jQuery( ".navbar-move li" ).removeClass("yahan");
   jQuery( this ).addClass("yahan");
   var p = jQuery( ".yahan" );
   var position = p.position();
-  //$( "p" ).text( "left: " + position.left + ", top: " + position.top );
-  
   var offset = jQuery( this ).offset();
-  //event.stopPropagation();
   var corlft = offset.left;
   var corwid =  jQuery( this ).outerWidth();
- // alert(corwid);
+ 
   jQuery("#mark").css( "left", position.left);
   jQuery("#mark").css("width", corwid);
 });
 
+/*return mark to active nav item*/
 jQuery(".navbar-move li").mouseout(function( event ) {
-  jQuery("#mark").css( "left", "-999px");
-  jQuery( ".navbar-move li" ).removeClass("yahan");
+  var acti = ".navbar-move li.active";
+    jQuery( acti ).removeClass("yahan");
+  jQuery( acti ).addClass("yahan");
+  var p = jQuery( ".yahan" );
+  var position = p.position();
+  var offset = jQuery( acti ).offset();
+  var corlft = offset.left;
+  var corwid =  jQuery( acti ).outerWidth();
+  jQuery("#mark").css( "left", position.left);
+  jQuery("#mark").css("width", corwid);
 });
-/*./navbar-move active navbar item*/
 
 
 
