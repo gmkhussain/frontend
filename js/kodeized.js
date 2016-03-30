@@ -642,7 +642,7 @@ jQuery(".navbar-move li").hover(function( event ) {
 /*return mark to active nav item*/
 jQuery(".navbar-move li").mouseout(function( event ) {
   var acti = ".navbar-move li.active";
-    jQuery( acti ).removeClass("yahan");
+    jQuery( this ).removeClass("yahan");
   jQuery( acti ).addClass("yahan");
   var p = jQuery( ".yahan" );
   var position = p.position();
