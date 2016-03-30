@@ -262,7 +262,6 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 .ovrvis{overflow:visible;}
 
 .section-bg {height:auto;left:0;position:absolute;right:0;top:0;width:100%;z-index:-80;text-align:center;}
-
 .section-bg > img {height: auto; width:100%;}
 
 .bg-cntr {background-repeat: no-repeat; background-position: center;}
@@ -319,32 +318,23 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
 .listview ul li {display:block;}
 
-.listdvr li:not(:last-child) {
-    border-right: 1px solid hotpink;
-    margin-right: 1em;
-    padding-right: 1em;
-}
+.listdvr li:not(:last-child) { border-right: 1px solid hotpink; margin-right: 1em; padding-right: 1em;}
+
 .clrnav li>a { padding: 0em;} /*.clrnav clear spacing for .listdvr */
 
 [class*="list-col-"] ul { padding:0; }
-
-[class*="list-col-"] ul li {
-    display: inline-block;
-    float: left;
-}
+[class*="list-col-"] ul li { display: inline-block; float: left;}
 
 .cols-5 { width:20%; }
 
-.list-col-2 ul li {    width: 50%;   }
-.list-col-3 ul li {    width: 33.33%;   }
-.list-col-4 ul li {    width: 25%;   }
-.list-col-5 ul li {    width: 20%;   }
-.list-col-6 ul li {    width:16.666666666%; }
-
+.list-col-2 ul li { width:50%; }
+.list-col-3 ul li { width:33.33%; }
+.list-col-4 ul li { width:25%; }
+.list-col-5 ul li { width:20%; }
+.list-col-6 ul li { width:16.666666666%; }
 
 @media (max-width:768px){ .list-col-4 ul li{ width:50%; } .cols-5 { width:100%; }  }
 @media (max-width:480px){ [class*="list-col-"] ul li{ width:100%; } }
-
 
 /* news paper style*/
 .listodr-col-2 ul{
@@ -356,34 +346,16 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
     column-gap: 20px;
  }
 
-[class*="listodr-col"] ul {
-    list-style-type: none;
-    padding: 0;
-}
-
+[class*="listodr-col"] ul { list-style-type: none; padding: 0;}
 @media only screen and (max-width : 667px) {
-.listodr ul{
-    -moz-column-count: 1;
-    -webkit-column-count: 1;
-    column-count: 1;
- }
+	.listodr ul{ -moz-column-count: 1; -webkit-column-count: 1; column-count: 1; }
 }
 
-.li-col-3 ul li {
-    width: 33.33%;
-}
-.li-col-4 ul li {
-    width: 25%;
-}
+.li-col-3 ul li { width: 33.33%; }
+.li-col-4 ul li { width: 25%; }
 
-.alistdvr li a{
-    border-right: 1px solid #eee;
-   margin-right: 10px;
-    padding-right: 15px;
-}
-.alistdvr li:last-child a{
-    border: 0;
-}
+.alistdvr li a{ border-right: 1px solid #eee; margin-right: 10px; padding-right: 15px;}
+.alistdvr li:last-child a{ border: 0;}
 
 
 /*===SLIDER===*/
@@ -485,17 +457,8 @@ input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset;}
 }
 
 /***submit button on right***/
-.search-fom [type="submit"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    border: 0;
-}
-
-.search-fom .form-group {
-    margin: 0.3em 0;
-}
+.search-fom [type="submit"] { position: absolute; top: 0; right: 0; height: 100%; border: 0;}
+.search-fom .form-group { margin: 0.3em 0;}
 /***./submit button on right***/
 
 .lbl20 label { width: 20%; display: inline-block; float: left; line-height: 40px; }
@@ -693,17 +656,7 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 
 
 
-
-
-
-.fnc-fom .form-group label {
-    color: #000 !important;
-    position: absolute;
-    text-transform: uppercase;
-    top: 10px;
-	left:10px
-}
-
+.fnc-fom .form-group label { color: #000 !important; position: absolute; text-transform: uppercase; top: 10px; left:10px}
 
 .fnc-fom ::-webkit-input-placeholder{opacity: 0;}
 /**show placeholder when click on form-control**/
@@ -712,21 +665,10 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 .fnc-fom .form-control:not(:placeholder-shown) + label{/**if .form-control haven't placeholder**/}
 
 .fnc-fom .form-control.has-value + label,
-.fnc-fom .form-group .form-control:focus + label {
-    top: -20px;
-    font-size: 12px;
-    left: 10px;
-}
+.fnc-fom .form-group .form-control:focus + label { top: -20px; font-size: 12px; left: 10px;}
 
-.fnc-fom form {
-    background-color: #eee;
-    margin: 40px 0;
-    padding: 30px;
-}
-.fnc-fom .form-group {
-    margin-top: 30px;
-    position: relative;
-}
+.fnc-fom form { background-color: #eee; margin: 40px 0; padding: 30px;}
+.fnc-fom .form-group { margin-top: 30px; position: relative;}
 
 
 /***-->label animation***/
@@ -783,23 +725,8 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 
 
 /**down scroll**/
-.dwn-scroll {
-    width: 110px;
-    margin: 0px auto;
-    position: relative;
-    padding: 1px;
-    cursor: pointer;
-    font-weight: 500;
-}
-.dwn-scroll i {
-    border: 1px solid #ccc;
-    color: #ccc;
-    width: 35px;
-    height: 35px;
-    background-color: #f7f7f7;
-    padding-top: 10px;
-    border-radius: 50%;
-}
+.dwn-scroll { width: 110px; margin: 0px auto; position: relative; padding: 1px; cursor: pointer; font-weight: 500;}
+.dwn-scroll i { border: 1px solid #ccc; color: #ccc; width: 35px; height: 35px; background-color: #f7f7f7; padding-top: 10px; border-radius: 50%;}
 /**./down scroll**/
 
 
@@ -829,7 +756,7 @@ body *:before,
 				}
 .icon2x i:before {font-size: 2em;}
 
-/*====== NAVBAR ======*/
+/*=== NAVBAR ===*/
 /**side nav bg transparent**/
 body  #navbar-height-col {background-color: #000;}
 body .navbar-default .navbar-collapse {background: transparent;}
@@ -877,22 +804,10 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 
 /*dropdown-menu*/
 /*submenu for desktop*/
-.dropdown:hover  > .dropdown-menu {
-    display: block;
-}
+.dropdown:hover  > .dropdown-menu { display: block; }
 
-.dropdown > a::before {
-    color: #000;
-    content: "\f107";
-    font-family: "fontawesome";
-    font-size: 1em;
-    margin-left: 1%;
-    position: absolute;
-    right: 1%;
-}
-.dropdown.open > a::before {
-    content: "\f105";
-}
+.dropdown > a::before { color: #000; content: "\f107"; font-family: "fontawesome"; font-size: 1em; margin-left: 1%; position: absolute; right: 1%; }
+.dropdown.open > a::before { content: "\f105"; }
 
 /***multi level submenu spacing*** -issue fixed .moreMover- **/
 .nav.navbar-nav ul.dropdown-menu ul.dropdown-menu {
@@ -903,13 +818,7 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 /*submenu for mobile*/
 @media only screen and (max-width : 768px) {
 
-.dropdown.open .dropdown-menu,
-.dropdown > .dropdown-menu {
-    position: static;
-    float: none;
-    width: 100%;
-	background-color:#fff;
-}
+.dropdown.open .dropdown-menu, .dropdown > .dropdown-menu { position: static; float: none; width: 100%; background-color:#fff; }
 .navbar a{ text-align:center; }
 
 /*--(hover disable for mobile)-- .dropdown > a:hover + .dropdown-menu { display: none;}*/
@@ -926,16 +835,12 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 Note: see bottom note
 */
 .hdr--sticky {position: fixed !important;z-index: 5555;}
-.hdr--sticky-active {
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid #eee;
-}
+.hdr--sticky-active { background-color: rgba(255, 255, 255, 1); box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); border-bottom: 1px solid #eee; }
 
 /*========LINKS========*/
 .strip-btn a {
-    animation: 2s linear 0s normal none infinite running progress-bar-stripes;
- border-bottom:5px solid #cc4500;
+	animation: 2s linear 0s normal none infinite running progress-bar-stripes;
+	border-bottom:5px solid #cc4500;
 }
 
 .strip-btn a:hover {
@@ -964,15 +869,12 @@ http://jsfiddle.net/gmkhussain/awqs01zc/
 /****Note: add above Class for hover***/
 
 
-
-
 /***modal***/
 [data-toggle="modal"] {cursor: pointer; /*cursor for modal link*/ }
 
 /*modal onload jerking issue fixed */
 body.modal-open { overflow: visible; }
 body.modal-open .modal { margin-right: -1.2em;}
-
 
 .modal-dialog { top: 20%;}
 .modal .close { background-color: #d00; color: #fff; font-size: 2em; height: 30px; margin: 0; opacity: 1; position: absolute; right: 0; text-shadow: none; top: 0; width: 30px;}
@@ -1051,26 +953,9 @@ li.dropdown.user-menu li.user-footer { padding: 10px; float: left; width: 100%;}
 
 
 img.broken-image { min-height: 140px; text-align: center;}
-img.broken-image:before,img.broken-image:after {  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  display: block;
-}
-img.broken-image:before {
-  content: "\f127" " - " "\f030";
-  background-color: #eee;
-  border: 1px dotted #ccc;
-  font-family: FontAwesome;
-  font-size: 2.4em;
-  color:#ccc;
-  padding-top:0.8em;
-}
-img.broken-image:after {
-  content:  "Broken Image of " attr(alt);
-  padding-top: 6em;
-}
+img.broken-image:before,img.broken-image:after {  position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; display: block;}
+img.broken-image:before { content: "\f127" " - " "\f030"; background-color: #eee; border: 1px dotted #ccc; font-family: FontAwesome; font-size: 2.4em; color:#ccc; padding-top:0.8em;}
+img.broken-image:after { content:  "Broken Image of " attr(alt); padding-top: 6em;}
 
 
 /**********./gmk classes***********/
