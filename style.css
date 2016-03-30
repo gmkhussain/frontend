@@ -229,6 +229,9 @@ body [class*="flaticon-"]::before {margin: 0;}
 
 /*section divider - use w/<HR>*/
 .dvr, .dvr-cont .container {margin: 30px 0; height: 1px; border-top: 1px solid #ccc;}
+.dvr-shine {border:0px; height: 20px; background-image: radial-gradient(farthest-side at 50% -50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
+
+
 
 .pul-lft {float: left;}
 .pul-rgt {float: right;}
@@ -782,11 +785,10 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 /**down scroll**/
 .dwn-scroll {
     width: 110px;
-    margin: -20px auto 20px;
+    margin: 0px auto;
     position: relative;
     padding: 1px;
     cursor: pointer;
-    color: #fff;
     font-weight: 500;
 }
 .dwn-scroll i {
