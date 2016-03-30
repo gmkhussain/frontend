@@ -901,28 +901,20 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 /*submenu for mobile*/
 @media only screen and (max-width : 768px) {
 
-.navbar-nav .dropdown-menu:hover,
-.dropdown > a:hover + .dropdown-menu,
-body .dropdown.open > .dropdown-menu {
-    border:2px solid #eee;
-    border-radius:0px;
-	float:left;
-	width:100%;
-	display:block !important;
-	position: relative;
-    margin-top: -5px;
-	margin-left:0px !important;
+.dropdown.open .dropdown-menu,
+.dropdown > .dropdown-menu {
+    position: static;
+    float: none;
+    width: 100%;
+	background-color:#fff;
 }
-
 .navbar a{ text-align:center; }
-/*--(hover disable for mobile)--
-.dropdown > a:hover + .dropdown-menu {
-    display: none;
-}*/
+
+/*--(hover disable for mobile)-- .dropdown > a:hover + .dropdown-menu { display: none;}*/
 
 }
-/*./dropdown-menu*/
 
+/*./dropdown-menu*/
 /*navbar-move active navbar item*/
 .navbar-move #mark {background-color: #39c; display: inline-block; position: absolute; z-index: 159; height: 2px; left:-9999;}
 /*./navbar-move active navbar item*/

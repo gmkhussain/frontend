@@ -75,7 +75,6 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 ###Bootcamp™
 * Short Guideline
 
-
 ###Brats®
 * Fixing
 * Conflicts ( ie. Tab Nav Header Nav )
@@ -103,7 +102,9 @@ $(function () {
 
 ###Overdose
 * Speed-less
+####Metabolic
 * Mess-up code
+
 
 ```html
 //Can Delete
