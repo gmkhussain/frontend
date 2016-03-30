@@ -163,11 +163,15 @@ jQuery(function() {
 
 
 
+/**.form-group--active on parent of .form-control**/
+jQuery(".form-control").focus(function() {
+  jQuery(this).parent().addClass("form-group--active");
+});
 
-
-
-
-
+jQuery(".form-control").blur(function() {
+  jQuery(this).parent().removeClass("form-group--active");
+});
+/**./.form-group--active on parent of .form-control**/
 
 
 //fnc-fom label animation//
