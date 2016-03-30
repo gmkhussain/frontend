@@ -63,3 +63,26 @@ function radioButtonGroup( buttonGroup ) {
     classie.add( event.target, 'is-checked' );
   });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$('.grid').isotope({
+  itemSelector: '.grid-item',
+  masonry: {
+    columnWidth: 100
+  }
+});

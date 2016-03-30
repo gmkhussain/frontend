@@ -1,0 +1,28 @@
+/* ---- grid ---- */
+.isotope-area .grid {
+  background: #DDD;
+  max-width: 1200px;
+  position: relative;
+}
+
+/* clear fix */
+.isotope-area .grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+.isotope-area .grid-item {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #0D8;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.7);
+}
+
+.isotope-area .grid-item--width2 { width: 200px; }
+.isotope-area .grid-item--height2 { height: 200px; }
+
+/* ---- .grid-item ---- */
