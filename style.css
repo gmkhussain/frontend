@@ -363,7 +363,7 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 [class*="list-col-"] ul { padding:0; }
 [class*="list-col-"] ul li { display: inline-block; float: left;}
 
-.cols-5 { width:20%; }
+.cols-5 {width:20%; padding-right:15px; padding-left:15px; }
 
 .list-col-2 ul li { width:50%; }
 .list-col-3 ul li { width:33.33%; }
