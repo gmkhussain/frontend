@@ -767,8 +767,8 @@ body #slide-nav #slidemenu {background-color: transparent;}
 
 .navbar.navbar-default { background-color: transparent; border: 0 none; margin: 0; }
 
-.nav-cntr .navbar-nav > li { display: inline-block; float: none; }
-.nav-cntr .navbar-nav.nav { text-align: center; width: 100%; }
+.nav-cntr > li { display: inline-block; float: none; }
+.nav-cntr { text-align: center; width: 100%; }
 
 
 @media only screen and (max-width : 768px) {
