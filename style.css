@@ -308,6 +308,44 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 }
 /**./list vertical align**/
 
+
+
+
+/*list-btns3D*/
+.thr3d-btn { border-top: 0; border-left: 0; border-right: 0; outline: none;}
+
+.thr3d-btn,
+.list-btns3D li a {
+    background-color: #39c;
+    color: #fff;
+    display: block;
+    margin: 8px 0;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 2em;
+	border-radius:5px;
+	padding-left: 0.5em;
+    padding-right: 0.5em;
+	margin: 0px 10px 10px 0px;
+	
+	position: relative;
+}
+
+.thr3d-btn, .thr3d-btn:focus, .thr3d-btn:hover,
+.list-btns3D li a,.list-btns3D li.active a,.list-btns3D li a:hover,.list-btns3D li.active a:focus{
+	background-color: #3498DB;
+	border-bottom: 5px solid #2980B9;
+	color:#fff;
+}
+
+.thr3d-btn:active,
+.list-btns3D li a:active{
+		transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+/*./list-btns3D*/
+
 .zebra-cross > *:nth-child(2n+1){background-color:#eee;}
 
 .vcntrlist ul {align-items: center; display: flex; justify-content: center;}
