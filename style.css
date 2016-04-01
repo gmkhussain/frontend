@@ -640,8 +640,6 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 
 
 
-.fnc-fom .form-group label { color: #000 !important; position: absolute; text-transform: uppercase; top: 10px; left:10px}
-
 .fnc-fom ::-webkit-input-placeholder{opacity: 0;}
 /**show placeholder when click on form-control**/
 .fnc-fom .form-control:focus::-webkit-input-placeholder{opacity: 1;}
@@ -656,13 +654,6 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 
 
 /***-->label animation***/
-.fnc-fom .form-group label {
-    color: #000 !important;
-    position: absolute;
-    text-transform: uppercase;
-    top: 10px;
-	left:10px
-}
 
 .fnc-fom .form-control.has-value + label,
 .fnc-fom .form-group .form-control:focus + label {
@@ -683,10 +674,10 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 /***./-->label animation***/
 
 
-.fnc-fom input[type="checkbox"] + label::before {
+.fnc-fom input[type="checkbox"] + ins::before {
     border: 1px solid #ccc;
-    color: #39c;
-    content: " ";
+    color: #fff;
+    content: ".";
     display: inline-block;
     font-family: "glyphicons halflings";
     font-size: 1em;
@@ -694,8 +685,34 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
     padding: 0;
     text-align: center;
     width: 25px;
-	float:left;
+    margin-left: -25px;
 }
+.fnc-fom input[type="checkbox"] + ins+label {
+    margin-right: 15px;
+}
+
+.fnc-fom input[type="checkbox"]:checked + ins::before {
+    background-color: #39c;
+    color: #fff;
+    content: "";
+    display: inline-block;
+}
+
+.fnc-fom input[type="checkbox"] {
+    float: none;
+    height: 25px;
+    width: 25px;
+    margin: 0;
+    position: relative;
+    top: 8px;
+    z-index: 1;
+    opacity: 0;
+}
+
+.fnc-fom input[type="checkbox"] + label {
+    display: inline-block;
+}
+
 
 .fnc-fom select {
     -webkit-appearance: none;
@@ -704,20 +721,6 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
     padding: 2px 30px 2px 2px;
     border: 1px solid #ccc;
     background: #fff url("images/select_ctrl_down.png") no-repeat right center;
-}
-
-
-.fnc-fom input[type="checkbox"]:checked + label::before {
-    background-color: #39c;
-    color: #fff;
-    content: "";
-    display: inline-block;
-}
-
-.fnc-fom input[type="checkbox"] { float:none; }
-
-.fnc-fom input[type="checkbox"] + label {
-    display: inline-block;
 }
 
 
