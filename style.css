@@ -550,60 +550,6 @@ input[type=radio], input[type=checkbox] {
 /*select or Dropdown */
 option:hover { background-color: #fafafa;}
 
-.fnc-fom input[type="checkbox"] + label::before {
-    border: 1px solid #ccc;
-    color: #39c;
-    content: " ";
-    display: inline-block;
-    font-family: "glyphicons halflings";
-    font-size: 1em;
-    height: 25px;
-    padding: 0;
-    text-align: center;
-    width: 25px;
-	float:left;
-}
-
-.fnc-fom select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 2px 30px 2px 2px;
-    border: 1px solid #ccc;
-    background: #fff url("images/select_ctrl_down.png") no-repeat right center;
-}
-
-
-.fnc-fom input[type="checkbox"]:checked + label::before {
-    background-color: #39c;
-    color: #fff;
-    content: "";
-    display: inline-block;
-}
-.fnc-fom input[type="checkbox"] + label {
-    display: inline-block;
-}
-
-.fnc-fom .inputgroup input[type="checkbox"] {
-    height: 25px;
-    margin: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    width: 25px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -737,7 +683,44 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 /***./-->label animation***/
 
 
-.inputgroup { position: relative; }
+.fnc-fom input[type="checkbox"] + label::before {
+    border: 1px solid #ccc;
+    color: #39c;
+    content: " ";
+    display: inline-block;
+    font-family: "glyphicons halflings";
+    font-size: 1em;
+    height: 25px;
+    padding: 0;
+    text-align: center;
+    width: 25px;
+	float:left;
+}
+
+.fnc-fom select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 2px 30px 2px 2px;
+    border: 1px solid #ccc;
+    background: #fff url("images/select_ctrl_down.png") no-repeat right center;
+}
+
+
+.fnc-fom input[type="checkbox"]:checked + label::before {
+    background-color: #39c;
+    color: #fff;
+    content: "";
+    display: inline-block;
+}
+
+.fnc-fom input[type="checkbox"] { float:none; }
+
+.fnc-fom input[type="checkbox"] + label {
+    display: inline-block;
+}
+
+
 .inline-control .form-group, .inline-control .form-control { display: inline-block; width: auto; margin-right: 1%; }
 
 
