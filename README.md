@@ -96,15 +96,27 @@ $(function () {
 </script>
 ```
 
+
+```html
+//On Click Trigger Click on another element after few second
+	<script>
+	jQuery(".nav-tabs li a").click(function() {
+		  setTimeout(function() {
+			jQuery("#allbtn").trigger("click");
+		  }, 10);
+		});
+	</script>
+```
+
 ###Hazing
 * Unclear
 
 
 ###Overdose
 * Speed-less
-####Metabolic
 * Mess-up code
 
+####Metabolic
 
 ```html
 //Can Delete
