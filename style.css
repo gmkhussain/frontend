@@ -884,6 +884,10 @@ body a, body a:active, body  a:focus, body  a:hover {
 .imgzoom-hover [class*="__inr"]:hover [class*="__img"] img { transform: scale(1); }
 .imgzoom-hover [class*="__inr"] [class*="__img"] img { transform: scale(1.2); }
 
+/*__inr element bit bigger on hover*/
+.scale-hover [class*="__inr"]:hover { transform: scale(1.1); }
+/*./__inr element bit bigger on hover*/
+
 /*
 For Mobile Friendly Navigation
 http://jsfiddle.net/gmkhussain/awqs01zc/
