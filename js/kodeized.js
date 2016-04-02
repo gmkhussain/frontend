@@ -444,9 +444,9 @@ jQuery(document).ready(function(){
 //Inner Pages Filler Script
 jQuery(function () {
     jQuery(window).scroll(function () {
-        var $myDiv = jQuery('.fill-mask');
+        var $myDiv = jQuery('.fill__move');
         var y = $(this).scrollTop();
-        jQuery('#results').text(y);
+        jQuery('#fill__value').text(y);
         x = y - 3;
         $myDiv.animate({
             height: x
