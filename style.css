@@ -757,22 +757,14 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 
 
 
-
-
-
-
-
-body,
-body *,
-body *:after,
-body *:before,
-.transition, .transition *, .transition *:after,  .transition *:before,
-.transition *:hover{
- transition:all 0.3s ease 0s !important;
- -webkit-transition:all 0.3s ease 0s !important;
- /*
-    transition: all 500ms ease 0s; */
+/*transition*/
+.transition, .transition *, .transition *:after,  .transition *:before,.transition *:hover{
+	transition:all 0.3s ease 0s !important;
+	-webkit-transition:all 0.3s ease 0s !important;
+	/*transition: all 500ms ease 0s; */
 }
+/*./transition*/
+
 /**shake-icon on hover**/
 .shake-icon .fa:hover  {-webkit-animation: link 0.5s;animation: link 0.5s;}
 @keyframes link {25%{-webkit-transform: rotate(10deg);transform: rotate(10deg);}
