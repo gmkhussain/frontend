@@ -763,6 +763,11 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 	-webkit-transition:all 0.3s ease 0s !important;
 	/*transition: all 500ms ease 0s; */
 }
+
+.no-transition, .no-transition *, .no-transition *:after,  .no-transition *:before,.no-transition *:hover{
+	transition:all 0s ease 0s !important;
+	-webkit-transition:all 0s ease 0s !important;
+}
 /*./transition*/
 
 /**shake-icon on hover**/
