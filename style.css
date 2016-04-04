@@ -118,6 +118,11 @@ div:not([class*="-btn"]) > a[href]:not([class]){color: #008000;text-decoration: 
 .more-btn a {background-color: #39c; padding: 0.5em 0.5em; color: #fff;}
 [class*="-btn"] a {display: inline-block;}
 
+/*Table unhover rows blur on hover*/
+.table-blur--hover tbody:hover td { color: transparent; text-shadow: 0 0 3px #aaa;}
+.table-blur--hover tbody:hover tr:hover td { color: #444; text-shadow: 0 1px 0 #fff;}
+/*Table unhover rows blur on hover*/
+	
 /*===TABLE Responsive===*/
 @media only screen and (max-width : 768px) {
 .table-area th {display: none;}
