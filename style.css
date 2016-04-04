@@ -118,10 +118,10 @@ div:not([class*="-btn"]) > a[href]:not([class]){color: #008000;text-decoration: 
 .more-btn a {background-color: #39c; padding: 0.5em 0.5em; color: #fff;}
 [class*="-btn"] a {display: inline-block;}
 
-/*Table unhover rows blur on hover*/
+/*Table un-hover rows blur on hover*/
 .table-blur--hover tbody:hover td { color: transparent; text-shadow: 0 0 3px #aaa;}
 .table-blur--hover tbody:hover tr:hover td { color: #444; text-shadow: 0 1px 0 #fff;}
-/*Table unhover rows blur on hover*/
+/*./Table un-hover rows blur on hover*/
 	
 /*===TABLE Responsive===*/
 @media only screen and (max-width : 768px) {
@@ -520,8 +520,8 @@ input[type=radio], input[type=checkbox] {
 }
 
 /*checkbox checked and uncheck*/
-.form-control:checked + label {    color: green; }
-.form-control:not(:checked) + label {    color: #333; }
+.form-control:checked + label { color: green; }
+.form-control:not(:checked) + label { color: #333; }
 .form-control:focus {
     border-color: rgba(196, 11, 49, 1);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(196, 11, 49, 0.5);
@@ -658,14 +658,11 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 .fnc-fom .form-group { margin-top: 30px; position: relative;}
 
 
-/***-->label animation***/
-
-.fnc-fom .form-control.has-value + label,
-.fnc-fom .form-group .form-control:focus + label {
-    top: -20px;
-    font-size: 12px;
-    left: 10px;
-}
+/*Label as a placeholder animation*/
+.placelabeler .form-group label { color: #000 !important; position: absolute; text-transform: uppercase; top: 10px; left:10px; }
+.placelabeler .form-control.has-value + label,
+.placelabeler .form-group .form-control:focus + label { top: -20px; font-size: 12px; left: 10px;}
+/*./Label as a placeholder animation*/
 
 .fnc-fom form {
     background-color: #eee;
