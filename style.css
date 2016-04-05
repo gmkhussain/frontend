@@ -660,7 +660,7 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 
 
 /*Label as a placeholder animation*/
-.placelabeler .form-group label { color: #000 !important; position: absolute; text-transform: uppercase; top: 10px; left:10px; }
+.placelabeler .form-group .form-control~label { color: #000 !important; position: absolute; text-transform: uppercase; top: 10px; left:10px; }
 .placelabeler .form-control.has-value + label,
 .placelabeler .form-group .form-control:focus + label { top: -20px; font-size: 12px; left: 10px;}
 /*./Label as a placeholder animation*/
@@ -721,7 +721,6 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    padding: 2px 30px 2px 2px;
     border: 1px solid #ccc;
     background: #fff url("images/select_ctrl_down.png") no-repeat right center;
 }
