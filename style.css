@@ -271,6 +271,7 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
 .bg-cntr {background-repeat: no-repeat; background-position: center;}
 .bg-full,.bg-cvr {background-size: cover;}
+.bg-fix { background-attachment: fixed;}
 
 /*relative for inside of wide box*/
 .posrel {overflow: hidden;position: relative;}
