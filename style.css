@@ -61,6 +61,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Proxima Nova";
 .hed.crossline h2 {text-align: center; display: inline-block; background-color: #fff; padding: 0 0.4em;}
 .hed.crossline hr { margin-top: -28px; margin-bottom: 40px; border-color: #333;}
 
+.hed.lndotln hr {width: 10px;height: 10px;background-color: #333;border-radius: 50%;position: relative; margin-top:0px; margin-bottom:20px; opacity: .2;}
+.hed.lndotln hr:before,.lndotln hr:after {content: "";width: 3000%;height: 3px;background-color: #333;display: block;margin-top: 2px;position: absolute;right: 22px;top: 1px;}
+.hed.lndotln hr:after {right: auto; left: 20px;}
+
 .inkd{font-family:"Zeyada";}
 
 .dwnlod-btn > a {display: inline-block; background-color: #0a0; color: #fff; padding: 10px 15px;}
