@@ -944,7 +944,7 @@ body.modal-open .modal { margin-right: -1.2em;}
 
 
 /*filler*/
-.fill-holder { background-image: url("images/fill-def.jpg"); float: none; height: 100%; left: 0; margin: 0 auto; overflow: hidden; position: absolute; top: 0; width: 36px; z-index: 100;}
+.fill-holder { background-image: url(""); float: none; height: 100%; left: 0; margin: 0 auto; overflow: hidden; position: absolute; top: 0; width: 36px; z-index: 100;}
 .fill__mask { background-image: url("images/fill-mask.png"); background-repeat: repeat; height: 100%;}
 .fill__move { background-color: #4090d7; background-repeat: repeat; height: auto;}
 /**./filler**/
