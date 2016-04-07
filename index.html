@@ -41,6 +41,17 @@
 	<!--Date Picker-->
 	<script src="js/bootstrap-datepicker.js"></script>
 	
+	<!--datetimepicker-->
+	<script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script><!--//required moment.js-->
+	<link href='css/bootstrap-datetimepicker.css' rel='stylesheet' />
+		<script type="text/javascript">
+			jQuery(function () {
+				jQuery('#datetimepicker1').datetimepicker();
+				});
+		</script>
+	<!--datetimepicker-->
+	
   </head>
   <body class="transition">
 
@@ -799,7 +810,10 @@
 					 <input type="checkbox" value="donut" /><label>Donut</label>
 				</div>
 				
-				
+				<div class="form-group">
+						<label>DateTimePicker</label>
+						<input type="text" class="form-control" id="datetimepicker1" />
+				</div>
 				
 				<p><b>.input-group</b> for Optional icons in horizontal and inline forms</p>
 				
@@ -1388,8 +1402,7 @@
 	</div>
   </div>
 </div>
-	
-	
+					
 
 </main>
     
