@@ -35,15 +35,15 @@ body, html{ height: 100%; padding: 0;}
 
 body .navbar-brand {padding: 5px; max-width: 200px;}
 
-body{font-family:"Open Sans"; overflow-x: hidden;}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; overflow-x: hidden;}
 
-body nav.navbar { font-family: "Open Sans"; }
+body nav.navbar { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
 
 section {width: 100%;}
 section[class*="-area"] {position: relative; clear:both; }
 
 /*======== CONTENT ========*/
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Proxima Nova";}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;}
 .strong {font-weight: bold;}
 .strike {text-decoration: line-through;}
 .inline-block {display: inline-block;}
@@ -861,8 +861,8 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 /*
 Note: see bottom note
 */
-.hdr--sticky {position: fixed !important;z-index: 450;}
-.hdr--sticky-active { background-color: rgba(255, 255, 255, 1); box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); border-bottom: 1px solid #eee; }
+.hdr--sticky { z-index: 450;}
+.hdr--sticky-active { position: fixed !important; background-color: rgba(255, 255, 255, 1); box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); border-bottom: 1px solid #eee; }
 
 /*========LINKS========*/
 .strip-btn a {
