@@ -477,9 +477,17 @@
 				</blockquote>
 	
 	
-	
+			<div class="girdbox-area girdbox-list">
+				
 				<h2><b>.listgrid-valign</b></h2>
-				<ul class="listgrid-valign">
+				
+				<div class="gridbox-icons icon2x">
+					<h3><b>.girdbox-thumbnail</b> and <b>.girdbox-list</b> toggle style</h3>
+					<button id="girdBoxThumbStyle"><i class="glyphicon glyphicon-th-large"></i></button>
+					<button id="girdBoxListStyle"><i class="glyphicon glyphicon-th-list"></i></button>
+				</div>
+				
+				<ul class="girdbox col-sm-4 p0 listgrid-valign">
 					<li class="col-sm-3 posrel taglized"><h1>GOLD</h1>
 						<span class="tri-badge">
 							<span class="txt">Most Popular</span>
@@ -490,6 +498,48 @@
 					<li class="col-sm-2"><a class="btn" href="#!package=gold">Sign Up</a></li>
 				</ul>
 				
+				<ul class="girdbox col-sm-4 p0 listgrid-valign">
+					<li class="col-sm-3 posrel taglized"><h1>GOLD</h1>
+						<span class="tri-badge">
+							<span class="txt">Most Popular</span>
+						</span>
+					</li>
+					<li class="col-sm-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</li>
+					<li class="col-sm-2"><span class="price"><ins>$ 159</ins>/ year</span></li>
+					<li class="col-sm-2"><a class="btn" href="#!package=gold">Sign Up</a></li>
+				</ul>
+				
+				<ul class="girdbox col-sm-4 p0 listgrid-valign">
+					<li class="col-sm-3 posrel taglized"><h1>GOLD</h1>
+						<span class="tri-badge">
+							<span class="txt">Most Popular</span>
+						</span>
+					</li>
+					<li class="col-sm-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</li>
+					<li class="col-sm-2"><span class="price"><ins>$ 159</ins>/ year</span></li>
+					<li class="col-sm-2"><a class="btn" href="#!package=gold">Sign Up</a></li>
+				</ul>
+				
+				<style>
+					.girdbox-list .girdbox { width: 100%;}
+					.girdbox-thumbnail .girdbox > * { display: block; width: 100%;}
+				</style>
+				
+				<script>
+					jQuery( "#girdBoxThumbStyle" ).click(function() {
+						jQuery(".girdbox-area").removeClass("girdbox-list");
+						jQuery(".girdbox-area").addClass("girdbox-thumbnail");
+					});
+					jQuery( "#girdBoxListStyle" ).click(function() {
+						jQuery(".girdbox-area").removeClass("girdbox-thumbnail");
+						jQuery(".girdbox-area").addClass("girdbox-list");
+					});
+				</script>
+				
+			</div>
+			
+			
+			
 				
 				<br/><a href="tel:1-408-555-5555">Call +923343069159</a>
 				<br/><a href="sms:1-408-555-1212">Message +923343069159</a>
