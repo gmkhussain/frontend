@@ -271,7 +271,11 @@ if (jQuery(this).scrollTop() > 1){
   }
 });
 
-
+//Blind Footer
+jQuery( document ).ready(function() {
+	var ftrBlind = jQuery(".ftr--blind").height();
+	jQuery("footer").css("padding-top", ftrBlind );
+});
 
 
 //Classes On Body tag and Add ACTIVE Class on navbar link//

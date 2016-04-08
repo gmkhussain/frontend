@@ -39,7 +39,7 @@ body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; overflow-x: hidden
 
 body nav.navbar { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
 
-section {width: 100%;}
+section {width: 100%; background-color: #fff; }
 section[class*="-area"] {position: relative; clear:both; }
 
 /*======== CONTENT ========*/
@@ -863,6 +863,8 @@ Note: see bottom note
 */
 .hdr--sticky { z-index: 450;}
 .hdr--sticky-active { position: fixed !important; background-color: rgba(255, 255, 255, 1); box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); border-bottom: 1px solid #eee; }
+
+.ftr--blind { position: fixed; z-index: -1; bottom: 0; width: 100%;}
 
 /*========LINKS========*/
 .strip-btn a {
