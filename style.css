@@ -97,7 +97,7 @@ div:not([class*="-btn"]) > a[href]:not([class]){color: #008000;text-decoration: 
 
 .blurtxt { color: transparent; text-shadow: 0 0 5px rgba(0,0,0,0.5); }
 
-.shad-dp20 { box-shadow: 0px 10px 20px 7px #eee; padding: 10px; border: 1px solid #f7f7f7; }
+.shad-dp20 { box-shadow: 0px 10px 20px 7px #eee; border: 1px solid #f7f7f7; }
 
 /*hide active language from dropdown list*/
 .lang a.selctd-lang {display: none;}
