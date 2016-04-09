@@ -1113,6 +1113,8 @@ img.broken-image:after { content:  "Broken Image of " attr(alt); padding-top: 6e
 /* iPad (All) (768x1024) Portrait Tablets */
 @media only screen and (max-width : 768px) {	}
 
+/*iPhone 6 Plus landscape · width: 736px */
+@media only screen and (max-width : 736px) {	}
 
 /*iPhone 6 landscape · width: 667px */
 @media only screen and (max-width : 667px) {	}
