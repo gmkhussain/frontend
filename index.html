@@ -58,6 +58,10 @@
 	<script type="text/javascript" src="js/highcharts.js"></script>
 	<!--./highcharts-->
 	
+	<!--Chartist-->
+		<link rel="stylesheet" href="_xtra/chartist.min.css">
+		<script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+	<!--./Chartist-->
 	
   </head>
   <body class="transition">
@@ -307,6 +311,47 @@
 	<section class="charts-area" id="swiper-slider">
 	
 		<div class="container">
+		
+			<div id="chartistjs">
+		
+			<h2>Chartist.JS</h2>
+			<div class="ct-chart ct-golden-section0 col-sm-6" id="chart1"></div>
+			<script>
+			var chart = new Chartist.Line('.ct-chart', {
+			  labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+			  series: [
+				[1, 5, 2, 5, 4, 3],
+				[2, 3, 4, 8, 1, 2],
+				[5, 4, 3, 2, 1, 0.5]
+			  ]
+			}, {
+			  low: 0,
+			  showArea: true,
+			  showPoint: false,
+			  fullWidth: true
+			});
+
+			chart.on('draw', function(data) {
+			  if(data.type === 'line' || data.type === 'area') {
+				data.element.animate({
+				  d: {
+					begin: 200 * data.index,
+					dur: 200,
+					from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+					to: data.path.clone().stringify(),
+					easing: Chartist.Svg.Easing.easeOutQuint
+				  }
+				});
+			  }
+			});
+			</script>
+
+		</div>
+		
+		<hr class="dvr" />
+		
+		<div id="highchartsjs">
+		
 			<style>
 				text[style="cursor:pointer;color:#909090;font-size:9px;fill:#909090;"] { display: none;}
 			</style>
@@ -364,7 +409,6 @@
 				});
 			</script>
 			</div>
-			
 			
 			<div class="col-sm-6">
 				<div id="charts2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
@@ -625,7 +669,9 @@
 });
 	</script>
 			</div>
-			
+		
+		</div>
+		
 		</div>
 	</section>
 	
