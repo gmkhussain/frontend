@@ -1137,6 +1137,35 @@
 	<section class="form-area ">
 		<div class="container">
 		
+		
+				<div class="upload-preview">
+					<h3>.upload-preview</h3>
+					<p>image file upload preview</p>
+					
+					<div class="upload-preview__img mb30 col-sm-3 ">
+						<img class="image" src="images/slide1.jpg" />
+					</div>
+					
+					<input type="file" class="file-input" />
+				
+					<script>
+						jQuery('[type=file]').change(function(){
+							var curElement = jQuery(this).parent().parent().find('.upload-preview__img img');
+							console.log(curElement);
+							var reader = new FileReader();
+							reader.onload = function (e) {
+							// get loaded data and render thumbnail.
+							curElement.attr('src', e.target.result);
+							};
+							// read the image file as a data URL.
+							reader.readAsDataURL(this.files[0]);
+						});
+					</script>
+				</div>
+				
+		
+		<hr class="dvr">
+		
 		<h3>form <b>.inline-control</b></h3>
 		<div class="control-group inline-control">
 		  <label class="control-label">Choose Rates:</label>
