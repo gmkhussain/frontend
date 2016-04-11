@@ -854,7 +854,7 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 
 /*./dropdown-menu*/
 /*navbar-move active navbar item*/
-.navbar-move #mark {background-color: #39c; display: inline-block; position: absolute; z-index: 159; height: 2px; left:-9999;}
+.navbar-move #mark {background-color: #39c; display: inline-block; position: absolute; z-index: 159; height: 2px; left:-9999px;}
 /*./navbar-move active navbar item*/
 
 
