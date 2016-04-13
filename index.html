@@ -1277,8 +1277,8 @@
 		<div class="container">
 		
 		<div class="reportrange col-sm-6">
-			<div class="hed crossline"><h2>date range picker</h2><hr></div>
-					<div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+			<div class="hed crossline"><h2>Predefined Ranges <small>date range picker</small></h2><hr></div>
+					<div id="reportrange" class="form-control">
 						<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
 						<span></span> <b class="caret"></b>
 					</div>
@@ -1287,7 +1287,7 @@
 				$(function() {
 
 					function cb(start, end) {
-						$('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+						$('#reportrange').val(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
 					}
 					cb(moment().subtract(29, 'days'), moment());
 
@@ -1304,6 +1304,25 @@
 
 				});
 				</script>
+		</div>
+		
+		<div class="datetimepicker col-sm-6">
+		<div class="hed crossline"><h2>Date and Time</h2><hr></div>
+		
+			<input type="text" class="form-control" name="daterange" value="01/01/2015 1:30 PM - 01/01/2015 2:00 PM" />
+ 
+			<script type="text/javascript">
+			$(function() {
+				$('input[name="daterange"]').daterangepicker({
+					timePicker: true,
+					timePickerIncrement: 30,
+					locale: {
+						format: 'MM/DD/YYYY h:mm A'
+					}
+				});
+			});
+			</script>
+		
 		</div>
 
 				
