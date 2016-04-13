@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Helvetica Neue
 .inline-block {display: inline-block;}
 
 /*clear heading margins*/
-.clrhm h1, .clrhm h2, .clrhm h3, .clrhm h4, .clrhm h5, .clrhm h6  { margin:0px; }
+.clrhm h1, .clrhm h2, .clrhm h3, .clrhm h4, .clrhm h5, .clrhm h6, .clrhm .h1, .clrhm .h2, .clrhm .h3, .clrhm .h4, .clrhm .h5, .clrhm .h6  { margin:0px; }
 
 /*center align H2 and P in section */
 .hed-cntr .container > h2, .hed-cntr .container > p, .hed-cntr .container > .lnk-btn { text-align: center; }
