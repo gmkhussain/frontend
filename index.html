@@ -54,6 +54,13 @@
 		</script>
 	<!--datetimepicker-->
 	
+	
+	
+	<!--daterangepicker-->
+	<link rel="stylesheet" href="_xtra/daterangepicker.css">
+	<script src="_xtra/daterangepicker.js"></script>
+	<!--./daterangepicker-->
+	
 	<!--highcharts-->
 	<script type="text/javascript" src="_xtra/highcharts.js"></script>
 	<!--./highcharts-->
@@ -1269,9 +1276,41 @@
 	<section class="form-area ">
 		<div class="container">
 		
+		<div class="reportrange col-sm-6">
+			<div class="hed crossline"><h2>date range picker</h2><hr></div>
+					<div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+						<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+						<span></span> <b class="caret"></b>
+					</div>
+
+				<script type="text/javascript">
+				$(function() {
+
+					function cb(start, end) {
+						$('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+					}
+					cb(moment().subtract(29, 'days'), moment());
+
+					$('#reportrange').daterangepicker({
+						ranges: {
+						   'Today': [moment(), moment()],
+						   'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+						   'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+						   'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+						   'This Month': [moment().startOf('month'), moment().endOf('month')],
+						   'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+						}
+					}, cb);
+
+				});
+				</script>
+		</div>
+
+				
+				
 		
-				<div class="upload-preview">
-					<h3>.upload-preview</h3>
+				<div class="upload-preview col-sm-6">
+					<div class="hed crossline"><h2>.upload-preview</h2><hr></div>
 					<p>image file upload preview</p>
 					
 					<div class="upload-preview__img mb30 col-sm-3 ">
@@ -1328,16 +1367,17 @@
 		</div>
 		
 		<div class="form-inline fnc-fom bdr1 p20">
-							<h3>form <b>.form-inline</b></h3>
-							<div class="form-group">
-								<input type="checkbox" name="check1" id="check1" /><ins></ins> <label for="check1">Yes</label>
-							</div>
-							<div class="form-group">
-								<input type="checkbox" name="check2" id="check2" /><ins></ins> <label for="check2">No</label>
-							</div>
+			<h3>form <b>.form-inline</b></h3>
+				<div class="form-group">
+					<input type="checkbox" name="check1" id="check1" /><ins></ins> <label for="check1">Yes</label>
+				</div>
+				<div class="form-group">
+					<input type="checkbox" name="check2" id="check2" /><ins></ins> <label for="check2">No</label>
+				</div>
 		</div>
-
-					
+		
+		
+			
 		<h2>Form Fancy Elements</h2>
 		
 			<div class="fnc-fom col-sm-4 placelabeler">
@@ -1352,7 +1392,7 @@
 				<div class="form-group">
 					 <input type="checkbox" value="donut" /><label>Donut</label>
 				</div>
-				
+						
 				<div class="form-group">
 						<label>DateTimePicker</label>
 						<input type="text" class="form-control" id="datetimepicker1" />
