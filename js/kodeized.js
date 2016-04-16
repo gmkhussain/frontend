@@ -71,6 +71,12 @@ jQuery(function() {
 	jQuery('body').addClass(active_locLast + "-page");
 	jQuery('body nav').addClass(active_locLast + "-nav");
 
+  var urlParameters = window.location.search; // returns the URL Parameters
+	var split_urlParameters = urlParameters.split(/[ .=:;?!~,`"&|()<>{}\[\]\r\n/\\]+/);
+	urlParametersLast= split_urlParameters[split_urlParameters.length-1];
+	urlParametersLast2= split_urlParameters[split_urlParameters.length-2];
+	jQuery('body').addClass(urlParametersLast + "-parameter");
+	jQuery('body').addClass(urlParametersLast2 + "-parameter");
 });
 
 
