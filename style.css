@@ -252,6 +252,9 @@ body [class*="flaticon-"]::before {margin: 0;}
 .valigner > *, .valigner .valign {display: table-cell;vertical-align: middle;}
 
 
+.random-box { border-bottom: 1px solid #ccc; height: 350px; clear: both; }
+.random-box:nth-child(even) .random__lft { float: right; }
+
 
 /*=== IMG ===*/
 .ovrflw { overflow: hidden; }
