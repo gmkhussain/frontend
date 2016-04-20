@@ -699,15 +699,25 @@ jQuery('p:empty').remove();
 
 
 /***Live Detect Browser Size****/
+var windowTitle = jQuery(document).prop('title'); // Original Title
 if (jQuery('html').hasClass("livewindowsize")) {
-function LiveDetectWindowSize(){
-    // Get the dimensions of the viewport
-    var windowWidth = $(window).width();
 	
-	jQuery('body').addClass("width-"+windowWidth);
-	jQuery(document).prop('title', windowWidth );
+	jQuery('body').mouseleave(function() {
+		function LiveDetectWindowSize(){
+			// Get the dimensions of the viewport
+			var windowWidth = jQuery(window).width();
+			jQuery('body').addClass("width-"+windowWidth);
+			jQuery(document).prop('title', windowWidth );
+		};
+	  jQuery(document).ready(LiveDetectWindowSize);    // When the page first loads
+	  jQuery(window).resize(LiveDetectWindowSize);     // When the browser changes size
+	});
+	
+	jQuery('body').mouseenter(function() {
+		jQuery(document).prop('title', windowTitle ); // When mouse enter display Original Title
+	});
+
 };
-jQuery(document).ready(LiveDetectWindowSize);    // When the page first loads
-jQuery(window).resize(LiveDetectWindowSize);     // When the browser changes size
-}
+
+
 /***./Live Detect Browser Size****/
