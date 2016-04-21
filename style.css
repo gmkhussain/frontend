@@ -444,6 +444,7 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
     bottom: 10em;
     position: absolute;
     z-index: 10;
+	left:0;
 }
 
 .slider.fadeft .carousel-inner > .active.left {background-color: #fff;left: 0;}
@@ -755,12 +756,6 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 }
 /*./transition*/
 
-/**shake-icon on hover**/
-.shake-icon .fa:hover  {-webkit-animation: link 0.5s;animation: link 0.5s;}
-@keyframes link {25%{-webkit-transform: rotate(10deg);transform: rotate(10deg);}
-				50% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg);}
-				}
-.icon2x i:before {font-size: 2em;}
 
 /*=== NAVBAR ===*/
 /**side nav bg transparent**/
@@ -931,7 +926,7 @@ body.modal-open .modal { margin-right: -1.2em;}
 .fill__move { background-color: #4090d7; background-repeat: repeat; height: auto;}
 /**./filler**/
 
-
+/**icons**/
 .fa-facebook{ color:#2b4687; }
 .fa-twitter{ color:#118ed3; }
 .fa-google, .fa-google-plus{ color:#cf4320; }
@@ -940,6 +935,25 @@ body.modal-open .modal { margin-right: -1.2em;}
 .fa-skype{ color:#139be1; }
 .fa-pinterest { color:#ba0f0b; }
 
+.icon-boxed i { width: 26px; color: #fff; height: 26px; margin: 0 2px; line-height: 1.7em; text-align: center; background-color: #ccc; font-size: 1.15em; }
+
+.icon-rounded i { border-radius: 50%; }
+
+.icon-boxed .fa-facebook{ background-color:#2b4687; }
+.icon-boxed .fa-twitter{ background-color:#118ed3; }
+.icon-boxed .fa-google, .icon-boxed .fa-google-plus{ background-color:#cf4320; }
+.icon-boxed .fa-youtube, .icon-boxed .fa-youtube-play{ background-color:#ff3333; }
+.icon-boxed .fa-instagram{ background-color:#476e93; }
+.icon-boxed .fa-skype{ background-color:#139be1; }
+.icon-boxed .fa-pinterest { background-color:#ba0f0b; }
+
+/**shake-icon on hover**/
+.shake-icon .fa:hover  {-webkit-animation: link 0.5s;animation: link 0.5s;}
+@keyframes link {25%{-webkit-transform: rotate(10deg);transform: rotate(10deg);}
+				50% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg);}
+				}
+.icon2x i:before {font-size: 2em;}
+/**./icons**/
 
 .swiper-container * {transition: all 2s !important;-webkit-transition: all 2s !important;}
 body .dontfly.swiper-container .swiper-slide {display: inline-block;width: auto;margin-right:15px;}
