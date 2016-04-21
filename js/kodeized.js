@@ -584,11 +584,13 @@ jQuery(document).ready(function() {
 
     jQuery(this).addClass("KNav" + i + "");
     last = i;
+
+		// alert(last);
+		if (last >= moreTabLimit) {
+			jQuery("li.moreTabMover").appendTo("#moreTabSubMenu");
+		}
+	  
   });
- // alert(last);
-  if (last >= moreTabLimit) {
-    jQuery("li.moreTabMover").appendTo("#moreTabSubMenu");
-  }
 });
 
 
