@@ -1,4 +1,4 @@
-# Bootstrap 3 Extended ver 1.3
+# Bootstrap 3 Extended ver 1.4
 ###Low-level Front-End Toolkit
 Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.github.io/frontend/)
 

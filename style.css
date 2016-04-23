@@ -773,6 +773,9 @@ body #slide-nav #slidemenu {background-color: transparent;}
 .nav-cntr > li { display: inline-block; float: none; }
 .nav-cntr { text-align: center; width: 100%; }
 
+.blur-nav--hover:hover .navbar-nav li a { opacity: 0.3; }
+.blur-nav--hover .navbar-nav li a:hover { opacity: 1; }
+
 
 @media only screen and (max-width : 768px) {
 body .nav.navbar-nav { margin: 0; }
@@ -960,6 +963,7 @@ body.modal-open .modal { margin-right: -1.2em;}
 				50% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg);}
 				}
 .icon2x i:before {font-size: 2em;}
+.icon2x.icon-boxed i { width: 3.5em; height: 3.5em; line-height: 3.5em; text-align: center; }
 /**./icons**/
 
 .swiper-container * {transition: all 2s !important;-webkit-transition: all 2s !important;}
