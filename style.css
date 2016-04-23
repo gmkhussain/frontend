@@ -857,7 +857,7 @@ Note: see bottom note
 
 .iln-btn { display: inline-block; }
 
-/*dot bullet for OL UL list*/
+/*dot bullet icon for OL UL list*/
 .dotlist li  {display: inline-block; position: relative; padding-left: 15px; }
 .dotlist li:before {content: "";height: 5px;width: 5px;background-color: #ffc526;margin-right: 10px;display: block;position: absolute;top: 5px;left: 0px;border-radius: 50%;}
 
