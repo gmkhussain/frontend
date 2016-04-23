@@ -857,11 +857,16 @@ Note: see bottom note
 
 .iln-btn { display: inline-block; }
 
+/*dot bullet for OL UL list*/
+.dotlist li  {display: inline-block; position: relative; padding-left: 15px; }
+.dotlist li:before {content: "";height: 5px;width: 5px;background-color: #ffc526;margin-right: 10px;display: block;position: absolute;top: 5px;left: 0px;border-radius: 50%;}
+
 /*========HOVER========*/
 body a, body a:active, body  a:focus, body  a:hover {
    outline:none !important; /*for remove the dotted line around the clicked a*/
    text-decoration:none;
 }
+
 .ftr__links a:hover, .ftr-links a:hover { border-left: 1px solid #777 !important; padding-left: 8px;}
 
 .imgzoom-hover [class*="__inr"] [class*="__img"] { overflow: hidden;}
