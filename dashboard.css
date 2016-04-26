@@ -1,0 +1,57 @@
+.dashboard .navbar-nav>li {
+    display: block;
+    width: 100%;
+}
+
+.dashboard .sidelft .navbar-nav>li>.dropdown-menu {
+    position: static;
+    display: block;
+    width: 100%;
+    border: 0;
+    height: 0px;
+    overflow: hidden;
+    padding: 0;
+}
+ul.nav.navbar-nav.navbar-main {
+    float: left;
+    width: 100%;
+}
+body.nav-min section.sidelft {
+    width: 10%;
+}
+
+body.nav-min section.sidelft~.col-sm-9 {
+    width: 90%;
+}
+section.sidelft {
+    height: 97vh;
+}
+div#bs-example-navbar-collapse-1 {
+    padding: 0;
+}
+
+.container-fluid {
+    padding: 0;
+
+}
+
+body.nav-min section.sidelft .navbar-nav li a i {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+}
+
+body.nav-min section.sidelft .navbar-nav li a span {
+    font-size: 10px;
+    text-align: center;
+	display:block;
+}
+body.nav-min .navbar-default .navbar-nav>li>a {
+    padding: 10px;
+}
+
+.dashboard .sidelft .navbar-nav>li.open>.dropdown-menu,
+.dashboard .sidelft .navbar-nav>li:hover>.dropdown-menu {
+    height: auto;
+}
+
