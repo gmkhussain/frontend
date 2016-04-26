@@ -1,6 +1,7 @@
-.dashboard .navbar-nav>li {
+body.dashboard .sidelft .navbar-nav>li {
     display: block;
     width: 100%;
+    border-top: 1px solid #eee;
 }
 
 .dashboard .sidelft .navbar-nav>li>.dropdown-menu {
@@ -32,7 +33,6 @@ div#bs-example-navbar-collapse-1 {
 
 .container-fluid {
     padding: 0;
-
 }
 
 body.nav-min section.sidelft .navbar-nav li a i {
@@ -55,3 +55,32 @@ body.nav-min .navbar-default .navbar-nav>li>a {
     height: auto;
 }
 
+span.notify-icon {
+    position: absolute;
+    font-size: 10px;
+    background-color: #d00;
+    color: #fff;
+    padding: 1px 2px;
+    width: 12px;
+    text-align: center;
+    height: 12px;
+    margin-top: -10px;
+    margin-left: -5px;
+    border-radius: 5px;
+}
+
+.noarrow.dropdown > a::before {
+    display: none;
+}
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin: 0;
+}
+
+
+/**dropdown align to right**/
+body.dashboard li.dropdown .dropdown-menu { left: auto; right: 0;}
+
+body.dashboard .sidelft .navbar-nav li.active{
+    border-right: 5px solid #000;
+}
+body.dashboard .sidelft .navbar-nav>li.open {border-right: 5px solid #eee;}

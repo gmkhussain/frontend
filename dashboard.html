@@ -45,7 +45,7 @@
 
 	<div class="container00">
 
-	<section class="sidelft col-sm-3 ">
+	<section class="sidelft col-sm-3 p0">
 		<nav class="navbar navbar-default" role="navigation" id="slide-nav">
 			  <div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -71,10 +71,6 @@
 						  <ul class="dropdown-menu">
 							<li><a href="#a">Action</a></li>
 							<li><a href="#b">Another action</a></li>
-							<li><a href="#c">Something else here</a></li>
-							<li class="divider"></li>
-							<li><a href="#d">Separated link</a></li>
-							<li class="divider"></li>
 							<li><a href="#e">One more separated link</a></li>
 						  </ul>
 						</li>
@@ -82,20 +78,27 @@
 						<li><a href="#!6"><i class="fa fa-twitter"></i> <span>Link SIX</span></a></li>
 						<li><a href="#!7"><i class="fa fa-car"></i> <span>Link 7</span></a></li>
 						<li><a href="#!8"><i class="fa fa-bus"></i> <span>Link 8.0</span></a></li>
-						
 					  </ul>
-					  
-		
 
 					</div><!-- /.navbar-collapse -->
 				</div>
 			  </div><!-- /.container-fluid -->
 			</nav>
+			
+		<script>
+			dashsubmenu = $("body .dropdown-menu");
+			$(dashsubmenu).each(function(index) {
+				//var subli = $(this).find('.dropdown-menu li').is(".active");
+				//jQuery(this).parent().addClass("open");
+			});
+			$('li.active').parent().addClass('open');
+		</script>
+		
 	</section>
 	<section class="topnav col-sm-9 bg-silver">
 	
 		<div class="nav toggle pul-lft">
-              <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              <a id="menu_toggle" class="btn btn-primary"><i class="fa fa-bars"></i></a>
         </div>
 		
 		<script>
@@ -105,10 +108,31 @@
 		</script>
 	
 						<ul class="nav navbar-nav pul-rgt">
+							<li class="dropdown noarrow">
+							<a href="#noti" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							  <i class="fa fa-envelope"><span class="notify-icon">5</span></i>
+							</a>
+									<ul class="dropdown-menu p20">
+									  <li>Some text</li>
+									  <li>Some text</li>
+									</ul>
+							</li>
+
+							<li class="dropdown noarrow">
+							<a href="#noti" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							  <i class="fa fa-bell"><span class="notify-icon">5</span></i>
+							</a>
+									<ul class="dropdown-menu p20">
+									  <li>Some text</li>
+									  <li>Some text</li>
+									</ul>
+							</li>
+						
+						
 					  		<li class="dropdown user user-menu pul-rgt">
 							<a href="#usr-name" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 							  <span class="dp"><img src="images/usr.jpg" alt="user"></span>
-							  <span class="usr-name">Robert</span>
+							  <span class="usr-name">Royalty</span>
 							</a>
 									<ul class="dropdown-menu p20">
 									  <li class="user-header">
