@@ -8,6 +8,7 @@
 
 /*
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(https://fonts.googleapis.com/css?family=Exo+2:400,100,200,300,500,600,700);
 @font-face {
     font-family: 'nexabold';
     src: url('css/NEXA BOLD-webfont.eot');
@@ -439,6 +440,12 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 .listdvr li:not(:last-child) { border-right: 1px solid hotpink; margin-right: 1em; padding-right: 1em;}
 
 .clrnav li>a { padding: 0em;} /*.clrnav clear spacing for .listdvr */
+
+
+.dotlist--connect ul li i { width: 30px; height: 30px; background-color: #fff; text-align: center; border-radius: 50%; border: 1px solid #ccc; line-height: 2em; margin: 0 10px 10px 0px; }
+
+.dotlist--connect ul li:not(:last-child) i:after { border-left: 2px solid #ccc; content: ""; display: block; height: 15px; left: 49%; position: absolute; }
+
 
 [class*="list-col-"] ul { padding:0; }
 [class*="list-col-"] ul li { display: inline-block; float: left;}
