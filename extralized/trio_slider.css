@@ -1,0 +1,78 @@
+.trio-slider { position: relative; }
+
+.trio-slider li {
+  width: 500px;
+  min-height: 280px;
+  background: #333;
+  display: inline-block;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+}
+
+.trio-slider li p {
+  color: white;
+  font-weight: bold;
+  font-size: 5em;
+  text-align: center;
+  margin-top: 1.175em;
+}
+
+.trio-slider .items {
+    position: absolute;
+    left: 25%;
+}
+
+.trio-slider .main-pos {
+  margin-left: 2em !important;
+  z-index: 3000;
+}
+
+.trio-slider .left-pos {
+  opacity: .3;
+  margin-left: -17em !important;
+  z-index: 1000;
+  -webkit-transform: scale(.75);
+  -moz-transform: scale(.75);
+  transform: scale(.75);
+}
+
+.trio-slider .back-pos {
+  margin-left: 2em !important;
+  opacity: .05;
+  -webkit-transform: scale(.5);
+  -moz-transform: scale(.5);
+  transform: scale(.5);
+}
+
+.trio-slider .right-pos {
+  opacity: .3;
+  margin-left: 21em !important;
+  z-index: 1000;
+  -webkit-transform: scale(.75);
+  -moz-transform: scale(.75);
+  transform: scale(.75);
+}
+
+.trio-slider .trio-arrows {
+  position: relative;
+  margin: 0 auto;
+  left: 0;
+  top: 10em;
+  width: 100%;
+  z-index: 6666;
+  display: block;
+}
+
+.trio-slider input#trioNext { float: right; }
+
+.trio-slider input#trioPrev { float: left; }
+
+.trio-slider .trio-arrows input {
+    border: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+}
