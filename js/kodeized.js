@@ -635,37 +635,40 @@ jQuery('.panel-heading a').click(function() {
 
 
 
-
 /***navbar-move active navbar item***/
-/*hover mark to nav item*/
-jQuery(".navbar-move li").hover(function( event ) {
-  jQuery( ".navbar-move li" ).removeClass("yahan");
-  jQuery( this ).addClass("yahan");
-  var p = jQuery( ".yahan" );
-  var position = p.position();
-  var offset = jQuery( this ).offset();
-  var corlft = offset.left;
-  var corwid =  jQuery( this ).outerWidth();
- 
-  jQuery("#mark").css( "left", position.left);
-  jQuery("#mark").css("width", corwid);
+jQuery( document ).ready(function() {
+	/*hover mark to nav item*/
+	jQuery(".navbar-move > li").hover(function( event ) {
+	  jQuery( ".navbar-move li" ).removeClass("yahan");
+	  jQuery( this ).addClass("yahan");
+	  var p = jQuery( ".yahan" );
+	  var position = p.position();
+		  //var offset = jQuery( this ).offset();
+		  //var corlft = offset.left;
+	  var corwid =  jQuery( this ).outerWidth();
+	 
+	  jQuery("#mark").css( "left", position.left);
+	  jQuery("#mark").css( "top", position.top);
+	  jQuery("#mark").css("width", corwid);
+	});
+
+	/*return mark to active nav item*/
+	jQuery(".navbar-move > li").mouseout(function( event ) {
+	  var acti = ".navbar-move li.active";
+		jQuery( this ).removeClass("yahan");
+	  jQuery( acti ).addClass("yahan");
+	  var p = jQuery( ".yahan" );
+	  var position = p.position();
+		  //var offset = jQuery( acti ).offset();
+		  //var corlft = offset.left;
+	  var corwid =  jQuery( acti ).outerWidth();
+	  
+	  jQuery("#mark").css( "left", position.left);
+	  jQuery("#mark").css( "top", position.top);
+	  jQuery("#mark").css("width", corwid);
+	});
 });
-
-/*return mark to active nav item*/
-jQuery(".navbar-move li").mouseout(function( event ) {
-  var acti = ".navbar-move li.active";
-    jQuery( this ).removeClass("yahan");
-  jQuery( acti ).addClass("yahan");
-  var p = jQuery( ".yahan" );
-  var position = p.position();
-  var offset = jQuery( acti ).offset();
-  var corlft = offset.left;
-  var corwid =  jQuery( acti ).outerWidth();
-  jQuery("#mark").css( "left", position.left);
-  jQuery("#mark").css("width", corwid);
-});
-
-
+/***./navbar-move active navbar item***/
 
 
 /**mutilang**/
