@@ -965,6 +965,12 @@ body.modal-open .modal { margin-right: -1.2em;}
 .modal-content { border: 7px solid #eee; border-radius: 0; box-shadow: 0 20px 140px 13px #666;}
 /***./modal***/
 
+/*modal-fullscreen*/
+.modal-fullscreen .modal-dialog { width: 99%; margin: 0; height: 100vh; }
+.modal-fullscreen .modal-content { height: 100vh; }
+body.modal-open { overflow: hidden; }
+.modal-fullscreen .modal-body { min-height: 80vh; }
+/*./modal-fullscreen*/
 
 
 /***accordion active***/
