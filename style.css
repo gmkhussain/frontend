@@ -351,6 +351,7 @@ body [class*="flaticon-"]::before {margin: 0;}
 .ovrimg img{ width: 100%;}
 
 body img, .ovrimg-mx img { max-width: 100%; height: auto; }
+.modal iframe { width: 100%; min-height:70vh; }
 
 .gray-img img {-webkit-filter: grayscale(1);filter: grayscale(1);}
 

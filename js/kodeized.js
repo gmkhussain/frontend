@@ -723,6 +723,15 @@ if (jQuery('html').hasClass("livewindowsize")) {
 	});
 
 };
-
-
 /***./Live Detect Browser Size****/
+
+
+
+
+/*Video stop when Modal Close*/
+	jQuery('.modal').on('hidden.bs.modal', function () {
+		var src = $(this).find('iframe').attr('src');
+		jQuery(this).find('iframe').attr('src', '');
+		jQuery(this).find('iframe').attr('src', src);
+	});
+/*./Video stop when Modal Close*/	
