@@ -271,9 +271,11 @@ function scroll() {
 jQuery(window).scroll(function() {
 if (jQuery(this).scrollTop() > 1){  
     jQuery('.hdr--sticky').addClass("hdr--sticky-active");
+	jQuery('body').addClass("scrollized");
   }
   else{
     jQuery('.hdr--sticky').removeClass("hdr--sticky-active");
+	jQuery('body').removeClass("scrollized");
   }
 });
 
