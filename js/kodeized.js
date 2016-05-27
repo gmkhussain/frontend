@@ -1,4 +1,4 @@
-jQuery(document).ready(function () {
+ jQuery(document).ready(function () {
     //stick in the fixed 100% height behind the navbar but don't wrap it
     jQuery('#slide-nav.navbar-inverse').after(jQuery('<div class="inverse" id="navbar-height-col"></div>'));
   
@@ -266,7 +266,7 @@ function scroll() {
 */
 
 
-
+	
 //Sticky Header
 jQuery(window).scroll(function() {
 if (jQuery(this).scrollTop() > 1){  
@@ -603,6 +603,7 @@ jQuery(document).ready(function() {
 
 /**read more read less content**/
 jQuery('.moreless-area .moreless-btn').click(function() {
+
   if (jQuery(this).hasClass("less")) {
     jQuery(this).removeClass("less");
     jQuery(this).html("Read more");
@@ -612,6 +613,8 @@ jQuery('.moreless-area .moreless-btn').click(function() {
     jQuery(this).html("Read less");
     jQuery(this).parent().children(".moreless").removeClass("on");
   }
+    jQuery('html, body').animate({	scrollTop: jQuery(this).parent(".moreless-area").offset().top	}, 800);
+	
 });
 /**./read more read less content**/
 /**https://jsfiddle.net/gmkhussain/kcr80c24/**/
