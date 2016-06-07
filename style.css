@@ -933,8 +933,9 @@ Note: see bottom note
 
 /*========HOVER========*/
 body a, body a:active, body  a:focus, body  a:hover {
-   outline:none !important; /*for remove the dotted line around the clicked a*/
-   text-decoration:none;
+	outline:none !important; /*for remove the dotted line around the clicked a*/
+	text-decoration:none;
+	cursor: pointer;
 }
 
 .ftr__links a:hover, .ftr-links a:hover { border-left: 1px solid #777 !important; padding-left: 8px;}
