@@ -1176,7 +1176,7 @@
 			
 			<div class="hed crossline"><h2>FEATURED <b>.crossline</b> HEADING </h2><hr/></div>
 			
-			<div class="swiper-container dontfly ">
+			<div class="swiper-container dontfly s1">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide"><img src="images/burger.svg" alt="... 123"></div>
 					<div class="swiper-slide"><img src="images/donut.svg" alt="..."></div>
@@ -1195,21 +1195,21 @@
 				<div class="swiper-pagination hidden"></div>
 
 				<!-- Add Arrows -->
-				<div class="swiper-button-next swiper-button-next0"><i class="fa fa-angle-left"></i></div>
-				<div class="swiper-button-prev swiper-button-prev0"><i class="fa fa-angle-right"></i></div>
+				<div class="swiper-button-next swiper-button-next1"><i class="fa fa-angle-left"></i></div>
+				<div class="swiper-button-prev swiper-button-prev1"><i class="fa fa-angle-right"></i></div>
 
 			</div>
-			
 			
 		</div>
 	</section>
 	
-		<section class="product-area" id="swiperSlider">
+	
+	<section class="product-area" id="swiperSlider">
 		<div class="container">
 			
 			<div class="hed crossline"><h2>FEATURED <b>.crossline</b> HEADING </h2><hr/></div>
 			
-			<div class="swiper-container dontfly ">
+			<div class="swiper-container dontfly s2">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide"><img src="images/burger.svg" alt="... 123"></div>
 					<div class="swiper-slide"><img src="images/donut.svg" alt="..."></div>
@@ -1228,8 +1228,8 @@
 				<div class="swiper-pagination hidden"></div>
 				
 				<!-- Add Arrows -->
-				<div class="swiper-button-next swiper-button-next1"><i class="fa fa-angle-left"></i></div>
-				<div class="swiper-button-prev swiper-button-prev1"><i class="fa fa-angle-right"></i></div>
+				<div class="swiper-button-next swiper-button-next2"><i class="fa fa-angle-left"></i></div>
+				<div class="swiper-button-prev swiper-button-prev2"><i class="fa fa-angle-right"></i></div>
 				
 			</div>
 
@@ -2492,43 +2492,43 @@
 	<!--Swiper Slider-->
 	<script src="js/swiper.jquery.min.js"></script>
 		<script>
-			var sliders = [];
-			$('.swiper-container').each(function(index, element){
-				$(this).addClass('s'+index);
-
-				$('.s'+index).swiper();    
-		
-					var slider = new Swiper('.s'+index, { /* Options here */
-								pagination: '.swiper-pagination',
-								slidesPerView: '3',
-								centeredSlides: false,
-								paginationClickable: true,
-								nextButton: '.swiper-button-next'+index,
-								prevButton: '.swiper-button-prev'+index,
-								spaceBetween: 15,
-								autoplay: 2500,
-								autoplayDisableOnInteraction: false,
-								breakpoints: {
-								1024: {
-									slidesPerView: 3,
-									spaceBetween: 40
-								},
-								768: {
-									slidesPerView: 3,
-									spaceBetween: 30
-								},
-								640: {
-									slidesPerView: 1,
-									spaceBetween: 20
-								},
-								320: {
-									slidesPerView: 1,
-									spaceBetween: 10
-								}
-							}
+				var swiper1 = new Swiper('.s1', {
+							pagination: '.swiper-pagination',
+							slidesPerView: '3',
+							centeredSlides: false,
+							paginationClickable: true,
+							nextButton: '.swiper-button-next1',
+							prevButton: '.swiper-button-prev1',
+							spaceBetween: 15,
+							autoplay: 2500,
+							autoplayDisableOnInteraction: false,
+							breakpoints: {
+							1024: {	slidesPerView: 3, spaceBetween: 40 },
+							768: { slidesPerView: 3, spaceBetween: 30 },
+							640: { slidesPerView: 1, spaceBetween: 20 },
+							320: { slidesPerView: 1, spaceBetween: 10 }
+						}
 					});
-					sliders.push(slider);
-				});
+					
+					
+					var swiper2 = new Swiper('.s2', {
+							pagination: '.swiper-pagination',
+							slidesPerView: '4',
+							centeredSlides: false,
+							paginationClickable: true,
+							nextButton: '.swiper-button-next2',
+							prevButton: '.swiper-button-prev2',
+							spaceBetween: 15,
+							autoplay: 2500,
+							autoplayDisableOnInteraction: false,
+							breakpoints: {
+							1024: {	slidesPerView: 3, spaceBetween: 40 },
+							768: { slidesPerView: 3, spaceBetween: 30 },
+							640: { slidesPerView: 1, spaceBetween: 20 },
+							320: { slidesPerView: 1, spaceBetween: 10 }
+						}
+					});
+					
 		</script>
 	<!--./Swiper Slider -->
 	

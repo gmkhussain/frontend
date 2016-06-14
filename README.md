@@ -66,6 +66,64 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 <hr/>
 
 
+
+##Multiple Instances of Swiper on Same page
+```html
+//can do that easier just with different classes
+<div class="swiper-container s1"> ... </div>
+<div class="swiper-container s2"> ... </div>
+<div class="swiper-container s3"> ... </div>
+
+<script>
+	var swiper1 = new Swiper('.s1', { /* Options here */ })
+	var swiper2 = new Swiper('.s2', { /* Options here */ })
+	var swiper3 = new Swiper('.s3', { /* Options here */ })
+</script>
+```
+
+
+##Multiple Instances of Swiper on Same page
+```html
+		var sliders = [];
+			$('.swiper-container').each(function(index, element){
+				$(this).addClass('s'+index);
+
+				$('.s'+index).swiper();    
+		
+					var slider = new Swiper('.s'+index, { /* Options here */
+								pagination: '.swiper-pagination',
+								slidesPerView: '3',
+								centeredSlides: false,
+								paginationClickable: true,
+								nextButton: '.swiper-button-next'+index,
+								prevButton: '.swiper-button-prev'+index,
+								spaceBetween: 15,
+								autoplay: 2500,
+								autoplayDisableOnInteraction: false,
+								breakpoints: {
+								1024: {
+									slidesPerView: 3,
+									spaceBetween: 40
+								},
+								768: {
+									slidesPerView: 3,
+									spaceBetween: 30
+								},
+								640: {
+									slidesPerView: 1,
+									spaceBetween: 20
+								},
+								320: {
+									slidesPerView: 1,
+									spaceBetween: 10
+								}
+							}
+					});
+					sliders.push(slider);
+				});
+```
+
+
 * Script-less (HTML base)
 ```html
 <section class="hdr-area" data-navitemlimit="7">...
