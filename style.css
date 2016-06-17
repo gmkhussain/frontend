@@ -448,6 +448,11 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 .dotlist--connect ul li:not(:last-child) i:after { border-left: 2px solid #ccc; content: ""; display: block; height: 15px; left: 49%; position: absolute; }
 
 
+.bulletized ul { padding-left: 18px; }
+.bulletized li { position: relative; list-style-type: none; }
+.bulletized li:before {content: "";position: absolute;left: -17px;top: 7px;background-color: green;height: 5px;width: 5px;border-radius: 50%;}
+
+
 [class*="list-col-"] ul { padding:0; }
 [class*="list-col-"] ul li { display: inline-block; float: left;}
 
