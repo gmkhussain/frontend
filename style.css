@@ -912,7 +912,7 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 /*
 Note: see bottom note
 */
-.hdr--sticky { z-index: 450;}
+.hdr--sticky { width:100%; z-index: 450;}
 .hdr--sticky-active { position: fixed !important; background-color: rgba(255, 255, 255, 1); box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); border-bottom: 1px solid #eee; top:0; }
 
 .ftr--blind { position: fixed; z-index: -1; bottom: 0; width: 100%;}
