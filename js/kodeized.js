@@ -473,12 +473,17 @@ jQuery(document).ready(function(){
 });
 
 
+
 /**broken images fix**/
 // Replace source
-jQuery('img').error(function(){
-		jQuery(this).addClass('broken-image');
-		//jQuery(this).attr('src', 'images/noimage.jpg');
-		//jQuery(this).attr('alt', 'Broken Image Replaced');
+jQuery(window).load(function() { 
+   jQuery("img").each(function(){ 
+      var image = $(this); 
+      if(image.context.naturalWidth == 0 || 
+      image.readyState == 'uninitialized'){  
+         jQuery(image).unbind("error").addClass("broken-image");
+      } 
+   }); 
 });
 
 
