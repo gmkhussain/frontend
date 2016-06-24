@@ -362,7 +362,7 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
 .ovrvis{overflow:visible;}
 
-.section-bg {height:auto;left:0;position:absolute;right:0;top:0;width:100%;z-index:-80;text-align:center;}
+.section-bg {height:auto;left:0;position:absolute;right:0;top:0;width:100%;z-index:0;text-align:center;}
 .section-bg > img {height: auto; width:100%;}
 
 .bg-cntr {background-repeat: no-repeat; background-position: center;}
