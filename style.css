@@ -534,7 +534,11 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 .thumb-indicat .carousel-indicators li { text-align: center; float: none; margin:0px; }
 /**./slider**/
 
-
+/**indicators move to right**/
+.indica-rgt ol.carousel-indicators { left: auto; right: 15px; width: auto; bottom: 90px; }
+.indica-rgt ol.carousel-indicators li { background-color: #ccc; }
+.indica-rgt ol.carousel-indicators li.active { background-color: #d00; }
+/**./indicators move to right**/
 
 /*===FORM===*/
 /**gentleform.js**/
