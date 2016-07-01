@@ -614,12 +614,14 @@ input[type=radio], input[type=checkbox] {
     outline: 0 none;
 }
 
+/*
 [type="button"]:not(.navbar-toggle),[type="reset"],[type="submit"],.inline-btns .form-control[type="button"], .inline-btns .form-control[type="submit"] {
     display: inline-block;
     width: auto;
     background-color: #ff6500;
     color: #fff;
 }
+*/
 .form-control {
     border: 1px solid #eee;
     border-radius: 0;
@@ -973,8 +975,8 @@ body.modal-open { overflow: visible; }
 body.modal-open .modal { margin-right: -1.2em;}
 
 .modal-dialog { top: 20%;}
-.modal .close { background-color: #d00; color: #fff; font-size: 2em; height: 30px; margin: 0; opacity: 1; position: absolute; right: 0; text-shadow: none; top: 0; width: 30px;}
-.modal-content { border: 7px solid #eee; border-radius: 0; box-shadow: 0 20px 140px 13px #666;}
+.modal .close { background-color: transparent; color: #000; font-size: 2em; height: 30px; margin: 0; opacity: 1; position: absolute; right: 5px; text-shadow: none; top: 10px; width: 30px; }
+.modal-content { border: 0px solid #eee; border-radius: 0; box-shadow: 0 20px 140px 13px #666;}
 /***./modal***/
 
 /*modal-fullscreen*/
