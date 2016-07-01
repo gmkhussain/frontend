@@ -40,7 +40,6 @@ body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; overflow-x: hidden
 
 body nav.navbar { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
 
-header,#page-content > section { width: 100%; background-color: #fff; z-index: 1; position: relative; }
 section[class*="-area"] {position: relative; clear:both; }
 
 /*======== CONTENT ========*/
@@ -919,7 +918,9 @@ Note: see bottom note
 .hdr--sticky { width:100%; z-index: 450;}
 .hdr--sticky-active { position: fixed !important; background-color: rgba(255, 255, 255, 1); box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); border-bottom: 1px solid #eee; top:0; }
 
-.ftr--blind { position: fixed; z-index: 0; bottom: 0; width: 100%;}
+.ftr-blinder #page-content > section { width: 100%; background-color: #fff; z-index: 1; position: relative; }
+.ftr-blinder header { z-index: 2; position: relative; }
+.ftr-blinder .ftr--blind { position: fixed; z-index: 0; bottom: 0; width: 100%;}
 
 /*========LINKS========*/
 .strip-btn a {
