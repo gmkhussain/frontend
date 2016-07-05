@@ -70,8 +70,19 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Helvetica Neue
 
 .dropcaps > p:first-child:first-letter {font-size: 2em;}
 
+.fnc-underline a {
+	box-shadow: inset 0 -0.12em 0 0 #f5f5f5,
+		inset 0 -.14em 0 0 rgba(245, 245, 245, 0.5),
+		inset 0 -.14em 0 0 currentColor;
+	text-decoration: none;
+	text-shadow: .05em 0 #f5f5f5,
+		-0.05em 0 #f5f5f5,
+		1.5px 0 #f5f5f5,
+		-1.5px 0 #f5f5f5;
+}
+
 /*default links|complex*/
-div:not([class*="-btn"]) > a[href]:not([class]){color: #008000;text-decoration: underline;}
+/* div:not([class*="-btn"]) > a[href]:not([class]){color: #008000;text-decoration: underline;} */
 .cr a {color: #fff;}
 
 /**alert-bar**/
