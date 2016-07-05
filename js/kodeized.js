@@ -439,7 +439,7 @@ jQuery(document).ready(function(){
 			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 			if (target.length) {
 			  jQuery('html, body').animate({
-				scrollTop: target.offset().top
+				scrollTop: target.offset().top + (-100) //Additional pixels to the scrollTop
 			  }, 1000);
 			  return false;
 			}
