@@ -208,13 +208,31 @@
 
 <main id="page-content">
 
-
 	<section class="slider-area thumb-indicat hover-ctrl fadeft " >
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 		  <!-- Indicators -->
-		  <ol class="carousel-indicators">
+		  <span class="carousel-indicators indicators-arr prev">prev</span>
+		  <span class="carousel-indicators indicators-arr next">Next</span>
+		  
+		  <ol class="carousel-indicators thumbs">
 			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="1"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"><img src="images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="3"><img src="images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="4"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="5"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
 			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
 		  </ol>
 
@@ -234,9 +252,35 @@
 			  </div>
 			</div>
 
+			<div class="item">
+			  <img src="images/slide2.jpg" alt="...">
+			  <div class="container posrel">
+				  <div class="caro-caps">
+				  	<h1>I am a <span class="morphext">So Simple, Very Doge, Much Wow, Such Cool</span> Text Rotator</h1>
+					<h2>Slider Caption Two</h2>
+					<p>Slider text content here</p>
+					<div class="lnk-btn inline-block more-btn"><a href="#">Read More</a></div>
+				  </div>
+			  </div>
+			</div>
+			
 
 			<div class="item gray-img">
 			  <img src="images/slide1.jpg" alt="...">
+			  <div class="container posrel">
+				  <div class="caro-caps">
+				  	<h1>I am a <span class="morphext">So Simple, Very Doge, Much Wow, Such Cool</span> Text Rotator</h1>
+					<h2>Slider Caption Two</h2>
+					<p>Slider text content here</p>
+					<div class="lnk-btn inline-block more-btn"><a href="#">Read More</a></div>
+				  </div>
+			  </div>
+			</div>
+			
+			
+
+			<div class="item gray-img">
+			  <img src="images/slide2.jpg" alt="...">
 			  <div class="container posrel">
 				  <div class="caro-caps">
 				  	<h1>I am a <span class="morphext">So Simple, Very Doge, Much Wow, Such Cool</span> Text Rotator</h1>
@@ -261,9 +305,38 @@
 	
 		<div class="dwn-scroll text-center h4">Go Ahead Scroll<br> <i class="glyphicon glyphicon-chevron-down"></i></div>
 		
+		<script>
+			var pixels=0;
+			
+			jQuery(function() {
+
+			var thumbmover = ".thumb-indicat .carousel-indicators li:nth-of-type(1)";
+
+			var thumbCount = $( ".thumb-indicat .carousel-indicators li" ).size(); // Counting li items
+			 if (thumbCount<8){ jQuery(".indicators-arr").addClass("hidden"); } // hiden next prev with limitation
+
+			  jQuery('.thumb-indicat .next').click(function () {
+				pixels=pixels-80;      
+				jQuery( thumbmover ).css('margin-left',pixels);
+					//alert(pixels);
+					if (pixels==-320){ pixels=0; }
+				});
+			  
+			  jQuery('.thumb-indicat .prev').click(function () {
+				pixels=pixels+80;      
+				jQuery( thumbmover ).css('margin-left',pixels);
+				//alert(pixels);
+					if (pixels>=0){ pixels=0; }
+				});
+			});
+		</script>
+
 	</section>
 	
 	
+	
+
+
 	<hr class="dvr dvr-shine" />
 	
 	<section class="counter-area scrolink scrollreveal fnc-underline">

@@ -541,8 +541,40 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
 /**thumbnail indicators**/
 .thumb-indicat .carousel-indicators li { text-indent: 0; width: 80px !important; border-radius: 0; min-height: 50px; overflow: hidden; margin: 0px;}
-.thumb-indicat .carousel-indicators { left: 0; text-align: center; background: rgba(255,255,255,.6); width: 100%; right: auto; margin-left: 0; bottom:0px; padding:5px;}
+.thumb-indicat .carousel-indicators {
+    left: 0;
+    text-align: center;
+    background: rgba(255,255,255,.6);
+    width: 100%;
+    right: auto;
+    margin-left: 0;
+    bottom: 0px;
+    padding: 5px;
+    white-space: nowrap;
+}
 .thumb-indicat .carousel-indicators li { text-align: center; float: none; margin:0px; }
+.thumb-indicat .carousel-indicators li:nth-of-type(1) { }
+ol.carousel-indicators.nextprev {
+    z-index: 555555;
+    width: 100%;
+    position: absolute;
+}
+
+.thumb-indicat .indicators-arr {
+    right: 0;
+    left: auto;
+    z-index: 5555;
+    width: 50px;
+    bottom: 30px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+.thumb-indicat .indicators-arr.prev {
+    right: auto;
+    left: 0;
+}
+
 /**./slider**/
 
 /**indicators move to right**/
