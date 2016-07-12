@@ -595,9 +595,15 @@ form[novalidate] .form-control:focus { box-shadow: none; }
 
 /*overlapping issue fixed for random heights*/ .form-group:not([class*="col-"]) {clear: both;}
 /*Placeholder*/
-.form-control::-moz-placeholder { color:#ccc;}
-.form-control:-ms-input-placeholder { color:#ccc;}
-.form-control::-webkit-input-placeholder { color:#ccc;}
+.form-control::-moz-placeholder { color:#ccc; -webkit-transition: padding 0.5s; transition: all 1s;}
+.form-control:-ms-input-placeholder { color:#ccc; -webkit-transition: padding 0.5s; transition: all 1s;}
+.form-control::-webkit-input-placeholder { color:#ccc; -webkit-transition: padding 0.5s; transition: 1s;}
+
+.placeholder--hover .form-control:hover::-webkit-input-placeholder, .placeholder--hover .form-control:focus::-webkit-input-placeholder {padding-left:100px; opacity:0;}
+.placeholder--hover .form-control:hover:-moz-placeholder, .placeholder--hover .form-control:focus:-moz-placeholder {padding-left:100px; opacity:0;}
+.placeholder--hover .form-control:hover::-moz-placeholder, .placeholder--hover .form-control:focus::-moz-placeholder {padding-left:100px; opacity:0;}
+.placeholder--hover .form-control:hover:-ms-input-placeholder, .placeholder--hover .form-control:focus:-ms-input-placeholder {padding-left:100px; opacity:0;}
+
 
 /*Change the white to Chrome autocomplete yellow color*/
 input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset;}
