@@ -659,8 +659,8 @@ input[type=radio], input[type=checkbox] {
 .form-control:checked + label { color: green; }
 .form-control:not(:checked) + label { color: #333; }
 .form-control:focus {
-    border-color: rgba(196, 11, 49, 1);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(196, 11, 49, 0.5);
+    border-color: rgb(194, 225, 230);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgb(223, 231, 236);
     outline: 0 none;
 }
 
