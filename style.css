@@ -42,6 +42,8 @@ body nav.navbar { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
 
 section[class*="-area"] {position: relative; clear:both; }
 
+.section-centralized--active { background-color: #0d0; }
+
 /*======== CONTENT ========*/
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;}
 .strong {font-weight: bold;}

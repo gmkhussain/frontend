@@ -195,8 +195,24 @@ jQuery(".form-control").blur(function() {
 
 
 
-
-
+/*section-centralized
+- highlight unique section when it is center of window */
+jQuery(document).ready(function() {      
+  var window_height = $(window).height();
+ jQuery(window).scroll(function() {
+    var scrollMiddle = $(window).scrollTop() + (window_height/2);
+    jQuery('.section-centralized section').each(function() {
+      elTop = jQuery(this).offset().top;
+      elBtm = elTop + $(this).height();
+      if (elTop < scrollMiddle && elBtm > scrollMiddle) {
+		jQuery(this).addClass("section-centralized--active");
+      } else {
+        jQuery(this).removeClass("section-centralized--active");
+      }
+    });
+  });
+});
+/*./section-centralized*/
 
 
 /*
