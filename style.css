@@ -907,6 +907,7 @@ body #slide-nav #slidemenu {background-color: transparent;}
 
 
 @media only screen and (max-width : 768px) {
+	
 body .nav.navbar-nav { margin: 0; }
 
 .navbar-toggle { border-color: transparent !important; min-height:35px;}
@@ -952,6 +953,13 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 
 /*submenu for mobile*/
 @media only screen and (max-width : 768px) {
+
+/*nav-plusminus for mobile*/
+.nav-plusminus .dropdown > a::before { content: "+"; }
+.nav-plusminus .dropdown.open > a::before { content: "-"; }
+.nav-plusminus .dropdown:hover  > .dropdown-menu { display: none ; }
+.nav-plusminus .dropdown.open  > .dropdown-menu { display: block ; }
+/*./nav-plusminus for mobile*/
 
 .dropdown.open .dropdown-menu, .dropdown > .dropdown-menu { position: static; float: none; width: 100%; background-color:#fff; }
 .navbar a{ text-align:center; }
