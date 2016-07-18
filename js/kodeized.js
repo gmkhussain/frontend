@@ -328,6 +328,12 @@ jQuery(".dwn-scroll").click(function() {
 
 
 
+//Tab slide up/dwon on click
+jQuery(".tab-animate li").click(function() {
+   jQuery('html, body').animate({ scrollTop: $(".tab-content").offset().top - 170 }, 1500 );
+});
+
+
 //Active Tab Nav move to center on click
     jQuery(document).ready(function(){
       $(".active-tab-move-area .nav-tabs li").click(function() {
