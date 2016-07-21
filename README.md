@@ -33,6 +33,14 @@ Additional file list:
 ```
 
 
+##On keypress do something on entire document but not inside inputs and textareas
+```html
+$(document).on('keypress', function(e) {
+    var tag = e.target.tagName.toLowerCase();
+    if ( e.which === 73 && tag != 'input' && tag != 'textarea') 
+        alert("Do Something");
+});
+```
 
 ```html
 //Find Tag Type *Optional
