@@ -952,7 +952,7 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 }
 
 /*submenu for mobile*/
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 767px) {
 
 /*nav-plusminus for mobile*/
 .nav-plusminus .dropdown > a::before { content: "+"; }

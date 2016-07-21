@@ -1,3 +1,8 @@
+/* 
+* Kodeized v1.0
+* This file contains works for many various kinds of tasks 
+*/
+
  jQuery(document).ready(function () {
     //stick in the fixed 100% height behind the navbar but don't wrap it
     jQuery('#slide-nav.navbar-inverse').after(jQuery('<div class="inverse" id="navbar-height-col"></div>'));
