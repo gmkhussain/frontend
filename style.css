@@ -632,11 +632,12 @@ input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset;}
     float: right;
 }
 
-.expand-search:hover input,
-.expand-search input:focus  {
-    width: 100%;
-    opacity: 1;
-}
+.expand-search:hover input, .expand-search input:focus  { width: 100%; opacity: 1; }
+
+.expand-search--fullwidth:hover input,
+.expand-search--fullwidth input { opacity: 0; max-width: 100%; min-width: auto; position: relative; z-index: 2; }
+.expand-search--fullwidth .form-group--active input { position: fixed; left:0; top:0; min-height:95px; font-size:2em; opacity:.9; }
+
 
 /***submit button on right***/
 .search-fom [type="submit"] { position: absolute; top: 0; right: 0; height: 100%; border: 0;}
@@ -971,7 +972,7 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 
 /*./dropdown-menu*/
 /*navbar-move active navbar item*/
-.navbar-move #mark {background-color: #39c; display: inline-block; position: absolute; z-index: 159; height: 2px; left:-9999px;}
+.navbar-move #mark {background-color: #39c; display: inline-block; position: absolute; z-index: 0; height: 2px; left:-9999px;}
 /*./navbar-move active navbar item*/
 
 
@@ -983,7 +984,7 @@ Note: see bottom note
 
 .ftr-blinder #page-content > section { width: 100%; background-color: #fff; z-index: 1; position: relative; }
 .ftr-blinder header { z-index: 2; position: relative; }
-.ftr-blinder .ftr--blind { position: fixed; z-index: 0; bottom: 0; width: 100%;}
+.ftr-blinder .ftr--blind { position: fixed; z-index: 0; bottom: 0; width: 100%; }
 
 /*========LINKS========*/
 .strip-btn a {
