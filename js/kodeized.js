@@ -82,6 +82,16 @@ jQuery(function() {
 	urlParametersLast2= split_urlParameters[split_urlParameters.length-2];
 	jQuery('body').addClass(urlParametersLast + "-parameter");
 	jQuery('body').addClass(urlParametersLast2 + "-parameter");
+	
+  var urlHash = window.location.hash;
+    var urlHashSplit = urlHash.split("#");
+    var urlHashAfterSplit = "NoHash";
+    if (urlHashSplit[1] != null){
+			urlHashAfterSplit = urlHashSplit[1];
+		}
+	jQuery('body').addClass(urlHashAfterSplit + "-hash");
+
+	
 });
 
 
