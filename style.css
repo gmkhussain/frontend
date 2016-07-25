@@ -190,6 +190,18 @@ body [class*="flaticon-"]::before {margin: 0;}
 /**borders**/
 .bdr1 { border: 1px solid #ccc; }
 
+/**positions**/
+.r0{ right:0; }
+.b0{ bottom:0; }
+.t0{ top:0; }
+.l0{ left:0; }
+
+body .r--{ right:auto; }
+body .b--{ bottom:auto; }
+body .t--{ top:auto; }
+body .l--{ left:auto; }
+/**./positions**/
+
 /**paddings**/
 .p0{ padding:0px;}
 .pl0{ padding-left:0px;}
