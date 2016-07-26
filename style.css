@@ -475,7 +475,7 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
 .dotlist--connect ul li i { width: 30px; height: 30px; background-color: #fff; text-align: center; border-radius: 50%; border: 1px solid #ccc; line-height: 2em; margin: 0 10px 10px 0px; }
 
-.dotlist--connect ul li:not(:last-child) i:after { border-left: 2px solid #ccc; content: ""; display: block; height: 15px; left: 49%; position: absolute; }
+.dotlist--connect ul li:not(:last-child) i:after  { border-left: 2px solid #ccc; content: ""; display: block; height: 100%; margin-left: 13px; }
 
 
 .bulletized ul { padding-left: 18px; }
