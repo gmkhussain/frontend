@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Helvetica Neue
 .clrhm h1, .clrhm h2, .clrhm h3, .clrhm h4, .clrhm h5, .clrhm h6, .clrhm .h1, .clrhm .h2, .clrhm .h3, .clrhm .h4, .clrhm .h5, .clrhm .h6  { margin:0px; }
 
 /*center align H2 and P in section */
-.hed-cntr .container > h2, .hed-cntr .container > p, .hed-cntr .container > .lnk-btn { text-align: center; }
+.hed-cntr .hed h2, .hed-cntr .container > h2, .hed-cntr .container > p, .hed-cntr .container > .lnk-btn { text-align: center; }
 
 .hed.crossline {text-align: center;}
 .hed.crossline h2 {text-align: center; display: inline-block; background-color: #fff; padding: 0 0.4em;}
@@ -65,6 +65,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Helvetica Neue
 .hed.lndotln hr:after {right: auto; left: 20px;}
 
 .hed.underline-mini h2:after {content: "";display: block;height: 4px;background-color: #ffc526;width: 50px;margin: 5px auto 0;}
+
+.underline-mini--double h2:before {content: "";height: 3px;width: 50px;display: block;background-color: #1db899;z-index: 1;bottom: 0;margin: 0 auto;position: relative;top: 51px;}
+.underline-mini--double h2:after { content: ""; display: block; background-color: #ccc; width: 160px; height: 1px; bottom: -10px; margin: 15px auto 0; }
 
 .inkd{font-family:"Zeyada";}
 
