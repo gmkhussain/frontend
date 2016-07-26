@@ -371,6 +371,7 @@ body .l--{ left:auto; }
 
 /*=== IMG ===*/
 .ovrflw { overflow: hidden; }
+.overload { overflow: auto; }
 
 .ovrimg { overflow: hidden; }
 .ovrimg img{ width: 100%;}
