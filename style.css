@@ -401,6 +401,7 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
 /*relative for inside of wide box*/
 .posrel {position: relative;}
+.posfix {position: fixed;}
 .posrel .section-bg ~ * {position: relative;}
 
 /*=== LIST ===*/
@@ -1095,7 +1096,7 @@ body.modal-open { overflow: hidden; }
 
 
 /*filler*/
-.fill-holder { background-image: url(""); float: none; height: 100%; left: 0; margin: 0 auto; overflow: hidden; position: absolute; top: 0; width: 36px; z-index: 100;}
+.fill-holder { height: 100vh; margin: 0 auto; width: 36px; }
 .fill__mask { background-image: url("images/fill-mask.png"); background-repeat: repeat; height: 100%;}
 .fill__move { background-color: #4090d7; background-repeat: repeat; height: auto;}
 /**./filler**/
