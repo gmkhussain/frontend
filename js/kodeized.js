@@ -574,7 +574,7 @@ jQuery('table th').each(function (i) {
 
 /***More Navbar Item Limitation***/
 jQuery( document ).ready(function() {
-moreNavLimit = jQuery(".hdr").attr("data-navitemlimit");
+moreNavLimit = jQuery(".hdr-area").attr("data-navitemlimit");
 
 jQuery(".navbar-main > li").each(function (i) {
 	i=i+1; //Counting Total Nav Items
