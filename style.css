@@ -1024,6 +1024,15 @@ Note: see bottom note
 .ftr-blinder header { z-index: 2; position: relative; }
 .ftr-blinder .ftr--blind { position: fixed; z-index: 0; bottom: 0; width: 100%; }
 
+/*bottom-area*/
+.bottom-logo--slide .bottom__logo { width: 36px; overflow: hidden; display: inline-block; }
+.bottom-logo--slide .bottom__logo img { width: auto; max-width: initial;}
+.bottom-logo--slide .bottom__rgt:hover .bottom__logo { width: 150px;}
+.bottom-logo--slide .bottom__txt { line-height: 40px; display: inline-block; float: left; }
+/*./bottom-area*/
+
+
+
 /*========LINKS========*/
 .strip-btn a {
 	animation: 2s linear 0s normal none infinite running progress-bar-stripes;
