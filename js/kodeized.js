@@ -213,12 +213,12 @@ jQuery(".form-control").blur(function() {
 /*section-centralized
 - highlight unique section when it is center of window */
 jQuery(document).ready(function() {      
-  var window_height = $(window).height();
+  var window_height = jQuery(window).height();
  jQuery(window).scroll(function() {
-    var scrollMiddle = $(window).scrollTop() + (window_height/2);
+    var scrollMiddle = jQuery(window).scrollTop() + (window_height/2);
     jQuery('.section-centralized section').each(function() {
       elTop = jQuery(this).offset().top;
-      elBtm = elTop + $(this).height();
+      elBtm = elTop + jQuery(this).height();
       if (elTop < scrollMiddle && elBtm > scrollMiddle) {
 		jQuery(this).addClass("section-centralized--active");
       } else {
@@ -382,7 +382,7 @@ jQuery(document).ready(function(){
 jQuery(document).ready(function(){
 	//Check to see if the window is top if not then display button
 	jQuery(window).scroll(function(){
-		if ($(this).scrollTop() > 100) {
+		if (jQuery(this).scrollTop() > 100) {
 			jQuery('.scrollToTop').fadeIn();
 		} else {
 			jQuery('.scrollToTop').fadeOut();
@@ -390,8 +390,8 @@ jQuery(document).ready(function(){
 	});
 	
 	//Click event to scroll to top
-	$('.scrollToTop').click(function(){
-		$('html, body').animate({scrollTop : 0},800);
+	jQuery('.scrollToTop').click(function(){
+		jQuery('html, body').animate({scrollTop : 0},800);
 		return false;
 	});
 
@@ -494,7 +494,7 @@ jQuery(document).ready(function(){
 jQuery(function () {
     jQuery(window).scroll(function () {
         var $myDiv = jQuery('.fill__move');
-        var y = $(this).scrollTop();
+        var y = jQuery(this).scrollTop();
         jQuery('#fill__value').text(y);
         x = y - 3;
         $myDiv.animate({
@@ -506,7 +506,7 @@ jQuery(function () {
 
 /*section height =screen*/
 jQuery(document).ready(function(){
-    jQuery('.screen-area').css("min-height", $(window).height() + 10);
+    jQuery('.screen-area').css("min-height", jQuery(window).height() + 10);
 });
 
 
@@ -515,7 +515,7 @@ jQuery(document).ready(function(){
 // Replace source
 jQuery(window).load(function() { 
    jQuery("img").each(function(){ 
-      var image = $(this); 
+      var image = jQuery(this); 
       if(image.context.naturalWidth == 0 || 
       image.readyState == 'uninitialized'){  
          jQuery(image).unbind("error").addClass("broken-image");
@@ -528,18 +528,18 @@ jQuery(window).load(function() {
 
 
 /////////TOOL TIP///////
-$('body').tooltip({    
+jQuery('body').tooltip({    
     selector: "a[rel=tooltip]"
 })
 
 
 // Enabling Popover Example //
-$(function(){
+jQuery(function(){
     // Enabling Popover Example 1 - HTML (content and title from html tags of element)
-    $("[data-toggle=popover]").popover();
+    jQuery("[data-toggle=popover]").popover();
 
     // Enabling Popover Example 2 - JS (hidden content and title capturing)
-    $("#popoverExampleTwo").popover({
+    jQuery("#popoverExampleTwo").popover({
         html : true, 
         content: function() {
           return $('#popoverExampleTwoHiddenContent').html();
