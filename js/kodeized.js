@@ -5,9 +5,9 @@
 
  jQuery(document).ready(function () {
     //stick in the fixed 100% height behind the navbar but don't wrap it
-    jQuery('#slide-nav.navbar-inverse').after(jQuery('<div class="inverse" id="navbar-height-col"></div>'));
+    jQuery('.slide-navbar #slide-nav.navbar-inverse').after(jQuery('<div class="inverse" id="navbar-height-col"></div>'));
   
-    jQuery('#slide-nav.navbar-default').after(jQuery('<div id="navbar-height-col"></div>'));  
+    jQuery('.slide-navbar #slide-nav.navbar-default').after(jQuery('<div id="navbar-height-col"></div>'));  
 
     // Enter your ids or classes
     var toggler = '.navbar-toggle';
@@ -18,15 +18,15 @@
     var menuneg = '-100%';
     var slideneg = '-80%';
 
-    jQuery("#slide-nav").on("click", toggler, function (e) {
+    jQuery(".slide-navbar #slide-nav").on("click", toggler, function (e) {
 
-        var selected = jQuery(this).hasClass('slide-active');
+        var selected = jQuery(this).hasClass('slide-navbar--active');
 
-        jQuery('#slidemenu').stop().animate({
+        jQuery('.slide-navbar #slidemenu').stop().animate({
             left: selected ? menuneg : '0px'
         });
 
-        jQuery('#navbar-height-col').stop().animate({
+        jQuery('.slide-navbar #navbar-height-col').stop().animate({
             left: selected ? slideneg : '0px'
         });
 
@@ -39,16 +39,16 @@
         });
 
 
-        jQuery(this).toggleClass('slide-active', !selected);
-        jQuery('#slidemenu').toggleClass('slide-active');
-        jQuery('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
+        jQuery(this).toggleClass('slide-navbar--active', !selected);
+        jQuery('.slide-navbar #slidemenu').toggleClass('slide-navbar--active');
+        jQuery('.slide-navbar #page-content, .navbar, body, .navbar-header').toggleClass('slide-navbar--active');
     });
 
     var selected = '#slidemenu, #page-content, body, .navbar, .navbar-header';
     jQuery(window).on("resize", function () {
 
-        if (jQuery(window).width() > 767 && jQuery('.navbar-toggle').is(':hidden')) {
-            jQuery(selected).removeClass('slide-active');
+        if (jQuery(window).width() > 767 && jQuery('.slide-navbar .navbar-toggle').is(':hidden')) {
+            jQuery(selected).removeClass('slide-navbar--active');
         }
     });
 });
