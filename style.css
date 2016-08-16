@@ -42,7 +42,7 @@ body nav.navbar { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
 
 section[class*="-area"] {position: relative; clear:both; }
 
-.section-centralized--active { background-color: #0d0; }
+.section-centralized--active { border:2px solid #0d0; }
 
 
 
@@ -1063,13 +1063,20 @@ body a, body a:active, body  a:focus, body  a:hover {
 
 .ftr__links a:hover, .ftr-links a:hover { border-left: 1px solid #777 !important; padding-left: 8px;}
 
-.imgzoom-hover [class*="__inr"] [class*="__img"] { overflow: hidden;}
-.imgzoom-hover [class*="__inr"]:hover [class*="__img"] img { transform: scale(1); }
-.imgzoom-hover [class*="__inr"] [class*="__img"] img { transform: scale(1.2); }
+.imgzoom--hover [class*="__inr"] [class*="__img"] { overflow: hidden;}
+.imgzoom--hover [class*="__inr"]:hover [class*="__img"] img { transform: scale(1); }
+.imgzoom--hover [class*="__inr"] [class*="__img"] img { transform: scale(1.2); }
 
 /*__inr element bit bigger on hover*/
-.scale-hover [class*="__inr"]:hover { transform: scale(1.1); }
+.scale--hover [class*="__inr"]:hover { transform: scale(1.1); }
 /*./__inr element bit bigger on hover*/
+
+/*FlashCross hover*/
+.flashcross--hover:after, .flashcross--hover:before { content: ''; position: absolute; top: 0; bottom: 0; right: 0; left: 0; -webkit-transition: all .6s ease-in-out; transition: all .6s ease-in-out; }
+.flashcross--hover:after, .flashcross--hover:before { content: ''; position: absolute; top: 0; bottom: 0; right: 0; left: 0; -webkit-transition: all .6s ease-in-out; transition: all .6s ease-in-out; }
+.flashcross--hover:hover:before { right: 50%; left: 50%; background: rgba(255, 255, 255, .2); }
+.flashcross--hover:hover:after { top: 50%; bottom: 50%; background: rgba(255, 255, 255, .2); }
+/*./FlashCross hover*/
 
 /*
 For Mobile Friendly Navigation
