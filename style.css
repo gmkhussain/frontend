@@ -1174,6 +1174,12 @@ body.modal-open { overflow: hidden; }
 @keyframes link {25%{-webkit-transform: rotate(10deg);transform: rotate(10deg);}
 				50% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg);}
 				}
+				
+/*1.5x larger*/
+.icon1-5x .fa:before { font-size: 1.8em; }
+.icon-boxed.icon1-5x .fa { width: 2.8em; height: 2.8em; line-height: 2.8em; }
+
+/*2x larger*/
 .icon2x i:before {font-size: 2em;}
 .icon2x.icon-boxed i { width: 3.5em; height: 3.5em; line-height: 3.5em; text-align: center; }
 /**./icons**/
