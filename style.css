@@ -1078,6 +1078,17 @@ body a, body a:active, body  a:focus, body  a:hover {
 .flashcross--hover:hover:after { top: 50%; bottom: 50%; background: rgba(255, 255, 255, .2); }
 /*./FlashCross hover*/
 
+
+/*Metro Flip Box Front/Back*/
+.metroflip_inr { -webkit-perspective: 1000; -moz-perspective: 1000; perspective: 1000; overflow: visible; margin-bottom: 5px; position: relative; }
+.metroflip-box .front { z-index: 0; -webkit-transform: rotateY(0deg); -moz-transform: rotateY(0deg); transform: rotateY(0deg); }
+.metroflip-box .front, .metroflip-box .back { -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; backface-visibility: hidden; -webkit-transition: all 750ms ease 0s; -moz-transition: all 750ms ease 0s; -o-transition: all 750ms ease 0s; -ms-transition: all 750ms ease 0s; transition: all 750ms ease 0s; -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; -ms-transform-style: preserve-3d; transform-style: preserve-3d; }
+.metroflip-box .back { position: absolute; top: 0px; left: 0px; right: 0px; height: 100%; z-index: -2; -webkit-transform: rotateY(-180deg); -moz-transform: rotateY(-180deg); transform: rotateY(-180deg); }
+.metroflip-box:hover .front { -webkit-transform: rotateY(180deg); -moz-transform: rotateY(180deg); transform: rotateY(180deg); }
+.metroflip-box:hover .back { z-index: 3; -webkit-transform: rotateY(0deg); -moz-transform: rotateY(0deg); transform:rotateY(0deg);
+}
+/*./Metro Flip Box Front/Back */
+
 /*
 For Mobile Friendly Navigation
 http://jsfiddle.net/gmkhussain/awqs01zc/

@@ -513,7 +513,7 @@ jQuery(document).ready(function(){
 
 /**broken images fix**/
 // Replace source
-jQuery(window).load(function() { 
+jQuery(window).ready(function() { 
    jQuery("img").each(function(){ 
       var image = jQuery(this); 
       if(image.context.naturalWidth == 0 || 
