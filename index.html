@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="css/swiper.min.css">
 
 	<!-- jQuery -->
-	<script src="js/jquery1.11.1.min.js"></script>
+	<script src="js/jquery-3.0.0.min.js"></script>
 	
 	<!--browser selector-->
 	<script src="js/css_browser_selector.js" type="text/javascript"></script>
@@ -307,13 +307,14 @@
 		<div class="dwn-scroll text-center h4">Go Ahead Scroll<br> <i class="glyphicon glyphicon-chevron-down"></i></div>
 		
 		<script>
+			//jQuery.Deferred exception: jQuery(...).size is not a function TypeError: jQuery(...).size is not a function
 			var pixels=0;
 			
 			jQuery(function() {
 
 			var thumbmover = ".thumb-indicat .carousel-indicators li:nth-of-type(1)";
 
-			var thumbCount = $( ".thumb-indicat .carousel-indicators li" ).size(); // Counting li items
+			var thumbCount = jQuery( ".thumb-indicat .carousel-indicators li" ).size(); // Counting li items
 			 if (thumbCount<8){ jQuery(".indicators-arr").addClass("hidden"); } // hiden next prev with limitation
 
 			  jQuery('.thumb-indicat .next').click(function () {
