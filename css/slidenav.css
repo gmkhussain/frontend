@@ -121,6 +121,54 @@ body.slide-navbar--active {
 	.slide-navbar #slide-nav .navbar-form .btn {
 	    width: 100%
 	}
+	
+	
+	
+	
+	
+	
+	
+/*slide-navbar--right*/
+.slide-navbar--right.slide-navbar #slide-nav .navbar-toggle{ float:right; }
+
+.slide-navbar--right00.slide-navbar--active #slide-nav .navbar-toggle {
+    position: fixed !important;
+    right: 10px;
+    top: 0;
+    z-index: 777;
+}
+
+.slide-navbar--right main#page-content.slide-navbar--active {
+    left: auto !important;
+    right: 80% !important;
+}
+
+.slide-navbar--right.slide-navbar #slide-nav #slidemenu{
+	left:auto;
+	right:-100%;
+}
+
+.slide-navbar--right .navbar-header.slide-navbar--active {
+    left: auto !important;
+    right: 80% !important;
+}
+
+.slide-navbar--right #slidemenu.slide-navbar--active {
+    right: 0px !important;
+    left:auto !important;
+}
+
+.slide-navbar--right.slide-navbar #navbar-height-col{
+	left: auto !important;
+    right: -80% !important;
+}
+
+.slide-navbar--right.slide-navbar--active #navbar-height-col{
+	right: 0% !important;
+	z-index: 1;
+}
+
+
 }
 @media (min-width:768px) { 
 	.slide-navbar #page-content {
