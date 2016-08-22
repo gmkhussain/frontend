@@ -557,10 +557,10 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 .no-ctrl .carousel-indicators { display: none; }
 
 /***slider arrows hide/show on hover***/
-.hover-ctrl .right.carousel-control { right: -20%; left: auto; }
-.hover-ctrl .left.carousel-control { right:auto; left:-20%; }
-.hover-ctrl:hover .right.carousel-control { right: 0; }
-.hover-ctrl:hover .left.carousel-control { left: 0; }
+.hover-ctrl .right.carousel-control { right:-30px; left: auto; opacity:0;}
+.hover-ctrl .left.carousel-control { right:auto; left:-30px; opacity:0;}
+.hover-ctrl:hover .right.carousel-control { right: 0;  opacity:1;}
+.hover-ctrl:hover .left.carousel-control { left: 0; opacity:1;}
 
 /**arrows in center**/
 .cntr-ctrl .carousel-control {color: #777;}
