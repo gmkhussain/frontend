@@ -492,6 +492,9 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
 .listview ul li {display:block;}
 
+.list-icon li .fa { float: left; width: 1em; height: 2em; margin-left: -1.5em; line-height: 1.5em; font-size: 1em; }
+.list-icon li { margin-left: 1.5em; margin-bottom: 1em; }
+
 .listdvr li:not(:last-child) { border-right: 1px solid hotpink; margin-right: 1em; padding-right: 1em;}
 
 .clrnav li>a { padding: 0em;} /*.clrnav clear spacing for .listdvr */
