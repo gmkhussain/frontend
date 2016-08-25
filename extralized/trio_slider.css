@@ -1,5 +1,7 @@
 .trio-slider { position: relative; }
 
+.trio-slider .carousel { min-height: 290px; overflow: hidden; padding: 0; }
+
 .trio-slider li {
   width: 500px;
   min-height: 280px;
@@ -59,7 +61,7 @@
   position: relative;
   margin: 0 auto;
   left: 0;
-  top: 10em;
+  top: 7em;
   width: 100%;
   z-index: 6666;
   display: block;
@@ -75,4 +77,21 @@
     height: 50px;
     border-radius: 50%;
     display: inline-block;
+}
+
+@media (max-width:1024px){
+	.trio-slider .items { position: absolute; left: 22%; width: 50%; }
+}
+
+@media (max-width:768px){
+section.trio-slider li.main-pos {
+    width: 90%;
+    left: 5%;
+    margin-left: 0px !important;
+}
+
+	section.trio-slider .items.left-pos, .trio-slider .items.right-pos {
+    width: 100%;
+    left: 5%;
+}
 }
