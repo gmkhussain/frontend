@@ -182,7 +182,7 @@ li.c_active.active a {background-color: #39c; color: #fff;}
 
 /****pinterest-style****/
 .pinterest-style *, .pinterest-style  *:before, *:after {box-sizing:  border-box !important;}
-.pinterest-style .row {-moz-column-width: 18em; -webkit-column-width: 18em; -moz-column-gap: 1em; -webkit-column-gap:1em;}
+.pinterest-style .row { column-width:18em; -moz-column-width: 18em; -webkit-column-width: 18em; -moz-column-gap: 1em; -webkit-column-gap:1em;}
 .pinterest-style .item { display: inline-block; padding:  .25rem; width:  100%; }
 .pinterest-style .well { position:relative; display: block;}
 /****./pinterest-style****/
