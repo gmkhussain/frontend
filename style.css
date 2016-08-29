@@ -936,7 +936,7 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 /*=== NAVBAR ===*/
 /**side nav bg transparent**/
 body #navbar-height-col { background-color: inherit; }
-body .navbar-default .navbar-collapse {background: transparent;}
+body .navbar-default .navbar-collapse {background: transparent;border-top:0;}
 body #slide-nav #slidemenu {background-color: transparent;}
 /**./side nav bg transparent**/
 

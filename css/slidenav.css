@@ -50,6 +50,9 @@ body.slide-navbar--active {
 }
 /* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
 @media (max-width:767px) { 
+nav.navbar .container-fluid {
+    padding: 0;
+}
 	.slide-navbar #slide-nav .container {
 	    margin: 0!important;
 	    padding: 0!important;
@@ -57,6 +60,9 @@ body.slide-navbar--active {
 	}
 	.slide-navbar #slide-nav .navbar-header {
 	    margin: 0 auto;
+	    padding: 0 0px;
+	}
+	.slide-navbar--active #slide-nav .navbar-header {
 	    padding: 0 15px;
 	}
 	.slide-navbar #slide-nav .navbar.slide-navbar--active {
@@ -66,14 +72,13 @@ body.slide-navbar--active {
 	    z-index: 1000;
 	}
 	.slide-navbar #slide-nav #slidemenu {
-	    background: #f7f7f7;
 	    left: -100%;
 	    width: 80%;
 	    min-width: 0;
 	    position: absolute;
 	    padding-left: 0;
 	    z-index: 2;
-	    top: -8px;
+	    top: 0px;
 	    margin: 0;
 	}
 	.slide-navbar #slide-nav #slidemenu .navbar-nav {
