@@ -842,6 +842,12 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 .fnc-fom form { background-color: #eee; margin: 40px 0; padding: 30px;}
 .fnc-fom .form-group { margin-top: 30px; position: relative;}
 
+.fnc-uplaod .file-drop-area { position: relative; max-width: 100%; margin: 0 auto; }
+.fnc-uplaod.file-drop-area.is-active { background-color: #3F4069; }
+.fnc-uplaod .fake-btn { padding: 8px 15px; margin-right: 8px; font-size: 12px; margin-bottom: 10px; display: inline-block; }
+.fnc-uplaod .file-msg { font-weight: 400; overflow: hidden; text-overflow: ellipsis; display: inline-block; vertical-align: middle;}
+.fnc-uplaod .file-input { position: absolute; left: 0; top: 0; height: 100%; width: 100%; cursor: pointer; opacity: 0; }
+.fnc-uplaod .file-input:focus { outline: none; }
 
 /*Label as a placeholder animation*/
 .placelabeler .form-group .form-control~label { color: #000 !important; position: absolute; text-transform: uppercase; top: 10px; left:10px; }

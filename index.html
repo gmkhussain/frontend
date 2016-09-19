@@ -1896,6 +1896,32 @@
 				</div>
 				
 		
+		
+				<div class="file-drop-area fnc-uplaod col-sm-6">
+						<div class="hed crossline"><h2>.fnc-upload</h2><hr></div>
+							  <span class="fake-btn bg-orange">Choose files</span>
+							  <span class="file-msg js-set-number">or drag and drop files here</span>
+							  <input class="file-input" type="file" multiple>
+							  
+						<script>
+							var fileInput = jQuery('.fnc-uplaod .file-input'),
+								dropArea = jQuery('.fnc-uplaod .file-drop-area');
+								
+							// change inner text
+							fileInput.on('change', function() {
+							  var filesCount = fileInput[0].files.length;
+							  if (filesCount === 1) {
+								// if single file then show file name
+								jQuery('.js-set-number').text(fileInput.val().split('\\').pop());
+							  } else {
+								// otherwise show number of files
+								jQuery('.js-set-number').text(filesCount + ' files selected');
+							  }
+							});
+						</script>
+				</div>
+							
+							
 		<hr class="dvr">
 		
 		<h3>form <b>.inline-control</b></h3>
