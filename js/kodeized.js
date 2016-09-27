@@ -681,7 +681,6 @@ jQuery('.panel-heading a').click(function() {
 /*./smart alert bar*/
 
 
-
 /***navbar-move active navbar item***/
 jQuery( document ).ready(function() {
 	/*hover mark to nav item*/
@@ -782,3 +781,14 @@ if (jQuery('html').hasClass("livewindowsize")) {
 		jQuery(this).find('iframe').attr('src', src);
 	});
 /*./Video stop when Modal Close*/	
+
+
+
+
+jQuery(".hoverized *").on("mouseenter", function (e) {
+	jQuery(this).addClass("hoverized--active");
+});
+
+jQuery(".hoverized *").on("mouseout", function (e) {
+	jQuery(this).removeClass("hoverized--active");
+});

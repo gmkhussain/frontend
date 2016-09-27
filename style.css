@@ -1070,6 +1070,9 @@ body a, body a:active, body  a:focus, body  a:hover {
 	cursor: pointer;
 }
 
+.hoverized--active { background: yellow; }
+
+
 .ftr__links a:hover, .ftr-links a:hover { border-left: 1px solid #777 !important; padding-left: 8px;}
 
 .imgzoom--hover [class*="__inr"] [class*="__img"] { overflow: hidden;}
