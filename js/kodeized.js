@@ -745,6 +745,12 @@ jQuery( document ).ready(function() {
 
 /***remove blank <P> tags***/
 jQuery('p:empty').remove();
+
+jQuery('.p-blank--remove p').each(function() {
+  var $this = jQuery(this);
+  if ($this.html().replace(/\s|&nbsp;/g, '').length == 0)
+    $this.remove();
+});
 /***./remove blank P tags***/
 
 
