@@ -754,6 +754,13 @@ jQuery('.p-blank--remove p').each(function() {
 /***./remove blank P tags***/
 
 
+/***remove &nbsp; from any element***/
+jQuery('.remove-nbsp').html(function(i,h){
+    console.log(i,h);
+    return h.replace(/&nbsp;/g,'');
+});
+/***./remove &nbsp; from any element***/
+
 
 /***Live Detect Browser Size****/
 var windowTitle = jQuery(document).prop('title'); // Original Title
