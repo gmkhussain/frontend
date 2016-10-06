@@ -209,8 +209,8 @@
 
 <main id="page-content">
 
-	<section class="slider-area thumb-indicat hover-ctrl fadeft" >
-		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+	<section class="slider-area slider--pauseplay thumb-indicat hover-ctrl fadeft" >
+		<div id="carousel-example-generic" class="carousel slide slider--pauseplay" data-ride="carousel" data---interval="false">
 		  <!-- Indicators -->
 		  <span class="carousel-indicators indicators-arr prev">prev</span>
 		  <span class="carousel-indicators indicators-arr next">Next</span>
@@ -301,6 +301,33 @@
 		  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
 			<span class="glyphicon glyphicon-chevron-right"></span>
 		  </a>
+		  
+		  
+		  
+		    <div id="carouselButtons" class="pul-rgt">
+				  <button id="playButton" type="button" class="btn btn-default btn-xs">
+					  <span class="glyphicon glyphicon-play"></span>
+				   </button>
+				  <button id="pauseButton" type="button" class="btn btn-default btn-xs">
+					  <span class="glyphicon glyphicon-pause"></span>
+				  </button>
+  
+				  <script>
+					  jQuery(function () {
+						jQuery('.slider--pauseplay').carousel({
+							interval:2000,
+							pause: "false"
+						});
+						jQuery('#playButton').click(function () {
+							jQuery('.slider--pauseplay').carousel('cycle');
+						});
+						jQuery('#pauseButton').click(function () {
+							jQuery('.slider--pauseplay').carousel('pause');
+						});
+					});
+				  </script>
+			</div>
+
 		</div>
 		
 	
