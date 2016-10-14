@@ -93,18 +93,29 @@
 			<button class="fa fa-bookmark alert-pin-btn pul-rgt"></button>
 			<strong>WOW!</strong> LIKE us on <i class="fa fa-facebook animezied animezied-bounce"></i> Facebook For Extra Awesome Stuff. 
 			
-				<div class="lang-area btn-group pul-rgt">
+				<div class="lang-area btn-group lang pul-rgt">
 					<a class="btn dropdown-toggle" data-toggle="dropdown">
 						<span>Select Languages</span>
 							<i class="fa fa-language"></i>
 						<span class="caret"></span>
 					</a>
 								
-					<ul class="dropdown-menu ">
+					<ul class="dropdown-menu">
 						<li><a href="#English">English</a></li>
 						<li><a href="#Arabic">العربية</a></li>
 						<li><a href="#Japanese">日本語</a></li>
 					</ul>
+					<script>
+						/**mutilang**/
+						var multiLangLink = ".lang.btn-group .dropdown-menu li a";
+						var multiLangLabel = ".lang.btn-group .btn span:not(.caret)";
+						jQuery(multiLangLink).click(function() {
+						  jQuery(multiLangLink).removeClass("selctd-lang");
+						  jQuery(this).addClass("selctd-lang");
+						  jQuery(multiLangLabel).html(jQuery(this).html());
+						});
+						/**./mutilang**/
+					</script>
 				</div>
 
 		</div>
@@ -209,7 +220,7 @@
 
 <main id="page-content">
 
-	<section class="slider-area slider--pauseplay thumb-indicat hover-ctrl fadeft" >
+	<section class="slider-area thumb-indicat hover-ctrl fadeft" >
 		<div id="carousel-example-generic" class="carousel slide slider--pauseplay" data-ride="carousel" data---interval="false">
 		  <!-- Indicators -->
 		  <span class="carousel-indicators indicators-arr prev">prev</span>
@@ -303,31 +314,6 @@
 		  </a>
 		  
 		  
-		  
-		    <div id="carouselButtons" class="pul-rgt">
-				  <button id="playButton" type="button" class="btn btn-default btn-xs">
-					  <span class="glyphicon glyphicon-play"></span>
-				   </button>
-				  <button id="pauseButton" type="button" class="btn btn-default btn-xs">
-					  <span class="glyphicon glyphicon-pause"></span>
-				  </button>
-  
-				  <script>
-					  jQuery(function () {
-						jQuery('.slider--pauseplay').carousel({
-							interval:2000,
-							pause: "false"
-						});
-						jQuery('#playButton').click(function () {
-							jQuery('.slider--pauseplay').carousel('cycle');
-						});
-						jQuery('#pauseButton').click(function () {
-							jQuery('.slider--pauseplay').carousel('pause');
-						});
-					});
-				  </script>
-			</div>
-
 		</div>
 		
 	
