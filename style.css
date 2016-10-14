@@ -46,7 +46,7 @@ section[class*="-area"] {position: relative; clear:both; }
 
 
 
-/*======== CONTENT ========*/
+/*** CONTENT ***/
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;}
 .strong {font-weight: bold;}
 .strike {text-decoration: line-through;}
@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Helvetica Neue
 .label,.badge {position: relative; border-radius: 3px; margin-left: 3px;}
 /*label less bolder*/ body label { font-weight: 600;}
 
-/*==Buttons/Btn==*/
+/*** Buttons/Btn ***/
 .btn-flat .btn { border-radius: 0; }
 .more-btn a {background-color: #39c; padding: 0.5em 0.5em; color: #fff;}
 [class*="-btn"] a {display: inline-block;}
@@ -148,22 +148,22 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Helvetica Neue
 .table-blur--hover tbody:hover tr:hover td { color: #444; text-shadow: 0 1px 0 #fff;}
 /*./Table un-hover rows blur on hover*/
 	
-/*===TABLE Responsive===*/
+/*** TABLE Responsive ***/
 @media only screen and (max-width : 768px) {
 .table-area th {display: none;}
 .table-area td::before {content: attr(for); display: block; font-weight: 600;}
 .table-area td {display: block;text-align: center;}
 }
-/*===./TABLE Responsive===*/
+/*** ./TABLE Responsive ***/
 
 
-/*===TABS===*/
+/*** TABS ***/
 /*tab-content border,height*/ body .tab-content { border: 1px solid #ccc; border-top: 0; min-height: 150px;}
 
 /**tabs**/
 li.c_active.active a {background-color: #39c; color: #fff;}
 /**./tabs**/
-/*===./TABS===*/
+/*** ./TABS ***/
 
 /**scrollToTop**/
 .scrollToTop {
@@ -188,7 +188,7 @@ li.c_active.active a {background-color: #39c; color: #fff;}
 /****./pinterest-style****/
 
 
-/*=== SPACING & ALIGNMENTS ===*/
+/*** SPACING & ALIGNMENTS ***/
 /*for flat icons*/
 body [class*="flaticon-"]::before {margin: 0;}
 
@@ -395,14 +395,15 @@ body .l--{ left:auto; }
 .random-box:nth-child(even) .random__lft { float: right; }
 
 
-/*=== IMG ===*/
+/*** IMG ***/
 .ovrflw { overflow: hidden; }
 .overload { overflow: auto; }
 
 .ovrimg { overflow: hidden; }
 .ovrimg img{ width: 100%;}
 
-body img, .ovrimg-mx img { max-width: 100%; height: auto; }
+body iframe, body img, .ovrimg-mx img { max-width: 100%; height: auto; }
+
 .modal iframe { width: 100%; min-height:70vh; }
 
 .color-gray,.grayedout { -webkit-filter: grayscale(1); filter: grayscale(1); }
@@ -410,7 +411,7 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
 .drp-shad {filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));	-webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));}
 		
-/*=== BG ===*/
+/*** BG ***/
 .wide-box-holder {clear:both;position: relative;overflow:hidden;}
 
 .ovrvis{overflow:visible;}
@@ -427,7 +428,7 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 .posfix {position: fixed;}
 .posrel .section-bg ~ * {position: relative;}
 
-/*=== LIST ===*/
+/*** LIST ***/
 /**package tag**/
 .taglized { overflow: hidden; }
 .tag-badge { position: absolute; top: -8px; right: -50px; transform: rotate(45deg); width: 140px; padding: 0px; box-sizing: border-box; height: 60px; background-color: yellowgreen; box-shadow: 0 0 10px 5px #eee; }
@@ -546,7 +547,7 @@ body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 .alistdvr li:last-child a{ border: 0;}
 
 
-/*===SLIDER===*/
+/*** SLIDER ***/
 .carousel-control {background: transparent !important;opacity: 1;}
 
 /*slider image center align*/
@@ -629,7 +630,7 @@ ol.carousel-indicators.nextprev {
 .indica-rgt ol.carousel-indicators li.active { background-color: #d00; }
 /**./indicators move to right**/
 
-/*===FORM===*/
+/*** FORM ***/
 /**gentleform.js**/
 form[novalidate] .form-control.is-invalid { border-color: red; }
 form[novalidate] .form-control.is-valid { border-color: green; }
@@ -939,7 +940,7 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 /*./transition*/
 
 
-/*=== NAVBAR ===*/
+/*** NAVBAR ***/
 /**side nav bg transparent**/
 body #navbar-height-col { background-color: inherit; }
 body .navbar-default .navbar-collapse {background: transparent;border-top:0;}
@@ -1044,7 +1045,7 @@ Note: see bottom note
 
 
 
-/*========LINKS========*/
+/*** LINKS ***/
 .strip-btn a {
 	animation: 2s linear 0s normal none infinite running progress-bar-stripes;
 	border-bottom:5px solid #cc4500;
@@ -1063,7 +1064,7 @@ Note: see bottom note
 .dotlist li  {display: inline-block; position: relative; padding-left: 15px; }
 .dotlist li:before {content: "";height: 5px;width: 5px;background-color: #ffc526;margin-right: 10px;display: block;position: absolute;top: 5px;left: 0px;border-radius: 50%;}
 
-/*========HOVER========*/
+/*** HOVER ***/
 body a, body a:active, body  a:focus, body  a:hover {
 	outline:none !important; /*for remove the dotted line around the clicked a*/
 	text-decoration:none;
@@ -1211,7 +1212,7 @@ body.modal-open { overflow: hidden; }
 body .dontfly.swiper-container .swiper-slide {display: inline-block;width: auto;margin-right:15px;}
 body .dontfly.swiper-container .swiper-slide img {max-width: 100%;max-height: 120px;}
 
-/*===datepicker===*/
+/*** datepicker ***/
 .datepicker.datepicker-dropdown {background-color: #fff; padding: 10px; text-align: center;}
 .datepicker.datepicker-dropdown td, .datepicker.datepicker-dropdown th {border: 1px solid #fff;text-align: center;}
 .datepicker.datepicker-dropdown td, .datepicker.datepicker-dropdown th {border: 1px solid #ccc; text-align: center; padding: 10px !important;}
@@ -1220,7 +1221,7 @@ body .dontfly.swiper-container .swiper-slide img {max-width: 100%;max-height: 12
 .datepicker-dropdown span.month { border: 1px solid #ccc; padding: 5px; width: 60px; display: block; float: left; margin: -1px -1px 0 0; }
 .datepicker-dropdown span.month:nth-child(5), span.month:nth-child(9) { clear: both; }
 .datepicker-dropdown td.old.day, .datepicker-dropdown  td.new.day { opacity: .2; }
-/*===./datepicker===*/
+/*** ./datepicker ***/
 
 /**dashboard-user-menu**/
 li.dropdown.user-menu .dropdown-menu {min-width: 210px; padding: 0 !important; }
