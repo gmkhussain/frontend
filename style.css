@@ -659,6 +659,7 @@ input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset;}
     display: inline-block;
     float: right;
     padding: 5px 10px;
+    width: 30px;
 }
 .search-fom.expand-search [type="submit"] {
     position: absolute;
@@ -1165,17 +1166,17 @@ body.modal-open { overflow: hidden; }
 /**./filler**/
 
 /**icons**/
-.fa-facebook{ color:#2b4687; }
-.fa-twitter{ color:#118ed3; }
-.fa-google, .fa-google-plus{ color:#cf4320; }
-.fa-youtube, .fa-youtube-play{ color:#ff3333; }
-.fa-instagram{ color:#476e93; }
-.fa-skype{ color:#139be1; }
-[class*="fa-pinterest"] { color:#ba0f0b; }
-.fa-linkedin { color:#0288d1; }
-.fa-rss { color:#f18d35; }
-.fa-flickr { color:#0062dc; }
-.fa-dribbble { color:#ea4b88; }
+[class*="icon"] .fa-facebook{ color:#2b4687; }
+[class*="icon"] .fa-twitter{ color:#118ed3; }
+[class*="icon"] .fa-google, .fa-google-plus{ color:#cf4320; }
+[class*="icon"] .fa-youtube, .fa-youtube-play{ color:#ff3333; }
+[class*="icon"] .fa-instagram{ color:#476e93; }
+[class*="icon"] .fa-skype{ color:#139be1; }
+[class*="icon"] [class*="fa-pinterest"] { color:#ba0f0b; }
+[class*="icon"] .fa-linkedin { color:#0288d1; }
+[class*="icon"] .fa-rss { color:#f18d35; }
+[class*="icon"] .fa-flickr { color:#0062dc; }
+[class*="icon"] .fa-dribbble { color:#ea4b88; }
 
 .icon-boxed i { width: 26px; color: #fff; height: 26px; margin: 0 2px; line-height: 1.7em; text-align: center; background-color: #ccc; font-size: 1.15em; }
 
