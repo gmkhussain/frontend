@@ -638,9 +638,19 @@ jQuery(document).ready(function() {
 });
 
 
-
-
-
+/**handle nav-tabs by url**/
+		var tabs_url = window.location.search; // returns the URL Parameters
+			var split_tabs_url= tabs_url.split(/[ .=:;?!~,`"&|()<>{}\[\]\r\n/\\]+/);
+			tabs_urlLast= split_tabs_url[split_tabs_url.length-1];
+			
+			jQuery(document).ready(function() {
+			jQuery("#"+tabs_urlLast).addClass('active');
+			jQuery('.nav-tabs-url-handler .nav-tabs li a').each(function(){
+			jQuery(this).find('[href="#'+tabs_urlLast+'"]').addClass('active');
+			jQuery(this).addClass("dasd");
+		})
+	});
+/**./handle nav-tabs by url**/
 
 
 /**read more read less content**/
