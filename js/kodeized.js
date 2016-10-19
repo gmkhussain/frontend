@@ -80,16 +80,16 @@ jQuery(function() {
 	var split_urlParameters = urlParameters.split(/[ .=:;?!~,`"&|()<>{}\[\]\r\n/\\]+/);
 	urlParametersLast= split_urlParameters[split_urlParameters.length-1];
 	urlParametersLast2= split_urlParameters[split_urlParameters.length-2];
-	jQuery('body').addClass(urlParametersLast + "-parameter");
-	jQuery('body').addClass(urlParametersLast2 + "-parameter");
+	jQuery('body').addClass("parameter-"+urlParametersLast);
+	jQuery('body').addClass("parameter-"+urlParametersLast2);
 	
   var urlHash = window.location.hash;
     var urlHashSplit = urlHash.split("#");
-    var urlHashAfterSplit = "NoHash";
+    var urlHashAfterSplit = "-no-hash";
     if (urlHashSplit[1] != null){
 			urlHashAfterSplit = urlHashSplit[1];
 		}
-	jQuery('body').addClass(urlHashAfterSplit + "-hash");
+	jQuery('body').addClass("hash"+urlHashAfterSplit);
 
 	
 });
@@ -781,7 +781,7 @@ if (jQuery('html').hasClass("livewindowsize")) {
 			// Get the dimensions of the viewport
 			var windowWidth = jQuery(window).width();
 			jQuery('body').addClass("width-"+windowWidth);
-			jQuery(document).prop('title', windowWidth );
+			jQuery(document).prop('title', windowTitle+" - "+windowWidth );
 		};
 	  jQuery(document).ready(LiveDetectWindowSize);    // When the page first loads
 	  jQuery(window).resize(LiveDetectWindowSize);     // When the browser changes size
