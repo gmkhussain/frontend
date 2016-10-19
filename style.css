@@ -154,9 +154,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family: "Helvetica", "
 	
 /*** TABLE Responsive ***/
 @media only screen and (max-width : 768px) {
-.table-area th {display: none;}
-.table-area td::before {content: attr(for); display: block; font-weight: 600;}
-.table-area td {display: block;text-align: center;}
+.table-rwd th {display: none;}
+.table-rwd td::before {content: attr(for); display: block; font-weight: 600;}
+.table-rwd td {display: block;text-align: center;}
 }
 /*** ./TABLE Responsive ***/
 
@@ -197,7 +197,7 @@ li.c_active.active a {background-color: #39c; color: #fff;}
 body [class*="flaticon-"]::before {margin: 0;}
 
 /**borders**/
-.bdr1 { border: 1px solid #ccc; }
+.bdr1 { border: 1px solid #ddd; }
 
 /**positions**/
 .r0{ right:0; }

@@ -563,6 +563,7 @@ jQuery('table th').each(function (i) {
 	tableTitle = jQuery( "table th:nth-child("+i+")" ).html();
 	//alert(ttl);
 	//alert(i);
+	jQuery( "table th:nth-child("+i+")" ).attr("for", tableTitle);
 	jQuery( "table td:nth-child("+i+")" ).attr("for", tableTitle);
 	//i=i+1;
 });
