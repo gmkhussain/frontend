@@ -30,24 +30,23 @@
 }
 */
 
-/**********gmk classes***********/
+/**********STYLIZED CLASSES***********/
+
 /**for 100% heights**/
 body, html{ height: 100%; padding: 0;}
 
 body .navbar-brand {padding: 5px; max-width: 200px;}
 
-body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; overflow-x: hidden;}
+body{font-family: "Helvetica", "Helvetica Neue",Arial,sans-serif; overflow-x: hidden;}
 
-body nav.navbar { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+body nav.navbar { font-family: "Helvetica", "Helvetica Neue", Arial,sans-serif; }
 
 section[class*="-area"] {position: relative; clear:both; }
 
 .section-centralized--active { border:2px solid #0d0; }
 
-
-
 /*** CONTENT ***/
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family: "Helvetica", "Helvetica Neue", Arial,sans-serif;}
 .strong {font-weight: bold;}
 .strike {text-decoration: line-through;}
 .inline-block {display: inline-block;}
@@ -78,19 +77,24 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family:"Helvetica Neue
 .dropcaps > p:first-child:first-letter {font-size: 2em;}
 
 .fnc-underline a {
-	box-shadow: inset 0 -0.12em 0 0 #f5f5f5,
-		inset 0 -.14em 0 0 rgba(245, 245, 245, 0.5),
-		inset 0 -.14em 0 0 currentColor;
+	box-shadow: inset 0 -0.12em 0 0 #f5f5f5, inset 0 -.14em 0 0 rgba(245, 245, 245, 0.5), inset 0 -.14em 0 0 currentColor;
 	text-decoration: none;
-	text-shadow: .05em 0 #f5f5f5,
-		-0.05em 0 #f5f5f5,
-		1.5px 0 #f5f5f5,
-		-1.5px 0 #f5f5f5;
-}
+	text-shadow: .05em 0 #f5f5f5, -0.05em 0 #f5f5f5, 1.5px 0 #f5f5f5, -1.5px 0 #f5f5f5; }
 
 /*default links|complex*/
-/* div:not([class*="-btn"]) > a[href]:not([class]){color: #008000;text-decoration: underline;} */
-.cr a {color: #fff;}
+
+
+/*transition*/
+.transition, .transition *, .transition *:after,  .transition *:before,.transition *:hover{
+	transition:all 0.3s ease 0s !important; -webkit-transition:all 0.3s ease 0s !important;
+	/*transition: all 500ms ease 0s; */
+}
+
+.no-transition, .no-transition *, .no-transition *:after,  .no-transition *:before,.no-transition *:hover{
+	transition:all 0s ease 0s !important; -webkit-transition:all 0s ease 0s !important;
+}
+/*./transition*/
+
 
 /**alert-bar**/
 .alert-bar {margin: 0;border-bottom: 0px solid #eee;padding: 0;background-color: #f9f9f9;line-height: 3em;}
@@ -713,16 +717,8 @@ input[type=radio], input[type=checkbox] {
     outline: 0 none;
 }
 
-/*
-[type="button"]:not(.navbar-toggle),[type="reset"],[type="submit"],.inline-btns .form-control[type="button"], .inline-btns .form-control[type="submit"] {
-    display: inline-block;
-    width: auto;
-    background-color: #ff6500;
-    color: #fff;
-}
-*/
 .form-control {
-    border: 1px solid #eee;
+    border: 1px solid #ddd;
     border-radius: 0;
     height: 40px;
 }
@@ -926,21 +922,6 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 
 
 
-
-/*transition*/
-.transition, .transition *, .transition *:after,  .transition *:before,.transition *:hover{
-	transition:all 0.3s ease 0s !important;
-	-webkit-transition:all 0.3s ease 0s !important;
-	/*transition: all 500ms ease 0s; */
-}
-
-.no-transition, .no-transition *, .no-transition *:after,  .no-transition *:before,.no-transition *:hover{
-	transition:all 0s ease 0s !important;
-	-webkit-transition:all 0s ease 0s !important;
-}
-/*./transition*/
-
-
 /*** NAVBAR ***/
 /**side nav bg transparent**/
 body #navbar-height-col { background-color: inherit; }
@@ -958,6 +939,7 @@ body #slide-nav #slidemenu {background-color: transparent;}
 .blur-nav--hover:hover .navbar-nav li a { opacity: 0.3; }
 .blur-nav--hover .navbar-nav li a:hover { opacity: 1; }
 
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus { background-color: inherit; text-shadow:0 0 15px #fff; }
 
 @media only screen and (max-width : 768px) {
 	
@@ -1239,7 +1221,7 @@ img.broken-image:after { content: "\f127" " - " "\f030"; background-color: #eee;
 img.broken-image:before { content:  "Broken Image of " attr(alt); padding-top: 6em; z-index: 1; }
 
 
-/**********./gmk classes***********/
+/**********./STYLIZED CLASSES***********/
 
 
 
