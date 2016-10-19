@@ -511,18 +511,18 @@ jQuery(document).ready(function(){
 
 
 
-/**broken images fix**/
+/**broken images fix
 // Replace source
 jQuery(window).ready(function() { 
-   jQuery("img").each(function(){ 
+   jQuery("img").each(function(){
       var image = jQuery(this); 
       if(image.context.naturalWidth == 0 || 
       image.readyState == 'uninitialized'){  
-         jQuery(image).unbind("error").addClass("broken-image");
+			jQuery(this).unbind("error").addClass("broken-image");
       } 
    }); 
 });
-
+**/
 
 
 
