@@ -24,6 +24,7 @@
 	<!-- jQuery -->
 	<script src="js/jquery1.11.1.min.js"></script>
 	
+	
 	<!--browser selector-->
 	<script src="js/css_browser_selector.js" type="text/javascript"></script>
 	
@@ -35,10 +36,179 @@
     <![endif]-->
 
 	<link rel="stylesheet" href="dashboard.css">
-		
+
+<style>
+.navbar-nav>li>a {
+    color: #fff;
+}
+.search-fom.expand-search [type="submit"] {
+    color: #FFF;
+    BACKGROUND-COLOR: transparent;
+}
+
+.dailer {
+    background-image: url("dashboard/mobile-frame.png");
+    min-height: 552px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.fom-bodered {
+    border: 1px solid #ddd;
+    min-height: 260px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.main-content {
+    background-image: url("dashboard/bg.jpg");
+}
+
+.fom-area .input-group[class*=col-] {
+    float: left;
+    padding: 15px 15px;
+}
+
+.btn-primary {
+    background-color: #0084ff;
+    color: #fff;
+}
+
+.conver-area .btn {
+    float: right;
+    margin-top: -45px;
+    margin-right: 10px;
+}
+
+.activ__inr .nav-tabs>li>a {
+    padding: 13.2px;
+}
+
+.activ__inr table {
+    width: 100%;
+}
+
+.scroldiv {
+    overflow-x: hidden;
+    height: 350px;
+}
+
+.activ__inr table td {
+    font-size: 12px;
+    padding: 10px;
+}
+
+.activ__inr table td ul li {
+    margin: 0 0 5px;
+    color: #666;
+    font-style: italic;
+}
+.activ__inr table th {
+    font-size: 12px;
+    padding: 0 8px;
+    color: #666;
+}
+
+.activ__inr table th small {
+    font-weight: 100;
+}
+
+#menu_toggle {
+    background-color: transparent;
+    border: 0;
+}
+
+.dailer__inr {
+    background-color: #fff;
+    float: left;
+    width: 225px;
+    height: 386px;
+    margin-left: 30px;
+    margin-top: 55px;
+    overflow: hidden;
+}
+.dailer-tab ul li {
+    text-align: center;
+}
+
+.numlock ul li button {
+    background-color: transparent;
+    border: 0;
+}
+
+.numblock button {
+    background-color: transparent;
+    border: 0;
+    height: 54px;
+    width: 100%;
+}
+
+.numblock ul li {
+    text-align: center;
+}
+
+.numblock ul li strong {
+    display: block;
+    color: #0084ff;
+    font-size: 22px;
+    font-weight: 100;
+}
+
+button.add-btn {
+    color: #0084ff;
+    background-color: transparent;
+    right: 0 !important;
+    left: auto !important;
+}
+
+.search-fom [type="submit"] {
+    background-color: transparent;
+    float: left;
+    right: auto;
+    left: 0;
+}
+
+.dailer__inr input#search {
+    padding-left: 24px;
+    font-size: 12px;
+    height: 30px;
+    border: 0;
+}
+
+.dailer__inr .form-group {
+    margin: 0 0 -1px;
+}
+
+
+.dailer__fom {
+    background-color: #0084ff;
+}
+
+.dailer__inr .nav-tabs>li>a, .dailer__inr .nav-tabs>li.active>a {
+    background-color: #0084ff;
+    color: #fff;
+    border: 0;
+    font-size: 18px;
+    border-bottom: 4px solid #0084ff;
+    padding: 5px;
+}
+
+.dailer__inr .nav-tabs>li.active>a {
+    border-color: #fff;
+}
+
+.fom-area.numbers .form-control {
+    color: #000;
+    text-align: center;
+    font-size: 22px;
+}
+
+
+</style>
+	
   </head>
 
-<body class="transition dashboard">
+<body class="transition dashboard nav-off placeholder--hover">
 
 
 <main id="page-content">
@@ -85,56 +255,58 @@
 			  </div><!-- /.container-fluid -->
 			</nav>
 			
-		<script>
-			dashsubmenu = $("body .dropdown-menu");
-			$(dashsubmenu).each(function(index) {
-				//var subli = $(this).find('.dropdown-menu li').is(".active");
-				//jQuery(this).parent().addClass("open");
-			});
-			$('li.active').parent().addClass('open');
-		</script>
 		
 	</section>
-	<section class="topnav col-sm-9 bg-silver">
 	
-		<div class="nav toggle pul-lft">
-              <a id="menu_toggle" class="btn btn-primary"><i class="fa fa-bars"></i></a>
-        </div>
+	<section class="topnav col-sm-9 p0">
 		
-		<script>
-			$( "#menu_toggle" ).click(function() {
-				$('body').toggleClass("nav-min");
-			});
-		</script>
-	
-						<ul class="nav navbar-nav pul-rgt">
-							<li class="dropdown noarrow">
-							<a href="#noti" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-							  <i class="fa fa-envelope"><span class="notify-icon">5</span></i>
-							</a>
-									<ul class="dropdown-menu p20">
-									  <li>Some text</li>
-									  <li>Some text</li>
-									</ul>
-							</li>
-
-							<li class="dropdown noarrow">
-							<a href="#noti" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-							  <i class="fa fa-bell"><span class="notify-icon">5</span></i>
-							</a>
-									<ul class="dropdown-menu p20">
-									  <li>Some text</li>
-									  <li>Some text</li>
-									</ul>
-							</li>
-						
-						
-					  		<li class="dropdown user user-menu pul-rgt">
+			<div class="hdr__top bg-blue col-sm-12 p0">
+			<div class="container">
+			
+			<div class="nav toggle pul-lft col-sm-3">
+				  <a id="menu_toggle" class="btn btn-primary"><i class="fa fa-bars"></i></a>
+				  <h5>JW Real Management</h5>
+			</div>
+		
+			<div class="nav text-right col-sm-3">
+				<ul class="nav navbar-nav ">
+					<li><a href="#noti"><i class="fa fa-users"></i></a></li>
+					<li class="dropdown noarrow">
+						<a href="#noti" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+						  <i class="fa fa-calendar"><span class="notify-icon">5</span></i>
+						</a>
+						<ul class="dropdown-menu">
+						  <li><a href="#">Some text</a></li>
+						  <li><a href="#">Some text</a></li>
+						</ul>
+					</li>
+					<li><a href="#noti"><i class="fa fa-check"></i></a></li>
+				</ul>
+			</div>
+		
+			<div class="nav  pul-lft col-sm-6">
+			<ul class="nav navbar-nav pul-rgt">
+			
+					<li><a href="#noti"><i class="fa fa-question"></i></a></li>
+					
+					<li>
+						<form action="#" class="search-fom expand-search expand-search--fullwidth0 ">
+							<div class="form-group ">
+								<label for="search" class="sr-only">Search</label>
+								<input type="text" class="form-control" name="search" id="search" placeholder="Search">
+								<button type="submit"><i class="glyphicon glyphicon-search"></i></button>
+							</div>
+						</form>
+					</li>
+					<li><a href="#noti"><i class="fa fa-user"></i></a></li>
+					<li><a href="#noti"><i class="fa fa-rss mr10"><span class="notify-icon dot"></span></i>10</a></li>
+					
+					<li class="dropdown user user-menu pul-rgt hidden">
 							<a href="#usr-name" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 							  <span class="dp"><img src="images/usr.jpg" alt="user"></span>
 							  <span class="usr-name">Royalty</span>
 							</a>
-									<ul class="dropdown-menu p20">
+							<ul class="dropdown-menu p20">
 									  <li class="user-header">
 										<span class="dp"><img src="images/usr.jpg" alt="user"></span>
 										<p>Robert <small>- Instructor</small></p>
@@ -151,76 +323,447 @@
 									</ul>
 							</li>
 						</ul>
-						
-					<form action="#" class="search-fom expand-search0 pul-rgt">
-						<div class="form-group has-feedback">
-							<label for="search" class="sr-only">Search</label>
-							<input type="text" class="form-control" name="search" id="search" placeholder="search">
-							<button type="submit"><i class="glyphicon glyphicon-search"></i> Search</button>
-						</div>
-					</form>
-
-	</section>
-
-	<section class="main-content col-sm-9 bg-gray">
 	
-	
-	<hr class="dvr" />
-	
-	<section class="table-area table-blur--hover" id="tableArea">
-
-		<div class="container0">
+					
+		</div>
 		
-		<div class="hed crossline"><h2>Table Responsive</h2><hr/></div>
+			</div>
+		</div>	
 		
-		<table class="table table-responsive">
-			<thead>
-			  <tr>
-				<th>Rank</th>
-				<th>Movie</th>
-				<th>Gross</th>
-			  </tr>
-			</thead>
-
-			<tbody>
-			 <tr>
-				<td>1</td>
-				<td>latest 9</td>
-				<td>852 Cr</td>
-			</tr>
-            <tr>
-				<td>2</td>
-				<td>latest 7</td>
-				<td>235 Cr</td>
-			</tr>
-            <tr>
-				<td>3</td>
-				<td>latest 5</td>
-				<td>547 Cr</td>
-			</tr>
-            <tr>
-				<td>4</td>
-				<td>latest 3</td>
-				<td>426 Cr</td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td>latest 1</td>
-				<td>456 Cr</td>
-			</tr>
-           </tbody>
-		  </table>
-		  
+		<div class="hdr__2nd bg-white col-sm-12 p10">
+			<div class="container">
+				<button class="btn btn-success">New Property</button>
+				
+				<div class="dropdown btn">
+				  <a data-toggle="dropdown" href="#">Action</a>
+				  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+					<li><a href="#!7"><i class="fa fa-car"></i> <span>Link 7</span></a></li>
+					<li><a href="#!8"><i class="fa fa-bus"></i> <span>Link 8.0</span></a></li>
+				  </ul>
+				  </ul>
+				</div>
+			</div>
 		</div>
 	</section>
+
+	<section class="main-content col-sm-9 bg-snow pt30">
 	
-	<hr class="dvr" />
+		<div class="container">
+			<div class="dailer-area col-sm-3 p0">
+				<div class="dailer">
+					<div class="dailer__inr">
+
+					<div class="dailer__fom bg-blue p5">
+						<form action="#" class="search-fom posrel">
+								<div class="form-group">
+									<label for="search" class="sr-only">Search</label>
+									<input type="text" class="form-control" name="search" id="search" placeholder="Search for people and place">
+									<button type="submit"><i class="glyphicon glyphicon-search"></i></button>
+									<button type="submit" class="add-btn"><i class="fa fa-plus"></i></button>
+								</div>
+						</form>
+					</div>
+						
+					<div class="dailer-tab ">
+						<ul class="nav nav-tabs list-col-4">
+						  <li class="active"><a href="#home" data-toggle="tab"><i class="fa fa-clock-o"></i></a></li>
+						  <li><a href="#profile" data-toggle="tab"><i class="fa fa-th"></i></a></li>
+						  <li><a href="#messages" data-toggle="tab"><i class="fa fa-th-list"></i></a></li>
+						  <li><a href="#settings" data-toggle="tab"><i class="fa fa-gear"></i></a></li>
+						</ul>
+
+						<div class="tab-content overload">
+						  <div class="tab-pane active" id="home">
+						  
+						<div class="fom-area numbers">
+							<div class="form-group text-center ">
+								<input type="text" class="form-control" id="number" value="(324) 4575 687" >
+							</div>
+							<div class="name text-center clrhm mt10">
+								<h4>Alex Ralf</h4>
+								<small>show details</small>
+							</div>
+						</div>
+					
+					<div class="numblock clrlist listview list-col-3">
+						  <ul>
+							<li>
+							  <button>
+								  <strong>1</strong>
+								  <span class="secondary"><i class="fa fa-gg"></i></span>
+							  </button>
+							</li>
+							<li>
+							  <button>
+								  <strong>2</strong>
+								  <span class="secondary">abc</span>
+							  </button>
+							</li>
+							<li>
+							  <button>
+								  <strong>3</strong>
+								  <span class="secondary">def</span>
+							  </button>
+							</li>
+							<li>
+							  <button>
+								  <strong>4</strong>
+								  <span class="secondary">ghi</span>
+							  </button>
+							</li>
+							<li>
+							  <button>
+								  <strong>5</strong>
+								  <span class="secondary">jkl</span>
+							  </button>
+							</li>
+							<li>
+							  <button>
+								  <strong>6</strong>
+								  <span class="secondary">mno</span>
+							  </button>
+							</li>
+							<li>
+							  <button>
+								  <strong>7</strong>
+								  <span class="secondary">pqrs</span>
+							  </button>
+							</li>
+							<li>
+							  <button>
+								  <strong>8</strong>
+								  <span class="secondary">tuv</span>
+							  </button>
+							</li>
+							<li>
+							  <button>
+								  <strong>9</strong>
+								  <span class="secondary">wxyz</span>
+							  </button>
+							</li>
+							<li>
+							  <button>
+								  <strong>*</strong>
+								  <span class="secondary">&nbsp;</span>
+							  </button>
+							</li>
+							<li>
+							  <button class="zero">
+								  <strong>0</strong>
+								  <span class="secondary">+</span>
+							  </button>
+							</li>
+							<li>
+							  <button>
+								  <strong>#</strong>
+								  <span class="secondary">&nbsp;</span>
+							  </button>
+							</li>
+						  </ul>
+				</div>
+
+
+						  </div>
+						  <div class="tab-pane" id="profile">...</div>
+						  <div class="tab-pane" id="messages">...</div>
+						  <div class="tab-pane" id="settings">...</div>
+						</div>
+					</div>
+					
+					
+					</div>
+				</div>
+			</div>
+			
+			<div class="fom-area col-sm-5 ">
+				<div class="fom-bodered overload mb30">
+				
+				<div class="input-group col-sm-12">
+				  <span class="input-group-addon">
+					<i class="fa fa-blind"></i>
+				  </span>
+				  <select type="text" class="form-control">
+					<option class="option">Salutation</option>
+				  </select>
+				</div>
+				
+				<div class="input-group col-sm-6 pl0">
+				  <span class="input-group-addon">
+					<i class="fa fa-user"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="First Name">
+				</div>
+				
+				<div class="input-group col-sm-6">
+				  <span class="input-group-addon">
+					<i class="fa fa-user"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="Middle Name">
+				</div>
+				
+				<div class="input-group col-sm-12">
+				  <span class="input-group-addon">
+					<i class="fa fa-user"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="Last Name">
+				</div>
+				
+				
+				<div class="input-group col-sm-12">
+				  <span class="input-group-addon">
+					<i class="fa fa-magic"></i>
+				  </span>
+				  <select type="text" class="form-control">
+					<option class="option">Suffix</option>
+				  </select>
+				</div>
+				
+				
+				<div class="input-group col-sm-12">
+				  <span class="input-group-addon">
+					<i class="fa fa-map-marker"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="Address">
+				</div>
+				
+				
+				<div class="input-group col-sm-12">
+				  <span class="input-group-addon">
+					<i class="fa fa-map-marker"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="Address Cont">
+				</div>
+				
+				
+				<div class="input-group col-sm-6">
+				  <span class="input-group-addon">
+					<i class="fa fa-building-o"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="City">
+				</div>
+				
+				<div class="input-group col-sm-6">
+				  <span class="input-group-addon">
+					<i class="fa fa-building-o"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="State / Provience">
+				</div>
+				
+				
+				<div class="input-group col-sm-12">
+				  <span class="input-group-addon">
+					<i class="fa fa-compass"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="Zip / Postalcode">
+				</div>
+				
+				
+				<div class="input-group col-sm-12">
+				  <span class="input-group-addon">
+					<i class="fa fa-fa"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="Country">
+				</div>
+				
+				
+				<div class="input-group col-sm-12">
+				  <span class="input-group-addon">
+					<i class="fa fa-tag"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="Search Tag">
+				</div>
+				
+				<div class="input-group col-sm-12">
+				  <span class="input-group-addon">
+					<i class="fa fa-comment"></i>
+				  </span>
+				  <textarea type="text" class="form-control mh100" placeholder="Description"></textarea>
+				</div>
+				
+				
+				<div class="input-group col-sm-6">
+				  <span class="input-group-addon">
+					<i class="fa fa-building-o"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="Company Name">
+				</div>
+				
+				<div class="input-group col-sm-6">
+				  <span class="input-group-addon">
+					<i class="fa fa-file-word-o"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="Title">
+				</div>
+				
+				<div class="input-group col-sm-6">
+				  <span class="input-group-addon">
+					<i class="fa fa-mobile"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="Work Phone">
+				</div>
+				
+				<div class="input-group col-sm-6">
+				  <span class="input-group-addon">
+					<i class="fa fa-mobile"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="Home Phone">
+				</div>
+								
+				<div class="input-group col-sm-6">
+				  <span class="input-group-addon">
+					<i class="fa fa-mobile"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="Mobile Phone">
+				</div>
+				
+				
+				<div class="input-group col-sm-6">
+				  <span class="input-group-addon">
+					<i class="fa fa-mobile"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="Other Phone">
+				</div>
+				
+				
+				<div class="input-group col-sm-12">
+				  <span class="input-group-addon">
+					<i class="fa fa-fax"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="Other Phone">
+				</div>
+				
+				
+				<div class="input-group col-sm-12">
+				  <span class="input-group-addon">
+					<i class="fa fa-envelope"></i>
+				  </span>
+				  <input type="text" class="form-control" placeholder="Email Address">
+				</div>
+				
+				
+				<div class="conver-area">
+				
+							<!-- Nav tabs -->
+						<ul class="nav nav-tabs">
+						  <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+						  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+						  <li><a href="#messages" data-toggle="tab">Messages</a></li>
+						  <li><a href="#settings" data-toggle="tab">Settings</a></li>
+						</ul>
+
+						<!-- Tab panes -->
+						<div class="tab-content p10">
+						  <div class="tab-pane active" id="home">No Task Found</div>
+						  <div class="tab-pane" id="profile">...</div>
+						  <div class="tab-pane" id="messages">...</div>
+						  <div class="tab-pane" id="settings">...</div>
+						</div>
+						<button class="btn btn-primary">New Task</button>
+
+				</div>
+				
+				</div>
+			
+			
+			
+				
+			</div>			
+			
+			<div class="activ-area col-sm-4">
+				<div class="activ__inr bg-white">
+				
+				<ul class="nav nav-tabs">
+				  <li class="active"><a href="#tab_activ1" data-toggle="tab">Activity</a></li>
+				  <li><a href="#tab_activ2" data-toggle="tab">Comments</a></li>
+				  <li><a href="#tab_activ3" data-toggle="tab">Emails</a></li>
+				  <li><a href="#tab_activ4" data-toggle="tab">Calls</a></li>
+				  <li><a href="#tab_activ5" data-toggle="tab">Text</a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content bdr0">
+				  <div class="tab-pane active" id="tab_activ1">
+				  
+				<div class="scroldiv">
+					<table class="table-bordered clrlist listview">
+						<thead>
+							<th><span class="icon"><img src="dashboard/icon.jpg" alt="" /></span></th>
+							<th>Owner Portal App  <small class="pul-rgt">10 days ago</small></th>
+						</thead>	
+						<tr>
+							<td>
+							</td>
+							<td>
+								<ul>
+									<li>Duration 1 hour 20 minutes</li>
+									<li><b>Category</b> Active</li>
+									<li><b>Category</b> Active</li>
+									<li>Agreement Duration 08/12/2017</li>
+									<li><b>Category</b> Inactive</li>
+									<li>Agreement Duration 08/12/2017</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							</td>
+							<td>
+								<ul>
+									<li>Duration 1 hour 20 minutes</li>
+									<li><b>Category</b> Active</li>
+									<li><b>Category</b> Active</li>
+									<li>Agreement Duration 08/12/2017</li>
+									<li><b>Category</b> Inactive</li>
+									<li>Agreement Duration 08/12/2017</li>
+									<li>Duration 1 hour 20 minutes</li>
+									<li><b>Category</b> Active</li>
+									<li><b>Category</b> Active</li>
+									<li>Agreement Duration 08/12/2017</li>
+									<li><b>Category</b> Inactive</li>
+									<li>Agreement Duration 08/12/2017</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							</td>
+							<td>
+								<ul>
+									<li>Duration 1 hour 20 minutes</li>
+									<li><b>Category</b> Active</li>
+									<li><b>Category</b> Active</li>
+									<li>Agreement Duration 08/12/2017</li>
+									<li><b>Category</b> Inactive</li>
+									<li>Agreement Duration 08/12/2017</li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+					
+				</div>
+					
+					<div class="bg-snow p20 bdr1">
+						<input type="text" class="form-control" placeholder="Add a Comment" />
+					</div>
+					
+				  
+				  </div>
+				  <div class="tab-pane" id="tab_activ2">tab_activ 2</div>
+				  <div class="tab-pane" id="tab_activ3">tab_activ 3</div>
+				  <div class="tab-pane" id="tab_activ4">tab_activ 4</div>
+				</div>
+
+				</div>
+			</div>			
+			
+		</div>
+	
 	</section>
 	
 	
 			
 	<footer>
-		<section class="ftr col-sm-12 bg-gray" id="footer">
+		<section class="ftr col-sm-12 bg-gray p20" id="footer">
 			<div class="container">
 				Bootom
 			</div>
@@ -240,6 +783,8 @@
     <script src="js/kodeized.js"></script>
 	<!--./Major Scripts-->
 
+	<!--dashboard-->
+	<script src="dashboard.js"></script>
 
 	</body>
 </html>

@@ -17,13 +17,15 @@ ul.nav.navbar-nav.navbar-main {
     float: left;
     width: 100%;
 }
-body.nav-min section.sidelft {
+body.nav--open section.sidelft {
     width: 10%;
 }
 
-body.nav-min section.sidelft~.col-sm-9 {
+/*
+body.nav--open section.sidelft~.col-sm-9 {
     width: 90%;
 }
+*/
 section.sidelft {
     height: 97vh;
 }
@@ -35,18 +37,18 @@ div#bs-example-navbar-collapse-1 {
     padding: 0;
 }
 
-body.nav-min section.sidelft .navbar-nav li a i {
+body.nav--open.nav-min section.sidelft .navbar-nav li a i {
     display: block;
     font-size: 20px;
     text-align: center;
 }
 
-body.nav-min section.sidelft .navbar-nav li a span {
+body.nav--open.nav-min section.sidelft .navbar-nav li a span {
     font-size: 10px;
     text-align: center;
 	display:block;
 }
-body.nav-min .navbar-default .navbar-nav>li>a {
+body.nav--open.nav-min .navbar-default .navbar-nav>li>a {
     padding: 10px;
 }
 
@@ -57,16 +59,23 @@ body.nav-min .navbar-default .navbar-nav>li>a {
 
 span.notify-icon {
     position: absolute;
-    font-size: 10px;
+    font-size: 11px;
     background-color: #d00;
     color: #fff;
-    padding: 1px 2px;
-    width: 12px;
+    padding: 1px;
+    width: 16px;
     text-align: center;
-    height: 12px;
     margin-top: -10px;
     margin-left: -5px;
-    border-radius: 5px;
+    border-radius: 2px;
+    line-height: 13px;
+}
+span.notify-icon.dot {
+    width: 5px;
+    height: 5px;
+    background-color: #74ff06;
+    margin-top: -3px;
+    margin-left: -3px;
 }
 
 .noarrow.dropdown > a::before {
@@ -77,6 +86,8 @@ span.notify-icon {
 }
 
 
+
+
 /**dropdown align to right**/
 body.dashboard li.dropdown .dropdown-menu { left: auto; right: 0;}
 
@@ -84,3 +95,80 @@ body.dashboard .sidelft .navbar-nav li.active{
     border-right: 5px solid #000;
 }
 body.dashboard .sidelft .navbar-nav>li.open {border-right: 5px solid #eee;}
+
+
+body.nav-off section.sidelft {
+    width: 20%;
+    left: -350px;
+    position: fixed;
+}
+
+body.nav-off section.main-content {
+    width: 100%;
+}
+
+.nav-off.nav--open .sidelft {
+    z-index: 5;
+    min-width: 220px;
+    position: fixed;
+    background-color: #fff;
+    left: 0;
+    width: 20%;
+}
+.nav.toggle {
+    margin-top: 8px;
+}
+
+#menu_toggle {
+    margin-left: 10px;
+    z-index: 30;
+    position: relative;
+        margin-right: 12px;
+    float: left;
+}
+.nav h5 {
+    display: inline-block;
+    color: #fff;
+    line-height: 35px;
+    font-size: 20px;
+    margin: 0;
+}
+.nav-off.nav--open main#page-content {
+    margin-left: 20%;
+}
+
+/*
+.nav--open #menu_toggle {
+	margin-left: 220px;
+}
+*/
+.nav-off section.topnav {
+    width: 100%;
+}
+
+
+.fom-area .input-group-addon {
+    width: 40px;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    height: 40px;
+    text-align: center;
+    color: #8f8f8f;
+    border-right: 0;
+    background-color: transparent;
+}
+.input-group .form-control {
+    border-left: 0;
+}
+
+.dashboard .nav-tabs>li>a {
+    border-radius: 0;
+    border: 1px solid #ccc;
+    margin-right: -1px;
+    color: #666;
+}
+
+.dashboard .nav-tabs>li.active>a {
+    background-color: #0084ff;
+    color: #fff;
+}
