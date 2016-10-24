@@ -399,7 +399,7 @@ jQuery(document).ready(function(){
 
 
 /**Button ripple effects on click**/
-jQuery(".btn-effect--ripple .btn").click(function (e) {
+jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripple a").click(function (e) {
   jQuery(".ripple").remove();/*Remove any old one*/
   var posX = $(this).offset().left,
       posY = $(this).offset().top,
@@ -625,8 +625,34 @@ jQuery(".navbar-main > li").each(function (i) {
 });
 /***./More Navbar Item Limitation***/
 
+/**tabs nav responsive **/
+(function($) {
+  'use strict';
+  $(document).on('show.bs.tab', '.nav-tabs-rwd [data-toggle="tab"]', function(e) {
+    var $target = $(e.target);
+    var $tabs = $target.closest('.nav-tabs-rwd');
+    var $current = $target.closest('li');
+    var $parent = $current.closest('li.dropdown');
+		$current = $parent.length > 0 ? $parent : $current;
+    var $next = $current.next();
+    var $prev = $current.prev();
+    var updateDropdownMenu = function($el, position){
+      $el
+      	.find('.dropdown-menu')
+        .removeClass('pull-xs-left pull-xs-center pull-xs-right')
+      	.addClass( 'pull-xs-' + position );
+    };
 
-
+    $tabs.find('>li').removeClass('next prev');
+    $prev.addClass('prev');
+    $next.addClass('next');
+    
+    updateDropdownMenu( $prev, 'left' );
+    updateDropdownMenu( $current, 'center' );
+    updateDropdownMenu( $next, 'right' );
+  });
+})(jQuery);
+/**./tabs nav responsive **/
 
 
 

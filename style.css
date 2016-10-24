@@ -37,16 +37,16 @@ body, html{ height: 100%; padding: 0;}
 
 body .navbar-brand {padding: 5px; max-width: 200px;}
 
-body{font-family: "Helvetica", "Helvetica Neue",Arial,sans-serif; overflow-x: hidden;}
+body{font-family: "Open Sans", "Helvetica", "Helvetica Neue",Arial,sans-serif; overflow-x: hidden;}
 
-body nav.navbar { font-family: "Helvetica", "Helvetica Neue", Arial,sans-serif; }
+body nav.navbar { font-family: "Open Sans", "Helvetica", "Helvetica Neue", Arial,sans-serif; }
 
 section[class*="-area"] {position: relative; clear:both; }
 
 .section-centralized--active { border:2px solid #0d0; }
 
 /*** CONTENT ***/
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family: "Helvetica", "Helvetica Neue", Arial,sans-serif;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family: "Open Sans", "Helvetica", "Helvetica Neue", Arial,sans-serif;}
 .strong {font-weight: bold;}
 .strike {text-decoration: line-through;}
 .inline-block {display: inline-block;}
@@ -162,6 +162,31 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family: "Helvetica", "
 
 
 /*** TABS ***/
+
+/**tabs nav responsive **/
+@media screen and (max-width: 479px) {
+  .nav-tabs-rwd > li { display: none; width: 23%; }
+  .nav-tabs-rwd > li > a { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-wrap: normal; width: 100%; width: 100%; text-align: center; vertical-align: top; }
+  .nav-tabs-rwd > li.active { width: 54%; }
+  .nav-tabs-rwd > li.active:first-child { margin-left: 23%; }
+  .nav-tabs-rwd > li.active, .nav-tabs-rwd > li.prev, .nav-tabs-rwd > li.next { display: block; }
+  .nav-tabs-rwd > li.prev, .nav-tabs-rwd > li.next { -webkit-transform: scale(0.9); transform: scale(0.9); }
+  .nav-tabs-rwd > li.next > a, .nav-tabs-rwd > li.prev > a { -webkit-transition: none; transition: none; }
+  .nav-tabs-rwd > li.next > a .text, .nav-tabs-rwd > li.prev > a .text { display: none; }
+  .nav-tabs-rwd > li.next > a:after, .nav-tabs-rwd > li.next > a:after, .nav-tabs-rwd > li.prev > a:after, .nav-tabs-rwd > li.prev > a:after { position: relative; top: 1px; display: inline-block; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: 400; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  .nav-tabs-rwd > li.prev > a:after { content: "\e079"; }
+  .nav-tabs-rwd > li.next > a:after { content: "\e080"; }
+  .nav-tabs-rwd > li.dropdown > a > .caret { display: none; }
+  .nav-tabs-rwd > li.dropdown > a:after { content: "\e114"; }
+  .nav-tabs-rwd > li.dropdown.active > a:after { display: none; }
+  .nav-tabs-rwd > li.dropdown.active > a > .caret { display: inline-block; }
+  .nav-tabs-rwd > li.dropdown .dropdown-menu.pull-xs-left { left: 0; right: auto; }
+  .nav-tabs-rwd > li.dropdown .dropdown-menu.pull-xs-center { right: auto; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); }
+  .nav-tabs-rwd > li.dropdown .dropdown-menu.pull-xs-right { left: auto; right: 0; }
+}
+/**./tabs nav responsive **/
+
+
 /*tab-content border,height*/ body .tab-content { border: 1px solid #ccc; border-top: 0; min-height: 150px;}
 
 /**tabs**/
@@ -871,9 +896,9 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 
 
 /**btn-effect--ripple**/
-.btn-effect--ripple .btn { position:relative; overflow:hidden;}
-.btn-effect--ripple .ripple { width: 0; height: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.4); transform: scale(0); position: absolute; opacity: 1;}
-.btn-effect--ripple .rippleEffect { animation: rippleDrop .6s linear;}
+.btn-effect--ripple .btn, .btn-effect--ripple button, .link-effect--ripple a { position:relative; overflow:hidden;}
+[class*="-effect--ripple"] .ripple { width: 0; height: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.4); transform: scale(0); position: absolute; opacity: 1; z-index:90;}
+[class*="-effect--ripple"] .rippleEffect { animation: rippleDrop .6s linear;}
 @keyframes rippleDrop { 100% { transform: scale(2); opacity: 0; } }
 /**./btn-effect--ripple**/
 
@@ -904,10 +929,10 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 .fnc-fom input[type="radio"] ,
 .fnc-fom input[type="checkbox"] + label { display: inline-block; }
 
-
+.fnc-select select,
 .fnc-fom select {
     -webkit-appearance: none;
-    -moz-appearance: none;
+    -moz-appearance: none !important;
     appearance: none;
     border: 1px solid #ccc;
     background: #fff url("images/select_ctrl_down.png") no-repeat right center;
