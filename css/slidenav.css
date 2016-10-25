@@ -39,7 +39,8 @@ body.slide-navbar--active {
     margin: 5px 0 0 0;
 }
 .slide-navbar #slide-nav .navbar-toggle.slide-navbar--active .icon-bar {
-    background: orange
+    background: orange;
+	margin-top:3px;
 }
 .slide-navbar .navbar-header {
     position: relative
