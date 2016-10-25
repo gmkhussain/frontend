@@ -1113,7 +1113,8 @@ body a, body a:active, body  a:focus, body  a:hover {
 .imgzoom--hover [class*="__inr"] [class*="__img"] img { transform: scale(1.2); }
 
 /*__inr element bit bigger on hover*/
-.scale--hover [class*="__inr"]:hover { transform: scale(1.1); }
+.scale--hover [class*="__inr"]:hover,
+.box-scale--hover [class*="-box"]:hover { transform: scale(1.1); }
 /*./__inr element bit bigger on hover*/
 
 /*FlashCross hover*/
