@@ -154,7 +154,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family: "Open Sans", "
 	
 /*** TABLE Responsive ***/
 @media only screen and (max-width : 768px) {
-.table-rwd th {display: none;}
+.table-rwd th,
+.table-rwd th[class*=col-]{display: none;}
 .table-rwd td::before {content: attr(for); display: block; font-weight: 600;}
 .table-rwd td {display: block;text-align: center;}
 }
@@ -536,6 +537,10 @@ body iframe, body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 /*width issue fixed for inner UL LI*/ .clrlist li ul li {display: inherit;} 
 
 .listview ul li {display:block;}
+
+.iconic-list li { list-style-type: none; position: relative; }
+.iconic-list li:before {content: "\f08d";margin-left: -30px;min-width: 20px;display: block;float: left;color: initial;text-align: center;max-width: 50px;min-height: 20px; font-family: "FontAwesome", "Glyphicons Halflings";}
+.iconic-list li { line-height: 1.8em; }
 
 .list-icon li .fa { float: left; width: 1em; height: 2em; margin-left: -1.5em; line-height: 1.5em; font-size: 1em; }
 .list-icon li { margin-left: 1.5em; margin-bottom: 1em; }
