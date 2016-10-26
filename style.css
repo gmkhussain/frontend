@@ -227,6 +227,7 @@ body [class*="flaticon-"]::before {margin: 0;}
 /**borders**/
 body .bdr0{ border: 0px; }
 .bdr1 { border: 1px solid #ddd; }
+.bdr-next~* { border-left: 1px solid #999; } /*add divider on every element that are preceded .bdr-next*/
 
 /**positions**/
 .r0{ right:0; }
@@ -748,13 +749,9 @@ input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset;}
 textarea {min-height: 50px; max-width:100%;}
 
 /***radiocheckbox***/
-input[type=radio], input[type=checkbox] {
-    width: auto;
-    height: auto;
-    display: inline-block;
-    float: left;
-    margin-right: 5px;
-}
+[class*="fom"] input[type=radio], [class*="fom"]  input[type=checkbox] { width: auto; height: auto; display: inline-block; margin-right: 5px; }
+[class*="fom"] label { font-weight: 500; margin-bottom: auto; }
+[class*="fom"] input[type="checkbox"]~input[type="checkbox"] { margin-left: 15px; }
 
 /*checkbox checked and uncheck*/
 .form-control:checked + label { color: green; }
