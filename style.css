@@ -232,6 +232,11 @@ body .bdr0{ border: 0px; }
 .bdr-next~* { border-left: 1px solid #999; } /*add divider on every element that are preceded .bdr-next*/
 
 /**positions**/
+.posabs {position: absolute;}
+.posrel {position: relative;}
+.posfix {position: fixed;}
+.posrel .section-bg ~ * {position: relative;}
+
 .r0{ right:0; }
 .b0{ bottom:0; }
 .t0{ top:0; }
@@ -471,10 +476,6 @@ body iframe, body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 .bg-full,.bg-cvr {background-size: cover;}
 .bg-fix { background-attachment: fixed;}
 
-/*relative for inside of wide box*/
-.posrel {position: relative;}
-.posfix {position: fixed;}
-.posrel .section-bg ~ * {position: relative;}
 
 /*** LIST ***/
 /**package tag**/
@@ -1117,6 +1118,11 @@ body a, body a:active, body  a:focus, body  a:hover {
 .imgzoom--hover [class*="__inr"] [class*="__img"] { overflow: hidden;}
 .imgzoom--hover [class*="__inr"]:hover [class*="__img"] img { transform: scale(1); }
 .imgzoom--hover [class*="__inr"] [class*="__img"] img { transform: scale(1.2); }
+
+.rotate-img--hover:hover img {
+	transform: rotate(4deg) scale(1.2);
+	-webkit-transform: rotate(4deg) scale(1.2);
+}
 
 /*__inr element bit bigger on hover*/
 .scale--hover [class*="__inr"]:hover,
