@@ -50,6 +50,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family: "Open Sans", "
 .strong {font-weight: bold;}
 .strike {text-decoration: line-through;}
 .inline-block {display: inline-block;}
+.big { font-size: 1.2em; line-height: 2em; }
+.big p { margin-bottom: 2em; }
 
 /*clear heading margins*/
 .clrhm h1, .clrhm h2, .clrhm h3, .clrhm h4, .clrhm h5, .clrhm h6, .clrhm .h1, .clrhm .h2, .clrhm .h3, .clrhm .h4, .clrhm .h5, .clrhm .h6  { margin:0px; }
@@ -143,7 +145,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family: "Open Sans", "
 /*label less bolder*/ body label { font-weight: 600;}
 
 /*** Buttons/Btn ***/
-.btn-flat .btn { border-radius: 0; }
+body .btn-flat, .btn-flat .btn { border-radius: 0; }
 .more-btn a {background-color: #39c; padding: 0.5em 0.5em; color: #fff;}
 [class*="-btn"] a {display: inline-block;}
 
@@ -1269,10 +1271,10 @@ li.dropdown.user-menu li.user-footer { padding: 10px; float: left; width: 100%;}
 /**./dashboard-user-menu**/
 
 
-img.broken-image { min-height: 120px; min-width: 140px; text-align: center; position: relative;}
-img.broken-image:before,img.broken-image:after {  position: absolute; top: 0px; left: 0px; min-height: 120px; min-width: 120px; width: 100%; display: block;}
-img.broken-image:after { content: "\f127" " - " "\f030"; background-color: #eee; border: 1px dotted #ccc; font-family: FontAwesome; font-size: 2.4em; color:#ccc; padding-top:0.8em;}
-img.broken-image:before { content:  "Broken Image of " attr(alt); padding-top: 6em; z-index: 1; }
+.broken-image-checker img { text-align: center; position: relative;}
+.broken-image-checker img:before, .broken-image-checker img:after {  position: absolute; top: 0px; left: 0px; min-height: 120px; min-width: 120px; width: 100%; display: block;}
+.broken-image-checker img:after { content: "\f127" " - " "\f030"; background-color: #eee; border: 1px dotted #ccc; font-family: FontAwesome; font-size: 2.4em; color:#ccc; padding-top:0.8em;}
+.broken-image-checker img:before { content:  "Broken Image of " attr(alt); padding-top: 6em; z-index: 1; }
 
 
 /**********./STYLIZED CLASSES***********/
@@ -1356,7 +1358,7 @@ img.broken-image:before { content:  "Broken Image of " attr(alt); padding-top: 6
 
 
 
-/*==============gmkmobqur===============*/
+/*==============Media Queries==============*/
 /* 24" large Screens */
 @media only screen and (max-width : 1920px) {	}
 
@@ -1395,6 +1397,9 @@ img.broken-image:before { content:  "Broken Image of " attr(alt); padding-top: 6
 
 /* iPad (All) (768x1024) Portrait Tablets */
 @media only screen and (max-width : 768px) {	}
+
+/* Lower then iPad (All) (767x---) */
+@media only screen and (max-width : 767px) {	}
 
 /*iPhone 6 Plus landscape · width: 736px */
 @media only screen and (max-width : 736px) {	}
