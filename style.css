@@ -459,6 +459,7 @@ body iframe, body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
 .modal iframe { width: 100%; min-height:70vh; }
 
+.filter-white   { -webkit-filter: brightness(1000%);     }
 .color-gray,.grayedout { -webkit-filter: grayscale(1); filter: grayscale(1); }
 .color-invert { -webkit-filter: invert(1); filter: invert(1); }
 
