@@ -125,6 +125,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family: "Open Sans", "
 
 .shad-dp20 { box-shadow: 0px 10px 20px 7px #eee; border: 1px solid #f7f7f7; }
 
+.shad-long{
+  text-shadow:  1px 1px rgba(0, 0, 0, 0.205) , 2px 2px rgba(0, 0, 0, 0.204) , 3px 3px rgba(0, 0, 0, 0.203) , 4px 4px rgba(0, 0, 0, 0.202) , 5px 5px rgba(0, 0, 0, 0.201) , 6px 6px rgba(0, 0, 0, 0.200) , 7px 7px rgba(0, 0, 0, 0.209) , 8px 8px rgba(0, 0, 0, 0.208) , 9px 9px rgba(0, 0, 0, 0.208);
+}
+
+
 /*hide active language from dropdown list*/
 .lang-area a.selctd-lang {display: none;}
 
@@ -1086,6 +1091,18 @@ Note: see bottom note
 
 
 /*** LINKS ***/
+.blinked-links a:hover,
+.blinked:hover { -webkit-animation: blinked 0.5s infinite; -moz-animation: blinked 0.5s infinite; /* animation: blinked 0.5s infinite; */ }
+@-webkit-keyframes blinked { 0%, 100% { color: #7ccdea; }
+	16%      { color: #0074D9; }  32%      { color: #2ECC40; }  48%      { color: #FFDC00; }  64%      { color: #B10DC9; }  80%      { color: #FF4136; }
+}
+
+@-moz-keyframes blinked {  0%, 100% { color: #7ccdea; }  16%      { color: #0074D9; }  32%      { color: #2ECC40; }  48%      { color: #FFDC00; }  64%      { color: #B10DC9; }  80%      { color: #FF4136; }
+ }
+
+@keyframes blinked {  0%, 100% { color: #7ccdea; }  16%      { color: #0074D9; }  32%      { color: #2ECC40; }  48%      { color: #FFDC00; }  64%      { color: #B10DC9; }  80%      { color: #FF4136; } }
+
+
 .strip-btn a {
 	animation: 2s linear 0s normal none infinite running progress-bar-stripes;
 	border-bottom:5px solid #cc4500;
