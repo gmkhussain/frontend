@@ -1091,6 +1091,14 @@ Note: see bottom note
 
 
 /*** LINKS ***/
+
+.signalized--hover:hover .fa{  border-radius: 100%;  -webkit-animation: signalized 0.6s linear infinite; animation: signalized 0.6s linear infinite; }
+
+@-webkit-keyframes signalized { 0% {    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);  }  100% { box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0); } }
+@keyframes signalized {  0% {    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);  }  100% {    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);  }
+}
+
+
 .blinked-links a:hover,
 .blinked:hover { -webkit-animation: blinked 0.5s infinite; -moz-animation: blinked 0.5s infinite; /* animation: blinked 0.5s infinite; */ }
 @-webkit-keyframes blinked { 0%, 100% { color: #7ccdea; }
