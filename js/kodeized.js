@@ -209,8 +209,9 @@ jQuery(".form-control").blur(function() {
 /*Add class on parent of Checked input*/
 jQuery("input").change(function() {
   if (jQuery(this).is(':checked')) {
-    jQuery(".checker-area").removeClass("is-active");
     jQuery(this).parents(".checker-area").addClass("is-active");
+  }else if (jQuery(this).prop('checked', false)){
+	jQuery(this).parents(".checker-area").removeClass("is-active");
   }
 });
 /*./Add class on parent of Checked input*/
