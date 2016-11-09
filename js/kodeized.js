@@ -195,7 +195,7 @@ jQuery(".form-control").blur(function() {
 /**./.form-group--active on parent of .form-control**/
 
 
-//fnc-fom label animation//
+/**fnc-fom label animation**/
 	jQuery('.fnc-fom .form-control').focusout(function(){
 	var text_value=jQuery(this).val();
      if(text_value!='')
@@ -203,11 +203,17 @@ jQuery(".form-control").blur(function() {
 		jQuery(this).addClass("has-value");
         }else{ jQuery(this).removeClass("has-value"); }
 	});
-//./fnc-fom label animation//
+/**./fnc-fom label animation**/
 
 
-
-
+/*Add class on parent of Checked input*/
+jQuery("input").change(function() {
+  if (jQuery(this).is(':checked')) {
+    jQuery(".checker-area").removeClass("is-active");
+    jQuery(this).parents(".checker-area").addClass("is-active");
+  }
+});
+/*./Add class on parent of Checked input*/
 
 
 /*section-centralized
