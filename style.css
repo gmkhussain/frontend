@@ -889,6 +889,8 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 .fnc-fom .form-control:not(:placeholder-shown) + label{/**if .form-control haven't placeholder**/}
 
 .fnc-fom .form-control.has-value + label,
+.fnc-fom .form-group .form-control + label:hover,
+.fnc-fom .form-group .form-control:hover + label,
 .fnc-fom .form-group .form-control:focus + label { top: -20px; font-size: 12px; left: 10px;}
 
 .fnc-fom form { background-color: #eee; margin: 40px 0; padding: 30px;}

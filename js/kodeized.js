@@ -195,6 +195,14 @@ jQuery(".form-control").blur(function() {
 /**./.form-group--active on parent of .form-control**/
 
 
+/**.has-value added if .form-control have value**/
+jQuery('.form-control').change(function (event) {
+	if (jQuery(this).val() != '') $(this).addClass('has-value');
+	else jQuery(this).removeClass('has-value');
+});
+/**./has-value added if form-control have value**/			
+
+
 /**fnc-fom label animation**/
 	jQuery('.fnc-fom .form-control').focusout(function(){
 	var text_value=jQuery(this).val();
