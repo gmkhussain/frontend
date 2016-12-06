@@ -254,6 +254,10 @@ body .bdr0{ border: 0px; }
 .bdr1 { border: 1px solid #ddd; }
 .bdr-next~* { border-left: 1px solid #999; } /*add divider on every element that are preceded .bdr-next*/
 
+
+.bdr--multi{ border-image: linear-gradient(to right, #000000 0%, #000000 49%, #43b0d8 49%, #43b0d6 100%); border-image-slice: 1; 
+border-style: solid;}
+
 /**positions**/
 .posabs {position: absolute;}
 .posrel {position: relative;}
