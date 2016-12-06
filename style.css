@@ -121,6 +121,24 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{font-family: "Open Sans", "
   text-overflow: ellipsis;
 }
 
+.has-quotes:after,
+.has-quotes:before {
+  content: "\f10d";
+  font-family: "FontAwesome";
+  font-size: 28px;
+  position: absolute;
+  top: -0px;
+  left: -15px;
+}
+
+.has-quotes:after {
+  content: "\f10e";
+  top: auto;
+  bottom: 0px;
+  left: auto;
+  right: 0px;
+}
+
 .blurtxt { color: transparent; text-shadow: 0 0 5px rgba(0,0,0,0.5); }
 
 .shad-dp20 { box-shadow: 0px 10px 20px 7px #eee; border: 1px solid #f7f7f7; }
