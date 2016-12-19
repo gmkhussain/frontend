@@ -21,7 +21,13 @@
 	<link rel="stylesheet" href="css/swiper.min.css">
 
 	<!-- jQuery -->
-	<script src="js/jquery-2.2.4.min.js"></script>
+	<!--[if (!IE)|(gt IE 8)]><!-->
+	  <script src="js/jquery-2.2.4.min.js"></script>
+	<!--<![endif]-->
+
+	<!--[if lte IE 8]>
+	  <script src="js/jquery1.9.1.min.js"></script>
+	<![endif]-->
 	
 	<!--browser selector-->
 	<script src="js/css_browser_selector.js" type="text/javascript"></script>
