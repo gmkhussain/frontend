@@ -36,186 +36,17 @@
     <![endif]-->
 
 	<link rel="stylesheet" href="dashboard.css">
-
-<style>
-.navbar-nav>li>a {
-    color: #fff;
-}
-.search-fom.expand-search [type="submit"] {
-    color: #FFF;
-    BACKGROUND-COLOR: transparent;
-}
-
-.dailer {
-    background-image: url("dashboard/mobile-frame.png");
-    min-height: 552px;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-}
-
-.fom-bodered {
-    border: 1px solid #ddd;
-    min-height: 260px;
-    padding: 15px;
-    background-color: #fff;
-}
-
-.main-content {
-    background-image: url("dashboard/bg.jpg");
-}
-
-.fom-area .input-group[class*=col-] {
-    float: left;
-    padding: 15px 15px;
-}
-
-.btn-primary {
-    background-color: #0084ff;
-    color: #fff;
-}
-
-.conver-area .btn {
-    float: right;
-    margin-top: -45px;
-    margin-right: 10px;
-}
-
-.activ__inr .nav-tabs>li>a {
-    padding: 13.2px;
-}
-
-.activ__inr table {
-    width: 100%;
-}
-
-.scroldiv {
-    overflow-x: hidden;
-    height: 350px;
-}
-
-.activ__inr table td {
-    font-size: 12px;
-    padding: 10px;
-}
-
-.activ__inr table td ul li {
-    margin: 0 0 5px;
-    color: #666;
-    font-style: italic;
-}
-.activ__inr table th {
-    font-size: 12px;
-    padding: 0 8px;
-    color: #666;
-}
-
-.activ__inr table th small {
-    font-weight: 100;
-}
-
-#menu_toggle {
-    background-color: transparent;
-    border: 0;
-}
-
-.dailer__inr {
-    background-color: #fff;
-    float: left;
-    width: 225px;
-    height: 386px;
-    margin-left: 30px;
-    margin-top: 55px;
-    overflow: hidden;
-}
-.dailer-tab ul li {
-    text-align: center;
-}
-
-.numlock ul li button {
-    background-color: transparent;
-    border: 0;
-}
-
-.numblock button {
-    background-color: transparent;
-    border: 0;
-    height: 54px;
-    width: 100%;
-}
-
-.numblock ul li {
-    text-align: center;
-}
-
-.numblock ul li strong {
-    display: block;
-    color: #0084ff;
-    font-size: 22px;
-    font-weight: 100;
-}
-
-button.add-btn {
-    color: #0084ff;
-    background-color: transparent;
-    right: 0 !important;
-    left: auto !important;
-}
-
-.search-fom [type="submit"] {
-    background-color: transparent;
-    float: left;
-    right: auto;
-    left: 0;
-}
-
-.dailer__inr input#search {
-    padding-left: 24px;
-    font-size: 12px;
-    height: 30px;
-    border: 0;
-}
-
-.dailer__inr .form-group {
-    margin: 0 0 -1px;
-}
-
-
-.dailer__fom {
-    background-color: #0084ff;
-}
-
-.dailer__inr .nav-tabs>li>a, .dailer__inr .nav-tabs>li.active>a {
-    background-color: #0084ff;
-    color: #fff;
-    border: 0;
-    font-size: 18px;
-    border-bottom: 4px solid #0084ff;
-    padding: 5px;
-}
-
-.dailer__inr .nav-tabs>li.active>a {
-    border-color: #fff;
-}
-
-.fom-area.numbers .form-control {
-    color: #000;
-    text-align: center;
-    font-size: 22px;
-}
-
-
-</style>
 	
-  </head>
+</head>
 
-<body class="transition dashboard nav-off placeholder--hover">
+<body class="transition dashboard nav-on placeholder--hover ">
 
 
 <main id="page-content">
 
 	<div class="container00">
 
-	<section class="sidelft col-sm-3 p0">
+	<section class="sidelft col-sm-2 p0">
 		<nav class="navbar navbar-default" role="navigation" id="slide-nav">
 			  <div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -226,16 +57,24 @@ button.add-btn {
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				  </button>
-					<a class="navbar-brand" href="./"><img src="images/logo.png" alt="logo" /></a>
+					<a class="navbar-brand filter-white" href="./"><img src="images/logo.png" alt="logo" /></a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div id="slidemenu">
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					  <ul class="nav navbar-nav navbar-main">
-						<li><a href="index.html"><i class="fa fa-home"></i> <span>Link One</span></a></li>
-						<li class=""><a href="#!2"><i class="fa fa-wifi"></i> <span>Link 2</span></a></li>
-						<li><a href="#!3"><i class="fa fa-phone"></i> <span>Link III</span></a></li>
+					  <ul class="nav navbar-nav navbar-main link-effect--ripple">
+						<li><a href="#!0"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+						<li class=""><a href="#!2"><i class="fa fa-calendar"></i> <span>Events Manager</span></a></li>
+						<li><a href="#!1"><i class="fa fa-bookmark"></i> <span>Addons Manager</span></a></li>
+						<li><a href="#!3"><i class="fa fa-database"></i> <span>Event Categories</span></a></li>
+						<li><a href="#!4"><i class="fa fa-usd"></i> <span>Transactions</span></a></li>
+						<li><a href="#!5"><i class="fa fa-list"></i> <span>Contests Manager</span></a></li>
+						<li><a href="#!6"><i class="fa fa-book"></i> <span>Business Listings</span></a></li>
+						<li><a href="#!7"><i class="fa fa-gift"></i> <span>Deals and Promotions</span></a></li>
+						<li><a href="#!8"><i class="fa fa-ticket"></i> <span>Coupons Manager</span></a></li>
+						
+						
 						<li class="dropdown">
 						  <a href="#!4" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-facebook"></i> <span>Dropdown 4</span></a>
 						  <ul class="dropdown-menu">
@@ -244,10 +83,7 @@ button.add-btn {
 							<li><a href="#e">One more separated link</a></li>
 						  </ul>
 						</li>
-						<li><a href="#!5"><i class="fa fa-link"></i> <span>Link V</span></a></li>
-						<li><a href="#!6"><i class="fa fa-twitter"></i> <span>Link SIX</span></a></li>
-						<li><a href="#!7"><i class="fa fa-car"></i> <span>Link 7</span></a></li>
-						<li><a href="#!8"><i class="fa fa-bus"></i> <span>Link 8.0</span></a></li>
+						
 					  </ul>
 
 					</div><!-- /.navbar-collapse -->
@@ -258,37 +94,21 @@ button.add-btn {
 		
 	</section>
 	
-	<section class="topnav col-sm-9 p0">
+	<section class="topnav col-sm-10 p0">
 		
 			<div class="hdr__top bg-blue col-sm-12 p0">
 			<div class="container">
 			
-			<div class="nav toggle pul-lft col-sm-3">
+			<div class="nav nav1 toggle pul-lft col-sm-3">
 				  <a id="menu_toggle" class="btn btn-primary"><i class="fa fa-bars"></i></a>
-				  <h5>JW Real Management</h5>
+				  <h5>Admin Panel</h5>
 			</div>
-		
-			<div class="nav text-right col-sm-3">
-				<ul class="nav navbar-nav ">
-					<li><a href="#noti"><i class="fa fa-users"></i></a></li>
-					<li class="dropdown noarrow">
-						<a href="#noti" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-						  <i class="fa fa-calendar"><span class="notify-icon">5</span></i>
-						</a>
-						<ul class="dropdown-menu">
-						  <li><a href="#">Some text</a></li>
-						  <li><a href="#">Some text</a></li>
-						</ul>
-					</li>
-					<li><a href="#noti"><i class="fa fa-check"></i></a></li>
-				</ul>
-			</div>
-		
-			<div class="nav  pul-lft col-sm-6">
-			<ul class="nav navbar-nav pul-rgt">
+
 			
+		
+			<div class="nav nav3 pul-lft col-sm-9 ">
+				<ul class="nav navbar-nav pul-rgt">
 					<li><a href="#noti"><i class="fa fa-question"></i></a></li>
-					
 					<li>
 						<form action="#" class="search-fom expand-search expand-search--fullwidth0 ">
 							<div class="form-group ">
@@ -298,19 +118,18 @@ button.add-btn {
 							</div>
 						</form>
 					</li>
-					<li><a href="#noti"><i class="fa fa-user"></i></a></li>
-					<li><a href="#noti"><i class="fa fa-rss mr10"><span class="notify-icon dot"></span></i>10</a></li>
+					<li><a href="#noti"><i class="fa fa-sign-out"></i> Logout</a></li>
 					
-					<li class="dropdown user user-menu pul-rgt hidden">
+					<li class="dropdown user user-menu pul-rgt ">
 							<a href="#usr-name" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 							  <span class="dp"><img src="images/usr.jpg" alt="user"></span>
-							  <span class="usr-name">Royalty</span>
+							  <span class="usr-name">Welcome Admin</span>
 							</a>
 							<ul class="dropdown-menu p20">
 									  <li class="user-header">
 										<span class="dp"><img src="images/usr.jpg" alt="user"></span>
-										<p>Robert <small>- Instructor</small></p>
-										<small>Member since 31 March. 2013</small>
+										<p>Admin <small>- Event Planner</small></p>
+										<small>Member since 9 Sept. 2012</small>
 									  </li>
 									  <li class="user-footer">
 										<div class="pull-left">
@@ -324,7 +143,6 @@ button.add-btn {
 							</li>
 						</ul>
 	
-					
 		</div>
 		
 			</div>
@@ -332,27 +150,153 @@ button.add-btn {
 		
 		<div class="hdr__2nd bg-white col-sm-12 p10">
 			<div class="container">
-				<button class="btn btn-success">New Property</button>
+				<button class="btn btn-success"><i class="fa fa-plus"></i> Add New Event</button>
 				
-				<div class="dropdown btn">
-				  <a data-toggle="dropdown" href="#">Action</a>
-				  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-					<li><a href="#!7"><i class="fa fa-car"></i> <span>Link 7</span></a></li>
-					<li><a href="#!8"><i class="fa fa-bus"></i> <span>Link 8.0</span></a></li>
-				  </ul>
-				  </ul>
-				</div>
+				
 			</div>
 		</div>
 	</section>
 
-	<section class="main-content col-sm-9 bg-snow pt30">
+	<section class="main-content col-sm-10 bg-snow pt30">
 	
 		<div class="container">
-			<div class="dailer-area col-sm-3 p0">
-				<div class="dailer">
-					<div class="dailer__inr">
+			
+			<div class="alert alert-success alert-dismissable">
+				<button type="button" class="close red" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<strong>Welcome! Admin</strong> to your dashboard.
+			</div>
+			
+			
+			
+			<div class="row counter-area link-effect--ripple ">
 
+				<div class="counter-box col-sm-4">
+					<div class="counter__inr shad-dp20 p10">
+						<a href="#randomLftRgt">		
+						<span class="counter__top">
+							<i class="fa fa-clock-o"></i> Total Events
+						</span>
+						<div class="counter__num h3 m0">1,024</div></a>
+						<span class="counter__bot">
+							<a href="#randomLftRgt">	<i class="fa fa-eye"> </i> View details</a>
+						</span>
+					</div>	
+				</div>
+				
+				
+				
+				<div class="counter-box col-sm-4">
+					<div class="counter__inr shad-dp20 p10">
+						<a href="#randomLftRgt">		
+						<span class="counter__top">
+							<i class="fa fa-clock-o"></i> Total Organizer
+						</span>
+						<div class="counter__num h3 m0">74</div></a>
+						<span class="counter__bot">
+							<a href="#randomLftRgt">	<i class="fa fa-eye"> </i> View details</a>
+						</span>
+					</div>	
+				</div>
+				
+				
+				
+				<div class="counter-box col-sm-4 ">
+					<div class="counter__inr shad-dp20 p10">
+						<a href="#randomLftRgt">		
+						<span class="counter__top">
+							<i class="fa fa-clock-o"></i> Total Visitors
+						</span>
+						<div class="counter__num h3 m0">9,024</div></a>
+						<span class="counter__bot">
+							<a href="#randomLftRgt">	<i class="fa fa-eye"> </i> View details</a>
+						</span>
+					</div>	
+				</div>
+				
+				
+				<div class="counter-box col-sm-4 ">
+					<div class="counter__inr shad-dp20 p10">
+						<a href="#randomLftRgt">		
+						<span class="counter__top">
+							<i class="fa fa-clock-o"></i> Total Contests
+						</span>
+						<div class="counter__num h3 m0">5,024</div></a>
+						<span class="counter__bot">
+							<a href="#randomLftRgt">	<i class="fa fa-eye"> </i> View details</a>
+						</span>
+					</div>	
+				</div>
+								
+				
+				<div class="counter-box col-sm-4 ">
+					<div class="counter__inr shad-dp20 p10">
+						<a href="#randomLftRgt">		
+						<span class="counter__top">
+							<i class="fa fa-clock-o"></i> Total Listed Business
+						</span>
+						<div class="counter__num h3 m0">764</div></a>
+						<span class="counter__bot">
+							<a href="#randomLftRgt">	<i class="fa fa-eye"> </i> View details</a>
+						</span>
+					</div>	
+				</div>
+				
+				
+				<div class="clearfix"></div>
+				
+				<div class="box-small col-sm-4">
+					<div class="media counter__inr p20">
+					  <a class="pull-left" href="#">
+						<i class="fa fa-money"></i>
+					  </a>
+					  <div class="media-body">
+						<h4>Today Sales</h4>
+						<p>$ 99</p>
+					  </div>
+					</div>
+				</div>
+				
+				<div class="box-small col-sm-4">
+					<div class="media counter__inr p20">
+					  <a class="pull-left" href="#">
+						<i class="fa fa-money"></i>
+					  </a>
+					  <div class="media-body">
+						<h4>Monthly Sales</h4>
+						<p>$ 99</p>
+					  </div>
+					</div>
+				</div>
+				
+				<div class="box-small col-sm-4">
+					<div class="media counter__inr p20">
+					  <a class="pull-left" href="#">
+						<i class="fa fa-money"></i>
+					  </a>
+					  <div class="media-body">
+						<h4>Total Sales</h4>
+						<h3>$ 99</h3>
+					  </div>
+					</div>
+				</div>
+				
+				
+				
+			</div>
+			
+			<!--
+			<div class="dailer-area col-sm-3 p0 hidden">
+			<button class="btn-close" id="hideMobile">Close <i class="fa fa-mobile"></i></button>
+					<script>
+					jQuery("#hideMobile").click(function(){
+						jQuery(".dailer-area").toggleClass("is-active");
+					});
+					</script>
+					
+				<div class="dailer">
+				
+					
+					<div class="dailer__inr">
 					<div class="dailer__fom bg-blue p5">
 						<form action="#" class="search-fom posrel">
 								<div class="form-group">
@@ -364,7 +308,7 @@ button.add-btn {
 						</form>
 					</div>
 						
-					<div class="dailer-tab ">
+					<div class="dailer-tab link-effect--ripple btn-effect--ripple">
 						<ul class="nav nav-tabs list-col-4">
 						  <li class="active"><a href="#home" data-toggle="tab"><i class="fa fa-clock-o"></i></a></li>
 						  <li><a href="#profile" data-toggle="tab"><i class="fa fa-th"></i></a></li>
@@ -376,16 +320,22 @@ button.add-btn {
 						  <div class="tab-pane active" id="home">
 						  
 						<div class="fom-area numbers">
-							<div class="form-group text-center ">
-								<input type="text" class="form-control" id="number" value="(324) 4575 687" >
-							</div>
-							<div class="name text-center clrhm mt10">
-								<h4>Alex Ralf</h4>
+							
+							    <div class="input-group text-center">
+								  <input type="text" class="form-control" id="number" value="(324) 4575 687" >
+								  <span class="input-group-btn  z100">
+									<button class="btn btn-default remove-number-btn " type="button"><i class="fa rotate135">+</i></button>
+								  </span>
+								</div>
+								
+								
+							<div class="name text-center clrhm ">
+								<h5>Alex Ralf</h5>
 								<small>show details</small>
 							</div>
 						</div>
 					
-					<div class="numblock clrlist listview list-col-3">
+					<div class="numblock clrlist listview">
 						  <ul>
 							<li>
 							  <button>
@@ -443,7 +393,7 @@ button.add-btn {
 							</li>
 							<li>
 							  <button>
-								  <strong>*</strong>
+								  <strong class="silver star">*</strong>
 								  <span class="secondary">&nbsp;</span>
 							  </button>
 							</li>
@@ -455,14 +405,17 @@ button.add-btn {
 							</li>
 							<li>
 							  <button>
-								  <strong>#</strong>
+								  <strong class="silver hash">#</strong>
 								  <span class="secondary">&nbsp;</span>
 							  </button>
 							</li>
 						  </ul>
 				</div>
 
-
+						<div class="dail-btn-area text-center">
+							<button class="dail-btn"><i class="fa fa-phone"></i></button>
+						</div>
+					
 						  </div>
 						  <div class="tab-pane" id="profile">...</div>
 						  <div class="tab-pane" id="messages">...</div>
@@ -475,8 +428,22 @@ button.add-btn {
 				</div>
 			</div>
 			
-			<div class="fom-area col-sm-5 ">
+			<div class="fom-area col-sm-5 fnc-select hidden">
 				<div class="fom-bodered overload mb30">
+				
+				<div class="input-group col-sm-6">
+				  <span>Contact Type <i class="fa fa-info-circle"></i> Other<span>
+				</div>
+				
+				
+				<div class="from-group col-sm-6">
+				  <select type="text" class="form-control">
+					<option class="option">Uncategorized</option>
+					<option class="option">Genreal</option>
+					<option class="option">Other</option>
+				  </select>
+				</div>
+				
 				
 				<div class="input-group col-sm-12">
 				  <span class="input-group-addon">
@@ -484,6 +451,8 @@ button.add-btn {
 				  </span>
 				  <select type="text" class="form-control">
 					<option class="option">Salutation</option>
+					<option class="option">Genreal</option>
+					<option class="option">Other</option>
 				  </select>
 				</div>
 				
@@ -641,17 +610,16 @@ button.add-btn {
 				</div>
 				
 				
-				<div class="conver-area">
+				<div class="conver-area col-sm-12 link-effect--ripple btn-effect--ripple">
 				
-							<!-- Nav tabs -->
+				
 						<ul class="nav nav-tabs">
 						  <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
 						  <li><a href="#profile" data-toggle="tab">Profile</a></li>
 						  <li><a href="#messages" data-toggle="tab">Messages</a></li>
 						  <li><a href="#settings" data-toggle="tab">Settings</a></li>
 						</ul>
-
-						<!-- Tab panes -->
+ 
 						<div class="tab-content p10">
 						  <div class="tab-pane active" id="home">No Task Found</div>
 						  <div class="tab-pane" id="profile">...</div>
@@ -669,8 +637,8 @@ button.add-btn {
 				
 			</div>			
 			
-			<div class="activ-area col-sm-4">
-				<div class="activ__inr bg-white">
+			<div class="activ-area col-sm-4 hidden">
+				<div class="activ__inr bg-white link-effect--ripple">
 				
 				<ul class="nav nav-tabs">
 				  <li class="active"><a href="#tab_activ1" data-toggle="tab">Activity</a></li>
@@ -680,7 +648,7 @@ button.add-btn {
 				  <li><a href="#tab_activ5" data-toggle="tab">Text</a></li>
 				</ul>
 
-				<!-- Tab panes -->
+				
 				<div class="tab-content bdr0">
 				  <div class="tab-pane active" id="tab_activ1">
 				  
@@ -757,15 +725,17 @@ button.add-btn {
 			</div>			
 			
 		</div>
+		
+		-->
 	
 	</section>
 	
 	
 			
 	<footer>
-		<section class="ftr col-sm-12 bg-gray p20" id="footer">
+		<section class="ftr-area col-sm-12 bg-silver p10 text-center" id="footer">
 			<div class="container">
-				Bootom
+				Admin Panel Bottom
 			</div>
 		</section>
 	</footer>
@@ -785,6 +755,8 @@ button.add-btn {
 
 	<!--dashboard-->
 	<script src="dashboard.js"></script>
+
+	
 
 	</body>
 </html>
