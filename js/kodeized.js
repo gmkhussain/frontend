@@ -56,8 +56,11 @@
 
 
 
-
-
+/**on menu open mode Trigger menu button when click body area**/
+jQuery("#page-content").on('click', function(event) { 
+		event.preventDefault(); 
+		jQuery(".slide-navbar--active .navbar-toggle").click(); 
+});
 
 
 
