@@ -56,12 +56,12 @@
 
 
 
-/**on menu open mode Trigger menu button when click body area**/
+/**on menu open mode Trigger menu button when click body area
 jQuery("#page-content").on('click', function(event) { 
 		event.preventDefault(); 
 		jQuery(".slide-navbar--active .navbar-toggle").click(); 
 });
-
+**/
 
 
 
@@ -71,7 +71,8 @@ jQuery("#page-content").on('click', function(event) {
 
 /**URL added on body tag as a Class**/
 jQuery(function() {
-  var loc = window.location.pathname; // returns the full URL
+  var locReal = window.location.pathname; // returns the full URL
+	var loc = locReal.replace(".", "/");
 	var split_loc = loc.split('/');
 	active_locLast = split_loc[split_loc.length-1]; 
 	active_locLastParent = split_loc[split_loc.length-2]; 
