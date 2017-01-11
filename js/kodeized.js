@@ -74,11 +74,16 @@ jQuery(function() {
   var locReal = window.location.pathname; // returns the full URL
 	var loc = locReal.replace(".", "/");
 	var split_loc = loc.split('/');
+	active_locLastParent2 = split_loc[split_loc.length-3];
+	active_locLastParent = split_loc[split_loc.length-2];
 	active_locLast = split_loc[split_loc.length-1]; 
-	active_locLastParent = split_loc[split_loc.length-2]; 
+	
+	
+	jQuery('body').addClass(active_locLastParent2 + "-page");
 	jQuery('body').addClass(active_locLastParent + "-page");
 	jQuery('body').addClass(active_locLast + "-page");
-	jQuery('body nav').addClass(active_locLast + "-nav");
+	
+	//jQuery('body nav').addClass(active_locLast + "-nav");
 
   var urlParameters = window.location.search; // returns the URL Parameters
 	var split_urlParameters = urlParameters.split(/[ .=:;?!~,`"&|()<>{}\[\]\r\n/\\]+/);
