@@ -1260,33 +1260,35 @@ body.modal-open { overflow: hidden; }
 /**./filler**/
 
 /**icons**/
-[class*="icon"] .fa-facebook{ color:#2b4687; }
-[class*="icon"] .fa-twitter{ color:#118ed3; }
-[class*="icon"] .fa-google, .fa-google-plus{ color:#cf4320; }
-[class*="icon"] .fa-youtube, .fa-youtube-play{ color:#ff3333; }
-[class*="icon"] .fa-instagram{ color:#476e93; }
-[class*="icon"] .fa-skype{ color:#139be1; }
-[class*="icon"] [class*="fa-pinterest"] { color:#ba0f0b; }
-[class*="icon"] .fa-linkedin { color:#0288d1; }
-[class*="icon"] .fa-rss { color:#f18d35; }
-[class*="icon"] .fa-flickr { color:#0062dc; }
-[class*="icon"] .fa-dribbble { color:#ea4b88; }
+.social-colors .fa-facebook{ color:#2b4687; }
+.social-colors  .fa-twitter{ color:#118ed3; }
+.social-colors  .fa-google, .social-colors .fa-google-plus{ color:#cf4320; }
+.social-colors  .fa-youtube, .social-colors .fa-youtube-play{ color:#ff3333; }
+.social-colors  .fa-instagram{ color:#476e93; }
+.social-colors  .fa-skype{ color:#139be1; }
+.social-colors  [class*="fa-pinterest"] { color:#ba0f0b; }
+.social-colors  .fa-linkedin { color:#0288d1; }
+.social-colors  .fa-rss { color:#f18d35; }
+.social-colors  .fa-flickr { color:#0062dc; }
+.social-colors .fa-dribbble { color:#ea4b88; }
 
-.icon-boxed i { width: 26px; color: #fff; height: 26px; margin: 0 2px; line-height: 1.7em; text-align: center; background-color: #ccc; font-size: 1.15em; }
+.social-colors .icon-boxed .fa { width: 26px; color: #fff; height: 26px; margin: 0 2px; line-height: 1.7em; text-align: center; background-color: #ccc; font-size: 1.15em; }
 
-.icon-rounded i { border-radius: 50%; }
+.social-colors .icon-rounded i { border-radius: 50%; }
 
-.icon-boxed .fa-facebook{ background-color:#2b4687; }
-.icon-boxed .fa-twitter{ background-color:#118ed3; }
-.icon-boxed .fa-google, .icon-boxed .fa-google-plus{ background-color:#cf4320; }
-.icon-boxed .fa-youtube, .icon-boxed .fa-youtube-play{ background-color:#ff3333; }
-.icon-boxed .fa-instagram{ background-color:#476e93; }
-.icon-boxed .fa-skype{ background-color:#139be1; }
-.icon-boxed [class*="fa-pinterest"] { background-color:#ba0f0b; }
-.icon-boxed .fa-linkedin { background-color:#0288d1; }
-.icon-boxed  .fa-rss { background-color:#f18d35; }
-.icon-boxed  .fa-flickr { background-color:#0062dc; }
-.icon-boxed  .fa-dribbble { background-color:#ea4b88; }
+.social-colors .icon-boxed .fa-facebook{ background-color:#2b4687; }
+.social-colors .icon-boxed .fa-twitter{ background-color:#118ed3; }
+.social-colors .icon-boxed .fa-google,
+.social-colors .icon-boxed .fa-google-plus{ background-color:#cf4320; }
+.social-colors .icon-boxed .fa-youtube,
+.social-colors .icon-boxed .fa-youtube-play{ background-color:#ff3333; }
+.social-colors .icon-boxed .fa-instagram{ background:linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); }
+.social-colors .icon-boxed .fa-skype{ background-color:#139be1; }
+.social-colors .icon-boxed [class*="fa-pinterest"] { background-color:#ba0f0b; }
+.social-colors .social-colors .icon-boxed .fa-linkedin { background-color:#0288d1; }
+.social-colors .icon-boxed  .fa-rss { background-color:#f18d35; }
+.social-colors .icon-boxed  .fa-flickr { background-color:#0062dc; }
+.social-colors .icon-boxed  .fa-dribbble { background-color:#ea4b88; }
 
 /**shake-icon on hover**/
 .shake-icon .fa:hover  {-webkit-animation: link 0.5s;animaanimation: link 0.5s;}
