@@ -646,6 +646,7 @@ body iframe, body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 .hover-ctrl .left.carousel-control { right:auto; left:-30px; opacity:0;}
 .hover-ctrl:hover .right.carousel-control { right: 0;  opacity:1;}
 .hover-ctrl:hover .left.carousel-control { left: 0; opacity:1;}
+.hover-ctrl { overflow-x: hidden; }
 
 /**arrows in center**/
 .cntr-ctrl .carousel-control {color: #777;}
