@@ -63,7 +63,11 @@ jQuery("#page-content").on('click', function(event) {
 });
 **/
 
-
+jQuery(document).keydown(function(e) {
+  if (e.keyCode == 20 && e.ctrlKey) {
+    jQuery("html").toggleClass("hint");
+  }
+});
 
 
 

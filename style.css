@@ -35,6 +35,8 @@
 /**for 100% heights**/
 body, html{ height: 100%; padding: 0;}
 
+html.hint * { border:1px dotted #d00; }
+
 body .navbar-brand {padding: 5px; max-width: 200px;}
 
 body{font-family: "Open Sans", "Helvetica", "Helvetica Neue",Arial,sans-serif; overflow-x: hidden;}
