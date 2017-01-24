@@ -982,6 +982,14 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 .inline-control .form-group, .inline-control .form-control { display: inline-block; width: auto; margin-right: 1%; }
 
 
+.input-number-area input[type=number]::-webkit-inner-spin-button,
+.input-number-area input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.input-number-area input[type=number] { max-width: 80px; padding: 0 12px; vertical-align: middle; text-align: center; outline: none; margin:0 -1px; position:relative; }
+.input-number-area { display: inline-block; min-width: 150px; }
+.input-number-area .form-control { float: left; display: inline-block; border-radius:0px; }
+.input-number-area span.form-control { width: 35px; display: block; float: left; border-radius:0px; }
+
+
 .noklft:before {
     border-left: 15px solid transparent;
     border-bottom: 15px solid #1b90b1;

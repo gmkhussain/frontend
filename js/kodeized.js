@@ -194,7 +194,41 @@ jQuery(function() {
 
 
 
+/**input-number**/
+jQuery(document).ready(function() {
+  window.inputNumber = function(el) {
+   var min = el.attr('min') || false;
+    var max = el.attr('max') || false;
+    var els = {};
+    els.dec = el.prev();
+    els.inc = el.next();
+    el.each(function() {
+      init($(this));
+    });
 
+    function init(el) {
+      els.dec.on('click', decrement);
+      els.inc.on('click', increment);
+      function decrement() {
+        var value = el[0].value;
+        value--;
+        if(!min || value >= min) {
+          el[0].value = value;
+        }
+      }
+      function increment() {
+        var value = el[0].value;
+        value++;
+        if(!max || value <= max) {
+          el[0].value = value++;
+        }
+      }
+    }
+  }
+  inputNumber(jQuery('.input-number'));
+});
+
+/**./.input-number**/
 
 
 /**.form-group--active on parent of .form-control**/
@@ -225,6 +259,8 @@ jQuery('.form-control').change(function (event) {
         }else{ jQuery(this).removeClass("has-value"); }
 	});
 /**./fnc-fom label animation**/
+
+
 
 
 /*Add class on parent of Checked input*/
@@ -549,6 +585,7 @@ jQuery(function () {
         var $myDiv = jQuery('.fill__move');
         var y = jQuery(this).scrollTop();
         jQuery('#fill__value').text(y);
+		jQuery('html').attr("x",y);
         x = y - 3;
         $myDiv.animate({
             height: x
