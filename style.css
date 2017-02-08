@@ -483,16 +483,18 @@ body .l--{ left:auto; }
 
 .ovrimg { overflow: hidden; }
 .ovrimg img{ width: 100%;}
+.img-cntr { width:50%; overflow:hidden; height:350px; position:relative; }
+.img-cntr img { position: absolute; left: 50%; top: 50%; -webkit-transform: translateY(-50%) translateX(-50%); max-width: initial !important;}
 
 body iframe, body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
 .modal iframe { width: 100%; min-height:70vh; }
 
-.filter-white   { -webkit-filter: brightness(1000%);     }
+.filter-white   { -webkit-filter: brightness(1000%); }
 .color-gray,.grayedout { -webkit-filter: grayscale(1); filter: grayscale(1); }
 .color-invert { -webkit-filter: invert(1); filter: invert(1); }
 
-.drp-shad {filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));	-webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));}
+.drp-shad {filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));	-webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5)); }
 		
 /*** BG ***/
 .wide-box-holder {clear:both;position: relative;overflow:hidden;}
