@@ -54,7 +54,13 @@
 });
 
 
-
+/*preloader*/
+jQuery(window).on('load', function() {
+  jQuery('#preloader__status').fadeOut();
+  jQuery('#preloader').delay(350).fadeOut('slow'); 
+  jQuery('body').delay(350).css({'overflow':'visible'});
+})
+/*./preloader*/
 
 /**on menu open mode Trigger menu button when click body area
 jQuery("#page-content").on('click', function(event) { 
