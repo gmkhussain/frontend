@@ -1111,7 +1111,13 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 .navbar-move #mark {background-color: #39c; display: inline-block; position: absolute; z-index: 0; height: 2px; left:-9999px;}
 /*./navbar-move active navbar item*/
 
+.navbar-nav.navbar-list>li { display: block; width: 100%; }
+.navbar-nav.navbar-list>li>.dropdown-menu { position: static; width: 100%; }
+.navbar-list { width: 100%; }
+.navbar-nav.navbar-list>li:hover:not(.open  )>.dropdown-menu { display: none; }
+.navbar-nav.navbar-list>li:not(:last-child)>a { border-bottom: 1px solid #9a9a9a; font-size: 16px; }
 
+					
 /*
 Note: see bottom note
 */
