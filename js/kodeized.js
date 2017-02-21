@@ -209,7 +209,7 @@ jQuery(document).ready(function() {
     els.dec = el.prev();
     els.inc = el.next();
     el.each(function() {
-      init($(this));
+      init(jQuery(this));
     });
 
     function init(el) {
@@ -250,7 +250,7 @@ jQuery(".form-control").blur(function() {
 
 /**.has-value added if .form-control have value**/
 jQuery('.form-control').change(function (event) {
-	if (jQuery(this).val() != '') $(this).addClass('has-value');
+	if (jQuery(this).val() != '') jQuery(this).addClass('has-value');
 	else jQuery(this).removeClass('has-value');
 });
 /**./has-value added if form-control have value**/			
@@ -302,25 +302,25 @@ jQuery(document).ready(function() {
 
 /*
 ////////XTRA GPv3 SCRIPTS /////
-$('.carousel').carousel({
+jQuery('.carousel').carousel({
   interval: 8000
 })
 */
 
 /*
 //Multipal slide//
-$('.testimoCarousel .item').each(function(){
-  var next = $(this).next();
+jQuery('.testimoCarousel .item').each(function(){
+  var next = jQuery(this).next();
   if (!next.length) {
-    next = $(this).siblings(':first');
+    next = jQuery(this).siblings(':first');
   }
-  next.children(':first-child').clone().appendTo($(this));
+  next.children(':first-child').clone().appendTo(jQuery(this));
   
   if (next.next().length>0) {
-    next.next().children(':first-child').clone().appendTo($(this));
+    next.next().children(':first-child').clone().appendTo(jQuery(this));
   }
   else {
-  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+  	jQuery(this).siblings(':first').children(':first-child').clone().appendTo(jQuery(this));
   }
   
 });
@@ -331,20 +331,20 @@ $('.testimoCarousel .item').each(function(){
 
 
 //Clients Slider
-$('.carousel[data-type="multi"] .item').each(function(){
-  var next = $(this).next();
+jQuery('.carousel[data-type="multi"] .item').each(function(){
+  var next = jQuery(this).next();
   if (!next.length) {
-    next = $(this).siblings(':first');
+    next = jQuery(this).siblings(':first');
   }
-  next.children(':first-child').clone().appendTo($(this));
+  next.children(':first-child').clone().appendTo(jQuery(this));
   
   for (var i=0;i<2;i++) {
     next=next.next();
     if (!next.length) {
-    	next = $(this).siblings(':first');
+    	next = jQuery(this).siblings(':first');
   	}
     
-    next.children(':first-child').clone().appendTo($(this));
+    next.children(':first-child').clone().appendTo(jQuery(this));
   }
 });
 
@@ -354,7 +354,7 @@ $('.carousel[data-type="multi"] .item').each(function(){
 var amount = '';
 
 function scroll() {
-    $('.case-snap').animate({
+    jQuery('.case-snap').animate({
         scrollTop: amount
     }, 100, 'linear',function() {
         if (amount != '') {
@@ -415,17 +415,17 @@ jQuery(".dwn-scroll").click(function() {
 
 //Tab slide up/dwon on click
 jQuery(".tab-animate li").click(function() {
-   jQuery('html, body').animate({ scrollTop: $(".tab-content").offset().top - 170 }, 1500 );
+   jQuery('html, body').animate({ scrollTop: jQuery(".tab-content").offset().top - 170 }, 1500 );
 });
 
 
 //Active Tab Nav move to center on click
     jQuery(document).ready(function(){
-      $(".active-tab-move-area .nav-tabs li").click(function() {
-        $(".active-tab-move-area .nav-tabs li.active").removeClass("c_active"); //Remove any "active" class
-//        $(".our-values .nav-tabs li.active > div").css("display","block");
-	    var $active = $(this).detach().addClass("c_active"),
-            $lis = $(".active-tab-move-area .nav-tabs li");
+      jQuery(".active-tab-move-area .nav-tabs li").click(function() {
+        jQuery(".active-tab-move-area .nav-tabs li.active").removeClass("c_active"); //Remove any "active" class
+//        jQuery(".our-values .nav-tabs li.active > div").css("display","block");
+	    var $active = jQuery(this).detach().addClass("c_active"),
+            $lis = jQuery(".active-tab-move-area .nav-tabs li");
         $active.insertBefore($lis.eq(Math.floor($lis.length / 2)));
       });
     });
@@ -471,10 +471,10 @@ jQuery(document).ready(function(){
 /**Button ripple effects on click**/
 jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripple a").click(function (e) {
   jQuery(".ripple").remove();/*Remove any old one*/
-  var posX = $(this).offset().left,
-      posY = $(this).offset().top,
-      buttonWidth = $(this).width(),
-      buttonHeight =  $(this).height();
+  var posX = jQuery(this).offset().left,
+      posY = jQuery(this).offset().top,
+      buttonWidth = jQuery(this).width(),
+      buttonHeight =  jQuery(this).height();
   jQuery(this).prepend("<span class='ripple'></span>");
 
   if(buttonWidth >= buttonHeight) {
@@ -568,7 +568,7 @@ jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripp
 		jQuery('.scrolink a').click(function() {
 		  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = jQuery(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
 			if (target.length) {
 			  jQuery('html, body').animate({
 				scrollTop: target.offset().top + (-100) //Additional pixels to the scrollTop
@@ -638,10 +638,10 @@ jQuery(function(){
     jQuery("#popoverExampleTwo").popover({
         html : true, 
         content: function() {
-          return $('#popoverExampleTwoHiddenContent').html();
+          return jQuery('#popoverExampleTwoHiddenContent').html();
         },
         title: function() {
-          return $('#popoverExampleTwoHiddenTitle').html();
+          return jQuery('#popoverExampleTwoHiddenTitle').html();
         }
     });
 
@@ -922,7 +922,7 @@ if (jQuery('html').hasClass("livewindowsize")) {
 
 /*Video stop when Modal Close*/
 	jQuery('.modal').on('hidden.bs.modal', function () {
-		var src = $(this).find('iframe').attr('src');
+		var src = jQuery(this).find('iframe').attr('src');
 		jQuery(this).find('iframe').attr('src', '');
 		jQuery(this).find('iframe').attr('src', src);
 	});

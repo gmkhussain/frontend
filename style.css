@@ -515,7 +515,7 @@ body iframe, body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
 /*** LIST ***/
 /**package tag**/
-.taglized { overflow: hidden; }
+.taglized { overflow: hidden; position:relative; }
 .tag-badge { position: absolute; top: -8px; right: -50px; transform: rotate(45deg); width: 140px; padding: 0px; box-sizing: border-box; height: 60px; background-color: yellowgreen; box-shadow: 0 0 10px 5px #eee; }
 .tag-badge .txt { width: 60px; display: block; margin: 0 auto; padding-top: 24px; text-align: center; text-transform: uppercase; line-height: 1; font-weight: 600;}
 
@@ -667,7 +667,7 @@ body iframe, body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 /*for slider caption*/
 .slider-area .container, .slider .container {position: relative;}
 
-.caro-caps { bottom: 10em; position: absolute; z-index: 0; left:0; }
+.caro-caps { bottom: 10em; position: absolute; z-index: 0; left:0; right:0; }
 
 .slider.fadeft .carousel-inner > .active.left {background-color: #fff;left: 0;}
 .slider.fadeft .carousel-inner > .active.left img {opacity: 0.8;}
