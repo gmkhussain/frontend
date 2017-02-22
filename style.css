@@ -1042,6 +1042,15 @@ body #slide-nav #slidemenu {background-color: transparent;}
 .blur-nav--hover:hover .navbar-nav li a { opacity: 0.3; }
 .blur-nav--hover .navbar-nav li a:hover { opacity: 1; }
 
+/*vertical line hover from top & bottom*/
+.vrline-topb--hover li a:not(.logo):before,
+.vrline-topb--hover li a:not(.logo):after { content: ""; display: block; width: 0%; background-color: #d00; display: block; position: absolute; bottom: 0; height: 0%; left: 50%; width: 2px; margin-left: -1px; }
+.vrline-topb--hover li a:not(.logo):before{ bottom: auto; top: 0;	 }
+.vrline-topb--hover li a { position: relative; }
+.vrline-topb--hover li a:hover:before,
+.vrline-topb--hover  li a:hover:after { height: 40%; z-index: -1; left: 50%; }
+/*./vertical line hover from top & bottom*/
+
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus { background-color: inherit; text-shadow:0 0 15px #fff; }
 
 @media only screen and (max-width : 768px) {
