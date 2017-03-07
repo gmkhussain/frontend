@@ -366,6 +366,15 @@ function scroll() {
 
 */
 
+/*sticky4all*/
+	var $window = $(window),
+       $stickyEl = $('.sticky'),
+       elTop = $stickyEl.offset().top;
+
+   $window.scroll(function() {
+        $stickyEl.toggleClass('sticky--active', $window.scrollTop() > elTop);
+    });
+/*./sticky4all*/	
 
 	
 //Sticky Header
