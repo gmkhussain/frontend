@@ -41,6 +41,10 @@ body, html{ height: 100%; padding: 0;}
 
 html.hint * { border:1px dotted #d00; }
 
+html.hint a { box-shadow: 1px 0 12px 0px #006dd3 inset; }
+
+html.hint a[href="#"]:before,html.hint a[href=""]:before { content: "# No Link"; position: absolute; font-size: 3em; color: #d00; z-index: 222; }
+
 body .navbar-brand {padding: 5px; max-width: 200px;}
 
 body{font-family: "Open Sans", "Helvetica", "Helvetica Neue",Arial,sans-serif; overflow-x: hidden;}
