@@ -24,7 +24,7 @@ Additional file list:
 
 <img src="https://github.com/gmkhussain/frontend/blob/master/images/favicon.png" width="auto" height="40" alt="favicon">
 
-###Newbies
+## Newbies
 * Well defined
 ```html
 	<script>//When mouse out from website * add 'leavepopup' on <body>
@@ -35,7 +35,7 @@ Additional file list:
 ```
 
 
-##On keypress do something on entire document but not inside inputs and textareas
+### On keypress do something on entire document but not inside inputs and textareas
 ```html
 $(document).on('keypress', function(e) {
     var tag = e.target.tagName.toLowerCase();
@@ -77,7 +77,7 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 
 
 
-##Multiple Instances of Swiper on Same page
+### Multiple Instances of Swiper on Same page
 ```html
 //can do that easier just with different classes
 <div class="swiper-container s1"> ... </div>
@@ -92,7 +92,7 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 ```
 
 
-##Multiple Instances of Swiper on Same page
+### Multiple Instances of Swiper on Same page
 ```html
 		var sliders = [];
 			$('.swiper-container').each(function(index, element){
@@ -140,10 +140,10 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 ```
 <hr/>
 
-###Bootcamp™
+## Bootcamp™
 * Short Guideline
 
-###Brats®
+## Brats®
 * Fixing
 * Conflicts ( ie. Tab Nav Header Nav )
 * Hard to use 
@@ -176,15 +176,15 @@ $(function () {
 	</script>
 ```
 
-###Hazing
+## Hazing
 * Unclear
 
 
-###Overdose
+## Overdose
 * Speed-less
 * Mess-up code
 
-####Metabolic
+### Metabolic
 
 ```html
 //Can Delete
@@ -195,10 +195,18 @@ _svg.html
 ```
 
 
-###Overload
+## Overload
 * Optional 
 * Extra files/scripts
 * [viewportchecker.js] (viewportchecker.js) - Detects if an element is in the viewport and DO SOMETHING.
+
+### Remove youtube branding after embedding video
+```html
+You can add ?modestbranding=1 to your url. That will remove the logo.
+&showinfo=0 will remove the title bar.
+```
+
+
 
 
 
