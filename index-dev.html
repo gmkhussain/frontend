@@ -788,19 +788,91 @@
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse p0" id="bs-example-navbar-collapse-1">
-						  <ul class="nav navbar-nav navbar-list">
+						  <style>
+						  .navbar-nav.navbar-mega>li>.dropdown-menu>li>a {
+								font-weight: 600;
+								border-bottom: 1px solid #ccc;
+							}
+
+						  .navbar-nav.navbar-mega>li>.dropdown-menu {
+									position: absolute;
+									top: 0px;
+									right: -600px;
+									left: auto;
+									min-width: 600px;
+								}
+
+								.navbar-nav.navbar-mega>li>.dropdown-menu li {
+									width: 33%;
+									float: left;
+									margin: 0 0.16666%;
+								}
+
+								.nav.navbar-nav.navbar-mega>li>.dropdown-menu .dropdown-menu {
+									display: block;
+									position: static;
+									top: 0px;
+									margin-left: 0px;
+									margin-top: 0px;
+									border: 0;
+									border-radius: 0;
+									box-shadow: none;
+								}
+
+								.nav.navbar-nav.navbar-mega>li>.dropdown-menu .dropdown-menu li {
+									display: block;
+									width: 100%;
+								}
+							</style>
+						  
+						  <ul class="nav navbar-nav navbar-list navbar-mega">
 						  
 							<li class="dropdown">
 							  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events</a>
 							  <ul class="dropdown-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
+								  <li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Action</a>
+									  <ul class="dropdown-menu">
+										<li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Political</a></li>
+										<li><a href="#">Business</a></li>
+										<li><a href="#">Sports</a></li>
+									  </ul>
+								  </li>
+								  <li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Action II</a>
+									  <ul class="dropdown-menu">
+										<li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Political</a></li>
+										<li><a href="#">Business</a></li>
+										<li><a href="#">Sports</a></li>
+									  </ul>
+								  </li>
+								  <li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">3rd Action</a>
+									  <ul class="dropdown-menu">
+										<li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Political</a></li>
+										<li><a href="#">Business</a></li>
+										<li><a href="#">Sports</a></li>
+									  </ul>
+								  </li>
 							  </ul>
 							</li>
 							
-							<li><a href="#">Political</a></li>
-							<li><a href="#">Business</a></li>
-							<li><a href="#">Sports</a></li>
+							<li class="dropdown">
+							  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Holiday</a>
+							  <ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Political</a></li>
+								<li><a href="#">Business</a></li>
+								<li><a href="#">Sports</a></li>
+							  </ul>
+							</li>
 							<li><a href="#">School & Organizations</a></li>
 							<li><a href="#">Real Estate</a></li>
 							<li><a href="#">Religious</a></li>
