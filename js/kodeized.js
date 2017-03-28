@@ -367,8 +367,8 @@ function scroll() {
 */
 
 /*sticky4all*/
-	var $window = $(window),
-       $stickyEl = $('.sticky'),
+	var $window = jQuery(window),
+       $stickyEl = jQuery('.sticky'),
        elTop = $stickyEl.offset().top;
 
    $window.scroll(function() {
@@ -600,7 +600,11 @@ jQuery(function () {
         var $myDiv = jQuery('.fill__move');
         var y = jQuery(this).scrollTop();
         jQuery('#fill__value').text(y);
-		jQuery('html').attr("x",y);
+		
+		/*Y Round by 100*/
+		var Yroundby100 = Math.floor(y / 100) * 100;  
+		
+		jQuery('html').attr("y-pos",Yroundby100);
         x = y - 3;
         $myDiv.animate({
             height: x
