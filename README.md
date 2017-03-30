@@ -6,6 +6,12 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 
 ###GH-Pages {ㅤ ㅤ ㅤㅤ ㅤ ㅤ ㅤㅤ}
 
+
+## addClass if URL is Root url (is Home page)
+```html
+	jQuery('body').toggleClass('is_index home', /\/$/.test(location.pathname));
+```
+
 Additional file list:
 + Root
     + js

@@ -79,6 +79,10 @@ jQuery(document).keydown(function(e) {
 
 
 
+/*addClass if URL is Root url (is Home page)*/
+jQuery('body').toggleClass('is_index home', /\/$/.test(location.pathname));
+
+
 /**URL added on body tag as a Class**/
 jQuery(function() {
   var locReal = window.location.pathname; // returns the full URL
