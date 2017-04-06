@@ -32,6 +32,11 @@
 
 /**********STYLIZED CLASSES***********/
 
+/*testing-area*/
+.testing-area { display: none !important; }
+.hashtag--testing .testing-area { display: block !important; }
+/*./testing-area*/
+
 .preloadized { overflow: hidden; }
 .preloadized #preloader { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #fff; z-index: 99999; }
 .preloadized #preloader__status { width: 32px; height: 32px; position: absolute; left: 50%; top: 50%; margin: -15px 0 0 -15px;  border-radius: 50%; }

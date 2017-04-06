@@ -103,8 +103,8 @@ jQuery(function() {
 	var split_urlParameters = urlParameters.split(/[ .=:;?!~,`"&|()<>{}\[\]\r\n/\\]+/);
 	urlParametersLast= split_urlParameters[split_urlParameters.length-1];
 	urlParametersLast2= split_urlParameters[split_urlParameters.length-2];
-	jQuery('body').addClass("parameter-"+urlParametersLast);
-	jQuery('body').addClass("parameter-"+urlParametersLast2);
+	jQuery('body').addClass("parameter--"+urlParametersLast);
+	jQuery('body').addClass("parameter--"+urlParametersLast2);
 	
   var urlHash = window.location.hash;
     var urlHashSplit = urlHash.split("#");
@@ -112,7 +112,7 @@ jQuery(function() {
     if (urlHashSplit[1] != null){
 			urlHashAfterSplit = urlHashSplit[1];
 		}
-	jQuery('body').addClass("hash"+urlHashAfterSplit);
+	jQuery('body').addClass("hashtag--"+urlHashAfterSplit);
 
 	
 });
