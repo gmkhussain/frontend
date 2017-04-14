@@ -498,6 +498,10 @@ body .l--{ left:auto; }
 .img-cntr { width:50%; overflow:hidden; height:350px; position:relative; }
 .img-cntr img { position: absolute; left: 50%; top: 50%; -webkit-transform: translateY(-50%) translateX(-50%); max-width: initial !important;}
 
+/*img-cntr hover conflict with imgzoom--hover fixed*/
+.imgzoom--hover .img-cntr img { -webkit-transform: translateY(-50%) translateX(-50%) scale(1.2) !important; }
+.imgzoom--hover .img-cntr:hover img { -webkit-transform: translateY(-50%) translateX(-50%) scale(1) !important; }
+
 body iframe, body img, .ovrimg-mx img { max-width: 100%; height: auto; }
 
 .modal iframe { width: 100%; min-height:70vh; }
@@ -1213,6 +1217,7 @@ body a, body a:active, body  a:focus, body  a:hover {
 .imgzoom--hover [class*="__inr"] [class*="__img"] { overflow: hidden;}
 .imgzoom--hover [class*="__inr"]:hover [class*="__img"] img { transform: scale(1); }
 .imgzoom--hover [class*="__inr"] [class*="__img"] img { transform: scale(1.2); }
+
 
 .rotate-img--hover:hover img {
 	transform: rotate(4deg) scale(1.2);
