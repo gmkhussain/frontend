@@ -1101,8 +1101,8 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 /*submenu for desktop*/
 .dropdown:hover  > .dropdown-menu { display: block; }
 
-.dropdown > a::before { color: #000; content: "\f107"; font-family: "fontawesome"; font-size: 1em; margin-left: 1%; position: absolute; right: 1%; }
-.dropdown.open > a::before { content: "\f105"; }
+.dropdown > a::after { color: #000; content: "\f107"; font-family: "fontawesome"; font-size: 1em; line-height: initial; margin-left:2px; position: static; }
+.dropdown.open > a::after { content: "\f105"; }
 
 /***multi level submenu spacing*** -issue fixed .moreMover- **/
 .nav.navbar-nav ul.dropdown-menu ul.dropdown-menu {
