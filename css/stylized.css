@@ -923,6 +923,12 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 }
 /*./checkylbl*/
 
+/**placeholder and form-control center align**/
+.text-center .form-control { text-align: center; }
+.text-center ::-webkit-input-placeholder { text-align: center; }
+.text-center :-moz-placeholder { text-align: center; }
+.text-center ::-moz-placeholder { text-align: center; }
+.text-center :-ms-input-placeholder { text-align: center; }
 
 
 .fnc-fom ::-webkit-input-placeholder{opacity: 0;}
