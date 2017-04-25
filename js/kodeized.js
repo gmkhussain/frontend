@@ -371,6 +371,7 @@ function scroll() {
 */
 
 /*sticky4all*/
+if (jQuery(".sticky")[0]){
 	var $window = jQuery(window),
        $stickyEl = jQuery('.sticky'),
        elTop = $stickyEl.offset().top;
@@ -378,6 +379,7 @@ function scroll() {
    $window.scroll(function() {
         $stickyEl.toggleClass('sticky--active', $window.scrollTop() > elTop);
     });
+} else { /* do something if class does not exist */ }
 /*./sticky4all*/	
 
 	
