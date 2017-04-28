@@ -7,7 +7,7 @@
     //stick in the fixed 100% height behind the navbar but don't wrap it
     jQuery('.slide-navbar #slide-nav.navbar-inverse').after(jQuery('<div class="inverse" id="navbar-height-col"></div>'));
   
-    jQuery('.slide-navbar #slide-nav.navbar-default').after(jQuery('<div id="navbar-height-col"></div>'));  
+    //jQuery('.slide-navbar #slide-nav.navbar-default').after(jQuery('<div id="navbar-height-col"></div>'));  
 
     // Enter your ids or classes
     var toggler = '.navbar-toggle';
