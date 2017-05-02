@@ -931,6 +931,20 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 .text-center :-ms-input-placeholder { text-align: center; }
 
 
+
+/*fom-brackets*/
+.fom-brackets .form-group .form-control:not([type="checkbox"]) {
+    border-color:transparent;
+    box-shadow:none;
+    border-bottom: 2px solid #333;
+	position:relative;
+}
+.fom-brackets .form-group:not(.brackets--no)::after, 
+.fom-brackets .form-group:not(.brackets--no):before {content: "";position: absolute;bottom: 0;height: 10px;background-color: #333;width: 2px;}
+.fom-brackets .form-group:before {left:15px;}
+.fom-brackets .form-group::after {right:15px;}
+
+
 .fnc-fom ::-webkit-input-placeholder{opacity: 0;}
 /**show placeholder when click on form-control**/
 .fnc-fom .form-control:focus::-webkit-input-placeholder{opacity: 1;}
