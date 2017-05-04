@@ -11,6 +11,7 @@
 	
     <!-- Bootstrap --><link href="css/bootstrap.min.css" rel="stylesheet">
 	
+	<link rel="stylesheet" href="css/stylized.css">
 	<link rel="stylesheet" href="style.css">
 	
 	<link rel="stylesheet" href="css/colorized.css">
@@ -64,6 +65,22 @@
 				<div id="slidemenu">
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					  <ul class="nav navbar-nav navbar-main link-effect--ripple">
+						<li class="dropdown">
+						  <a href="#!4" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bookmark"></i> <span>Getting Started</span></a>
+						  <ul class="dropdown-menu">
+							<li><a href="#a">Action</a></li>
+							<li><a href="#b">Another action</a></li>
+							<li><a href="#e">One more separated link</a></li>
+						  </ul>
+						</li>
+						<li class="dropdown">
+						  <a href="#!4" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bookmark"></i> <span>Guidelines</span></a>
+						  <ul class="dropdown-menu">
+							<li><a href="#a">Action</a></li>
+						  </ul>
+						</li>
+						
+						
 						<li><a href="#!0"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
 						<li class=""><a href="#!2"><i class="fa fa-calendar"></i> <span>Events Manager</span></a></li>
 						<li><a href="#!1"><i class="fa fa-bookmark"></i> <span>Addons Manager</span></a></li>
@@ -75,14 +92,7 @@
 						<li><a href="#!8"><i class="fa fa-ticket"></i> <span>Coupons Manager</span></a></li>
 						
 						
-						<li class="dropdown">
-						  <a href="#!4" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-facebook"></i> <span>Dropdown 4</span></a>
-						  <ul class="dropdown-menu">
-							<li><a href="#a">Action</a></li>
-							<li><a href="#b">Another action</a></li>
-							<li><a href="#e">One more separated link</a></li>
-						  </ul>
-						</li>
+						
 						
 					  </ul>
 
@@ -160,6 +170,277 @@
 	<section class="main-content col-sm-10 bg-snow pt30">
 	
 		<div class="container">
+
+			<style>
+.step__hed {
+    background-color: #f7f7f7;
+    padding: 2em 4em;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+    float: left;
+    width: 100%;
+}
+
+.step__hed h2 {
+    font-weight: 600;
+    font-size: 3em;
+}
+
+.step__hed h4 {
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.step__cont {
+    padding: 2em 4em;
+    background-color: #fff;
+    float: left;
+    width: 100%;
+}
+
+.step__cont h2 {
+    color: #000;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+}
+.colors-area ul li {
+    height: 70px;
+}
+
+
+.step__cont h2:before {content: "";display: block;width: 50%;height: 4px;background: #0084ff;position: absolute;top: -10px;}
+</style>
+			<div class="step-area" id="startup">
+				
+				<div class="step__hed clrhm">
+					<h4>Getting started</h4>
+					<h2>Frontend Extened</h2>
+				</div>
+				<div class="step__cont">
+				
+				<h2>Setup</h2>
+					<h3>1. Download the Kit</h3>
+<p>Go to the design kit on local network or provided link and click on the latest version to begin downloading the kit.</p>
+
+
+<div class="col-sm-6">
+			<pre class="  language-js">
+			<code class="  language-js">Design System</span>
+			├── css
+			│   ├── animate.css
+			│   └── bootstrap.min.css
+			│   └── colorized.css
+			│   └── font-awesome.min.css
+			│   └── slidenav.css
+			│   └── stylized.css
+			│   └── swiper.min.css
+			├── scripts
+			│   ├── bootstrap.min.js
+			│   └── css_browser_selector.js
+			│   └── css_browser_selector.js
+			│   └── html5shiv.min.js
+			│   └── jquery-2.2.4.min.js
+			│   └── kodeized.js
+			│   └── respond.min.js
+			│   └── swiper.jquery.min.js
+			│   └── viewportchecker.js
+			├── index-dev.html
+			├── index.html
+			└── style.css
+			</code></pre>
+</div>
+
+<div class="col-sm-6">
+<pre class="  language-js">
+			<code class="  language-js">Extra Design System</span>
+			├── extralized			
+			│   ├── bootstrap-datepicker.js
+			│   ├── bootstrap-datetimepicker.css
+			│   ├── bootstrap-datetimepicker.js
+			│   ├── chartist.min.css
+			│   ├── chartist.min.js
+			│   ├── daterangepicker
+			│   ├── daterangepicker.js
+			│   ├── gentleform.js
+			│   ├── highcharts.js
+			│   ├── html2canvas.js
+			│   ├── isotope.css
+			│   ├── isotope.kode.js
+			│   ├── isotope.pkgd.min.js
+			│   ├── jquery.ripples.js
+			│   ├── jquery.unveil.js
+			│   ├── masked-input.js
+			│   ├── modernizr.min.js
+			│   ├── moment.min.js
+			│   ├── morphext.js
+			│   ├── scrollreveal.min.js
+			│   ├── trio_slider.css
+			│   ├── trio_slider.js
+			│   └── zoom.js
+			</code></pre>
+			</div>
+			
+				</div>
+			</div>
+			
+			
+			
+			<div class="step-area" id="principles">
+				
+				<div class="step__hed clrhm">
+					<h4>GUIDELINES</h4>
+					<h2>Principles</h2>
+				</div>
+				<div class="step__cont">
+				
+					<div class="rules-area">
+						<h2>Focuses on five categories:</h2>
+						
+						<p><h4>Base</h4> is used for defaults like html, body, a, a:hover. This includes your CSS resets and would often be in its own base CSS file or at the start of your main CSS.</p>
+
+						<p><h4>Layout</h4> divides a page into sections with elements like header, footer, and article. Often developers show layout elements by prefixing the class with <strong>l-</strong>. Grids and lists would fall under this category.</p>
+
+						<p><h4>Module</h4> is a reusable element on the page. RULE sees modules as the majority of your elements and doesn’t require you to prefix them but you could do so if you choose. e.g. <strong>prod-box, colset, list-box.</strong></p>
+
+						<p><h4>State</h4> is used for the variations possible, for each element (e.g. active, inactive, expanded, hidden). These are prefixed with is-, e.g. <strong>is-active, is-inactive, is-expanded, is-hidden</strong> or are via pseudo-classes such as :hover and :focus or media queries.</p>
+
+						<p><h4>Theme</h4> is similar to state but defines how modules and layouts will look. It is more applicable for larger sites with shared elements that look different throughout. You would add theme variations on a per page or per section basis.</p>
+					
+					</div>
+				
+				
+				
+					<div class="bem-area">
+						<h2>Block, Element, Modifier (BEM)</h2>
+						<ul>
+							<li>Basically, It’s a way to name your classes (I guess it’s more than that, but this is the easily extrapolated thing in it)</li>
+							<li>It’s easy for anyone to understand BEM code, cause of the strict rules (also easier for you to write when you have a system)</li>
+						</ul>
+						<pre>
+						<code>
+							Code example:
+							/* This is the Block */
+							.block {}
+
+							/* This is an element, that helps to form the block as a whole */
+							.block__element {}
+
+							/* This modifies the element or a block*/
+							.block--modifier {}
+						</code>
+						</pre>
+						
+						<p>Don’t go so deep <code>block__elem1__elem2</code>, don’t try to mimic the DOM tree.</p>
+						
+						<pre>
+						<code>
+							 section class="mblock"
+								div class="block__elem1"
+									a class="block__elem2" href="/" Elemet 2 /a
+								/div 
+							/section 
+						</code>
+						</pre>
+						
+					</div>
+				
+				
+				
+					<div class="oocss-area">
+						<h2>OOCSS – Object-Oriented CSS</h2>
+						<p>In its basic form, OOCSS is a way of applying Object Oriented Design concepts which we use in other programming languages like Java, Ruby or JavaScript to CSS development. In OOCSS, objects are individual html elements, groups of elements, and so on. There are two main principles in OOCSS which allow for greater modularity and re-usability:</p>
+						
+						<ol>
+							<li>Separating structure from skin – means separating the structure and positioning styles from the presentational styles.</li>
+							<li>Separating container from content – means to separate any given object from its container. Any object should be able to be placed in another container and still look and behave the same. This basically means to try to avoid using child selectors when possible.</li>
+						</ol>
+						
+						<pre>
+						<code>
+						/* OOCSS */
+						 
+						.sidebar { /* sidebar contents */ }
+						 
+						h2.sidebar-title { /* special h2 element styles */ }
+						 
+						/* Non-OOCSS */
+						 
+						.sidebar { /* same sidebar contents */ }
+						 
+						.sidebar h2 { /* adds more specificity than needed */ }
+				
+						</code>
+						</pre>
+					</div>
+
+				
+					<h2>Be essential</h2>
+					<p>Every element in an experience should have a purpose. Leaving complexity behind allows you to design with restraint by emphasizing the essential and stripping away the distracting. Provide all the necessary information in a sleek and elegant way, so we can be distinct, clear, and concise with our users.</p>
+				
+					<h2>Be inclusive</h2>
+					<p>Good design should work for everyone. We need not to focus only on the average person, with regular needs and expectations. Keep in mind that the people using your products will be extremely diverse. User diversity covers variation in capabilities, needs, and aspirations. Empathize with a full spectrum of potential users instead of designing around a checklist.</p>
+				
+					<h2>Be consistent</h2>
+					<p>Consistency is not exact replication. Rather, it's a harmonious uniformity, instilling predictability and stability. A successful design should leave our users feeling like, “Yes, that makes sense.” Being consistent gives users to anticipate what will happen next. And when users encounter something that is expected, it creates a sense of comfort and trust. Usability is greatly improved when an experience acts and feels the same throughout.</p>
+				
+					<h2>Be humanistic</h2>
+					<p>More than being user-centered, we must be human-centered. Our designs are conceived from a deep understanding of the people behind the product and with the desire to help individuals accomplish their goals. Part of being humanistic is embracing empathy. Empathy is the ability to understand and share another personʼs perspective, feelings, and challenges. Go out of your way to identify with your user's needs.</p>
+				
+				
+					<h2>Be delightful</h2>
+					<p>Enhances usability and delight by embracing the spirit of “just enough design”. Engaging users with inspiration and curiosity by designing experiences to encourage critical thinking and creative confidence. Be mindful of usersʼ needs by providing them with the right tools at the right time. Make an offering so effective that it doesn't simply read as a software or a product but as something useful in that person's life.</p>
+				
+				
+				</div>
+				
+			</div>
+
+			
+			
+			
+			<div class="step-area" id="principles">
+				
+				<div class="step__hed clrhm">
+					<h4>STYLE</h4>
+					<h2>Colors</h2>
+				</div>
+				<div class="step__cont colors-area list-col-6">
+					
+					
+					<style>
+						.colors-area code { display: block; max-width: 60px; margin: 8px auto;}
+					</style>
+					<h2>Colors</h2>
+					
+						<ul>
+							<li class="color__inr bg-aqua">aqua <code>#7FDBFF</code><h4>Brand-01</h4></li>
+							<li class="color__inr bg-blue">black <code>#111</code><h4>Brand-04</h4></li>
+							<li class="color__inr bg-lime">blue <code>#0096d3</code><h4>Brand-03</h4></li>
+							<li class="color__inr bg-gray">gray <code>#0096d3</code><h4>Brand-04</h4></li>
+						</ul>
+						<div class="clearfix"></div>
+						<ul>
+							<li class="color__inr " style="background-color:#f5f7fa">UI <code>#f5f7fa</code><h4>UI-01</h4></li>
+							<li class="color__inr " style="background-color:#f0f3f6">UI <code>#f0f3f6</code><h4>UI-04</h4></li>
+							<li class="color__inr " style="background-color:#dfe3e6">UI <code>#dfe3e6</code><h4>UI-03</h4></li>
+							<li class="color__inr " style="background-color:#8c9ba5">UI <code>#8c9ba5</code><h4>UI-04</h4></li>
+						</ul>
+						<div class="clearfix"></div>
+						<ul>
+							<li class="color__inr " style="background-color:#152934">UI <code>#152934</code><h4>text-01</h4></li>
+							<li class="color__inr " style="background-color:#5a6872">UI <code>#5a6872</code><h4>text-04</h4></li>
+							<li class="color__inr " style="background-color:#5a6872">UI <code>#5a6872</code><h4>text-03</h4></li>
+							<li class="color__inr " style="background-color:#ffffff">UI <code>#ffffff</code><h4>inverse-01</h4></li>
+						</ul>
+					</div>
+				
+				 
+			</div>
+				
+			<div class="clearfix"></div>
 			
 			<div class="alert alert-success alert-dismissable">
 				<button type="button" class="close red" data-dismiss="alert" aria-hidden="true">&times;</button>
