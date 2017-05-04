@@ -937,7 +937,11 @@ if (jQuery('html').hasClass("livewindowsize")) {
 /***./Live Detect Browser Size****/
 
 
-
+/**making a specific page unresponsive**/
+if (jQuery("section, div").hasClass("page--no-rwd")) {
+	jQuery('head').append('<meta name="viewport" content="width=1440, user-scalable=no">');
+}
+/**./making a specific page unresponsive**/
 
 /*Video stop when Modal Close*/
 	jQuery('.modal').on('hidden.bs.modal', function () {
