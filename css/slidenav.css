@@ -50,7 +50,7 @@ body.slide-navbar--active {
     position: relative
 }
 
-.slide-navbar #slide-nav:after {content: ".";position: absolute;width: 80%;background: #f7f7f7;left: 20%;top: 0;height: 100vh; z-index:-20; opacity:0;}
+.slide-navbar--active #slide-nav:after {content: "";position: absolute;width: 80%;background: #f7f7f7;left: 20%;top: 0;height: 100vh; z-index:-20; opacity:0;}
 .slide-navbar--active #slide-nav:after{ opacity:1; z-index:1;}
 
 .slide-navbar--active section.hdr-area .container {
