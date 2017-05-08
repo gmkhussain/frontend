@@ -46,9 +46,9 @@ body, html{ height: 100%; padding: 0;}
 
 html.hint * { box-shadow: 0 0 0 1px #d00; }
 html.hint a { box-shadow: 1px 0 12px 0px #006dd3 inset; }
-html.hint a[href="#"]:before,html.hint a[href=""]:before { content: "# No Link"; position: absolute; font-size: 3em; color: #d00; z-index: 222; }
-html.hint [src*="localhost"] { border: 4px dotted #d00  !important; }
-html.hint  [href*="localhost"] { 4px dotted #39c  !important }
+html.hint a[href="#"]:after, html.hint a[href=""]:after { content: "# No Link"; position: absolute; font-size: 10px; background-color: #d00; z-index: 2; padding: 2px 4px; margin-top: 1.5em; color: #fff; }
+html.hint [src*="localhost"] { box-shadow: 0 0 10px 10px #ff8800; }
+html.hint [href*="localhost"]:after { content: "localhost link"; position: absolute; margin-top: 2em; font-weight: 600; font-size: 11px; background-color: orange; color: #fff; padding: 0 7px; z-index: 1;}
 
 body .navbar-brand {padding: 5px; max-width: 200px;}
 
