@@ -483,6 +483,31 @@ jQuery(document).ready(function(){
 });
 
 
+/*if stop scrolling '.ScrollToTop' push to corner*/
+			jQuery(function() {
+				var $output = jQuery( ".scrollToTop .fa" ),
+					scrolling = "<span id='scrolling'>Scrolling</span>",
+					stopped = "<span id='stopped'>Stopped</span>";
+
+					jQuery( window ).scroll(function() {
+						$output.html( scrolling );
+							jQuery('.scrollToTop').removeClass('has-stop');
+
+						clearTimeout( $.data( this, "scrollCheck" ) );
+						
+						$.data( this, "scrollCheck", setTimeout(function() {
+							$output.html( stopped );
+							setTimeout(function() {
+								jQuery('.scrollToTop').addClass('has-stop');
+							}, 5000);
+							
+						}, 250) );
+					});
+			});
+			
+			
+
+
 /**Button ripple effects on click**/
 jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripple a").click(function (e) {
   jQuery(".ripple").remove();/*Remove any old one*/
