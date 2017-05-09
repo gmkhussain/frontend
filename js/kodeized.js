@@ -77,7 +77,11 @@ jQuery(document).keydown(function(e) {
 
 
 
-
+if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
+    jQuery("html").attr("connection", "local");
+	}else{
+		jQuery("html").attr("connection", "live");
+	}
 
 /*addClass if URL is Root url (is Home page)*/
 jQuery('body').toggleClass('is_index home', /\/$/.test(location.pathname));
