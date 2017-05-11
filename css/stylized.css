@@ -1137,8 +1137,8 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 @media only screen and (max-width : 767px) {
 
 /*nav-plusminus for mobile*/
-.nav-plusminus .dropdown > a::before { content: "+"; }
-.nav-plusminus .dropdown.open > a::before { content: "-"; }
+.nav-plusminus .dropdown > a::after { content: "+"; }
+.nav-plusminus .dropdown.open > a::after { content: "-"; }
 .nav-plusminus .dropdown:hover  > .dropdown-menu { display: none ; }
 .nav-plusminus .dropdown.open  > .dropdown-menu { display: block ; }
 /*./nav-plusminus for mobile*/
