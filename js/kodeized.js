@@ -288,9 +288,11 @@ jQuery("input").change(function() {
 /*./Add class on parent of Checked input*/
 
 
+
+jQuery(document).ready(function() {
+
 /*section-centralized
-- highlight unique section when it is center of window */
-jQuery(document).ready(function() {      
+- highlight unique section when it is center of window */	
   var window_height = jQuery(window).height();
  jQuery(window).scroll(function() {
     var scrollMiddle = jQuery(window).scrollTop() + (window_height/2);
@@ -304,8 +306,33 @@ jQuery(document).ready(function() {
       }
     });
   });
+/*./section-centralized*/  
+  
+
+/*add .in-view class when element in viewport*/
+function isScrolledIntoView(elem) {
+    var docViewTop = jQuery(window).scrollTop();
+    var docViewBottom = docViewTop + jQuery(window).height();
+
+    var elemTop = jQuery(elem).offset().top;
+    var elemBottom = elemTop + jQuery(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+jQuery(window).scroll(function(){
+   jQuery('header, section, footer, [class*="-area"]').each(function () {
+      if (isScrolledIntoView(this) === true){
+          jQuery(this).addClass("/ in-view");
+      }else{
+		  jQuery(this).removeClass("/ in-view");
+	  }
+   });
 });
-/*./section-centralized*/
+/*./add .in-view class when element in viewport*/
+
+});
+
 
 
 /*
@@ -389,9 +416,10 @@ if (jQuery(".sticky")[0]){
 	
 //Sticky Header
 jQuery(window).scroll(function() {
-if (jQuery(this).scrollTop() > 1){  
+if (jQuery(this).scrollTop() > 1){
     jQuery('.hdr--sticky').addClass("hdr--sticky-active");
 	jQuery('body').addClass("scrollized");
+	
   }
   else{
     jQuery('.hdr--sticky').removeClass("hdr--sticky-active");
@@ -399,6 +427,7 @@ if (jQuery(this).scrollTop() > 1){
   }
 });
 
+		
 //Blind Footer
 jQuery( document ).ready(function() {
 	var ftrBlind = jQuery(".ftr-blinder .ftr--blind").height();
@@ -503,7 +532,7 @@ jQuery(document).ready(function(){
 							$output.html( stopped );
 							setTimeout(function() {
 								jQuery('.scrollToTop').addClass('has-stop');
-							}, 5000);
+							}, 2000);
 							
 						}, 250) );
 					});
@@ -739,7 +768,7 @@ jQuery(".navbar-main > li").each(function (i) {
   
   jQuery("li.moreMover").appendTo("#moreSubMenu");
   
-  jQuery(this).addClass("KNav" +i+"");
+  jQuery(this).addClass("knav" +i+"");
 });  
 });
 /***./More Navbar Item Limitation***/
