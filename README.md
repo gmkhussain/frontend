@@ -159,6 +159,13 @@ var str = "My Text";
 	console.log(enc);
 ```
 
+### Change hash (#) for slash (/) or another (string) on url
+```html
+if (location.href.indexOf("#prevHash") > -1) {
+	location.assign(location.href.replace('#prevHash', "#newHash")); 
+ }
+``` 
+
 ## Brats®
 * Fixing
 * Conflicts ( ie. Tab Nav Header Nav )
