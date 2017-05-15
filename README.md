@@ -149,6 +149,16 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 ## Bootcamp™
 * Short Guideline
 
+
+### Encode Decode by jQuery
+link: https://codepen.io/pen/OmEmaL
+```html
+var str = "My Text";
+    var enc = window.btoa(str);
+    var dec = window.atob(enc);
+	console.log(enc);
+```
+
 ## Brats®
 * Fixing
 * Conflicts ( ie. Tab Nav Header Nav )
