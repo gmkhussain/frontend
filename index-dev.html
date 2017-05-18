@@ -2010,6 +2010,25 @@
 		
 		</div>
 
+		
+			<div class="loading-btn col-sm-6">
+			
+				<div class="hed crossline"><h2>.btn--loading</h2><hr></div>
+				<p>spinner icon to button when it's in the Loading state</p>
+			
+			<button type="button" class="btn btn--loading btn-primary btn-lg " id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order">Submit Order</button>
+			
+			<script>
+					jQuery('.btn--loading').on('click', function() {
+						var btnLoading = jQuery(this);
+					  btnLoading.button('loading');
+						setTimeout(function() {
+						   btnLoading.button('reset');
+					   }, 8000);
+					});
+			</script>
+
+			</div>
 				
 				
 		
