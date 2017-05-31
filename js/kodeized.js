@@ -258,12 +258,14 @@ jQuery(".form-control").blur(function() {
 
 /**.has-value added if .form-control have value**/
 jQuery(document).ready(function() {
-	var inputs = ".form-control";
-	if (jQuery(inputs).val() != ''){
-			jQuery(inputs).addClass('has-value');
-	}else{
-			jQuery(inputs).removeClass('has-value');
-	}
+	
+	jQuery(".form-control").each(function(){
+		if (jQuery(this).val() != ''){
+			jQuery(this).addClass('has-value');
+		}else{
+			jQuery(this).removeClass('has-value');
+		}
+	});
 });
 /**./has-value added if form-control have value**/			
 
