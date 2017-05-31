@@ -747,8 +747,8 @@ form[novalidate] .form-control:focus { box-shadow: none; }
 
 /*overlapping issue fixed for random heights*/ .form-group:not([class*="col-"]) {clear: both;}
 /*Placeholder*/
-.form-control::-moz-placeholder { color:#555; -webkit-transition: padding 0.5s; transition: all 1s;}
-.form-control:-ms-input-placeholder { color:#555; -webkit-transition: padding 0.5s; transition: all 1s;}
+.form-control::-moz-placeholder { color:#555; -moz-transition: padding 0.5s; transition: all 1s;}
+.form-control:-ms-input-placeholder { color:#555; transition: padding 0.5s; transition: all 1s;}
 .form-control::-webkit-input-placeholder { color:#555; -webkit-transition: padding 0.5s; transition: 1s;}
 
 .placeholder--hover .form-control:hover::-webkit-input-placeholder, .placeholder--hover .form-control:focus::-webkit-input-placeholder {padding-left:100px; opacity:0;}
@@ -949,8 +949,14 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 
 
 .fnc-fom ::-webkit-input-placeholder{opacity: 0;}
+.fnc-fom ::-moz-input-placeholder{opacity: 0;}
+.fnc-fom ::-moz-input-placeholder{opacity: 0;}
+
 /**show placeholder when click on form-control**/
 .fnc-fom .form-control:focus::-webkit-input-placeholder{opacity: 1;}
+.fnc-fom .form-control:focus::-moz-input-placeholder{opacity: 1;}
+.fnc-fom .form-control:focus::-moz-input-placeholder{opacity: 1;}
+
 
 .fnc-fom .form-control:not(:placeholder-shown) + label{/**if .form-control haven't placeholder**/}
 
