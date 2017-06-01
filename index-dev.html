@@ -44,7 +44,7 @@
 	<!--scrollreveal-->
 	<script src="extralized/scrollreveal.min.js"></script>
 	<script>
-		window.scrollReveal = new scrollReveal();
+	//	window.scrollReveal = new scrollReveal();
 	</script>
 	<!--./scrollreveal-->
 	
@@ -344,6 +344,25 @@
 	
 	
 
+			<div class="extlink-area class_name text-center">
+			
+				<a class="scroll" href="index.html#footer_temp">extlink</a>
+					
+				<script>
+				$(document).ready(function(e){  
+					var str= location.hash; 
+					
+					
+					$(".scroll").click(function(event){     
+						var n=str.replace("_temp","");
+						$('html,body').animate({scrollTop:$(n).offset().top}, 500);
+					});
+				
+				});
+				
+				</script>
+			
+			</div>
 
 	<hr class="dvr dvr-shine" />
 	
@@ -355,6 +374,8 @@
 			<div class="hed underline-mini"><h2><b>.underline-mini</b> heading</h2></div>
 			<div class="hed underline-mini--double"><h2><b>.underline-mini--double</b> heading</h2></div>
 			
+			
+	
 
 			<h3>.fnc-underline</h3>
   <div class="metroflip-box col-sm-2 p0">
