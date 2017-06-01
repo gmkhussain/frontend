@@ -101,6 +101,13 @@ jQuery(function() {
 	jQuery('body').addClass(active_locLastParent + "-page");
 	jQuery('body').addClass(active_locLast + "-page");
 	
+	
+	/*[.nav--activized] added*/
+		window.setTimeout(function(){
+			jQuery('.nav--activized').find("."+active_locLast).addClass("is-active");
+		}, 200);
+	/*./[.nav--activized] added*/
+	
 	//jQuery('body nav').addClass(active_locLast + "-nav");
 
   var urlParameters = window.location.search; // returns the URL Parameters
