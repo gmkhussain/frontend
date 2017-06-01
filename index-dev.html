@@ -236,7 +236,7 @@
 
 <main id="page-content">
 
-	<section class="slider-area thumb-indicat hover-ctrl fadeft" >
+	<section class="slider-area thumb-indicat hover-ctrl fadeft slider--hash" >
 		<div id="carousel-example-generic" class="carousel slide slider--pauseplay" data-ride="carousel" data---interval="false">
 		  <!-- Indicators -->
 		  <span class="carousel-indicators indicators-arr prev">prev</span>
@@ -246,18 +246,18 @@
 			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
 			<li data-target="#carousel-example-generic" data-slide-to="1"><img src="images/slide2.jpg" alt="..."></li>
 			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="3"><img src="images/slide2.jpg" alt="..."></li>
+
 		  </ol>
 
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner">
 
 
-			<div class="item active">
+			<div class="item active" id="item1">
 			  <img src="images/slide1.jpg" alt="...">
 			</div>
 
-			<div class="item color-invert">
+			<div class="item color-invert" id="item2">
 			  <img src="images/slide2.jpg" alt="...">
 			  <div class="container posrel">
 				  <div class="caro-caps">
@@ -270,7 +270,7 @@
 			</div>
 			
 
-			<div class="item color-gray">
+			<div class="item color-gray"  id="item3">
 			  <img src="images/slide1.jpg" alt="...">
 			  <div class="container posrel">
 				  <div class="caro-caps">
@@ -283,20 +283,6 @@
 			</div>
 			
 			
-
-			<div class="item gray-img">
-			  <img src="images/slide2.jpg" alt="...">
-			  <div class="container posrel">
-				  <div class="caro-caps">
-				  	<h1>I am a <span class="morphext">So Simple, Very Doge, Much Wow, Such Cool</span> Text Rotator</h1>
-					<h2>Slider Caption Two</h2>
-					<p>Slider text content here</p>
-					<div class="lnk-btn inline-block more-btn"><a href="#">Read More</a></div>
-				  </div>
-			  </div>
-			</div>
-
-
 		  </div>
 
 		  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -305,7 +291,6 @@
 		  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
 			<span class="glyphicon glyphicon-chevron-right"></span>
 		  </a>
-		  
 		  
 		</div>
 		

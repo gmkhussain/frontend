@@ -454,8 +454,21 @@ jQuery( document ).ready(function() {
 
 
 
-
-
+/**[.slider--hash] Slider with hashtag URL ID**/
+/***-- slider .item ID required --***/
+	var slideUrl = document.location.toString();
+	if (slideUrl.match('#')) {
+		jQuery('.slider--hash .item.active').removeClass('active');
+			var slideIndex = slideUrl.split('#')[1];
+			jQuery('#' + slideIndex).addClass('active');
+		}
+		
+		jQuery('.slider--hash').bind('slid', function (e) {
+			var item = jQuery('.slider--hash .item.active').attr('id');
+			
+			if (item) window.location.hash = "#" + item;
+		});
+/**./[.slider--hash] Slider with hashtag URL ID**/
 
 //SLIDER ARROW BTN - HOME PAGE
 jQuery(".dwn-scroll").click(function() {
