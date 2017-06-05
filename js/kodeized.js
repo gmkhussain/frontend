@@ -132,7 +132,14 @@ jQuery(function() {
 
 
 
-
+/**Show Modal dialog by Hash URL**/
+  jQuery(function(){ /*shortcut for $(document).ready */
+      if(window.location.hash) {
+          var hash = window.location.hash;
+          jQuery(hash).modal('toggle');
+      }
+  });
+/**./Show Modal dialog by Hash URL**/
 
 
 
