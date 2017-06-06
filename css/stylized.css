@@ -1141,6 +1141,15 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 
 /*submenu for mobile*/
 @media only screen and (max-width : 767px) {
+	
+/*when click on dropdown disappear nav other items*/
+.navbar-overide .navbar-nav .dropdown.open { position: absolute; width: 100%; height: 100vh; background-color: #fff; top: 54px; z-index: 1; }
+.navbar-overide .navbar-default .navbar-collapse { height: 100vh;}
+.navbar-overide .navbar-nav .dropdown>a::before { content: "\f105"; }
+.navbar-overide .navbar-nav .dropdown.open>a::before { content: "\f104"; right: auto; left: 1%; }
+.navbar-overide .navbar-nav .dropdown:hover  > .dropdown-menu { display: none; }
+.navbar-overide .navbar-nav .dropdown.open> .dropdown-menu { display: block; }
+/*./when click on dropdown disappear nav other items*/
 
 /*nav-plusminus for mobile*/
 .nav-plusminus .dropdown > a::after { content: "+"; }
