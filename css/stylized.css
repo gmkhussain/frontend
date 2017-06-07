@@ -1148,8 +1148,9 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 .nav-folderized .nav h4:after { content: "+"; float: right; }
 .nav-folderized .nav.open h4:after { content: "-"; }
 .nav-folderized .nav.open ul { height:auto; max-height: 500px; transition: max-height 1s ease-in !important; }
+/* Ex. https://codepen.io/pen/zzGyYB */
 /**nav-expand for footer with head and ul**/
-	
+
 /*when click on dropdown disappear nav other items*/
 .navbar-overide .navbar-nav .dropdown.open { position: absolute; width: 100%; height: 100vh; background-color: #fff; top: 54px; z-index: 1; }
 .navbar-overide .navbar-default .navbar-collapse { height: 100vh;}
@@ -1307,7 +1308,7 @@ http://jsfiddle.net/gmkhussain/awqs01zc/
 body.modal-open { overflow: visible; }
 body.modal-open .modal { margin-right: -1.2em;}
 
-.modal-dialog { top: 20%;}
+.modal-dialog { top: 10%;}
 .modal .close { background-color: transparent; color: #000; font-size: 2em; height: 30px; margin: 0; opacity: 1; position: absolute; right: 5px; text-shadow: none; top: 10px; width: 30px; }
 .modal-content { border: 0px solid #eee; border-radius: 0; box-shadow: 0 20px 140px 13px #666;}
 /***./modal***/
@@ -1319,6 +1320,12 @@ body.modal-open { overflow: hidden; }
 .modal-fullscreen .modal-body { min-height: 80vh; }
 /*./modal-fullscreen*/
 
+/**modal vertically center**/
+.modal.modal-vcntr {text-align: center; padding: 0!important; }
+.modal.modal-vcntr:before { content: ''; display: inline-block; height: 100%; vertical-align: middle; margin-right: -4px; }
+.modal-vcntr .modal-dialog { display: inline-block; text-align: left; vertical-align: middle; }
+/* Ex. https://codepen.io/pen/pwJGqL */
+/**./modal vertically center**/
 
 /***accordion active***/
 .active .panel-heading a {font-weight: bold;}
