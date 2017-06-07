@@ -454,7 +454,14 @@ if (jQuery(this).scrollTop() > 1){
   }
 });
 
-		
+
+/****/
+jQuery(".nav-folderized h4").click(function(){
+	jQuery(this).parent(".nav").toggleClass("open"); 
+	jQuery('html, body').animate({ scrollTop: jQuery(this).offset().top - 170 }, 1500 );
+});
+/****/
+  
 //Blind Footer
 jQuery( document ).ready(function() {
 	var ftrBlind = jQuery(".ftr-blinder .ftr--blind").height();

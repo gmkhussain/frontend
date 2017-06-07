@@ -1142,6 +1142,14 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 /*submenu for mobile*/
 @media only screen and (max-width : 767px) {
 	
+/**nav-expand for footer with head and ul**/
+.nav-folderized .nav h4 { cursor: pointer; }
+.nav-folderized ul { max-height: 0; overflow:hidden; transition: max-height 1s ease-out; }
+.nav-folderized .nav h4:after { content: "+"; float: right; }
+.nav-folderized .nav.open h4:after { content: "-"; }
+.nav-folderized .nav.open ul { height:auto; max-height: 500px; transition: max-height 1s ease-in !important; }
+/**nav-expand for footer with head and ul**/
+	
 /*when click on dropdown disappear nav other items*/
 .navbar-overide .navbar-nav .dropdown.open { position: absolute; width: 100%; height: 100vh; background-color: #fff; top: 54px; z-index: 1; }
 .navbar-overide .navbar-default .navbar-collapse { height: 100vh;}
