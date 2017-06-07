@@ -134,10 +134,20 @@ jQuery(function() {
 
 /**Show Modal dialog by Hash URL**/
   jQuery(function(){ /*shortcut for $(document).ready */
-      if(window.location.hash) {
-          var hash = window.location.hash;
-          jQuery(hash).modal('toggle');
-      }
+    
+	jQuery(window.location.hash).modal('show');
+		jQuery('a[data-toggle="modal"]').click(function(){
+        window.location.hash = jQuery(this).attr('data-target');
+    });
+
+    function revertToOriginalURL() {
+        var original = window.location.href.substr(0, window.location.href.indexOf('#'))
+        history.replaceState({}, document.title, original);
+    }
+
+    jQuery('.modal').on('hidden.bs.modal', function () {
+        revertToOriginalURL();
+    });
   });
 /**./Show Modal dialog by Hash URL**/
 
