@@ -298,13 +298,20 @@ jQuery(document).ready(function() {
 
 
 /*Add class on parent of Checked input*/
-jQuery("input").change(function() {
+jQuery(".checker-area input:checkbox").change(function() {
   if (jQuery(this).is(':checked')) {
     jQuery(this).parents(".checker-area").addClass("is-active");
   }else if (jQuery(this).prop('checked', false)){
 	jQuery(this).parents(".checker-area").removeClass("is-active");
   }
 });
+
+/*checker-area for radio button*/
+jQuery('.checker-area input:radio').click(function() {
+    jQuery('input:radio[name='+ jQuery(this).attr('name')+']').parent().removeClass('is-active');
+    jQuery(this).parent().addClass('is-active');
+});
+
 /*./Add class on parent of Checked input*/
 
 
