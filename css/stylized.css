@@ -1111,8 +1111,8 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 
 /***close icon on navbar***/
 .cross-toggle .navbar .icon-bar:nth-child(2) { position: relative; top: 6px; transform: rotate(45deg); }
-.cross-toggle .navbar .icon-bar:nth-child(3) { display: none !important;}
-.cross-toggle .navbar .icon-bar:nth-child(4) { top: -3px; transform: rotate(-45deg); }
+.slide-navbar--active .cross-toggle .navbar .icon-bar:nth-child(3) { opacity:0; }
+.slide-navbar--active .cross-toggle .navbar .icon-bar:nth-child(4) { position: relative; top: -6px; transform: rotate(-45deg);}
 /***need to add collapsed on navbar-toggle***/
 .cross-toggle  .navbar-toggle.collapsed .icon-bar { top: auto; transform: none; display: block !important; }
 /***./close icon on navbar***/
@@ -1144,7 +1144,7 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 	
 /**nav-expand for footer with head and ul**/
 .nav-folderized .nav h4 { cursor: pointer; }
-.nav-folderized ul { max-height: 0; overflow:hidden; transition: max-height 1s ease-out; }
+.nav-folderized .nav ul { max-height: 0; overflow:hidden; transition: max-height 1s ease-out; }
 .nav-folderized .nav h4:after { content: "+"; float: right; }
 .nav-folderized .nav.open h4:after { content: "-"; }
 .nav-folderized .nav.open ul { height:auto; max-height: 500px; transition: max-height 1s ease-in !important; }
