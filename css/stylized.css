@@ -1219,6 +1219,79 @@ Note: see bottom note
 }
 
 
+.ani-shiny,
+.btn--shiny a, button.btn--shiny { position:relative; background-color:transparent; }
+
+.ani-shiny:before,
+.btn--shiny a:before, button.btn--shiny:before {
+	z-index:10;
+  content:"";
+  display:block;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  /*   gradient   */
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(1%, rgba(255, 255, 255, 0.03)), color-stop(30%, rgba(255, 255, 255, 0.85)), color-stop(50%, rgba(255, 255, 255, 0.85)), color-stop(70%, rgba(255, 255, 255, 0.85)), color-stop(71%, rgba(255, 255, 255, 0.85)), color-stop(100%, rgba(255, 255, 255, 0)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, rgba(255, 255, 255, 0.6) 30%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.85) 71%, rgba(255, 255, 255, 0) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+  /* IE6-9 */
+  /*  forming the shine element
+      play around with the width, skew and gradient to get different effects
+    */
+  width: 15%;
+  height: 100%;
+  transform: skew(-10deg, 0deg);
+  -webkit-transform: skew(-10deg, 0deg);
+  -moz-transform: skew(-10deg, 0deg);
+  -ms-transform: skew(-10deg, 0deg);
+  -o-transform: skew(-10deg, 0deg);
+  /*  animating it  */
+  animation: shinyMove 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  -webkit-animation: shinyMove 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: 1s;
+  -moz-transform: skew(-10deg, 0deg);
+  -moz-animation: shinyMove 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-delay: 1s;
+  -ms-transform: skew(-10deg, 0deg);
+  -ms-animation: shinyMove 2s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-delay: 1s;
+  -o-transform: skew(-10deg, 0deg);
+  -o-animation: shinyMove 2s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-delay: 1s;
+}
+
+/*  */
+@keyframes shinyMove { 0% { left: 0; opacity: 0; } 5% { opacity: 0.0; } 48% { opacity: 0.2; } 80% { opacity: 0.0; } 100% { left: 82%; } }
+
+@-webkit-keyframes shinyMove { 0% { left: 0; opacity: 0; } 5% { opacity: 0.0; } 48% { opacity: 0.2; } 80% { opacity: 0.0; } 100% { left: 82%; } }
+
+@-moz-keyframes shinyMove { 0% { left: 0; opacity: 0; } 5% { opacity: 0.0; } 48% { opacity: 0.2; } 80% { opacity: 0.0; }
+  100% { left: 88%; } }
+
+@-ms-keyframes shinyMove { 0% { left: 0; opacity: 0; } 5% { opacity: 0.0; } 48% { opacity: 0.2; } 80% { opacity: 0.0;
+  } 100% { left: 82%; } }
+  
+@-o-keyframes shinyMove { 0% { left: 0; opacity: 0; } 5% { opacity: 0.0; } 48% { opacity: 0.2; } 80% { opacity: 0.0; } 100% { left: 82%; } }
+
+
+.ani-blinked,
 .blinked-links a:hover,
 .blinked:hover { -webkit-animation: blinked 0.5s infinite; -moz-animation: blinked 0.5s infinite; /* animation: blinked 0.5s infinite; */ }
 @-webkit-keyframes blinked { 0%, 100% { color: #7ccdea; }
@@ -1229,6 +1302,12 @@ Note: see bottom note
  }
 
 @keyframes blinked {  0%, 100% { color: #7ccdea; }  16%      { color: #0074D9; }  32%      { color: #2ECC40; }  48%      { color: #FFDC00; }  64%      { color: #B10DC9; }  80%      { color: #FF4136; } }
+
+
+
+
+
+
 
 
 .strip-btn a {
