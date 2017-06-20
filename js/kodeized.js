@@ -913,13 +913,21 @@ jQuery(document).ready(function() {
 /**read more read less content**/
 jQuery('.moreless-area .moreless-btn').click(function() {
 
+  var lessData = jQuery(this).attr("data-less");
+
   if (jQuery(this).hasClass("less")) {
     jQuery(this).removeClass("less");
     jQuery(this).html("Read more");
     jQuery(this).parent().children(".moreless").addClass("on");
   } else {
     jQuery(this).addClass("less");
-    jQuery(this).html("Read less");
+
+		if (lessData != null){
+			jQuery(this).html(lessData);
+		}else{
+			jQuery(this).html("read less");
+		}
+
     jQuery(this).parent().children(".moreless").removeClass("on");
   }
     jQuery('html, body').animate({	scrollTop: jQuery(this).parent(".moreless-area").offset().top	}, 800);
