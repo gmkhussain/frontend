@@ -946,6 +946,28 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 .fom-brackets .form-group::after {right:15px;}
 
 
+.fom-bottomline--focus .form-group:before,
+.fom-bottomline--focus .input-group:before {
+    content: "";
+    bottom: 0;
+    width: 0px;
+    background-color: #00a1c0;
+    height: 2px;
+    left: 50%;
+    display: block;
+    position: absolute;
+    border-radius:5px;
+}
+
+.fom-bottomline--focus .form-group--active.form-group:before,
+.fom-bottomline--focus .form-group--active.input-group:before {
+    width: 100%;
+    z-index:10;
+    left: 0%;
+}
+
+
+
 .fnc-fom ::-webkit-input-placeholder{opacity: 0;}
 .fnc-fom ::-moz-input-placeholder{opacity: 0;}
 .fnc-fom ::-moz-input-placeholder{opacity: 0;}
