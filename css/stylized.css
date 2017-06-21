@@ -54,8 +54,6 @@ body .navbar-brand {padding: 5px; max-width: 200px;}
 
 body{ overflow-x: hidden;}
 
-body nav.navbar { font-family: "Open Sans", "Helvetica", "Helvetica Neue", Arial,sans-serif; }
-
 section[class*="-area"] {position: relative; clear:both; }
 
 .section-centralized--active { border:2px solid #0d0; }
@@ -238,19 +236,19 @@ li.c_active.active a {background-color: #39c; color: #fff;}
 
 /**scrollToTop**/
 .scrollToTop {
-    bottom: 30px;
+    bottom: 20px;
     color: inherit;
     display: none;
     padding: 10px;
     position: fixed;
-    right: 40px;
+    right: 5px;
 	z-index:888;
 	padding: 0;
     font-size: 2em;
 	text-align: center;
 }
 .scrollToTop span { display: block; font-size: 12px; font-family: MONOSPACE; text-transform: uppercase; width: 60px; }
-.scrollToTop.has-stop { opacity: .2; right: 0; bottom: 0; }
+.scrollToTop.has-stop { opacity: .2; right: 5; bottom: 0; }
 /**./scrollToTop**/
 
 
@@ -758,7 +756,7 @@ form[novalidate] .form-control:focus { box-shadow: none; }
 
 
 /*Change the white to Chrome autocomplete yellow color*/
-input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset;}
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset !important;}
 
 .expand-search {
     display: inline-block;
@@ -965,7 +963,6 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 .fnc-fom .form-group .form-control:hover + label,
 .fnc-fom .form-group .form-control:focus + label { top: -20px; font-size: 12px; left: 10px;}
 
-.fnc-fom form { background-color: #eee; margin: 40px 0; padding: 30px;}
 .fnc-fom .form-group { margin-top: 30px; position: relative;}
 
 .fnc-uplaod .file-drop-area { position: relative; max-width: 100%; margin: 0 auto; }
@@ -989,15 +986,6 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 @keyframes rippleDrop { 100% { transform: scale(2); opacity: 0; } }
 /**./btn-effect--ripple**/
 
-.fnc-fom form {
-    background-color: #eee;
-    margin: 40px 0;
-    padding: 30px;
-}
-.fnc-fom .form-group {
-    margin-top: 30px;
-    position: relative;
-}
 /***./-->label animation***/
 
 .fnc-fom input[type="radio"] + mark::before { border-radius: 50%; }
