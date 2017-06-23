@@ -968,14 +968,14 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 
 
 
-.fnc-fom ::-webkit-input-placeholder{opacity: 0;}
-.fnc-fom ::-moz-input-placeholder{opacity: 0;}
-.fnc-fom ::-moz-input-placeholder{opacity: 0;}
+.placelabeler ::-webkit-input-placeholder{opacity: 0;}
+.placelabeler ::-moz-input-placeholder{opacity: 0;}
+.placelabeler ::-moz-input-placeholder{opacity: 0;}
 
 /**show placeholder when click on form-control**/
-.fnc-fom .form-control:focus::-webkit-input-placeholder{opacity: 1;}
-.fnc-fom .form-control:focus::-moz-input-placeholder{opacity: 1;}
-.fnc-fom .form-control:focus::-moz-input-placeholder{opacity: 1;}
+.placelabeler .form-control:focus::-webkit-input-placeholder{opacity: 1;}
+.placelabeler .form-control:focus::-moz-input-placeholder{opacity: 1;}
+.placelabeler .form-control:focus::-moz-input-placeholder{opacity: 1;}
 
 
 .fnc-fom .form-control:not(:placeholder-shown) + label{/**if .form-control haven't placeholder**/}
