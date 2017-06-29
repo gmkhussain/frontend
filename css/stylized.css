@@ -1010,6 +1010,12 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 
 /***./-->label animation***/
 
+
+body .fnc__checkbox:before { top: 0; left: 0; position: absolute; margin-left: 0; height: 100%; width: 100%; font-size: 0.8em; }
+
+.fnc-fom .fnc__checkbox input[type="checkbox"] { opacity: 0; height: 18px ; top: 0; }
+.fnc-fom .fnc__checkbox { position: relative; display: inline-block; float: left;}
+
 .fnc-fom input[type="radio"] + mark::before { border-radius: 50%; }
 .fnc-fom input[type="radio"] + mark::before,
 .fnc-fom input[type="checkbox"] + mark::before { border: 1px solid #ccc; color: #fff; content: ""; display: inline-block; font-family: "glyphicons halflings"; font-size: 1em; height: 25px; padding: 0; text-align: center; width: 25px; margin-left: -25px; }
