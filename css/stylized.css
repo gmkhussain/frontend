@@ -1011,7 +1011,7 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 /***./-->label animation***/
 
 
-body .fnc__checkbox:before { top: 0; left: 0; position: absolute; margin-left: 0; height: 100%; width: 100%; font-size: 0.8em; }
+body .fnc__checkbox:before { top: 0; left: 0; position: absolute; margin-left: 0; height: 100%; width: 100%; font-size: 1em; content:"";}
 
 .fnc-fom .fnc__checkbox input[type="checkbox"] { opacity: 0; height: 18px ; top: 0; }
 .fnc-fom .fnc__checkbox { position: relative; display: inline-block; float: left;}
@@ -1110,6 +1110,31 @@ body #slide-nav #slidemenu {background-color: transparent;}
 .vrline-topb--hover  li a:hover:after { height: 40%; z-index: -1; left: 50%; }
 /*./vertical line hover from top & bottom*/
 
+/*navbar window blinds hover */
+.navbar-blinds--hover .navbar-nav>li>a:hover { color: #fff; }
+.navbar-blinds--hover .navbar-nav>li>a:before {
+    content: "";
+    display: block;
+    background-color: #00a1c0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 0%;
+    top: 50%;
+    z-index: -1;
+}
+
+.navbar-blinds--hover .navbar-nav>li>a {
+    position: relative;
+}
+
+.navbar-blinds--hover .navbar-nav>li>a:hover:before {
+    height: 100%;
+    top: 0;
+}
+/*./navbar window blinds hover */
+	
+
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus { background-color: inherit; text-shadow:0 0 15px #fff; }
 
 @media only screen and (max-width : 768px) {
@@ -1201,7 +1226,7 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 .navbar-nav.navbar-list>li>.dropdown-menu { position: static; width: 100%; }
 .navbar-list { width: 100%; }
 .navbar-nav.navbar-list>li:hover:not(.open  )>.dropdown-menu { display: none; }
-.navbar-nav.navbar-list>li:not(:last-child)>a { border-bottom: 1px solid #9a9a9a; font-size: 16px; }
+.navbar-nav.navbar-list>li:not(:last-child)>a { border-bottom: 1px solid #9a9a9a; }
 
 					
 /*
