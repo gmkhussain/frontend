@@ -1052,6 +1052,8 @@ body .fnc__checkbox:before { top: 0; left: 0; position: absolute; margin-left: 0
 .input-number-area .form-control { float: left; display: inline-block; border-radius:0px; }
 .input-number-area span.form-control { width: 35px; display: block; float: left; border-radius:0px; }
 
+/*.input-group inside .form-group*/
+body .form-group .input-group { width: 100%; margin-bottom: 0; }
 
 .noklft:before {
     border-left: 15px solid transparent;
