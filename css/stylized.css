@@ -979,6 +979,7 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 
 
 /*selectized*/
+
 .accordion-arr .selectized.panel-title  a:before {
     float: right;
     line-height: 48px;
@@ -1022,6 +1023,14 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+.selectized--ride .selectized-option {
+    position: absolute;
+    margin-top: 47px;
+    z-index: 5;
+    background-color: #fff;
+}
+
 /*./selectized*/
 
 .fnc-fom .form-control:not(:placeholder-shown) + label{/**if .form-control haven't placeholder**/}
