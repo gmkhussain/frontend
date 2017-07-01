@@ -103,8 +103,15 @@ jQuery(function() {
 	
 	
 	/*[.nav--activized] added*/
+		/*
+			Find domain.com/LastURLname in body and addClass .LastURLname.is-active
+		*/
 		window.setTimeout(function(){
 			jQuery('.nav--activized').find("."+active_locLast).addClass("is-active");
+				if (!$(".nav--activized nav *").hasClass(active_locLast)) {
+					console.log(".nav--activized -> class not found same as Last URL string ");
+				}
+
 		}, 200);
 	/*./[.nav--activized] added*/
 	
