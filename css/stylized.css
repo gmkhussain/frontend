@@ -1140,6 +1140,33 @@ body .form-group .input-group { width: 100%; margin-bottom: 0; }
 
 
 /*** NAVBAR ***/
+
+/* .navbar-toggle--desktop
+	NOTE: Don't use with SlideNav.CSS
+	ie: https://codepen.io/pen/rwJqXx
+*/
+
+.navbar-toggle--desktop .navbar-header {
+  float: none;
+}
+.navbar-toggle--desktop .navbar-toggle {
+  display: block;
+}
+.navbar-toggle--desktop .navbar-collapse.collapse {
+  display: none!important;
+}
+.navbar-toggle--desktop .navbar-nav {
+  float: none!important;
+}
+.navbar-toggle--desktop .navbar-nav>li {
+  float: none;
+}
+.navbar-toggle--desktop .navbar-collapse.collapse.in{
+  display:block !important;
+}
+/*/.navbar-toggle--desktop*/
+
+
 /**side nav bg transparent**/
 body #navbar-height-col { background-color: inherit; }
 body .navbar-default .navbar-collapse {background: transparent;border-top:0;}
