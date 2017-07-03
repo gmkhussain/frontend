@@ -2074,34 +2074,43 @@
 					</script>
 				</div>
 				
-		
-		
+				
 				<div class="file-drop-area fnc-uplaod col-sm-6">
+						<div class="hed crossline"><h2>.fnc-upload <small>with label</small></h2><hr></div>
+							  <span class="fake-btn btn-info">Choose files</span>
+							  <input class="file-input" type="file" id="fileInputId">
+								<label for="fileInputId">File name will display here</label>
+				</div>
+							
+							
+		
+		
+				<div class="file-drop-area fnc-uplaod--multi  col-sm-6">
 						<div class="hed crossline"><h2>.fnc-upload</h2><hr></div>
 							  <span class="fake-btn bg-orange">Choose files</span>
 							  <span class="file-msg js-set-number">or drag and drop files here</span>
 							  <input class="file-input" type="file" multiple>
 							  
 						<script>
-							var fileInput = jQuery('.fnc-uplaod .file-input'),
-								dropArea = jQuery('.fnc-uplaod .file-drop-area');
+							var fileInput = jQuery('.fnc-uplaod--multi .file-input'),
+								dropArea = jQuery('.fnc-uplaod--multi .file-drop-area');
 								
 							// change inner text
 							fileInput.on('change', function() {
 							  var filesCount = fileInput[0].files.length;
 							  if (filesCount === 1) {
 								// if single file then show file name
-								jQuery('.js-set-number').text(fileInput.val().split('\\').pop());
+								jQuery('.fnc-uplaod--multi .js-set-number').text(fileInput.val().split('\\').pop());
 							  } else {
 								// otherwise show number of files
-								jQuery('.js-set-number').text(filesCount + ' files selected');
+								jQuery('.fnc-uplaod--multi .js-set-number').text(filesCount + ' files selected');
 							  }
 							});
 						</script>
 				</div>
 							
 							
-				<div class="file-drop-area fnc-uplaod col-sm-6 btn-effect--ripple">
+				<div class="data-toogle-area col-sm-6 btn-effect--ripple">
 						<div class="hed crossline"><h2>.Data toogle button</h2><hr></div>
 							
 						<button type="button" class="btn btn-primary" data-toggle="button">Single toggle</button>

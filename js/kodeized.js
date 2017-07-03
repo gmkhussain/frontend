@@ -312,7 +312,20 @@ jQuery(document).ready(function() {
 /**./fnc-fom label animation**/
 
 
-
+/**fnc-upload**/
+jQuery(".fnc-uplaod [type=file]").on("change", function() {
+  /*
+	Name of file will show in label as text *input#ID need to = label[for=#ID]
+  */
+  var file = this.files[0].name;
+  var fileName = jQuery(this).attr("placeholder");
+  if (jQuery(this).val() != "") {
+    jQuery(this).next().text(file);
+  } else {
+    jQuery(this).next().text(fileName);
+  }
+});
+/**./fnc-upload**/
 
 /*Add class on parent of Checked input*/
 jQuery(".checker-area input:checkbox").change(function() {
