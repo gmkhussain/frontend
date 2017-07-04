@@ -503,7 +503,7 @@ body .l--{ left:auto; }
 .imgzoom--hover .img-cntr img { -webkit-transform: translateY(-50%) translateX(-50%) scale(1.2) !important; }
 .imgzoom--hover .img-cntr:hover img { -webkit-transform: translateY(-50%) translateX(-50%) scale(1) !important; }
 
-body iframe, body img, .ovrimg-mx img { max-width: 100%; height: auto; }
+body iframe, body img, .ovrimg-mx img { max-width: 100%; }
 
 .modal iframe { width: 100%; min-height:70vh; }
 
