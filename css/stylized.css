@@ -1612,7 +1612,6 @@ body.modal-open { overflow: hidden; }
 .icon2x.icon-boxed i { width: 3.5em; height: 3.5em; line-height: 3.5em; text-align: center; }
 /**./icons**/
 
-.swiper-container * {transition: all 2s !important;-webkit-transition: all 2s !important;}
 body .dontfly.swiper-container .swiper-slide {display: inline-block;width: auto;margin-right:15px;}
 body .dontfly.swiper-container .swiper-slide img {max-width: 100%;max-height: 120px;}
 
@@ -1637,9 +1636,10 @@ li.dropdown.user-menu li.user-footer { padding: 10px; float: left; width: 100%;}
 
 
 .broken-image-checker img { text-align: center; position: relative;}
-.broken-image-checker img:before, .broken-image-checker img:after {  position: absolute; top: 0px; left: 0px; min-height: 120px; min-width: 120px; width: 100%; display: block;}
-.broken-image-checker img:after { content: "\f127" " - " "\f030"; background-color: #eee; border: 1px dotted #ccc; font-family: FontAwesome; font-size: 2.4em; color:#ccc; padding-top:0.8em;}
-.broken-image-checker img:before { content:  "Broken Image of " attr(alt); padding-top: 6em; z-index: 1; }
+.broken-image-checker img:before, .broken-image-checker img:after {  position: absolute; top: 0px; left: 0px; min-height: 80px; min-width: 80px; width: 100%; display: block;}
+.broken-image-checker img:after { content: "\f127" " - " "\f030"; background-color: #eee; border: 1px dotted #ccc; font-family: FontAwesome; font-size: 1.5em; color:#ccc; padding-top:0.4em;}
+.broken-image-checker img:before { content:  "Broken Image of " attr(alt); padding-top: 4em; z-index: 1; font-size: 10px;
+    opacity: .5;}
 
 
 /**********./STYLIZED CLASSES***********/
