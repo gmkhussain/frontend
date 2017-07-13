@@ -117,6 +117,14 @@ section[class*="-area"] {position: relative; clear:both; }
 .alert.alert-bar.pinned {height: 1px;overflow: hidden;}
 .pinned .alert-pin-btn {margin-top: 0px;}
 
+
+
+/**alert-sticky**/
+.alert-sticky { position: fixed; z-index: 99; right: 30px; bottom: 0px; }
+.alert-sticky{ animation: move_to_top 1s; }
+	@keyframes move_to_top { 0% { bottom: -10vh; } 50% { bottom: 5vh; } 100% { bottom: 0vh; } }
+/**./alert-sticky**/	
+
 /*truncate string / limited text */
 .hed-lmt h3, .hed-lmt h4 {display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 /*truncate string P tag content */

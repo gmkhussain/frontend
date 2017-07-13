@@ -375,6 +375,23 @@
 			  </ul>
 			</div>
 	
+	<button class="btn-alert--show">Send Message</button>
+	
+	<div class="alert alert-danger alert-dismissable alert-sticky fade">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+	<script>
+		$('.btn-alert--show').click(function(){
+			$('.alert').show()
+		})
+	</script>
+	
 
 			<h3>.fnc-underline</h3>
   <div class="metroflip-box col-sm-2 p0">
