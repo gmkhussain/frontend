@@ -478,13 +478,31 @@ jQuery(window).scroll(function() {
 if (jQuery(this).scrollTop() > 1){
     jQuery('.hdr--sticky').addClass("hdr--sticky-active");
 	jQuery('body').addClass("scrollized");
-	
   }
   else{
     jQuery('.hdr--sticky').removeClass("hdr--sticky-active");
 	jQuery('body').removeClass("scrollized");
   }
 });
+
+
+
+
+var lastScrollizedTop = 0;
+jQuery(window).scroll(function(event) {
+  var scrollizedTop = jQuery(this).scrollTop();
+  if (scrollizedTop > lastScrollizedTop) {
+    jQuery("body").removeClass("scrollized--up");
+    jQuery("body").addClass("scrollized--down");
+  } else {
+    jQuery("body").removeClass("scrollized--down");
+    jQuery("body").addClass("scrollized--up");
+  }
+  lastScrollizedTop = scrollizedTop;
+});
+
+
+
 
 
 /****/
@@ -512,6 +530,18 @@ jQuery( document ).ready(function() {
 
 
 
+/**add class on multilevels of dropdown in navbar **/	
+/*
+ie: https://codepen.io/pen/RgdgGy
+*/
+var navLevel1 = $( "ul.nav" );
+navLevel1.addClass( " --- level1" );
+
+jQuery(".level1 > li > ul").addClass(" --- level2");
+jQuery(".level2 > li > ul").addClass(" --- level3");
+/**./add class on multilevels of dropdown in navbar **/	
+	
+	
 
 
 /**[.slider--hash] Slider with hashtag URL ID**/
