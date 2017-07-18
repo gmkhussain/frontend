@@ -99,7 +99,7 @@
 	  </div>
 	</div>
 
-	
+<div id="body-wrapper">
 
 <header>
 	<section class="alert alert-bar">
@@ -121,16 +121,17 @@
 						<li><a href="#Arabic">العربية</a></li>
 						<li><a href="#Japanese">日本語</a></li>
 					</ul>
+				
 					<script>
-						/**mutilang**/
-						var multiLangLink = ".lang.btn-group .dropdown-menu li a";
+						
+						var multiLangLink = ".lang.btn-group .dropdown-menu li a"; /*mutilang*/
 						var multiLangLabel = ".lang.btn-group .btn span:not(.caret)";
 						jQuery(multiLangLink).click(function() {
 						  jQuery(multiLangLink).removeClass("selctd-lang");
 						  jQuery(this).addClass("selctd-lang");
 						  jQuery(multiLangLabel).html(jQuery(this).html());
-						});
-						/**./mutilang**/
+						});	
+						/*./mutilang*/
 					</script>
 				</div>
 
@@ -349,7 +350,7 @@
 			
 			</div>
 
-	<hr class="dvr dvr-shine" />
+			
 	
 	<section class="counter-area scrolink scrollreveal fnc-underline hed-cntr hoverized blinked-links">
 		<div class="container">
@@ -783,9 +784,7 @@
 			
 		</div>
 	</section>
-	
-	<hr class="dvr dvr-shine" />
-		
+
 	
 	<section class="navbar-list">
 		
@@ -959,8 +958,6 @@
 		</div>
 	</section>
 	
-	<hr class="dvr dvr-shine" />
-		
 
 	
 	
@@ -1062,7 +1059,7 @@
 	</section>
 	
 	
-	<hr class="dvr">
+	
 	
 	<section class="charts-area" id="chartistjsArea">
 	
@@ -1431,8 +1428,8 @@
 		</div>
 	</section>
 	
-	<hr class="dvr" />
-		
+
+	
 	
 	<section class="product-area" id="swiperSlider">
 		<div class="container">
@@ -1499,7 +1496,8 @@
 		</div>
 	</section>
 
-	<hr class="dvr" />
+
+	
 
 	<section class="isotope-area bg-fix"  style="background-image:url('images/slide1.jpg')" id="isotope">
 	
@@ -1574,7 +1572,7 @@
 		</div>
 	</section>
 	
-	<hr class="dvr" />
+
 	
 	
 	<section class="main-area" id="content">
@@ -1839,8 +1837,8 @@
 			</div>	
 	</section>
 	
-	<hr class="dvr" />
-		<section class="list-area" id="listArea">
+
+	<section class="list-area" id="listArea">
 		<div class="container">
 			
 			<div class="list col-sm-3 clrlist">
@@ -1942,11 +1940,8 @@
 			
 		</div>
 	</section>
-	
-	<hr class="dvr" />
-	
-	
 
+	
 
 	<section class="tabs-area " data-navitemlimit="4" id="tabsArea">
 		<div class="container">
@@ -2012,9 +2007,8 @@
 		</div>
 	</section>
 	
-	<hr class="dvr" />
 
-
+	
 	<section class="form-area " id="dateRangePicker">
 		<div class="container">
 		
@@ -2601,7 +2595,7 @@
 		</div>
 	</section>
 	
-	<hr class="dvr" />
+
 	
 	<section class="table-area table-rwd table-blur--hover" id="tableArea">
 
@@ -2650,7 +2644,7 @@
 		</div>
 	</section>
 	
-	<hr class="dvr" />
+
 	
 	<section class="colors-area list-col-6 scale-hover" id="colorArea">
 		<div class="container">
@@ -2685,7 +2679,8 @@
 		</div>
 	</section>
 	
-	<hr class="dvr" />
+
+	
 	
 	<section class="heights100" id="heights">
 		<div class="container">
@@ -2709,7 +2704,7 @@
 		</div>
 	</section>
 	
-	<hr class="dvr" />
+	
 	
 	<section class="images-area " id="imagesArea">
 		<div class="container">
@@ -2765,8 +2760,7 @@
 		</div>
 	</section>
 	
-	<hr class="dvr" />
-	
+	 
 		
 	
 	<section class="tooltip-area" id="tooltipArea">
@@ -2794,7 +2788,7 @@
 		</div>
 	</section>
 	
-	<hr class="dvr" />
+	
 			
 	<section class="pinterest-style" id="pinterestStyle">
 
@@ -2857,8 +2851,8 @@
 		</div>
 	</section>
 	
-	<hr class="dvr" />
-		
+	
+	
 	<section class="modal-area clrlist listview list-icon" id="modalArea">
 		<div class="container">
 			<h2>Modal</h2>
@@ -3029,7 +3023,10 @@
 		</div>
 	</section>
 		
-	<hr class="dvr" />
+	
+	
+
+</main>
 
 			
 	<footer>
@@ -3118,13 +3115,11 @@
 			</div>
 		</section>
 		
+		<a href="" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
 		
 	</footer>
 	
 	
-			<a href="" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
-	
-				
 			<div class="fill-holder posfix l0 t0 z1000 hidden-xs">
 				<h4 id="fill__value"></h4>
 				<div class="fill__move">
@@ -3163,8 +3158,11 @@
   </div>
 </div>
 					
+					
+</div> <!--./body-wrapper-->	
+	
+				
 
-</main>
     
 	<!--Bootstrap-->
     <script src="js/bootstrap.min.js"></script>
