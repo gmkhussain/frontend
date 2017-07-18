@@ -1057,6 +1057,11 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 .fnc-uplaod .file-input { position: absolute; left: 0; top: 0; height: 100%; width: 100%; cursor: pointer; opacity: 0; }
 .fnc-uplaod .file-input:focus { outline: none; }
 
+/*fnc-upload for input-group*/
+.fnc-uplaod .input-group label { border: 1px solid #333; border-radius: 0; height: 43px; top: 0px; left: 0; width: 100%; padding-top: 8px; padding-left: 115px; font-weight: 300; margin-bottom: 0; }
+.fnc-uplaod .fake-btn { position: absolute; top: 5px; left: 5px; background-color: #1abc9c; }
+/*./fnc-upload for input-group*/
+
 /*Label as a placeholder animation*/
 .placelabeler .form-group .form-control~label { color: #000 !important; position: absolute; text-transform: uppercase; top: 10px; left:10px; }
 .placelabeler .form-control.has-value + label,
