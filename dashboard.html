@@ -21,9 +21,15 @@
 		<!--link rel="stylesheet" href="css/foundation-icons.css"-->
 		<!--link rel="stylesheet" type="text/css" href="css/flaticon.css"--> 
 	<link rel="stylesheet" href="css/swiper.min.css">
+	
+	
 
 	<!-- jQuery -->
 	<script src="js/jquery1.11.1.min.js"></script>
+	
+	
+	<link rel="stylesheet" href="extralized/jquery.dataTables.min.css.css">
+	<script src="jextralized/jquery.dataTables.min.js"></script>
 	
 	
 	<!--browser selector-->
@@ -450,7 +456,7 @@
 					<h4>List of</h4>
 					<h2>Components</h2>
 				</div>
-				<div class="step__cont colors-area list-col-6">
+				<div class="step__cont colors-area list-col-5">
 					
 					
 					<div class="component-status clrlist ">
@@ -461,7 +467,7 @@
 						</li>
 						<li>
 						  <i class="fa fa-warning orange"></i>
-						  <span>Under review</span>
+						  <span>Under review  <small>In progress</small></span>
 						</li>
 						<li>
 						  <i class="fa fa-ban red"></i>
@@ -473,6 +479,60 @@
 						</li>
 					  </ul>
 					</div>
+					
+					
+					<hr>
+					
+					<table class="table" id="myDataTable">
+					 <thead>
+						<tr>
+						  <th>Status</th>
+						  <th class="w20">Event</th>
+						  <th>Definitions</th>
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.hoverized</h2></td>
+							<td>
+								<h4>Need to add <b>hoverized</b> class where you want to see this event</h4>
+								<p>when hover on any element will add <b>.hoverized--active</b> class on hovered</p>
+							</td>
+						</tr>
+						
+						<tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.bulletized <small>List : UL LI</small></h2></td>
+							<td>
+								<p>Will show dots before < li > element</p>
+							</td>
+						</tr>
+						
+						<tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.fom</h2></td>
+							<td>
+								<h4>Need to add <b>hoverized</b> class where you want to see this event</h4>
+								<p>when hover on any element will add <b>.hoverized--active</b> class on hovered</p>
+							</td>
+						</tr>
+						<tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.fnc-upload <small>with / input-group</h2></td>
+							<td>
+								<h4>Need to add <b>hoverized</b> class where you want to see this event</h4>
+								<p>when hover on any element will add <b>.hoverized--active</b> class on hovered</p>
+							</td>
+						</tr>
+						
+						
+						</tbody>
+					</table>
+					
+					
+					<hr>
+					
 					
 					<table class="table">
 					  <thead>
@@ -1124,13 +1184,19 @@
 	
 	<!--Major Scripts-->
 	<script src="js/viewportchecker.js"></script>
-    <script src="js/kodeized.js"></script>
 	<!--./Major Scripts-->
+    <script src="js/kodeized.js"></script>
 
 	<!--dashboard-->
 	<script src="dashboard.js"></script>
 
 	
 
+	<script>
+	$(document).ready(function(){
+		$('#myDataTable').DataTable();
+	});
+
+	</script>
 	</body>
 </html>
