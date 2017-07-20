@@ -1113,9 +1113,17 @@ if (jQuery('html').hasClass("livewindowsize")) {
 
 
 /**making a specific page unresponsive**/
-if (jQuery("section, div").hasClass("page--no-rwd")) {
-	jQuery('head').append('<meta name="viewport" content="width=1440, user-scalable=no">');
-}
+jQuery( document ).ready(function() {
+	
+	var rwdDisableCode = '<meta name="viewport" content="width=1440, user-scalable=no">';
+	var rwdDisableMode = jQuery("section, div").hasClass("page--no-rwd");
+
+	if (rwdDisableMode) {
+	  if (!jQuery("body").hasClass("parameter--rwd")) {
+		jQuery("body").append(rwdDisableCode);
+	  }
+	}
+});
 /**./making a specific page unresponsive**/
 
 /*Video stop when Modal Close*/

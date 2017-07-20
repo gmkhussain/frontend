@@ -1563,13 +1563,14 @@ body.modal-open { overflow: hidden; }
 	position: absolute;
 	margin-left: -32px;
 }
-.accordion-plus .panel-title .panel-default:first-child a:before, .accordion-plus .panel-title a.collapsed:before { content: "\2b"; padding-left: 2px; }
-.accordion-plus .panel-title a:before{ content: "\2212"; font-family: 'Glyphicons Halflings'; }
+.accordion-plus .panel-title .panel-default:first-child a:before,
+.accordion-plus [data-toggle="collapse"].collapsed:before { content: "\2b"; padding-left: 2px; }
+.accordion-plus [data-toggle="collapse"]:before{ content: "\2212"; font-family: 'Glyphicons Halflings'; }
 
 /**accordion with arrows**/
 .accordion-arr .panel-title .panel-default:first-child a:before,
-.accordion-arr .panel-title a.collapsed:before{ content: "\f054";}
-.accordion-arr .panel-title a:before { content: "\f078"; font-family: "FontAwesome"; border: 0;background-color: transparent;line-height: 2.2em;}
+.accordion-arr [data-toggle="collapse"].collapsed:before{ content: "\f054";}
+.accordion-arr [data-toggle="collapse"]:before { content: "\f078"; font-family: "FontAwesome"; border: 0;background-color: transparent;line-height: 2.2em;}
 /***./accordion***/	
 
 
