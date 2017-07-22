@@ -902,15 +902,18 @@ jQuery(document).ready(function() {
 
 
 /**handle nav-tabs by url**/
-		var tabs_url = window.location.search; // returns the URL Parameters
+	jQuery(document).ready(function() {
+
+			var tabs_url = window.location.hash; // returns the URL Parameters
 			var split_tabs_url= tabs_url.split(/[ .=:;?!~,`"&|()<>{}\[\]\r\n/\\]+/);
 			tabs_urlLast= split_tabs_url[split_tabs_url.length-1];
 			
-			jQuery(document).ready(function() {
-			jQuery("#"+tabs_urlLast).addClass('active');
-			jQuery('.nav-tabs-url-handler .nav-tabs li a').each(function(){
-			jQuery(this).find('[href="#'+tabs_urlLast+'"]').addClass('active');
-			jQuery(this).addClass("dasd");
+			jQuery(".tab-pane").removeClass('active');
+			jQuery(".tab-pane"+tabs_urlLast).addClass('active');
+			
+		jQuery('.nav-tabs-url-handler .nav-tabs li').each(function(){
+				jQuery(this).find('[href="'+tabs_urlLast+'"]').parent("li").addClass('active');
+				jQuery(this).parents("li").removeClass('active');
 		})
 	});
 /**./handle nav-tabs by url**/
@@ -1077,6 +1080,7 @@ jQuery( document ).ready(function() {
 		jQuery("body").append(rwdDisableCode);
 	  }
 	}
+	
 });
 /**./making a specific page unresponsive**/
 
