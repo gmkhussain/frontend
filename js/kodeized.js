@@ -90,20 +90,25 @@ jQuery(function() {
 
 /**Show Modal dialog by Hash URL**/
   jQuery(function(){ /*shortcut for $(document).ready */
-    
-	jQuery(window.location.hash).modal('show');
-		jQuery('a[data-toggle="modal"]').click(function(){
-        window.location.hash = jQuery(this).attr('data-target');
-    });
+    var hashUrl = window.location.hash
+	
+	if(jQuery(hashUrl).hasClass("modal")){
+		jQuery(window.location.hash).modal('show');
+			jQuery('a[data-toggle="modal"]').click(function(){
+			window.location.hash = jQuery(this).attr('data-target');
+		});
+	}
 
     function revertToOriginalURL() {
         var original = window.location.href.substr(0, window.location.href.indexOf('#'))
         history.replaceState({}, document.title, original);
     }
 
-    jQuery('.modal').on('hidden.bs.modal', function () {
-        revertToOriginalURL();
-    });
+	if(jQuery(hashUrl).hasClass("modal")){
+		jQuery('.modal').on('hidden.bs.modal', function () {
+			revertToOriginalURL();
+		});
+	}
   });
 /**./Show Modal dialog by Hash URL**/
 
