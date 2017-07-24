@@ -908,13 +908,20 @@ jQuery(document).ready(function() {
 			var split_tabs_url= tabs_url.split(/[ .=:;?!~,`"&|()<>{}\[\]\r\n/\\]+/);
 			tabs_urlLast= split_tabs_url[split_tabs_url.length-1];
 			
-			jQuery(".tab-pane").removeClass('active');
-			jQuery(".tab-pane"+tabs_urlLast).addClass('active');
+			if( tabs_urlLast == "" ){
+				console.log("If: Hashtag value is -> " + tabs_urlLast);
+			}else{
+				console.log("Else: Hashtag value is -> " + tabs_urlLast );
 			
-		jQuery('.nav-tabs-url-handler .nav-tabs li').each(function(){
-				jQuery(this).find('[href="'+tabs_urlLast+'"]').parent("li").addClass('active');
-				jQuery(this).parents("li").removeClass('active');
-		})
+				jQuery('.nav-tabs-url-handler .nav-tabs li').each(function(){
+						jQuery(".tab-pane").removeClass('active');
+						jQuery(".tab-pane"+tabs_urlLast).addClass('active');
+						
+						jQuery(this).removeClass('active');
+						jQuery(this).find('[href="'+tabs_urlLast+'"]').parent("li").addClass('active');
+						//jQuery(this).parents("li").removeClass('active');
+				});		
+		}
 	});
 /**./handle nav-tabs by url**/
 
