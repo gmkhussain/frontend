@@ -208,6 +208,13 @@ body .btn-flat, .btn-flat .btn { border-radius: 0; }
 
 body .table-valign tr td {vertical-align: middle;}
 
+[class*="table-lmt-"]{ overflow-y: auto; }
+.table-lmt-100 { max-height: 100px; }
+.table-lmt-200 { max-height: 200px; }
+.table-lmt-300 { max-height: 300px; }
+.table-lmt-400 { max-height: 400px; }
+.table-lmt-500 { max-height: 500px; }
+.table-lmt-600 { max-height: 600px; }
 
 /*** TABS ***/
 

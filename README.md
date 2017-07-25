@@ -1,10 +1,10 @@
 # Bootstrap 3 Extended ver 1.4 
 [<span class="font-size: 20px;"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" style="width: 30px;height: 30px;position: relative;top: 10px;" /> @GMKHussain</span>](http://twitter.com/gmkhussain)
 
-###Low-level Front-End Toolkit
+### Low-level Front-End Toolkit 
 Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.github.io/frontend/)
 
-###GH-Pages {ㅤ ㅤ ㅤㅤ ㅤ ㅤ ㅤㅤ}
+### ⌘ GH-Pages {ㅤ ㅤ ㅤㅤ ㅤ ㅤ ㅤㅤ}
 
 
 ## addClass if URL is Root url (is Home page)
