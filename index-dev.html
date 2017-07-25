@@ -2868,19 +2868,34 @@
 	
 	
 	
-	<section class="modal-area clrlist listview list-icon" id="modalArea">
+	<section class="modal-area" id="modalArea">
 		<div class="container">
 			<h2>Modal</h2>
-			<h4>.list-icon</h4>
-			<ul>
-				<li><i class="fa fa-link"></i> .zoom</li>
-				<li><i class="fa fa-bars"></i> .newspaper</li>
-				<li><i class="fa fa-bell"></i> .move-horizontal</li>
-				<li><i class="fa fa-book"></i> .move-from-top</li>
-				<li><i class="fa fa-database"></i> .unfold-3d</li>
-				<li><i class="fa fa-gears"></i> .zoom-out</li>
-			</ul>
 			
+			<div class="clrlist listview list-icon --- col-sm-3">
+				<h4>.list-icon <small>with icon element </small></h4>
+				<ul>
+					<li><i class="fa fa-link"></i> .zoom</li>
+					<li><i class="fa fa-bars"></i> .newspaper</li>
+					<li><i class="fa fa-bell"></i> .move-horizontal</li>
+					<li><i class="fa fa-book"></i> .move-from-top</li>
+					<li><i class="fa fa-database"></i> .unfold-3d</li>
+					<li><i class="fa fa-gears"></i> .zoom-out</li>
+				</ul>
+			</div>
+			
+			
+			
+			<div class="list-icon--arr clrlist listview --- col-sm-3">
+				<h4>.icon-arr <small>without icon element </small></h4>
+				
+				<ul>
+					<li>highway</li>
+					<li>newspaper</li>
+					<li>Somthing..</li>
+				</ul>
+			
+			</div>
 			
 			<!-- Button trigger modal -->
 			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
