@@ -1477,6 +1477,11 @@ Note: see bottom note
 }
 
 .iln-btn { display: inline-block; }
+.clrbtn, .clrbtn:hover, .clrbtn:focus {
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+}
 
 /*dot bullet icon for OL UL list*/
 .dotlist li  {display: inline-block; position: relative; padding-left: 15px; }
