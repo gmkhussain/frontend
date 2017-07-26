@@ -542,6 +542,19 @@ jQuery(".tab-animate li").click(function() {
     });
 	
 	
+/*[.tabs-change--hover] tabs change on hover without click*/
+	jQuery(document).on('mouseenter', '.tabs-change--hover [data-toggle="tab"]', function () {
+		jQuery(this).tab('show');
+    });
+
+	//Dropdown items in nav tabs can get stuck in .active mode
+	jQuery('.tabs-change--hover  .nav-tabs').on('shown.bs.tab', 'a', function (e) {
+		if (e.relatedTarget) {
+			jQuery(e.relatedTarget).removeClass('active');
+		}
+	});
+/*./[.tabs-change--hover] tabs change on hover without click*/	
+	
 /*
 //MOVING WIDE-DIV BACKGROUND IMAGES
 jQuery(document).ready(function(){
