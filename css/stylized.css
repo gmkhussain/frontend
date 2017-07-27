@@ -517,9 +517,31 @@ body .l--{ left:auto; }
 .img-cntr { width:50%; overflow:hidden; height:350px; position:relative; }
 .img-cntr img { position: absolute; left: 50%; top: 50%; -webkit-transform: translateY(-50%) translateX(-50%); max-width: initial !important;}
 
+
+
+
 /*img-cntr hover conflict with imgzoom--hover fixed*/
 .imgzoom--hover .img-cntr img { -webkit-transform: translateY(-50%) translateX(-50%) scale(1.2) !important; }
 .imgzoom--hover .img-cntr:hover img { -webkit-transform: translateY(-50%) translateX(-50%) scale(1) !important; }
+
+
+/* [.rotateY360--hover] on hover icon element rotate 360deg*/
+.rotateY360--hover:hover [class*="__icon"],
+.rotateY360--hover:hover i.fa,
+.rotateY360--hover:hover i.icon {
+    transform: rotateY(360deg);
+    transition: all 1s !important;
+}
+
+
+.rotate360--hover:hover [class*="__icon"],
+.rotate360--hover:hover i.fa,
+.rotate360--hover:hover i.icon {
+    transform: rotate(360deg);
+    -webkit-transition: transform 1.3s 1s !important;
+	transition: transform 1.3s 1s !important;
+}
+
 
 body iframe, body img, .ovrimg-mx img { max-width: 100%; }
 
