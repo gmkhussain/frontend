@@ -805,13 +805,11 @@ jQuery(function(){
 
 
 
-/***TABLE TH TEXT ADD ON TDs for mobile reponsive****/
+/**TH text add on TDs for attribute mobile responsive**/
 jQuery('table th').each(function (i) {
 	//adding 0 to 1
 	i=i+1;
-	tableTitle = jQuery( "table th:nth-child("+i+")" ).html();
-	//alert(ttl);
-	//alert(i);
+	tableTitle = jQuery( "table th:nth-child("+i+")" ).text();
 	jQuery( "table th:nth-child("+i+")" ).attr("for", tableTitle);
 	jQuery( "table td:nth-child("+i+")" ).attr("for", tableTitle);
 	//i=i+1;
