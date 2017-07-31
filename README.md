@@ -12,6 +12,26 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 	jQuery('body').toggleClass('is_index home', /\/$/.test(location.pathname));
 ```
 
+## How to get page load time with jQuery
+```
+		//add in head tag as early as possible.
+        <script>
+		   var startTime = (new Date()).getTime();
+		</script>
+		
+		<script src="{{asset('front/js/jquery-2.2.4.min.js')}}"></script>
+		
+		<script>
+		   $(window).load(function () {
+			   var endTime = (new Date()).getTime();
+			   var millisecondsLoading = endTime - startTime;
+			   // Put millisecondsLoading in a hidden form field
+			   // or Ajax it back to the server or whatever.
+			   console.log("Fully Loaded: " + millisecondsLoading);
+		   });
+		</script>
+```
+
 Additional file list:
 + Root
     + js

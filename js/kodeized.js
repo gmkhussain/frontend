@@ -302,7 +302,7 @@ jQuery(".checker-area input:checkbox").change(function() {
 
 
 
-jQuery(document).ready(function() {
+jQuery(window).on('load', function() {
 
 	var windowHeight = jQuery(window).height();
 	var documentHeight = jQuery(document).height();
@@ -312,6 +312,7 @@ jQuery(document).ready(function() {
 	//console.log("document height:" + documentHeight );
 	//console.log("Body height:" + bodyHeight );
 	
+
 		if( documentHeight < windowHeight   || bodyHeight < windowHeight ){
 			console.log("short page");
 			jQuery("body").addClass("page-height-short");
