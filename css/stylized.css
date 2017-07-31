@@ -1353,6 +1353,15 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 
 /*--(hover disable for mobile)-- .dropdown > a:hover + .dropdown-menu { display: none;}*/
 
+
+.hdr--sticky-mobile--off .hdr--sticky {
+    position: static !important;
+}
+
+html body.hdr--sticky-mobile--off {
+    padding-top: 0;
+}
+
 }
 
 /*./dropdown-menu*/

@@ -1133,3 +1133,12 @@ jQuery(".hoverized *").on("mouseenter", function (e) {
 jQuery(".hoverized *").on("mouseout", function (e) {
 	jQuery(this).removeClass("hoverized--active");
 });
+
+
+/**Detect iFrame embedding, Image & video inside DIV**/
+jQuery("div").each(function (checkMediaType) {
+	jQuery( this ).contents().find( "img" ).parent("div").addClass( "has-image" );
+	jQuery( this ).contents().find( "iframe" ).parent("div").addClass( "has-iframe" );
+	jQuery( this ).contents().find( "video" ).parent("div").addClass( "has-video" );
+});
+/**./Detect iFrame embedding, images & video inside DIV**/
