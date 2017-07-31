@@ -304,11 +304,24 @@ jQuery(".checker-area input:checkbox").change(function() {
 
 jQuery(document).ready(function() {
 
+	var windowHeight = jQuery(window).height();
+	var documentHeight = jQuery(document).height();
+	var bodyHeight = jQuery('body').height()
+	
+	//console.log("window height:" + windowHeight );
+	//console.log("document height:" + documentHeight );
+	//console.log("Body height:" + bodyHeight );
+	
+		if( documentHeight < windowHeight   || bodyHeight < windowHeight ){
+			console.log("short page");
+			jQuery("body").addClass("page-height-short");
+		}
+		
 /*section-centralized
 - highlight unique section when it is center of window */	
-  var window_height = jQuery(window).height();
+  
  jQuery(window).scroll(function() {
-    var scrollMiddle = jQuery(window).scrollTop() + (window_height/2);
+    var scrollMiddle = jQuery(window).scrollTop() + (windowHeight/2);
     jQuery('.section-centralized section').each(function() {
       elTop = jQuery(this).offset().top;
       elBtm = elTop + jQuery(this).height();
@@ -920,9 +933,9 @@ jQuery(document).ready(function() {
 			tabs_urlLast= split_tabs_url[split_tabs_url.length-1];
 			
 			if( tabs_urlLast == "" ){
-				console.log("If: Hashtag value is -> " + tabs_urlLast);
+				console.log("Page has no #Hashtag " + tabs_urlLast);
 			}else{
-				console.log("Else: Hashtag value is -> " + tabs_urlLast );
+				console.log("#Hashtag value is -> " + tabs_urlLast );
 			
 				jQuery('.nav-tabs-url-handler .nav-tabs li').each(function(){
 						jQuery(".tab-pane").removeClass('active');

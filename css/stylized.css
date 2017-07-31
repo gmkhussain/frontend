@@ -41,8 +41,10 @@
 .preloadized #preloader { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #fff; z-index: 99999; }
 .preloadized #preloader__status { width: 32px; height: 32px; position: absolute; left: 50%; top: 50%; margin: -15px 0 0 -15px;  border-radius: 50%; }
 
-/**for 100% heights**/
+/**for 100% heights
 body, html{ height: 100%; padding: 0;}
+**/
+.page-height-short footer { position: fixed; bottom: 0; left: 0; right: 0; width: 100%; }
 
 html.hint * { box-shadow: 0 0 0 1px #d00; }
 html.hint a { box-shadow: 1px 0 12px 0px #006dd3 inset; }
@@ -514,7 +516,7 @@ body .l--{ left:auto; }
 
 .ovrimg { overflow: hidden; }
 .ovrimg img{ width: 100%;}
-.img-cntr { width:50%; overflow:hidden; height:350px; position:relative; }
+.img-cntr { overflow:hidden; position:relative; }
 .img-cntr img { position: absolute; left: 50%; top: 50%; -webkit-transform: translateY(-50%) translateX(-50%); max-width: initial !important;}
 
 
