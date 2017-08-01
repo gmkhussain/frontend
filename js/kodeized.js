@@ -1107,12 +1107,18 @@ jQuery( document ).ready(function() {
 	var rwdDisableCode = '<meta name="viewport" content="width=1440, user-scalable=no">';
 	var rwdDisableMode = jQuery("section, div").hasClass("page--no-rwd");
 
+	/*
+	type: url.com?norwd -> disable responsive mode "?norwd" query string
+	*/
+	if (jQuery("body").hasClass("parameter--norwd")) {
+		jQuery("body").append(rwdDisableCode);
+	  }
+	  
 	if (rwdDisableMode) {
 	  if (!jQuery("body").hasClass("parameter--rwd")) {
 		jQuery("body").append(rwdDisableCode);
 	  }
 	}
-	
 });
 /**./making a specific page unresponsive**/
 

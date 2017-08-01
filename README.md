@@ -3,9 +3,9 @@
 
 ### Low-level Front-End Toolkit 
 Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.github.io/frontend/)
+##### 1+1=3? : everything and takes it to a whole new level.
 
 ### ⌘ GH-Pages {ㅤ ㅤ ㅤㅤ ㅤ ㅤ ㅤㅤ}
-
 
 ## addClass if URL is Root url (is Home page)
 ```html
