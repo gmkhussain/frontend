@@ -348,7 +348,7 @@ function isScrolledIntoView(elem) {
 }
 
 jQuery(window).scroll(function(){
-   jQuery('header, section, footer, [class*="-area"]').each(function () {
+   jQuery('header, section, footer, [class*="-area"], div').each(function () {
       if (isScrolledIntoView(this) === true){
           jQuery(this).addClass("/ in-view");
       }else{
@@ -1149,3 +1149,14 @@ jQuery("div").each(function (checkMediaType) {
 	jQuery( this ).contents().find( "video" ).parent("div").addClass( "has-video" );
 });
 /**./Detect iFrame embedding, images & video inside DIV**/
+
+
+/**Detecting AJAX request start and loaded**/
+jQuery(document).ajaxStart(function() {
+	jQuery("body").removeClass("ajax--loaded").addClass("ajax--loading"); 
+});
+
+jQuery(document).ajaxStart(function() {	
+	jQuery("body").removeClass("ajax--loading").addClass("ajax--loaded");
+});
+/**./Detecting AJAX request start and loaded **/
