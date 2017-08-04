@@ -1188,7 +1188,7 @@ body .form-group .input-group { width: 100%; margin-bottom: 0; }
     width: 15px;
 }
 
-
+.fade-corner{ position: relative; }
 .fade-corner:after,
 .fade-corner:before {
     content: "";

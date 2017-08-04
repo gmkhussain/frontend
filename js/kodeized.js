@@ -501,6 +501,10 @@ jQuery( document ).ready(function() {
 });
 
 
+/**navbar--open when navbar-toggle open add class on body**/
+jQuery(".navbar-toggle").on("click", function (e) { jQuery("body").toggleClass(" --- navbar--open"); });
+/**./navbar--open when navbar-toggle open add class on body**/
+
 //Classes On Body tag and Add ACTIVE Class on navbar link//
     jQuery(document).ready(function () {
         var url = window.location;
