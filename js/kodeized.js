@@ -319,6 +319,8 @@ jQuery(window).on('load', function() {
 		if( documentHeight < windowHeight   || bodyHeight < windowHeight ){
 			console.log("short page");
 			jQuery("body").addClass("page-height-short");
+		}else{
+			jQuery("body").removeClass("page-height-short");
 		}
 		
 		

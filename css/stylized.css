@@ -1189,6 +1189,26 @@ body .form-group .input-group { width: 100%; margin-bottom: 0; }
 }
 
 
+.fade-corner:after,
+.fade-corner:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    top:0;
+}
+
+.fade-corner--right:after {
+    box-shadow: -30px 0px 30px 0px #eee inset;
+    right: 0;
+}
+
+.fade-corner--left:before {
+    box-shadow: 30px 0px 30px 0px #eee inset;
+    left: 0;
+}
+
+
 /**down scroll**/
 .dwn-scroll { width: 110px; margin: 0px auto; position: relative; padding: 1px; cursor: pointer; font-weight: 500;}
 .dwn-scroll i { border: 1px solid #ccc; color: #ccc; width: 35px; height: 35px; background-color: #f7f7f7; padding-top: 10px; border-radius: 50%;}
