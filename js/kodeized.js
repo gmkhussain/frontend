@@ -321,6 +321,7 @@ jQuery(window).on('load', function() {
 			jQuery("body").addClass("page-height-short");
 		}else{
 			jQuery("body").removeClass("page-height-short");
+			console.log("long page");
 		}
 		
 		
@@ -504,6 +505,7 @@ jQuery( document ).ready(function() {
 /**navbar--open when navbar-toggle open add class on body**/
 jQuery(".navbar-toggle").on("click", function (e) { jQuery("body").toggleClass(" --- navbar--open"); });
 /**./navbar--open when navbar-toggle open add class on body**/
+
 
 //Classes On Body tag and Add ACTIVE Class on navbar link//
     jQuery(document).ready(function () {
@@ -1122,7 +1124,7 @@ if (jQuery('html').hasClass("livewindowsize")) {
 /**making a specific page unresponsive**/
 jQuery( document ).ready(function() {
 	
-	var rwdDisableCode = '<meta name="viewport" content="width=1440, user-scalable=no">';
+	var rwdDisableCode = '<meta name="viewport" content="width=1440, initial-scale=0,maximum-scale=1">';
 	var rwdDisableMode = jQuery("section, div").hasClass("page--no-rwd");
 
 	/*
