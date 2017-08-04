@@ -44,7 +44,7 @@
 /**for 100% heights
 body, html{ height: 100%; padding: 0;}
 **/
-.page-height-short footer { position: fixed; bottom: 0; left: 0; right: 0; width: 100%; }
+.page-height-short footer { position: absolute; bottom: 0; left: 0; right: 0; width: 100%; }
 
 html.hint * { box-shadow: 0 0 0 1px #d00; }
 html.hint a { box-shadow: 1px 0 12px 0px #006dd3 inset; }
@@ -1322,6 +1322,8 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 
 /*submenu for mobile*/
 @media only screen and (max-width : 767px) {
+
+body.page-height-short footer { position: static; }
 	
 /**nav-expand for footer with head and ul**/
 .nav-folderized .nav h4 { cursor: pointer; }

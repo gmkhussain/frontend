@@ -18,6 +18,7 @@ jQuery("#page-content").on('click', function(event) {
 });
 **/
 
+		
 jQuery(document).keydown(function(e) {
   if (e.keyCode == 192 && e.ctrlKey) {
     jQuery("html").toggleClass("hint");
@@ -311,13 +312,24 @@ jQuery(window).on('load', function() {
 	//console.log("window height:" + windowHeight );
 	//console.log("document height:" + documentHeight );
 	//console.log("Body height:" + bodyHeight );
-	
 
+		/*
+		 Place footer at bottom only if page is "short"
+		*/
 		if( documentHeight < windowHeight   || bodyHeight < windowHeight ){
 			console.log("short page");
 			jQuery("body").addClass("page-height-short");
 		}
 		
+		
+		/*
+		footerHeight: for short pages, style required as per site theme.
+		*/
+		var footerHeight = jQuery("footer").height();
+			jQuery("footer").attr("data-height", footerHeight );
+		console.log("Footer height: " +footerHeight);
+
+
 /*section-centralized
 - highlight unique section when it is center of window */	
   
