@@ -27,6 +27,18 @@ jQuery(document).keydown(function(e) {
 
 
 
+
+jQuery(document).keydown(function(e) {
+  if (e.keyCode == 222 && e.ctrlKey) {
+	  var myGridized = '<div id="gridized"><div class="container"><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div></div></div>';
+	  
+	  jQuery("#gridized").remove();
+	  jQuery("html").toggleClass("hint--gridized");
+	  jQuery("html.hint--gridized body").append(myGridized);
+  }
+});
+
+
 if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
     jQuery("html").attr("connection", "local");
 	}else{
@@ -466,6 +478,13 @@ if (jQuery(this).scrollTop() > 1){
     jQuery('.hdr--sticky').removeClass("hdr--sticky-active");
 	jQuery('body').removeClass("scrollized");
   }
+  var halfWindowHeight = jQuery(window).height() / 2 ;
+   if (jQuery(window).scrollTop()  > halfWindowHeight ) {        
+        jQuery('body').addClass("scrollized--half");
+    }else{
+		jQuery('body').removeClass("scrollized--half");
+	}
+	
 });
 
 
