@@ -1,7 +1,11 @@
 # Bootstrap 3 Extended ver 1.4 
 [<span class="font-size: 20px;"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" style="width: 30px;height: 30px;position: relative;top: 10px;" /> @GMKHussain</span>](http://twitter.com/gmkhussain)
 
-### Low-level Front-End Toolkit 
+### Low-level Front-End Toolkit
+I realised I was doing the same thing over and over when starting a new build so decided to create my own mini package which has the basics for starting a simple static or dynamic web site.
+
+**NOTE** that this package has a dependency [Bootstrap 3.1](https://github.com/twbs/bootstrap) which already  installed as well.
+
 Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.github.io/frontend/)
 ##### 1+1=3? : everything and takes it to a whole new level.
 

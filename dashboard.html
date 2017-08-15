@@ -304,18 +304,38 @@
 				</div>
 				<div class="step__cont">
 				
+					<div class="col-sm-3 bdr1">
+					<h3>BEM Architecture</h3>
+						<p>We believe CSS is ready for primetime. We are basing our architecture on <a href="http://bem.info/method/">BEM</a> make your apps faster, less contextual and easier to manage.</p>
+					</div>
+					
+					<div class="clearfix"></div>
+				
 					<div class="rules-area">
 						<h2>Focuses on five categories:</h2>
+					
+					<div class="clearfix"></div>
+						<div class="row">
+						<div class="col-sm-12 ">
+						<p><h3>Base</h3> is used for defaults like html, body, a, a:hover. This includes your CSS resets and would often be in its own base CSS file or at the start of your main CSS.</p>
+						</div>
+
+						<div class="col-sm-12 ">
+						<p><h3>Layout</h3> divides a page into sections with elements like header, footer, and article. Often developers show layout elements by prefixing the class with <strong>l-</strong>. Grids and lists would fall under this category.</p>
+						</div>
+
+						<div class="col-sm-12 ">
+						<p><h3>Module</h3> is a reusable element on the page. RULE sees modules as the majority of your elements and doesn’t require you to prefix them but you could do so if you choose. e.g. <strong>prod-box, colset, list-box.</strong></p>
+						</div>
 						
-						<p><h4>Base</h4> is used for defaults like html, body, a, a:hover. This includes your CSS resets and would often be in its own base CSS file or at the start of your main CSS.</p>
-
-						<p><h4>Layout</h4> divides a page into sections with elements like header, footer, and article. Often developers show layout elements by prefixing the class with <strong>l-</strong>. Grids and lists would fall under this category.</p>
-
-						<p><h4>Module</h4> is a reusable element on the page. RULE sees modules as the majority of your elements and doesn’t require you to prefix them but you could do so if you choose. e.g. <strong>prod-box, colset, list-box.</strong></p>
-
-						<p><h4>State</h4> is used for the variations possible, for each element (e.g. active, inactive, expanded, hidden). These are prefixed with is-, e.g. <strong>is-active, is-inactive, is-expanded, is-hidden</strong> or are via pseudo-classes such as :hover and :focus or media queries.</p>
-
-						<p><h4>Theme</h4> is similar to state but defines how modules and layouts will look. It is more applicable for larger sites with shared elements that look different throughout. You would add theme variations on a per page or per section basis.</p>
+						<div class="col-sm-12 ">
+						<p><h3>State</h3> is used for the variations possible, for each element (e.g. active, inactive, expanded, hidden). These are prefixed with is-, e.g. <strong>is-active, is-inactive, is-expanded, is-hidden</strong> or are via pseudo-classes such as :hover and :focus or media queries.</p>
+						</div>
+						
+						<div class="col-sm-12 ">
+						<p><h3>Theme</h3> is similar to state but defines how modules and layouts will look. It is more applicable for larger sites with shared elements that look different throughout. You would add theme variations on a per page or per section basis.</p>
+						</div>
+						</div>
 					
 					</div>
 				
@@ -486,6 +506,7 @@
 					<hr>
 					
 					<table class="table" id="myDataTable">
+					 
 					 <thead>
 						<tr>
 						  <th>Status</th>
@@ -493,13 +514,206 @@
 						  <th>Definitions</th>
 						</tr>
 					  </thead>
+					  
 					  <tbody>
 					  
 						<tr>
 							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.list-col-2 *</h2></td>
+							<td>
+							<p>Use class <b>"list-col-2", "list-col-3", "list-col-4"</b> etc
+output list item break into number of columns ie(list-col-[number of columns])</p>
+
+								<a href="index-dev.html">Preview</a>
+							</td>
+						</tr>
+						
+						
+					   <tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.nav-folderized .nav</h2></td>
+							<td>we use this class basically for mobile view, when we have merge the links in collapse on mobile screen.
+Give class <b>nav-folderized</b> on <b>parent div</b> and inner div must be in <b>nav</b> element.
+	<a href="index-dev.html">Preview</a>
+							</td>
+						</tr>
+						
+												
+					   <tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.flashcross--hover</h2></td>
+							<td>
+								<p>Use <b>"flashcross--hover"</b> class for shadow effect in any box or image.</p>
+								<a href="index-dev.html#imagesArea">Preview</a>
+							</td>
+						</tr>
+						
+						
+						
+					   <tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.accordion-plus</h2></td>
+							<td><p>when we make bootstrap collapse panel and we want to use as bullet plus/minus ( + / - ) we just use class <b>accordion-plus</b> on main div.</p>
+								<a href="index-dev.html#accordion">Preview</a>
+							</td>
+						</tr>
+						
+						
+						
+					   <tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.bdr--multi</h2></td>
+							<td><p>if we want to use multi color border we just put this class <b>bdr--multi</b></p>
+								<a href="index-dev.html#content">Preview</a>
+							</td>
+						</tr>
+						
+						
+						
+						
+					   <tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.blurtxt</h2></td>
+							<td><p>if we have blur text we can apply class <b>blurtxt</b></p>
+								<a href="index-dev.html#content">Preview</a>
+							</td>
+						</tr>
+						
+						
+						
+					   <tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.strike</h2></td>
+							<td><p>we can cross the any text to apply class <b>strike</b></p>
+								<a href="index-dev.html#content">Preview</a>
+							</td>
+						</tr>
+						
+						
+						
+					   <tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.rotate-img--hover</h2></td>
+							<td><p>if apply hover effect to rotate the div or any image simply apply class <b>rotate-img--hover</b></p>
+								<a href="index-dev.html#imagesArea">Preview</a>
+							</td>
+						</tr>
+						
+						
+					   <tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.table-responsive</h2></td>
+							<td>
+							<p>use class <b>table-responsive</b> when make table and because of this class your tabe set in mobile view automatically.</p>
+							
+								<a href="index-dev.html#tableArea">Preview</a>
+							</td>
+						</tr>
+						
+						
+					   <tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.signalized--hover</h2></td>
+							<td>
+							<p>when we want to apply some effect in any link and button, apply on main div/button class <b>signalized--hover</b>
+but  <b>note:</b> it will apply only and only when use font-awesome default class that is <b>fa.</b></p>
+							
+								<a href="index-dev.html#downloadableLink">Preview</a>
+							</td>
+						</tr>
+						
+						
+						
+						
+					   <tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.btn--loading</h2></td>
+							<td><p>
+							when use loader button use class <b>"btn--loading"</b> but as well as apply this
+element/tag data-loading-text " <b>i class='fa fa-circle-o-notch fa-spin' </b> Your Text" for showing loading and
+some text if you want.
+</p>
+								<a href="index-dev.html#load">Preview</a>
+							</td>
+						</tr>
+						
+						
+						
+					   <tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.tag-badge</h2></td>
+							<td><p>
+							if you show any tag on div like have sale or discount in any product, same as want to use mark in any box
+use class <b>"tag-badge"</b> simply it will be show your text as tag mark in a top right section.
+</p>
+								<a href="index-dev.html#girdBox">Preview</a>
+							</td>
+						</tr>
+						
+						
+ 
+ 
+
+
+
+
+					   <tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.testing-area <small>with url.com#testing</small></h2></td>
+							<td>
+								<p>If you want to add temporary changes in your website, simply add <b>.testing-area</b> in parent and check this changes in website url including <b>#testing e.g www.xyz.com#testing</b></p>
+								<a href="index-dev.html">Preview</a>
+							</td>
+						</tr>
+						
+
+
+
+					   <tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>..scrollToTop <small>( bottom arrow )</small></h2></td>
+							<td>
+								<p>This class added arrow in the bottom of the page in your website, just add <b>.scrolltotop</b> class in anchor tag.</p>
+								<a href="index-dev.html">Preview</a>
+							</td>
+						</tr>
+
+
+					   <tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.navbar-list</h2></td>
+							<td>
+								<p>This class mostly used for products listing in sidebar, just add .navbar-list in your ul tag.</p>
+								<a href="index-dev.html">Preview</a>
+							</td>
+						</tr>
+
+
+						
+					   <tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.navbar-mega</h2></td>
+							<td>
+								<p>
+								This class is used to show one or more list with dropdown, just add <b>.navbar-mega</b> in your ul tag.
+								</p>
+								<a href="index-dev.html">Preview</a>
+							</td>
+						</tr>
+						
+					   <tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.fom</h2></td>
+							<td>___
+								<a href="index-dev.html">Preview</a>
+							</td>
+						</tr>
+						
+						
+						<tr>
+							<td> <i class="fa fa-check green"></i> </td>
 							<td><h2>.moreless</h2></td>
 							<td>
-								
 								<code>data-less="here is less" //after clicked content</code>
 								
 								<a href="index-dev.html#moreless">Preview</a>
@@ -524,21 +738,70 @@
 							</td>
 						</tr>
 						
+						
+
+						<tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.has-quotes</h2></td>
+							<td>
+								<p>We used this class to write quotations, just add <b>.has-quotes</b> class in parent div and make their position relative with <b>.posrel</b> class.</p>
+							</td>
+						</tr>
+						
+
+
+
+
+						<tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.blurtxt</h2></td>
+							<td>
+								<p>this class is used to blur content. just add <b>.blurtxt</b> class.</p>
+							</td>
+						</tr>
+						
+
+						<tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.pul-lft</h2></td>
+							<td>
+								<p>this class is used for aligning div to the left, just add <b>.pul-lft</b> class.</p>
+							</td>
+						</tr>
+
+
+
+						<tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.pul-rgt</h2></td>
+							<td>
+								<p>this class is used for aligning div to the right, just add <b>.pul-rgt</b> class. </p>
+							</td>
+						</tr>
+
+
+
+						<tr>
+							<td> <i class="fa fa-check green"></i> </td>
+							<td><h2>.pul-cntr</h2></td>
+							<td>
+								<p>this class is used for aligning div to the center, just add <b>.pul-cntr class.</b> </p>
+							</td>
+						</tr>
+						
+
+
+
 						<tr>
 							<td> <i class="fa fa-check green"></i> </td>
 							<td><h2>.fom</h2></td>
-							<td>
-								<h4>Need to add <b>hoverized</b> class where you want to see this event</h4>
-								<p>when hover on any element will add <b>.hoverized--active</b> class on hovered</p>
-							</td>
+							<td>___</td>
 						</tr>
+						
 						<tr>
 							<td> <i class="fa fa-check green"></i> </td>
 							<td><h2>.fnc-upload <small>with / input-group</h2></td>
-							<td>
-								<h4>Need to add <b>hoverized</b> class where you want to see this event</h4>
-								<p>when hover on any element will add <b>.hoverized--active</b> class on hovered</p>
-							</td>
+							<td>___</td>
 						</tr>
 						
 						

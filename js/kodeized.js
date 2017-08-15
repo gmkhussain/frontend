@@ -30,7 +30,8 @@ jQuery(document).keydown(function(e) {
 
 jQuery(document).keydown(function(e) {
   if (e.keyCode == 222 && e.ctrlKey) {
-	  var myGridized = '<div id="gridized"><div class="container"><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div><div class="col-sm-1"></div></div></div>';
+	  
+	var myGridized = '<div id="gridized"><div class="container"><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div></div></div>';
 	  
 	  jQuery("#gridized").remove();
 	  jQuery("html").toggleClass("hint--gridized");
@@ -317,23 +318,31 @@ jQuery(".checker-area input:checkbox").change(function() {
 
 jQuery(window).on('load', function() {
 
+		var footerHeight = jQuery("footer").height();
+		jQuery("footer").attr("data-height", footerHeight );
+		//console.log(footerHeight);
+		
 	var windowHeight = jQuery(window).height();
 	var documentHeight = jQuery(document).height();
-	var bodyHeight = jQuery('body').height()
+	var bodyHeight = jQuery('body').height();
 	
-	//console.log("window height:" + windowHeight );
-	//console.log("document height:" + documentHeight );
-	//console.log("Body height:" + bodyHeight );
+	var bodyHeight_withFooter = bodyHeight + footerHeight;
+	var documentHeight_withFooter = documentHeight + footerHeight;
+	
+	
+	console.log("window height:" + windowHeight );
+	console.log("document height:" + documentHeight + " with footer " + documentHeight_withFooter );
+	console.log("Body height:" + bodyHeight + " with footer " + bodyHeight_withFooter );
 
 		/*
 		 Place footer at bottom only if page is "short"
 		*/
-		if( documentHeight < windowHeight   || bodyHeight < windowHeight ){
-			console.log("short page");
+		if( documentHeight_withFooter < windowHeight   || bodyHeight_withFooter < windowHeight ){
+			console.log("--> short page");
 			jQuery("body").addClass("page-height-short");
 		}else{
 			jQuery("body").removeClass("page-height-short");
-			console.log("long page");
+			console.log("--> long page");
 		}
 		
 		

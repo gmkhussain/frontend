@@ -554,6 +554,10 @@ button#hideMobile {
     font-size: 65px;
 }
 
+.step__hed {
+    background-image: url("dashboard/bg-amazium.png");
+    background-attachment: fixed;
+}
 
 /*==============gmkmobqur===============*/
 /* 24" large Screens */
