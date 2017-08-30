@@ -1693,6 +1693,77 @@ body a, body a:active, body  a:focus, body  a:hover {
 /*./FlashCross hover*/
 
 
+
+
+/*SlashFlash hover*/
+.slashflash--hover { position: relative; overflow: hidden; }
+
+.slashflash--hover::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  content: '';
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  -webkit-transform: scale3d(1.9, 1.4, 1)
+    rotate3d(0, 0, 1, 45deg)
+    translate3d(0, -100%, 0);
+  transform: scale3d(1.9, 1.4, 1)
+    rotate3d(0, 0, 1, 45deg)
+    translate3d(0, -100%, 0);
+}
+
+.slashflash--hover:hover::before {
+  -webkit-transform: scale3d(1.9, 1.4, 1)
+    rotate3d(0, 0, 1, 45deg)
+    translate3d(0, 100%, 0);
+  transform: scale3d(1.9, 1.4, 1)
+    rotate3d(0, 0, 1, 45deg)
+    translate3d(0, 100%, 0);
+}
+/*./SlashFlash hover*/
+
+
+/*SlashFlash hover*/
+.squareframe--hover { background-color: #39c; position: relative; }
+
+.squareframe--hover:before {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+.squareframe--hover:after {
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+}
+
+.squareframe--hover:hover:before, .squareframe--hover:hover:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.squareframe--hover:before, .squareframe--hover:after {
+  transition: all 2s !important;
+  content: "";
+  position: absolute;
+  display: block;
+  z-index: 0;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1;
+}
+/*./SlashFlash hover*/
+
+
 /*Metro Flip Box Front/Back*/
 .metroflip_inr { -webkit-perspective: 1000; -moz-perspective: 1000; perspective: 1000; overflow: visible; margin-bottom: 5px; position: relative; }
 .metroflip-box .front { z-index: 0; -webkit-transform: rotateY(0deg); -moz-transform: rotateY(0deg); transform: rotateY(0deg); }

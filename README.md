@@ -173,7 +173,7 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 ## Bootcamp™
 * Short Guideline
 
-###Problem with position: fixed.
+###Problem with position: fixed. ( i.e. https://codepen.io/pen/prQQpq ) 
 ```
 // Problem
 I was trying to fix, turning fixed on and off as a way of sticking header nav element to the top of the page as it scrolled by.
