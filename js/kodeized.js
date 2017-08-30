@@ -1,5 +1,6 @@
 /* 
-* Kodeized v1.0
+* Kodeized v1.06 MX
+* Coding made effortless.
 * This file contains works for many various kinds of tasks 
 */
 
@@ -1208,3 +1209,41 @@ jQuery(document).ajaxStart(function() {
 	jQuery("body").removeClass("ajax--loading").addClass("ajax--loaded");
 });
 /**./Detecting AJAX request start and loaded **/
+
+
+
+/*selectized*/
+	jQuery(".selectized").click(function(a){
+		jQuery("body").addClass("selectized--open");
+	});
+
+	jQuery(".selectized-option").click(function(e) {	
+		/*
+			Not allow to do something ( i.e. on click close selectized )
+		*/
+		e.stopPropagation();
+	});
+									
+	jQuery(document).on("click",".selectized--open", function(e) {
+		
+	 /*
+		detecting seleteized open state or close option.
+	 */
+		var Checker = $(".selectized-option").hasClass("in");
+		var Target = $(".selectized-option");
+		if (Checker){
+			Target.removeClass("in");
+			jQuery("body").removeClass("selectized--open");
+				}
+			return false;
+	});
+/*selectized*/
+		
+		
+now = new Date();
+hour = now.getHours();
+if (hour > 4 && hour < 18) {
+  jQuery("body").addClass(" ___ time--day");
+} else {
+  jQuery("body").addClass(" ___ time--night");
+}

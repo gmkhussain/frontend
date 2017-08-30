@@ -1731,6 +1731,7 @@
 				  <div class="valign">
 					<h2><strong>.valigner</strong> <br/>vertical align me</h2>
 					<p>vertical align me sub text</p>
+					<b>should define "valign" element height</b>
 				  </div>
 				</div>
 				
@@ -2259,9 +2260,21 @@
 		  <button class="btn btn-search form-control" type="submit"> Search <i class="fa fa-search"></i></button>
 		</div>
 		
-		<div class="form-inline fom bdr1 p20 checker-area">
+		<div class="form-inline fom bdr1 p20 checker-area0">
 			<h4>*fom checkbox styling</h4>
 			<h3>.checker-area</h3>
+			
+			<span class="fnc__checkbox checker-area">
+				<input type="checkbox" name="check1" id="FNC__CHECKBOX" />
+			</span>
+			<label for="FNC__CHECKBOX">FNC__CHECKBOX</label>
+			
+			<span class="fnc__checkbox is-radio checker-area">
+				<input type="radio" name="check1" id="FNC__RADIO" />
+			</span>
+			<label for="FNC__RADIO">FNC__RADIO</label>
+			
+			
 			<input type="checkbox" name="check1" id="check1" /><mark></mark> <label for="check1">Yes</label>
 			<input type="checkbox" name="check1" id="check2" /><mark></mark> <label for="check1">No</label>
 			<input type="checkbox" name="check1" id="check3" /><mark></mark> <label for="check1">Maybe</label>
@@ -3213,6 +3226,7 @@
 	<!--Major Scripts-->
 	<script src="js/viewportchecker.js"></script>
     <script src="js/kodeized.js"></script>
+	<script src="js/customized.js"></script>
 	<!--./Major Scripts-->
 
 	<!--Swiper Slider-->

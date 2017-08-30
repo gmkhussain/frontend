@@ -27,3 +27,6 @@ if( findSwiper.hasClass(".swiper-container") ){ // .hasClass() returns BOOLEAN t
 
 
 
+
+
+

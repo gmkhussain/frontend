@@ -229,6 +229,7 @@ body .btn-flat, .btn-flat .btn { border-radius: 0; }
 }
 /*** ./TABLE Responsive ***/
 
+body .table-valign tr th,
 body .table-valign tr td {vertical-align: middle;}
 
 [class*="table-lmt-"]{ overflow-y: auto; }
@@ -521,7 +522,7 @@ body .l--{ left:auto; }
 .pul-rgt {float: right;}
 .pul-cntr {float: none; margin-left:auto; margin-right:auto;}
 
-.valign {align-items: center; display: flex; min-height: 100px; /* define holder height */}
+.valign {align-items: center; display: flex; height: 100px; /* define holder height */}
 /***vertical align***/
 .valigner {min-height: 240px; display: table; text-align: center;}
 .valigner > *, .valigner .valign {display: table-cell;vertical-align: middle;}
@@ -1194,10 +1195,52 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 /***./-->label animation***/
 
 
-body .fnc__checkbox:before { top: 0; left: 0; position: absolute; margin-left: 0; height: 100%; width: 100%; font-size: 1em; content:"";}
+body .fnc__checkbox:before {
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin-left: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 1em;
+    content: "";
+    box-shadow: 0 0 0 1px #ccc;
+}
 
-.fnc-fom .fnc__checkbox input[type="checkbox"] { opacity: 0; height: 18px ; top: 0; }
-.fnc-fom .fnc__checkbox { position: relative; display: inline-block; float: left;}
+.fnc__checkbox.is-radio:before {
+    border-radius: 50%;
+}
+
+.fnc__checkbox.is-active:before {
+    content: "\f00c";
+    color: #fff;
+    text-align: center;
+    line-height: 1.8em;
+    font-family: "FontAwesome";
+    box-shadow: 0 0 0 30px #39c inset;
+}
+.fnc__checkbox.is-radio:before {
+    border-radius: 50%;
+}
+
+.fnc__checkbox.is-radio.is-active:before {
+    content:"\f111";
+}
+
+.fnc__checkbox {
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.fnc__checkbox input {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+	opacity: 0; 
+}
 
 .fnc-fom input[type="radio"] + mark::before { border-radius: 50%; }
 .fnc-fom input[type="radio"] + mark::before,
@@ -1381,9 +1424,9 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 
 
 /***close icon on navbar***/
-.cross-toggle .navbar .icon-bar:nth-child(2) { position: relative; top: 6px; transform: rotate(45deg); }
-.slide-navbar--active .cross-toggle .navbar .icon-bar:nth-child(3) { opacity:0; }
-.slide-navbar--active .cross-toggle .navbar .icon-bar:nth-child(4) { position: relative; top: -6px; transform: rotate(-45deg);}
+.navbar--open .cross-toggle .navbar .icon-bar:nth-child(2) { position: relative; top: 6px; transform: rotate(45deg); }
+.navbar--open .cross-toggle .navbar .icon-bar:nth-child(3) { opacity:0; }
+.navbar--open .cross-toggle .navbar .icon-bar:nth-child(4) { position: relative; top: -10px; transform: rotate(-45deg);}
 /***need to add collapsed on navbar-toggle***/
 .cross-toggle  .navbar-toggle.collapsed .icon-bar { top: auto; transform: none; display: block !important; }
 /***./close icon on navbar***/

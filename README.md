@@ -37,13 +37,13 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 ```
 
 Additional file list:
-+ Root
++ Frontized Root
     + js
 		+ [kodeized.js](#kodeized.js) - Coding made effortless.
 		+ viewportchecker.js #viewportchecker.js
 		+ swiper.jquery.min.js
     + css
-        + css_browser_selector.js
+        + stylized.css
 
 
 ## Installing
@@ -173,6 +173,19 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 ## Bootcamp™
 * Short Guideline
 
+###Problem with position: fixed.
+```
+// Problem
+I was trying to fix, turning fixed on and off as a way of sticking header nav element to the top of the page as it scrolled by.
+
+// Solution
+-webkit-transform: translate3d(0, 0, 0)
+-webkit-transform: translateZ(0);
+will-change: transform;
+	
+Incase parent has above styling, child elements with position: fixed. will not working properly. 
+    
+```
 
 ### Encode Decode by jQuery
 link: https://codepen.io/pen/OmEmaL
