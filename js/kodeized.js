@@ -1247,3 +1247,10 @@ if (hour > 4 && hour < 18) {
 } else {
   jQuery("body").addClass(" ___ time--night");
 }
+
+
+/**image-orientation-checker**/
+jQuery('.image-orientation-checker img').each(function(){
+    jQuery(this).addClass(this.width > this.height ? 'orientation--landscape' : 'orientation--portrait');
+});
+/**./image-orientation**/
