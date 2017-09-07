@@ -1951,6 +1951,21 @@ li.dropdown.user-menu li.user-footer { padding: 10px; float: left; width: 100%;}
     opacity: .5;}
 
 
+/**broken-image-checker: cover parent element as default Image**/
+.broken-image-checker
+.has-image[class*="__img"] { position: relative; }
+
+.broken-image-checker
+.has-image[class*="__img"] img {left: 0;right: 0;position: absolute;top: 0;width: 100%;transform: translateY(0%) translateX(0%);height: 100%;}
+
+.broken-image-checker
+.has-image[class*="__img"] img:after { height: 100%; width: 100%; content: "\f030"; font-size: 5em; line-height: 1.4em; }
+
+.broken-image-checker
+.has-image[class*="__img"] img:before {content: "";}
+/**./broken-image-checker: cover parent element as  default Image**/
+
+
 /**********./STYLIZED CLASSES***********/
 
 
