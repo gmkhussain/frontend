@@ -137,8 +137,8 @@ section[class*="-area"] {position: relative; clear:both; }
 .alert-bar {margin: 0;border-bottom: 0px solid #eee;padding: 0;background-color: #f9f9f9;line-height: 3em;}
 .alert-bar button.close {background-color: transparent;opacity: 1;color: #333;}
 .alert-pin-btn {position: absolute;margin-top: 10px;right: 0;}
-.alert.alert-bar.pinned {height: 1px;overflow: hidden;}
-.pinned .alert-pin-btn {margin-top: 0px;}
+.alert--pinned { position: fixed; top: 0; z-index: 500; }
+.alert--pinned .alert-pin-btn {margin-top: 0px;}
 
 
 
@@ -436,11 +436,23 @@ body .l--{ left:auto; }
 .mt0{ margin-top:0px;}
 .mb0{ margin-bottom:0px;}
 
+.m5{ margin:5px;}
+.ml5{ margin-left:5px;}
+.mr5{ margin-right:5px;}
+.mt5{ margin-top:5px;}
+.mb5{ margin-bottom:5px;}
+
 .m10{ margin:10px;}
 .ml10{ margin-left:10px;}
 .mr10{ margin-right:10px;}
 .mt10{ margin-top:10px;}
 .mb10{ margin-bottom:10px;}
+
+.m15{ margin:15px;}
+.ml15{ margin-left:15px;}
+.mr15{ margin-right:15px;}
+.mt15{ margin-top:15px;}
+.mb15{ margin-bottom:15px;}
 
 .m20{ margin:20px;}
 .ml20{ margin-left:20px;}
@@ -498,15 +510,26 @@ body .l--{ left:auto; }
 
 
 /**widths**/
+.wa{width:auto;}
+.w5{width:5%;}
 .w10{width:10%;}
+.w15{width:15%;}
 .w20{width:20%;}
+.w25{width:25%;}
 .w30{width:30%;}
+.w35{width:35%;}
 .w40{width:40%;}
+.w45{width:45%;}
 .w50{width:50%;}
+.w55{width:55%;}
 .w60{width:60%;}
+.w65{width:65%;}
 .w70{width:70%;}
+.w75{width:75%;}
 .w80{width:80%;}
+.w85{width:85%;}
 .w90{width:90%;}
+.w95{width:95%;}
 .w100{width:100%;}
 
 /*section divider - use w/<HR>*/
@@ -533,10 +556,10 @@ body .l--{ left:auto; }
 
 
 /*** IMG ***/
-.ovrflw { overflow: hidden; }
+.ofh { overflow: hidden; }
+.ofv { overflow: visible; }
 .overload { overflow: auto; }
 
-.ovrimg { overflow: hidden; }
 .ovrimg img{ width: 100%;}
 .img-cntr { overflow:hidden; position:relative; }
 .img-cntr img { position: absolute; left: 50%; top: 50%; -webkit-transform: translateY(-50%) translateX(-50%); max-width: initial !important;}
@@ -579,8 +602,6 @@ body iframe, body img, .ovrimg-mx img { max-width: 100%; }
 		
 /*** BG ***/
 .wide-box-holder {clear:both;position: relative;overflow:hidden;}
-
-.ovrvis{overflow:visible;}
 
 .section-bg {height:auto;left:0;position:absolute;right:0;top:0;width:100%;z-index:0;text-align:center;}
 .section-bg > img {height: auto; width:100%;}

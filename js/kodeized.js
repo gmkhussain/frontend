@@ -1041,7 +1041,7 @@ jQuery('.panel-heading a').click(function() {
 
 /*smart alert bar*/
 	jQuery('.alert-pin-btn').click(function() {
-		jQuery('.alert-bar').toggleClass('pinned');
+		jQuery(this).parent('.alert-bar').toggleClass('alert--pinned');
 	});
 /*./smart alert bar*/
 
@@ -1254,3 +1254,11 @@ jQuery('.image-orientation-checker img').each(function(){
     jQuery(this).addClass(this.width > this.height ? 'orientation--landscape' : 'orientation--portrait');
 });
 /**./image-orientation**/
+
+
+/**zoomized**/
+var zoomizedIcon = jQuery(".zoomized button")
+jQuery(".zoomized").click(function(){
+  jQuery(this).toggleClass("is-active");
+});
+/**./zoomized**/
