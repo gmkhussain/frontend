@@ -1262,3 +1262,23 @@ jQuery(".zoomized").click(function(){
   jQuery(this).toggleClass("is-active");
 });
 /**./zoomized**/
+
+
+
+
+/**count-child**/
+/*
+ NOTE: First child should be <div>
+ i.e. https://codepen.io/pen/Mvexoz
+*/
+jQuery(".count-child").each(function() {
+  
+  countChildGroup = jQuery(this);
+  
+  var countChildLength = jQuery(countChildGroup).children("div").length;
+  var totalCountChild = jQuery(countChildGroup).addClass(
+    "count-child-total-" + countChildLength
+  );
+
+});
+/**./count-child**/

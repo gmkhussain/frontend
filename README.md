@@ -225,6 +225,13 @@ $(function () {
 </script>
 ```
 
+### Links not working properly on Swiper slides
+
+```
+var swiper1 = new Swiper('.s1', {
+		preventClicks: false,					
+	});
+```
 
 ```html
 //On Click Trigger Click on another element after few second

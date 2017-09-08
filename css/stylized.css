@@ -794,6 +794,17 @@ body iframe, body img, .ovrimg-mx img { max-width: 100%; }
 .li-col-4 ul li { width: 25%; }
 
 
+
+/**count-child**/
+[class*="count-child-total-"] > div { float:left; }
+.count-child-total-1 > div{ width:100%;}
+.count-child-total-2 > div{ width:50%;}
+.count-child-total-3 > div{ width:33.333%;}
+.count-child-total-4 > div{ width:25%;}
+.count-child-total-5 > div { width: 20%; }
+/**./count-child**/
+
+
 /*** SLIDER ***/
 .carousel-control {background: transparent !important;opacity: 1;}
 
@@ -1562,6 +1573,22 @@ Note: see bottom note
 
 @-webkit-keyframes signalized { 0% {    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);  }  100% { box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0); } }
 @keyframes signalized {  0% {    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);  }  100% {    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);  }
+}
+
+.ani-jelly-link--hover a:hover,
+.ani-jelly--hover:hover{
+	animation: jelly 0.6s ease;
+}
+
+@-moz-keyframes jelly { from { transform: scale(1, 1); }  30% { transform: scale(1.25, 0.75);  }  40% {	transform: scale(0.75, 1.25);  }  50% {	transform: scale(1.15, 0.85);  }  65% {	transform: scale(0.95, 1.05);  }  75% {	transform: scale(1.05, 0.95);  }  to { transform: scale(1, 1); } }
+
+@-webkit-keyframes jelly { from { transform: scale(1, 1); }  30% { transform: scale(1.25, 0.75);  }  40% { transform: scale(0.75, 1.25);  }  50% { transform: scale(1.15, 0.85);  }  65% { transform: scale(0.95, 1.05);  }  75% { transform: scale(1.05, 0.95);  }  to { transform: scale(1, 1);  } }
+
+@-o-keyframes jelly { from { transform: scale(1, 1); }  30% { transform: scale(1.25, 0.75);  }
+  40% { transform: scale(0.75, 1.25);  }  50% { transform: scale(1.15, 0.85);  }  65% { transform: scale(0.95, 1.05);  }  75% { transform: scale(1.05, 0.95);  }  to { transform: scale(1, 1);  } }
+
+@keyframes jelly { from { transform: scale(1, 1); }  30% { transform: scale(1.25, 0.75);  }
+  40% { transform: scale(0.75, 1.25);  }  50% { transform: scale(1.15, 0.85);  }  65% { transform: scale(0.95, 1.05);  }  75% { transform: scale(1.05, 0.95);  }  to { transform: scale(1, 1);  }
 }
 
 
