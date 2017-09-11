@@ -37,9 +37,17 @@
 .hashtag--testing .testing-area { display: block !important; }
 /*./testing-area*/
 
+/**preloader**/
 .preloadized { overflow: hidden; }
 .preloadized #preloader { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #fff; z-index: 99999; }
 .preloadized #preloader__status { width: 32px; height: 32px; position: absolute; left: 50%; top: 50%; margin: -15px 0 0 -15px;  border-radius: 50%; }
+/**preloader**/
+
+
+/**preloader-off**/
+.preloader--off .preloader { display: none; }
+/**preloader-off**/
+
 
 /**for 100% heights
 body, html{ height: 100%; padding: 0;}
@@ -790,9 +798,6 @@ body iframe, body img, .ovrimg-mx img { max-width: 100%; }
 	.listodr ul{ -moz-column-count: 1; -webkit-column-count: 1; column-count: 1; }
 }
 
-.li-col-3 ul li { width: 33.33%; }
-.li-col-4 ul li { width: 25%; }
-
 
 
 /**count-child**/
@@ -899,11 +904,19 @@ form[novalidate] .form-control.is-valid~ins:before {content: "\f00c"; color: #0d
 form[novalidate] .form-control:focus { box-shadow: none; }
 /**./gentleform.js**/
 
-/*overlapping issue fixed for random heights*/ .form-group:not([class*="col-"]) {clear: both;}
+
+
+/*overlapping issue fixed for random heights*/
+.form-group:not([class*="col-"]) {clear: both;}
+
+
+
 /*Placeholder*/
 .form-control::-moz-placeholder { color:#555; -moz-transition: padding 0.5s; transition: all 1s;}
 .form-control:-ms-input-placeholder { color:#555; transition: padding 0.5s; transition: all 1s;}
 .form-control::-webkit-input-placeholder { color:#555; -webkit-transition: padding 0.5s; transition: 1s;}
+
+
 
 .placeholder--hover .form-control:hover::-webkit-input-placeholder, .placeholder--hover .form-control:focus::-webkit-input-placeholder {padding-left:100px; opacity:0;}
 .placeholder--hover .form-control:hover:-moz-placeholder, .placeholder--hover .form-control:focus:-moz-placeholder {padding-left:100px; opacity:0;}
@@ -913,6 +926,9 @@ form[novalidate] .form-control:focus { box-shadow: none; }
 
 /*Change the white to Chrome autocomplete yellow color*/
 input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset !important;}
+
+
+
 
 .expand-search {
     display: inline-block;
@@ -946,21 +962,25 @@ input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset !importa
 .expand-search--fullwidth .form-group--active input { position: fixed; left:0; top:0; min-height:95px; font-size:2em; opacity:.9; }
 
 
+
+
 /***submit button on right***/
 .search-fom [type="submit"] { position: absolute; top: 0; right: 0; height: 100%; border: 0;}
 .search-fom .form-group { margin: 0.3em 0;}
 /***./submit button on right***/
 
-.lbl20 label { width: 20%; display: inline-block; float: left; line-height: 40px; }
-.lbl20 .form-group > .form-control { width: 80%; display: inline-block; }
-.lbl20 .form-control[type="submit"], .lbl20 .form-control[type="button"] { margin-left: 20%; }
+
 
 textarea {min-height: 50px; max-width:100%;}
+
+
 
 /***radiocheckbox***/
 [class*="fom"] input[type=radio], [class*="fom"]  input[type=checkbox] { width: auto; height: auto; display: inline-block; margin-right: 5px; }
 [class*="fom"] label { font-weight: 500; margin-bottom: auto; }
 [class*="fom"] input[type="checkbox"]~input[type="checkbox"] { margin-left: 15px; }
+
+
 
 /*checkbox checked and uncheck*/
 .form-control:checked + label { color: green; }
@@ -977,6 +997,8 @@ textarea {min-height: 50px; max-width:100%;}
     height: 40px;
 }
 
+
+
 /*radio button*/
 [type="radio"]:checked + label { color: #d00; }
 
@@ -989,14 +1011,19 @@ textarea {min-height: 50px; max-width:100%;}
     width: auto;
 }
 
+
+
 /*select or Dropdown */
 option:hover { background-color: #fafafa;}
 
 
 
-
+/**hidden-checkbox**/
 .hidden-checkbox [type="checkbox"] { display: none; }
-/*checkylbl*/
+
+
+
+/**checkylbl**/
 /*Button is :CHECKED*/
 input[type="checkbox"]:checked ~ .checkylbl {
   background: rgba(73,168,68,1);
@@ -1078,7 +1105,9 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
   left: 0;
   background: rgba(73,168,68,1);
 }
-/*./checkylbl*/
+/**./checkylbl**/
+
+
 
 /**placeholder and form-control center align**/
 .text-center .form-control { text-align: center; }
@@ -1128,14 +1157,16 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 .placelabeler ::-moz-input-placeholder{opacity: 0;}
 .placelabeler ::-moz-input-placeholder{opacity: 0;}
 
+
+
 /**show placeholder when click on form-control**/
 .placelabeler .form-control:focus::-webkit-input-placeholder{opacity: 1;}
 .placelabeler .form-control:focus::-moz-input-placeholder{opacity: 1;}
 .placelabeler .form-control:focus::-moz-input-placeholder{opacity: 1;}
 
 
-/*selectized*/
 
+/*selectized*/
 .accordion-arr .selectized.panel-title  a:before {
     float: right;
     line-height: 48px;
@@ -1189,6 +1220,8 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 
 /*./selectized*/
 
+
+
 .fnc-fom .form-control:not(:placeholder-shown) + label{/**if .form-control haven't placeholder**/}
 
 .fnc-fom .form-control.has-value + label,
@@ -1217,6 +1250,7 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 /*./Label as a placeholder animation*/
 
 
+
 /**btn-effect--ripple**/
 .btn-effect--ripple .btn, .btn-effect--ripple button, .link-effect--ripple a { position:relative; overflow:hidden;}
 [class*="-effect--ripple"] .ripple { width: 0; height: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.4); transform: scale(0); position: absolute; opacity: 1; z-index:90;}
@@ -1227,6 +1261,7 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 /***./-->label animation***/
 
 
+/**.fnc__checkbox fancy checkbox**/
 body .fnc__checkbox:before {
     top: 0;
     left: 0;
@@ -1273,6 +1308,9 @@ body .fnc__checkbox:before {
     height: 100%;
 	opacity: 0; 
 }
+/**./.fnc__checkbox fancy checkbox**/
+
+
 
 .fnc-fom input[type="radio"] + mark::before { border-radius: 50%; }
 .fnc-fom input[type="radio"] + mark::before,
@@ -1310,8 +1348,12 @@ body .fnc__checkbox:before {
 .input-number-area .form-control { float: left; display: inline-block; border-radius:0px; }
 .input-number-area span.form-control { width: 35px; display: block; float: left; border-radius:0px; }
 
+
+
 /*.input-group inside .form-group*/
 body .form-group .input-group { width: 100%; margin-bottom: 0; }
+
+
 
 .noklft:before {
     border-left: 15px solid transparent;
@@ -1333,6 +1375,8 @@ body .form-group .input-group { width: 100%; margin-bottom: 0; }
     width: 15px;
 }
 
+
+/**fade-corner**/
 .fade-corner{ position: relative; }
 .fade-corner:after,
 .fade-corner:before {
@@ -1352,6 +1396,8 @@ body .form-group .input-group { width: 100%; margin-bottom: 0; }
     box-shadow: 30px 0px 30px 0px #eee inset;
     left: 0;
 }
+/**./fade-corner**/
+
 
 
 /**down scroll**/
@@ -1390,21 +1436,29 @@ body .form-group .input-group { width: 100%; margin-bottom: 0; }
 /*/.navbar-toggle--desktop*/
 
 
+
 /**side nav bg transparent**/
 body #navbar-height-col { background-color: inherit; }
 body .navbar-default .navbar-collapse {background: transparent;border-top:0;}
 body #slide-nav #slidemenu {background-color: transparent;}
 /**./side nav bg transparent**/
 
-.nav>li>a:hover, .nav>li>a:focus, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{ background-color: transparent; }
 
-.navbar.navbar-default { background-color: transparent; border: 0 none; margin: 0; }
 
+
+
+/**nav-cntr**/
 .nav-cntr > li { display: inline-block; float: none; }
 .nav-cntr { text-align: center; width: 100%; }
+/**./nav-cntr**/
 
+
+/**blur-nav--hover**/
 .blur-nav--hover:hover .navbar-nav li a { opacity: 0.3; }
 .blur-nav--hover .navbar-nav li a:hover { opacity: 1; }
+/**./blur-nav--hover**/
+
+
 
 /*vertical line hover from top & bottom*/
 .vrline-topb--hover li a:not(.logo):before,
@@ -1414,6 +1468,8 @@ body #slide-nav #slidemenu {background-color: transparent;}
 .vrline-topb--hover li a:hover:before,
 .vrline-topb--hover  li a:hover:after { height: 40%; z-index: -1; left: 50%; }
 /*./vertical line hover from top & bottom*/
+
+
 
 /*navbar window blinds hover */
 .navbar-blinds--hover .navbar-nav>li>a { position: relative; }
@@ -1438,6 +1494,13 @@ body #slide-nav #slidemenu {background-color: transparent;}
 /*./navbar window blinds hover */
 	
 
+	
+
+.nav>li>a:hover, .nav>li>a:focus, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{ background-color: transparent; }
+
+.navbar.navbar-default { background-color: transparent; border: 0 none; margin: 0; }
+
+	
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus { background-color: inherit; text-shadow:0 0 15px #fff; }
 
 @media only screen and (max-width : 768px) {
@@ -1447,6 +1510,8 @@ body .nav.navbar-nav { margin: 0; }
 .navbar-toggle { border-color: transparent !important; min-height:35px;}
 .navbar-toggle:hover,.navbar-toggle:focus { background-color: transparent !important; min-height:35px;}
 
+
+
 /**arrow toggle icon-bar**/
 body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transform:unset; width:100% !important;}
 .arr-toggle .navbar .icon-bar:nth-child(3) { left: 3px; position: relative; }
@@ -1455,11 +1520,14 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 /**./arrow toggle icon-bar**/
 
 
+
 /***close icon on navbar***/
 .navbar--open .cross-toggle .navbar .icon-bar:nth-child(2) { position: relative; top: 6px; transform: rotate(45deg); }
 .navbar--open .cross-toggle .navbar .icon-bar:nth-child(3) { opacity:0; }
 .navbar--open .cross-toggle .navbar .icon-bar:nth-child(4) { position: relative; top: -10px; transform: rotate(-45deg);}
-/***need to add collapsed on navbar-toggle***/
+	/*
+	need to add ".collapsed" class on navbar-toggle
+	*/
 .cross-toggle  .navbar-toggle.collapsed .icon-bar { top: auto; transform: none; display: block !important; }
 /***./close icon on navbar***/
 
@@ -1994,75 +2062,3 @@ li.dropdown.user-menu li.user-footer { padding: 10px; float: left; width: 100%;}
 
 
 /**********./STYLIZED CLASSES***********/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

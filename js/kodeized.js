@@ -12,6 +12,16 @@ jQuery(window).on('load', function() {
 })
 /*./preloader*/
 
+
+
+/**preloader--off**/
+if (jQuery("section, div").hasClass("preloader--off")) {
+	jQuery("body").addClass("preloader--off");
+}
+/**./preloader--off**/
+
+
+
 /**on menu open mode Trigger menu button when click body area
 jQuery("#page-content").on('click', function(event) { 
 		event.preventDefault(); 
