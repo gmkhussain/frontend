@@ -1224,7 +1224,7 @@ jQuery(document).ajaxStart(function() {
 
 /*selectized*/
 	jQuery(".selectized").click(function(a){
-		jQuery("body").addClass("selectized--open");
+		jQuery("body").toggleClass("selectized--open");
 	});
 
 	jQuery(".selectized-option").click(function(e) {	

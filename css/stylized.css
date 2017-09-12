@@ -1796,10 +1796,14 @@ body a, body a:active, body  a:focus, body  a:hover {
 	-webkit-transform: rotate(4deg) scale(1.2);
 }
 
+
+
 /*__inr element bit bigger on hover*/
 .scale--hover [class*="__inr"]:hover,
 .box-scale--hover [class*="-box"]:hover { transform: scale(1.1); }
 /*./__inr element bit bigger on hover*/
+
+
 
 /*FlashCross hover*/
 .flashcross--hover:after, .flashcross--hover:before { content: ''; position: absolute; top: 0; bottom: 0; right: 0; left: 0; -webkit-transition: all .6s ease-in-out; transition: all .6s ease-in-out; }
@@ -1843,6 +1847,7 @@ body a, body a:active, body  a:focus, body  a:hover {
 /*./SlashFlash hover*/
 
 
+
 /*SlashFlash hover*/
 .squareframe--hover { background-color: #39c; position: relative; }
 
@@ -1880,6 +1885,7 @@ body a, body a:active, body  a:focus, body  a:hover {
 /*./SlashFlash hover*/
 
 
+
 /*Metro Flip Box Front/Back*/
 .metroflip_inr { -webkit-perspective: 1000; -moz-perspective: 1000; perspective: 1000; overflow: visible; margin-bottom: 5px; position: relative; }
 .metroflip-box .front { z-index: 0; -webkit-transform: rotateY(0deg); -moz-transform: rotateY(0deg); transform: rotateY(0deg); }
@@ -1889,6 +1895,8 @@ body a, body a:active, body  a:focus, body  a:hover {
 .metroflip-box:hover .back { z-index: 3; -webkit-transform: rotateY(0deg); -moz-transform: rotateY(0deg); transform:rotateY(0deg);
 }
 /*./Metro Flip Box Front/Back */
+
+
 
 /*
 For Mobile Friendly Navigation
@@ -2059,6 +2067,18 @@ li.dropdown.user-menu li.user-footer { padding: 10px; float: left; width: 100%;}
 .broken-image-checker
 .has-image[class*="__img"] img:before {content: "";}
 /**./broken-image-checker: cover parent element as  default Image**/
+
+
+
+/**starrating**/
+.starrating-area .fa { color: #ffc526; }
+.starrating-area.star-0 .fa-star { color: #d5dce1; }
+.starrating-area.star-1 .fa:nth-child(1)~.fa { color: #d5dce1; }
+.starrating-area.star-2 .fa:nth-child(2)~.fa { color: #d5dce1; }
+.starrating-area.star-3 .fa:nth-child(3)~.fa { color: #d5dce1; }
+.starrating-area.star-4 .fa:nth-child(4)~.fa { color: #d5dce1; }
+.starrating-area.star-5 .fa:nth-child(5)~.fa { color: #d5dce1; }
+/**./starrating**/
 
 
 /**********./STYLIZED CLASSES***********/
