@@ -320,7 +320,7 @@ jQuery(".checker-area input:checkbox").change(function() {
 	/*checker-area for radio button*/
 	jQuery('.checker-area input:radio').click(function() {
 		jQuery('input:radio[name='+ jQuery(this).attr('name')+']').parents(".checker-area").removeClass('is-active');
-		jQuery(this).parent().addClass('is-active');
+		jQuery(this).parents(".checker-area").addClass('is-active');
 	});
 	
 /*./Add class on parent of Checked input*/

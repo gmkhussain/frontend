@@ -1131,6 +1131,7 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 .fom-brackets .form-group::after {right:15px;}
 
 
+.fom-bottomline--focus .form-group{ position:relative; }
 .fom-bottomline--focus .form-group:before,
 .fom-bottomline--focus .input-group:before {
     content: "";
