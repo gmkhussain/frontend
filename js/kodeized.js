@@ -4,13 +4,13 @@
 * This file contains works for many various kinds of tasks 
 */
 
-/*preloader*/
+/**preloader**/
 jQuery(window).on('load', function() {
   jQuery('#preloader__status').fadeOut();
   jQuery('#preloader').delay(350).fadeOut('slow'); 
   jQuery('body').delay(350).css({'overflow':'visible'});
 })
-/*./preloader*/
+/**./preloader**/
 
 
 
@@ -29,16 +29,24 @@ jQuery("#page-content").on('click', function(event) {
 });
 **/
 
-		
+
+
+/**hint**/
+	/*
+	 Ctrl + ~ for preview
+	*/
 jQuery(document).keydown(function(e) {
   if (e.keyCode == 192 && e.ctrlKey) {
     jQuery("html").toggleClass("hint");
   }
 });
+/**./hint**/
 
 
-
-
+/**hint--gridized**/
+	/*
+	 Ctrl + ' for preview
+	*/
 jQuery(document).keydown(function(e) {
   if (e.keyCode == 222 && e.ctrlKey) {
 	  
@@ -49,16 +57,25 @@ jQuery(document).keydown(function(e) {
 	  jQuery("html.hint--gridized body").append(myGridized);
   }
 });
+/**./hint--gridized**/
 
 
+
+/**Detect Localhost connection**/
 if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
     jQuery("html").attr("connection", "local");
 	}else{
 		jQuery("html").attr("connection", "live");
 	}
+/**./Detect Localhost connection**/
+	
+
+
 
 /*addClass if URL is Root url (is Home page)*/
 jQuery('body').toggleClass('is_index home', /\/$/.test(location.pathname));
+
+
 
 
 /**URL added on body tag as a Class**/
@@ -108,7 +125,7 @@ jQuery(function() {
 
 	
 });
-
+/**./URL added on body tag as a Class**/
 
 
 
@@ -142,7 +159,7 @@ jQuery(function() {
 
 
 
-
+/**AnimateCSS**/
         jQuery(document).ready(function() {
             jQuery('.anime-in').addClass("hidden2").viewportChecker({
                 classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
@@ -215,6 +232,9 @@ jQuery(function() {
                }); 
 		});
 
+/**./AnimateCSS**/
+
+
 
 
 
@@ -255,6 +275,8 @@ jQuery(document).ready(function() {
 /**./.input-number**/
 
 
+
+
 /**.form-group--active on parent of .form-control**/
 jQuery(".form-control").focus(function() {
   jQuery(this).parent().addClass("form-group--active");
@@ -264,6 +286,8 @@ jQuery(".form-control").blur(function() {
   jQuery(this).parent().removeClass("form-group--active");
 });
 /**./.form-group--active on parent of .form-control**/
+
+
 
 
 /**.has-value added if .form-control have value**/
@@ -277,7 +301,9 @@ jQuery(document).ready(function() {
 		}
 	});
 });
-/**./has-value added if form-control have value**/			
+/**./has-value added if .form-control have value**/			
+
+
 
 
 /**fnc-fom label animation**/
@@ -289,6 +315,8 @@ jQuery(document).ready(function() {
         }else{ jQuery(this).removeClass("has-value"); }
 	});
 /**./fnc-fom label animation**/
+
+
 
 
 /**fnc-upload**/
@@ -308,6 +336,7 @@ jQuery(".fnc-uplaod [type=file]").on("change", function() {
 
 
 
+
 /*Add class on parent of Checked input*/ /*	ie: https://codepen.io/pen/KqeGje	*/
 jQuery(".checker-area input:checkbox").change(function() {
   if (jQuery(this).is(':checked')) {
@@ -322,11 +351,14 @@ jQuery(".checker-area input:checkbox").change(function() {
 		jQuery('input:radio[name='+ jQuery(this).attr('name')+']').parents(".checker-area").removeClass('is-active');
 		jQuery(this).parents(".checker-area").addClass('is-active');
 	});
-	
+
 /*./Add class on parent of Checked input*/
 
 
 
+
+
+/**detect page height**/
 jQuery(window).on('load', function() {
 
 		var footerHeight = jQuery("footer").height();
@@ -365,47 +397,48 @@ jQuery(window).on('load', function() {
 		console.log("Footer height: " +footerHeight);
 
 
-/*section-centralized
-- highlight unique section when it is center of window */	
+		/*section-centralized
+		- highlight unique section when it is center of window */	
+		  
+		 jQuery(window).scroll(function() {
+			var scrollMiddle = jQuery(window).scrollTop() + (windowHeight/2);
+			jQuery('.section-centralized section').each(function() {
+			  elTop = jQuery(this).offset().top;
+			  elBtm = elTop + jQuery(this).height();
+			  if (elTop < scrollMiddle && elBtm > scrollMiddle) {
+				jQuery(this).addClass("section-centralized--active");
+			  } else {
+				jQuery(this).removeClass("section-centralized--active");
+			  }
+			});
+		  });
+		/*./section-centralized*/  
   
- jQuery(window).scroll(function() {
-    var scrollMiddle = jQuery(window).scrollTop() + (windowHeight/2);
-    jQuery('.section-centralized section').each(function() {
-      elTop = jQuery(this).offset().top;
-      elBtm = elTop + jQuery(this).height();
-      if (elTop < scrollMiddle && elBtm > scrollMiddle) {
-		jQuery(this).addClass("section-centralized--active");
-      } else {
-        jQuery(this).removeClass("section-centralized--active");
-      }
-    });
-  });
-/*./section-centralized*/  
-  
 
-/*add .in-view class when element in viewport*/
-function isScrolledIntoView(elem) {
-    var docViewTop = jQuery(window).scrollTop();
-    var docViewBottom = docViewTop + jQuery(window).height();
+		/*add .in-view class when element in viewport*/
+		function isScrolledIntoView(elem) {
+			var docViewTop = jQuery(window).scrollTop();
+			var docViewBottom = docViewTop + jQuery(window).height();
 
-    var elemTop = jQuery(elem).offset().top;
-    var elemBottom = elemTop + jQuery(elem).height();
+			var elemTop = jQuery(elem).offset().top;
+			var elemBottom = elemTop + jQuery(elem).height();
 
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
+			return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+		}
 
-jQuery(window).scroll(function(){
-   jQuery('header, section, footer, [class*="-area"], div').each(function () {
-      if (isScrolledIntoView(this) === true){
-          jQuery(this).addClass("/ in-view");
-      }else{
-		  jQuery(this).removeClass("/ in-view");
-	  }
-   });
-});
-/*./add .in-view class when element in viewport*/
+		jQuery(window).scroll(function(){
+		   jQuery('header, section, footer, [class*="-area"], div').each(function () {
+			  if (isScrolledIntoView(this) === true){
+				  jQuery(this).addClass("/ in-view");
+			  }else{
+				  jQuery(this).removeClass("/ in-view");
+			  }
+		   });
+		});
+		/*./add .in-view class when element in viewport*/
 
 });
+/**./detect page height**/
 
 
 
@@ -475,7 +508,9 @@ function scroll() {
 
 */
 
-/*sticky4all*/
+
+
+/**sticky4all**/
 if (jQuery(".sticky")[0]){
 	var $window = jQuery(window),
        $stickyEl = jQuery('.sticky'),
@@ -485,10 +520,12 @@ if (jQuery(".sticky")[0]){
         $stickyEl.toggleClass('sticky--active', $window.scrollTop() > elTop);
     });
 } else { /* do something if class does not exist */ }
-/*./sticky4all*/	
+/**./sticky4all**/	
+
+
 
 	
-//Sticky Header
+/**Sticky Header**/
 jQuery(window).scroll(function() {
 if (jQuery(this).scrollTop() > 1){
     jQuery('.hdr--sticky').addClass("hdr--sticky-active");
@@ -506,10 +543,12 @@ if (jQuery(this).scrollTop() > 1){
 	}
 	
 });
+/**./Sticky Header**/
 
 
 
 
+/**detect scrollized direction --up & --down **/
 var lastScrollizedTop = 0;
 jQuery(window).scroll(function(event) {
   var scrollizedTop = jQuery(this).scrollTop();
@@ -522,23 +561,30 @@ jQuery(window).scroll(function(event) {
   }
   lastScrollizedTop = scrollizedTop;
 });
+/**./detect scrollized direction --up & --down **/
 
 
 
 
 
-/****/
+/**nav-folderized**/
 jQuery(".nav-folderized h4").click(function(){
 	jQuery(this).parent(".nav").toggleClass("open"); 
 	jQuery('html, body').animate({ scrollTop: jQuery(this).offset().top - 170 }, 1500 );
 });
-/****/
+/**./nav-folderized**/
+
+
+
   
-//Blind Footer
+/**Blind Footer**/
 jQuery( document ).ready(function() {
 	var ftrBlind = jQuery(".ftr-blinder .ftr--blind").height();
 	jQuery(".ftr-blinder footer").css("padding-top", ftrBlind );
 });
+/**./Blind Footer**/
+
+
 
 
 /**navbar--open when navbar-toggle open add class on body**/
@@ -546,7 +592,8 @@ jQuery(".navbar-toggle").on("click", function (e) { jQuery("body").toggleClass("
 /**./navbar--open when navbar-toggle open add class on body**/
 
 
-//Classes On Body tag and Add ACTIVE Class on navbar link//
+
+/**find current page link and add .active class on navbar link**/
     jQuery(document).ready(function () {
         var url = window.location;
         jQuery('ul.nav a[href="'+ url +'"]').parent().addClass('active');
@@ -554,6 +601,8 @@ jQuery(".navbar-toggle").on("click", function (e) { jQuery("body").toggleClass("
              return this.href == url;
         }).parent().addClass('active');
     });
+/**./find current page link and add .active class on navbar link**/
+
 
 
 
@@ -568,7 +617,7 @@ jQuery(".level1 > li > ul").addClass(" --- level2");
 jQuery(".level2 > li > ul").addClass(" --- level3");
 /**./add class on multilevels of dropdown in navbar **/	
 	
-	
+
 
 
 /**[.slider--hash] Slider with hashtag URL ID**/
@@ -587,47 +636,66 @@ jQuery(".level2 > li > ul").addClass(" --- level3");
 		});
 /**./[.slider--hash] Slider with hashtag URL ID**/
 
-//SLIDER ARROW BTN - HOME PAGE
+
+
+/**.dwn-scroll**/
 jQuery(".dwn-scroll").click(function() {
     jQuery('html, body').animate({
         scrollTop: jQuery(".dwn-scroll").offset().top
     }, 1500);
 });
+/**./.dwn-scroll**/
 
 
 
 
-//Tab slide up/dwon on click
+/**.tab-animate**/
+/*
+Tab slide up/dwon on click
+*/
 jQuery(".tab-animate li").click(function() {
    jQuery('html, body').animate({ scrollTop: jQuery(".tab-content").offset().top - 170 }, 1500 );
 });
+/**./.tab-animate**/
 
 
-//Active Tab Nav move to center on click
+
+
+/**.active-tab-move-area**/
+	/*
+	Active Tab Nav move to center on click
+	*/
     jQuery(document).ready(function(){
       jQuery(".active-tab-move-area .nav-tabs li").click(function() {
-        jQuery(".active-tab-move-area .nav-tabs li.active").removeClass("c_active"); //Remove any "active" class
-//        jQuery(".our-values .nav-tabs li.active > div").css("display","block");
+        jQuery(".active-tab-move-area .nav-tabs li.active").removeClass("c_active");
+		// Remove any "active" class
+		// jQuery(".our-values .nav-tabs li.active > div").css("display","block");
 	    var $active = jQuery(this).detach().addClass("c_active"),
             $lis = jQuery(".active-tab-move-area .nav-tabs li");
         $active.insertBefore($lis.eq(Math.floor($lis.length / 2)));
       });
     });
+/**./.active-tab-move-area**/
+
 	
 	
-/*[.tabs-change--hover] tabs change on hover without click*/
+/**[.tabs-change--hover] tabs change on hover without click**/
 	jQuery(document).on('mouseenter', '.tabs-change--hover [data-toggle="tab"]', function () {
 		jQuery(this).tab('show');
     });
 
-	//Dropdown items in nav tabs can get stuck in .active mode
+	/*
+	 Dropdown items in nav tabs can get stuck in .active mode
+	*/
 	jQuery('.tabs-change--hover  .nav-tabs').on('shown.bs.tab', 'a', function (e) {
 		if (e.relatedTarget) {
 			jQuery(e.relatedTarget).removeClass('active');
 		}
 	});
-/*./[.tabs-change--hover] tabs change on hover without click*/	
-	
+/**./[.tabs-change--hover] tabs change on hover without click**/	
+
+
+
 /*
 //MOVING WIDE-DIV BACKGROUND IMAGES
 jQuery(document).ready(function(){
@@ -645,27 +713,29 @@ jQuery(document).ready(function(){
 
 
 
-//Scroll to TOP//
-jQuery(document).ready(function(){
-	//Check to see if the window is top if not then display button
-	jQuery(window).scroll(function(){
-		if (jQuery(this).scrollTop() > 100) {
-			jQuery('.scrollToTop').fadeIn();
-		} else {
-			jQuery('.scrollToTop').fadeOut();
-		}
+/**scrollToTop**/
+	jQuery(document).ready(function(){
+		/*
+		 Check to see if the window is top if not then display button
+		*/
+		jQuery(window).scroll(function(){
+			if (jQuery(this).scrollTop() > 100) {
+				jQuery('.scrollToTop').fadeIn();
+			} else {
+				jQuery('.scrollToTop').fadeOut();
+			}
+		});
+		
+		/*
+		 Click event to scroll to top
+		*/
+		jQuery('.scrollToTop').click(function(){
+			jQuery('html, body').animate({scrollTop : 0},800);
+			return false;
+		});
 	});
-	
-	//Click event to scroll to top
-	jQuery('.scrollToTop').click(function(){
-		jQuery('html, body').animate({scrollTop : 0},800);
-		return false;
-	});
 
-});
-
-
-/*if stop scrolling '.ScrollToTop' push to corner*/
+	/*if stop scrolling '.ScrollToTop' push to corner*/
 			jQuery(function() {
 				var $output = jQuery( ".scrollToTop .fa" ),
 					scrolling = "<span id='scrolling'>Scrolling</span>",
@@ -686,11 +756,11 @@ jQuery(document).ready(function(){
 						}, 250) );
 					});
 			});
-			
+/**./scrollToTop**/
 			
 
 
-/**Button ripple effects on click**/
+/**.btn-effect--ripple Button ripple effects on click**/
 jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripple a").click(function (e) {
   jQuery(".ripple").remove();/*Remove any old one*/
   var posX = jQuery(this).offset().left,
@@ -716,71 +786,7 @@ jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripp
     left: x + 'px'
   }).addClass("rippleEffect");
 });
-/**./Button ripple effects on click**/
-
-
-
-
-
-
-
-
-
-/*************/
-/* Demo Scripts for Bootstrap Carousel and Animate.css article
-* on SitePoint by Maria Antonietta Perna
-*//*
-(function( $ ) {
-
-	//Function to animate slider captions 
-	function doAnimations( elems ) {
-		//Cache the animationend event in a variable
-		var animEndEv = 'webkitAnimationEnd animationend';
-		
-		elems.each(function () {
-			var $this = $(this),
-				$animationType = $this.data('animation');
-			$this.addClass($animationType).one(animEndEv, function () {
-				$this.removeClass($animationType);
-			});
-		});
-	}
-	
-	//Variables on page load 
-	var $myCarousel = $('#carousel-example-generic'),
-		$firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']");
-		
-	//Initialize carousel 
-	$myCarousel.carousel();
-	
-	//Animate captions in first slide on page load 
-	doAnimations($firstAnimatingElems);
-	
-	//Pause carousel  
-	$myCarousel.carousel('pause');
-	
-
-	//Other slides to be animated on carousel slide event 
-	$myCarousel.on('slide.bs.carousel', function (e) {
-		var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
-		doAnimations($animatingElems);
-	});  
-})(jQuery);
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
+/**./.btn-effect--ripple Button ripple effects on click**/
 
 
 
@@ -805,9 +811,7 @@ jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripp
 
 
 
-
-
-//Inner Pages Filler Script
+/**Inner Pages Filler Script**/
 jQuery(function () {
     jQuery(window).scroll(function () {
         var $myDiv = jQuery('.fill__move');
@@ -824,12 +828,17 @@ jQuery(function () {
         }, 30);
     }).scroll();
 });
+/**./Inner Pages Filler Script**/
 
 
-/*section height =screen*/
+
+
+/**section height =screen**/
 jQuery(document).ready(function(){
     jQuery('.screen-area').css("min-height", jQuery(window).height() + 10);
 });
+/**./section height =screen**/
+
 
 
 
@@ -887,13 +896,13 @@ jQuery('table th').each(function (i) {
 	jQuery( "table td:nth-child("+i+")" ).attr("for", tableTitle);
 	//i=i+1;
 });
+/**./TH text add on TDs for attribute mobile responsive**/
 
 
 
 
 
-
-/***More Navbar Item Limitation***/
+/**More Navbar Item Limitation**/
 jQuery( document ).ready(function() {
 moreNavLimit = jQuery(".hdr-area").attr("data-navitemlimit");
 
@@ -918,7 +927,10 @@ jQuery(".navbar-main > li").each(function (i) {
   jQuery(this).addClass("knav" +i+"");
 });  
 });
-/***./More Navbar Item Limitation***/
+/**./More Navbar Item Limitation**/
+
+
+
 
 /**tabs nav responsive **/
 (function($) {
@@ -952,6 +964,7 @@ jQuery(".navbar-main > li").each(function (i) {
 
 
 
+/**.tabs-more-area**/
 jQuery(document).ready(function() {
   //moreTabLimit = jQuery(".tabs-area").attr("data-navitemlimit");
   //alert(moreTabLimit);
@@ -983,6 +996,9 @@ jQuery(document).ready(function() {
 	  
   });
 });
+/**./.tabs-more-area**/
+
+
 
 
 /**handle nav-tabs by url**/
@@ -1010,7 +1026,12 @@ jQuery(document).ready(function() {
 /**./handle nav-tabs by url**/
 
 
+
+
 /**read more read less content**/
+/*
+ie: http://codepen.io/pen/QqNrzm
+*/
 jQuery('.moreless-area .moreless-btn').click(function() {
 
   var lessData = jQuery(this).attr("data-less");
@@ -1034,29 +1055,30 @@ jQuery('.moreless-area .moreless-btn').click(function() {
 	
 });
 /**./read more read less content**/
-/**https://jsfiddle.net/gmkhussain/kcr80c24/**/
 
 
 
 
-/****.accordion active add class****/
+
+/**.accordion active add class**/
 jQuery('.panel-heading a').click(function() {
   jQuery('.panel-default').removeClass('active');
   jQuery(this).parents('.panel-default').addClass('active');
 });
-/****./.accordion active add class****/
+/**./.accordion active add class**/
 
 
 
 
-/*smart alert bar*/
+/**smart alert bar**/
 	jQuery('.alert-pin-btn').click(function() {
 		jQuery(this).parent('.alert-bar').toggleClass('alert--pinned');
 	});
-/*./smart alert bar*/
+/**./smart alert bar**/
 
 
-/***navbar-move active navbar item***/
+
+/**navbar-move active navbar item**/
 jQuery( document ).ready(function() {
 	/*hover mark to nav item*/
 	jQuery(".navbar-move > li").hover(function( event ) {
@@ -1089,7 +1111,9 @@ jQuery( document ).ready(function() {
 	  jQuery("#mark").css("width", corwid);
 	});
 });
-/***./navbar-move active navbar item***/
+/**./navbar-move active navbar item**/
+
+
 
 
 /**mutilang**/
@@ -1129,6 +1153,8 @@ jQuery('.p-blank--remove p').each(function() {
 /***./remove blank P tags***/
 
 
+
+
 /***remove &nbsp; from any element***/
 jQuery('.remove-nbsp').html(function(i,h){
     console.log(i,h);
@@ -1137,7 +1163,9 @@ jQuery('.remove-nbsp').html(function(i,h){
 /***./remove &nbsp; from any element***/
 
 
-/***Live Detect Browser Size****/
+
+
+/**Live Detect Browser Size**/
 var windowTitle = jQuery(document).prop('title'); // Original Title
 if (jQuery('html').hasClass("livewindowsize")) {
 	
@@ -1157,7 +1185,9 @@ if (jQuery('html').hasClass("livewindowsize")) {
 	});
 
 };
-/***./Live Detect Browser Size****/
+/**./Live Detect Browser Size**/
+
+
 
 
 /**making a specific page unresponsive**/
@@ -1181,17 +1211,19 @@ jQuery( document ).ready(function() {
 });
 /**./making a specific page unresponsive**/
 
-/*Video stop when Modal Close*/
+
+
+/**Video stop when Modal Close**/
 	jQuery('.modal').on('hidden.bs.modal', function () {
 		var src = jQuery(this).find('iframe').attr('src');
 		jQuery(this).find('iframe').attr('src', '');
 		jQuery(this).find('iframe').attr('src', src);
 	});
-/*./Video stop when Modal Close*/	
+/**./Video stop when Modal Close**/
 
 
 
-
+/**hoverized**/
 jQuery(".hoverized *").on("mouseenter", function (e) {
 	jQuery(this).addClass("hoverized--active");
 });
@@ -1199,6 +1231,8 @@ jQuery(".hoverized *").on("mouseenter", function (e) {
 jQuery(".hoverized *").on("mouseout", function (e) {
 	jQuery(this).removeClass("hoverized--active");
 });
+/**./hoverized**/
+
 
 
 /**Detect iFrame embedding, Image & video inside DIV**/
@@ -1208,6 +1242,7 @@ jQuery("div").each(function (checkMediaType) {
 	jQuery( this ).contents().find( "video" ).parent("div").addClass( "has-video" );
 });
 /**./Detect iFrame embedding, images & video inside DIV**/
+
 
 
 /**Detecting AJAX request start and loaded**/
@@ -1222,7 +1257,7 @@ jQuery(document).ajaxStart(function() {
 
 
 
-/*selectized*/
+/**selectized**/
 	jQuery(".selectized").click(function(a){
 		jQuery("body").toggleClass("selectized--open");
 	});
@@ -1247,9 +1282,11 @@ jQuery(document).ajaxStart(function() {
 				}
 			return false;
 	});
-/*selectized*/
-		
-		
+/**selectized**/
+
+
+
+/**time--day & --night **/
 now = new Date();
 hour = now.getHours();
 if (hour > 4 && hour < 18) {
@@ -1257,6 +1294,9 @@ if (hour > 4 && hour < 18) {
 } else {
   jQuery("body").addClass(" ___ time--night");
 }
+/**./time--day & --night **/
+
+
 
 
 /**image-orientation-checker**/
@@ -1264,6 +1304,8 @@ jQuery('.image-orientation-checker img').each(function(){
     jQuery(this).addClass(this.width > this.height ? 'orientation--landscape' : 'orientation--portrait');
 });
 /**./image-orientation**/
+
+
 
 
 /**zoomized**/
