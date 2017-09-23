@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="broken-image-checker">
+<html lang="en" class="broken-image-checker" ng-app>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,12 +15,12 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="css/colorized.css">
 	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/slidenav.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	
 	<!-- jQuery -->
 	<!--[if (!IE)|(gt IE 8)]><!-->
 	  <script src="js/jquery-2.2.4.min.js"></script>
+	  <script src="js/angular.min.js"></script>
 	<!--<![endif]-->
 
 
@@ -28,8 +28,6 @@
 	  <script src="js/jquery1.9.1.min.js"></script>
 	<![endif]-->
 	
-	<!--browser selector-->
-	<script src="js/css_browser_selector.js" type="text/javascript"></script>
 	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -199,7 +197,10 @@
 	
 	<section class="abcxyz-area bg-green p100 sticky accordion-arr " style="top: 50px;">
 		<div class="container">
-			
+			   <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>
+	  
 			<div class="">I am section Sticky</div>
 			
 								<div class="panel-title selectized">

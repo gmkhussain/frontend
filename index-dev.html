@@ -70,8 +70,6 @@
 	  <script src="js/jquery1.9.1.min.js"></script>
 	<![endif]-->
 	
-	<!--browser selector-->
-	<script src="js/css_browser_selector.js" type="text/javascript"></script>
 	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -281,7 +279,7 @@
 
 <main id="page-content">
 
-	<section class="slider-area thumb-indicat hover-ctrl fadeft slider--hash" >
+	<section class="slider-area thumb-vr thumb-indicat hover-ctrl fadeft slider--hash " >
 		<div id="carousel-example-generic" class="carousel slide slider--pauseplay" data-ride="carousel" data---interval="false">
 		  <!-- Indicators -->
 		  <span class="carousel-indicators indicators-arr prev">prev</span>
@@ -290,8 +288,23 @@
 		  <ol class="carousel-indicators thumbs">
 			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
 			<li data-target="#carousel-example-generic" data-slide-to="1"><img src="images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"><img src="images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"><img src="images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"><img src="images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"><img src="images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"><img src="images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"><img src="images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"><img src="images/slide2.jpg" alt="..."></li>
 			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
-
+			<li data-target="#carousel-example-generic" data-slide-to="1"><img src="images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li>
 		  </ol>
 
 		  <!-- Wrapper for slides -->
@@ -349,25 +362,36 @@
 			jQuery(function() {
 
 			var thumbmover = ".thumb-indicat .carousel-indicators li:nth-of-type(1)";
+			//var thumbLast = ".thumb-indicat .carousel-indicators li:last-child";
 
 			var thumbCount = jQuery( ".thumb-indicat .carousel-indicators li" ).size(); // Counting li items
 			 if (thumbCount<8){ jQuery(".indicators-arr").addClass("hidden"); } // hiden next prev with limitation
 
 			  jQuery('.thumb-indicat .next').click(function () {
 				pixels=pixels-80;      
-				jQuery( thumbmover ).css('margin-left',pixels);
+				jQuery( thumbmover ).css('margin-top',pixels);
 					//alert(pixels);
 					if (pixels==-320){ pixels=0; }
 				});
 			  
 			  jQuery('.thumb-indicat .prev').click(function () {
 				pixels=pixels+80;      
-				jQuery( thumbmover ).css('margin-left',pixels);
+				jQuery( thumbmover ).css('margin-top',pixels);
 				//alert(pixels);
 					if (pixels>=0){ pixels=0; }
 				});
 			});
 		</script>
+		<style>
+		.thumb-vr ol.carousel-indicators.thumbs {
+    width: 20%;
+    height: 100%;
+}
+
+.thumb-vr ol.carousel-indicators.thumbs li {
+    display: block;
+}
+</style>
 
 	</section>
 	
