@@ -59,6 +59,33 @@ body, html{ height: 100%; padding: 0;}
 .page-height-short footer { position: absolute; bottom: 0; left: 0; right: 0; width: 100%; }
 
 
+
+
+/**Your web browser is out of date**/
+html.ie8 body {
+    margin-top: 34px;
+}
+html.ie8:before {
+    content: "\f06a  Your web browser is out of date. Update your browser for best experience.";
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    right: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    font-family: "FontAwesome";
+    background-color: #ef5a5a;
+    height: 34px;
+    padding: 5px;
+}
+/**./Your web browser is out of date**/
+
+
+
 /**hint**/
 /*
  Note: Ctrl + ~ for Preview
@@ -332,8 +359,9 @@ body .table-valign tr td {vertical-align: middle;}
 
 
 
-/*tab-content border,height*/
+/*tab-content border,height
 body .tab-content { border: 1px solid #ccc; border-top: 0; min-height: 150px;}
+*/
 
 /*** ./TABS ***/
 
@@ -668,6 +696,7 @@ body .l--{ left:auto; }
 .rotateY360--hover:hover i.fa,
 .rotateY360--hover:hover i.icon {
     transform: rotateY(360deg);
+	-webkit-transform: rotateY(360deg);
     transition: all 1s !important;
 }
 
@@ -756,7 +785,7 @@ body iframe, body img, .ovrimg-mx img { max-width: 100%; }
 /*** LIST ***/
 /**package tag**/
 .taglized { overflow: hidden; position:relative; }
-.tag-badge { position: absolute; top: -8px; right: -50px; transform: rotate(45deg); width: 140px; padding: 0px; box-sizing: border-box; height: 60px; background-color: yellowgreen; box-shadow: 0 0 10px 5px #eee; }
+.tag-badge { position: absolute; top: -8px; right: -50px; transform: rotate(45deg); -webkit-transform: rotate(45deg); width: 140px; padding: 0px; box-sizing: border-box; height: 60px; background-color: yellowgreen; box-shadow: 0 0 10px 5px #eee; }
 .tag-badge .txt { width: 60px; display: block; margin: 0 auto; padding-top: 24px; text-align: center; text-transform: uppercase; line-height: 1; font-weight: 600;}
 
 /**./package tag**/
@@ -804,8 +833,8 @@ body iframe, body img, .ovrimg-mx img { max-width: 100%; }
 
 .thr3d-btn:active,
 .list-btns3D li a:active{
-		transform: translate(0px,5px);
-  -webkit-transform: translate(0px,5px);
+	transform: translate(0px,5px);
+	-webkit-transform: translate(0px,5px);
 	border-bottom: 1px solid;
 }
 /*./list-btns3D*/
@@ -1167,6 +1196,7 @@ input[type="checkbox"]:checked ~ .checkylbl {
 input[type="checkbox"]:checked ~ .checkylbl label {
   left: 110px;
   transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
 }
 /*Button is :CHECKED*/
 input[type="checkbox"]:checked ~ .checkylbl {
@@ -1177,6 +1207,7 @@ input[type="checkbox"]:checked ~ .checkylbl {
 input[type="checkbox"]:checked ~ .checkylbl label {
   left: 110px;
   transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
 }
 .checkylbl, label {  border-radius: 50px;}
 .form-group.hidden-checkbox .checkylbl label { top: 1px;left: 2px;}
@@ -1208,6 +1239,7 @@ input[type="checkbox"]:checked ~ .checkylbl label {
   top: 0;
   left: 0;
   transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
 .checkylbl label::after {
@@ -1218,6 +1250,7 @@ input[type="checkbox"]:checked ~ .checkylbl label {
   top: 0;
   left: 0;
   transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
 .checkylbl label::before,
@@ -1394,9 +1427,9 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 
 /**btn-effect--ripple**/
 .btn-effect--ripple .btn, .btn-effect--ripple button, .link-effect--ripple a { position:relative; overflow:hidden;}
-[class*="-effect--ripple"] .ripple { width: 0; height: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.4); transform: scale(0); position: absolute; opacity: 1; z-index:90;}
+[class*="-effect--ripple"] .ripple { width: 0; height: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.4); transform: scale(0); -webkit-transform: scale(0); position: absolute; opacity: 1; z-index:90;}
 [class*="-effect--ripple"] .rippleEffect { animation: rippleDrop .6s linear;}
-@keyframes rippleDrop { 100% { transform: scale(2); opacity: 0; } }
+@keyframes rippleDrop { 100% { transform: scale(2); -webkit-transform: scale(2); opacity: 0; } }
 /**./btn-effect--ripple**/
 
 /***./-->label animation***/
@@ -1640,8 +1673,9 @@ body #slide-nav #slidemenu {background-color: transparent;}
 	
 
 	
-
+/*
 .nav>li>a:hover, .nav>li>a:focus, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{ background-color: transparent; }
+*/
 
 .navbar.navbar-default { background-color: transparent; border: 0 none; margin: 0; }
 
@@ -2274,7 +2308,7 @@ li.dropdown.user-menu li.user-footer { padding: 10px; float: left; width: 100%;}
 .has-image[class*="__img"] { position: relative; }
 
 .broken-image-default
-.has-image[class*="__img"] img {left: 0;right: 0;position: absolute;top: 0;width: 100%;transform: translateY(0%) translateX(0%);height: 100%;}
+.has-image[class*="__img"] img {left: 0;right: 0;position: absolute;top: 0;width: 100%;transform: translateY(0%) translateX(0%);height: 100%; -webkit-transform: translateY(0%) translateX(0%);height: 100%;}
 
 .broken-image-default
 .has-image[class*="__img"] img:after { height: 100%; width: 100%; content: "\f030"; font-size: 5em; line-height: 1.4em; }

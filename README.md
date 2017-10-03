@@ -1,5 +1,6 @@
-# Bootstrap 3 Extended ver 1.4 
-[<span class="font-size: 20px;"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" style="width: 30px;height: 30px;position: relative;top: 10px;" /> @GMKHussain</span>](http://twitter.com/gmkhussain)
+# Frontized 
+[<span class="font-size: 20px;"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" style="position: relative;
+    top: 5px;" height="32" /> @GMKHussain</span>](http://twitter.com/gmkhussain)
 
 ### Low-level Front-End Toolkit
 I realised I was doing the same thing over and over when starting a new build so decided to create my own mini package which has the basics for starting a simple static or dynamic web site.
@@ -11,6 +12,28 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 ##### 1+1=3? : everything and takes it to a whole new level.
 
 ### ⌘ GH-Pages {ㅤ ㅤ ㅤㅤ ㅤ ㅤ ㅤㅤ}
+
+
+
+### Versions
+
+| Versions          | Notes                                                  |           |
+|------------------|--------------------------------------------------------|--------------|
+| Frontized        |  Startup as a Bootstrap Extended |    |
+| Frontized 2     | "Frontized" without the "Extended" referring to versions 2 and up.  |    |
+| Frontized 4     |  Skipping 3 to avoid a confusion due to the misalignment of the router package's version which was already distributed as v3.3.0 |    |
+| Frontized 5     |   |    |
+| Frontized 5.5     |   |    |
+| Frontized 6 MX     |   |    |
+| Frontized 7     |   |    |
+| Frontized 8 Pro    |   |    |
+| Frontized 8.1    |   |    |
+| Frontized X     |  There no 9 because... Seven ate Nine. * CLEVER AND SUBTLE MARKETING TRICK:   simply going to call it the Frontized X and not pronounce it as Frontized Ten. |    |
+
+
+
+
+
 
 ## addClass if URL is Root url (is Home page)
 ```html
