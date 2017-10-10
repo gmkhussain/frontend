@@ -64,12 +64,12 @@ body label { font-weight: 600;}
 @media only screen and (max-width : 667px) {	}
 
 
-/* Google Nexus 7 603x966 | Samsung Galaxy Tab 600x1024  */
-@media only screen and (max-width : 603px) {	}
-
-
 /*iPhone4 and iPhone5 Galaxy S2 and S3  */
 @media only screen and (max-width : 640px) {	}
+
+
+/* Google Nexus 7 603x966 | Samsung Galaxy Tab 600x1024  */
+@media only screen and (max-width : 603px) {	}
 
 
 /* iPhone 5 Landscape · 320x568px */

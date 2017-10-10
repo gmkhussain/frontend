@@ -96,6 +96,18 @@ html.hint a { box-shadow: 1px 0 12px 0px #006dd3 inset; }
 html.hint a[href="#"]:after, html.hint a[href=""]:after { content: "# No Link"; position: absolute; font-size: 10px; background-color: #d00; z-index: 2; padding: 2px 4px; margin-top: 1.5em; color: #fff; }
 html.hint [src*="localhost"] { box-shadow: 0 0 10px 10px #ff8800; }
 html.hint [href*="localhost"]:after { content: "localhost link"; position: absolute; margin-top: 2em; font-weight: 600; font-size: 11px; background-color: orange; color: #fff; padding: 0 7px; z-index: 1;}
+
+html.hint a:after {
+    content: " --- " attr(href) " --- ";
+    font-size: 0.8em;
+    margin-top: 15px;
+    width: auto;
+    
+    z-index: 8888;
+    height: auto;
+    position:absolute;
+}
+
 /**hint**/
 
 
@@ -115,13 +127,13 @@ html.hint [href*="localhost"]:after { content: "localhost link"; position: absol
 	height: 10px;
 	background-color: #eee;
 	}
-#gridized div.col-sm-1 div {
+#gridized div[class*="col-"] div {
     background: #f7f7f7;
 	position:relative;
 	}
 
-#gridized .col-sm-1:after,#gridized .col-sm-1:before,
-#gridized .col-sm-1 div:after,#gridized .col-sm-1 div:before {
+#gridized [class*="col-"]:after,#gridized [class*="col-"]:before,
+#gridized [class*="col-"] div:after,#gridized [class*="col-"] div:before {
     content: "";
     background-color: #ccc;
     height: 100vh;
@@ -132,10 +144,10 @@ html.hint [href*="localhost"]:after { content: "localhost link"; position: absol
     z-index: 444;
 }
 
-#gridized .col-sm-1 div:after { left: auto;	right:0; }
-#gridized .col-sm-1 div:before { right: -15px; left: auto; }
-#gridized .col-sm-1:after { left: -1px; }
-#gridized .col-sm-1:before { left: 15px; }
+#gridized [class*="col-"] div:after { left: auto;	right:0; }
+#gridized [class*="col-"] div:before { right: -15px; left: auto; }
+#gridized [class*="col-"]:after { left: -1px; }
+#gridized [class*="col-"]:before { left: 15px; }
 
 /**./gridized**/
 

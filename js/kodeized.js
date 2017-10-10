@@ -50,7 +50,7 @@ jQuery(document).keydown(function(e) {
 jQuery(document).keydown(function(e) {
   if (e.keyCode == 222 && e.ctrlKey) {
 	  
-	var myGridized = '<div id="gridized"><div class="container"><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div><div class="col-sm-1"><div></div></div></div></div>';
+	var myGridized = '<div id="gridized"><div class="container"><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div></div></div>';
 	  
 	  jQuery("#gridized").remove();
 	  jQuery("html").toggleClass("hint--gridized");

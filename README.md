@@ -17,7 +17,7 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 
 ### Versions
 
-| Versions          | Notes                                                  |           |
+| Versions History          | Notes                                                  |           |
 |------------------|--------------------------------------------------------|--------------|
 | Frontized        |  Startup as a Bootstrap Extended |    |
 | Frontized 2     | "Frontized" without the "Extended" referring to versions 2 and up.  |    |
@@ -77,6 +77,8 @@ Additional file list:
 ```
 
 <img src="https://github.com/gmkhussain/frontend/blob/master/images/favicon.png" width="auto" height="40" alt="favicon">
+
+
 
 ## Newbies
 * Well defined
@@ -194,10 +196,21 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 ```
 <hr/>
 
+
+
 ## Bootcamp™
 * Short Guideline
 
-###Problem with position: fixed. ( i.e. https://codepen.io/pen/prQQpq ) 
+### How to clear cache on each page when it loads in the browser?
+```
+<!--Adding this meta tag will help you solve your problem.-->
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+```
+
+
+### Problem with position: fixed. ( i.e. https://codepen.io/pen/prQQpq ) 
 ```
 // Problem
 I was trying to fix, turning fixed on and off as a way of sticking header nav element to the top of the page as it scrolled by.
