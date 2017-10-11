@@ -1338,6 +1338,23 @@ jQuery(".count-child").each(function() {
 
 
 
+/**[.pagination--key] Pagination with right/left arrow keys**/
+(function ($) {
+    $('body').keyup(function (event) 
+    {
+        if (event.keyCode == 39) /* right arrow */
+        {
+			$(".pagination--key .next").trigger( "click" );
+        }
+        else if (event.keyCode == 37) /* left arrow */
+        {
+			$(".pagination--key .previous").trigger( "click" );
+        }
+    });    		
+})(jQuery);
+/**./[.pagination--key] Pagination with right/left arrow keys**/
+
+
 
 
 
