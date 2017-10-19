@@ -102,7 +102,7 @@ jQuery(function() {
 				if (!$(".nav--activized nav *").hasClass(active_locLast)) {
 					console.log(".nav--activized -> class not found same as Last URL string ");
 				}
-
+			jQuery(".nav--activized").find(".active").parent().parent(".dropdown").addClass("open");
 		}, 200);
 	/*./[.nav--activized] added*/
 	
@@ -1357,9 +1357,11 @@ jQuery(".count-child").each(function() {
 
 
 
-
-
-
+/**Datepicker close after picking a date**/
+jQuery('[data-provide="datepicker"]').on('change', function () {
+        jQuery('.datepicker').hide();
+});
+/**./Datepicker close after picking a date**/
 
 
 

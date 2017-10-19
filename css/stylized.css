@@ -223,6 +223,15 @@ section[class*="-area"] {position: relative; clear:both; }
 
 
 
+
+/**Issues with position fixed & scrolling on iOS**/
+* {
+	-webkit-overflow-scrolling: touch;
+}
+
+
+
+
 /**alert-bar**/
 .alert-bar {margin: 0;border-bottom: 0px solid #eee;padding: 0;background-color: #f9f9f9;line-height: 3em;}
 .alert-bar button.close {background-color: transparent;opacity: 1;color: #333;}
@@ -443,6 +452,8 @@ body .l--{ left:auto; }
 
 
 
+.z1 { z-index:5; }
+.z5 { z-index:5; }
 .z10 { z-index:10; }
 .z20 { z-index:20; }
 .z30 { z-index:30; }
@@ -665,10 +676,7 @@ body .l--{ left:auto; }
 .fl { float: left; }
 .fr { float: right; }
 .fn { float: none; }
-
-.pul-lft {float: left;}
-.pul-rgt {float: right;}
-.pul-cntr {float: none; margin-left:auto; margin-right:auto;}
+.fc, .pul-cntr {float: none; margin-left:auto; margin-right:auto;}
 
 
 
@@ -1736,7 +1744,7 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 /*submenu for desktop*/
 .dropdown:hover  > .dropdown-menu { display: block; }
 
-.dropdown > a::after { color: #000; content: "\f107"; font-family: "fontawesome"; font-size: 1em; line-height: initial; margin-left:2px; position: static; width: 10px; display: inline-block; text-align: center;}
+.dropdown > a::after { color: inherit; content: "\f107"; font-family: "fontawesome"; font-size: 1em; line-height: initial; margin-left:2px; position: static; width: 10px; display: inline-block; text-align: center;}
 .dropdown.open > a::after { content: "\f105"; }
 
 

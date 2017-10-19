@@ -16,7 +16,6 @@
 	
 	<link rel="stylesheet" href="css/colorized.css">
 	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/slidenav-.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 		<!--link rel="stylesheet" href="css/foundation-icons.css"-->
 		<!--link rel="stylesheet" type="text/css" href="css/flaticon.css"--> 
@@ -25,15 +24,12 @@
 	
 
 	<!-- jQuery -->
-	<script src="js/jquery1.11.1.min.js"></script>
+	<script src="js/jquery-2.2.4.min.js"></script>
 	
 	
-	<link rel="stylesheet" href="extralized/jquery.dataTables.min.css.css">
-	<script src="jextralized/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" href="extralized/jquery.dataTables.min.css">
+	<script src="extralized/jquery.dataTables.min.js"></script>
 	
-	
-	<!--browser selector-->
-	<script src="js/css_browser_selector.js" type="text/javascript"></script>
 	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,7 +51,7 @@
 
 	<div class="container00">
 
-	<section class="sidelft col-sm-2 p0">
+	<section class="sidelft col-sm-2 p0 nav--activized">
 		<nav class="navbar navbar-default" role="navigation" id="slide-nav">
 			  <div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -90,7 +86,7 @@
 						
 						
 						<li><a href="#!0"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
-						<li class=""><a href="#!2"><i class="fa fa-calendar"></i> <span>Events Manager</span></a></li>
+						<li class=""><a href="#2"><i class="fa fa-calendar"></i> <span>Events Manager</span></a></li>
 						<li><a href="#!1"><i class="fa fa-bookmark"></i> <span>Addons Manager</span></a></li>
 						<li><a href="#!3"><i class="fa fa-database"></i> <span>Event Categories</span></a></li>
 						<li><a href="#!4"><i class="fa fa-usd"></i> <span>Transactions</span></a></li>
@@ -126,7 +122,7 @@
 		
 			<div class="nav nav3 pul-lft col-sm-9 ">
 				<ul class="nav navbar-nav pul-rgt">
-					<li><a href="#noti"><i class="fa fa-question"></i></a></li>
+					
 					<li>
 						<form action="#" class="search-fom expand-search expand-search--fullwidth0 ">
 							<div class="form-group ">
@@ -136,7 +132,9 @@
 							</div>
 						</form>
 					</li>
-					<li><a href="#noti"><i class="fa fa-sign-out"></i> Logout</a></li>
+					<li><a href="#noti"><i class="fa fa-question"></i></a></li>
+					<li><a href="#noti"><i class="fa fa-cog"></i></a></li>
+					<li><a href="#noti"><i class="fa fa-bell"></i></a></li>
 					
 					<li class="dropdown user user-menu pul-rgt ">
 							<a href="#usr-name" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -225,9 +223,92 @@
 				
 				<div class="step__hed clrhm">
 					<h4>Getting started</h4>
-					<h2>Frontend Extened</h2>
+					<h2>Dashboard</h2>
 				</div>
 				<div class="step__cont">
+				
+				
+				
+				<table class="table ">
+					<thead>
+						<th>Name </th>
+						<th>Email address</th>
+						<th>State</th>
+						<th>Country </th>
+						<th>Skype</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+							<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo"> simple collapsible </button>
+							</td>
+							<td>alexjhon@yopmail.com</td>
+							<td>Japan</td>
+							<td>Tokyo</td>
+							<td><i class="fa fa-skype"></i> alex.jhon</td>
+						</tr>
+						
+						<tr>
+							<td>
+							
+
+<div id="demo" class="collapse in">...</div>
+
+							</td>
+						</tr>
+						
+						
+					</tbody>
+				</table>
+				
+				
+				
+				
+				
+				
+				
+				<div class="mb20">
+				
+				<button type="button" class="btn btn-default">+ Follow</button>
+				
+				
+				<div class="btn-group">
+				  <button type="button" class="btn btn-default">Edit</button>
+				  <button type="button" class="btn btn-default">Clone</button>
+				  <button type="button" class="btn btn-default">Delete</button>
+
+				  <div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					  
+					  <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+					  <li><a href="#">Dropdown link</a></li>
+					  <li><a href="#">Dropdown link</a></li>
+					</ul>
+				  </div>
+				</div>
+
+				</div>
+				
+				<div class="tabs-area">
+				
+					<ul class="nav nav-tabs">
+					  <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+					  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+					  <li><a href="#messages" data-toggle="tab">Messages</a></li>
+					  <li><a href="#settings" data-toggle="tab">Settings</a></li>
+					</ul>
+
+					<div class="tab-content">
+					  <div class="tab-pane active" id="home">...</div>
+					  <div class="tab-pane" id="profile">...</div>
+					  <div class="tab-pane" id="messages">...</div>
+					  <div class="tab-pane" id="settings">...</div>
+					</div>
+				</div>
+					
+					
 				
 				<h2>Setup</h2>
 					<h3>1. Download the Kit</h3>
@@ -1322,7 +1403,6 @@ use class <b>"tag-badge"</b> simply it will be show your text as tag mark in a t
 				
 			</div>
 			
-			<!--
 			<div class="dailer-area col-sm-3 p0 hidden">
 			<button class="btn-close" id="hideMobile">Close <i class="fa fa-mobile"></i></button>
 					<script>
@@ -1798,11 +1878,10 @@ use class <b>"tag-badge"</b> simply it will be show your text as tag mark in a t
 
 	<script>
 	$(document).ready(function(){
-		//$('#myDataTable').DataTable();
+		$('#myDataTable').DataTable();
 	});
 
 	</script>
-	
 	
 	
 	

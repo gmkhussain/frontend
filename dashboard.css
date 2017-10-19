@@ -1,7 +1,23 @@
+:root {
+  --white-color: #fff;
+  --blue-color: #0076de;
+  --dark-blue-color: #16325c;
+  --transparent-color: transparent;
+  --orange-color: #f4b222;
+}
+/* The rest of the CSS file 
+var(--blue-color);
+*/
+
+
+body {
+    min-height: 100vh;
+}
+
 body.dashboard .sidelft .navbar-nav>li {
     display: block;
     width: 100%;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--transparent-color);
 }
 
 .dashboard .sidelft .navbar-nav>li>.dropdown-menu {
@@ -12,7 +28,13 @@ body.dashboard .sidelft .navbar-nav>li {
     height: 0px;
     overflow: hidden;
     padding: 0;
+    background-color: #213f6b;
 }
+
+.dropdown-menu>li>a {
+    color: var(--white-color);
+}
+
 ul.nav.navbar-nav.navbar-main {
     float: left;
     width: 100%;
@@ -89,7 +111,7 @@ span.notify-icon {
     position: absolute;
     font-size: 11px;
     background-color: #d00;
-    color: #fff;
+    color: var(--white-color);
     padding: 1px;
     width: 16px;
     text-align: center;
@@ -115,7 +137,7 @@ span.notify-icon.dot {
 
 .navbar-header {
     width: 100%;
-    background-color: #0084ff;
+    background-color: var(--dark-blue-color);
 }
 
 
@@ -123,7 +145,7 @@ span.notify-icon.dot {
 body.dashboard li.dropdown .dropdown-menu { left: auto; right: 0;}
 
 body.dashboard .sidelft .navbar-nav li.active{
-    border-right: 5px solid #0084ff;
+    border-right: 5px solid var(--blue-color);
 }
 body.dashboard .sidelft .navbar-nav>li.open {border-right: 5px solid #eee;}
 
@@ -142,7 +164,7 @@ body.nav-off section.main-content {
     z-index: 5;
     min-width: 220px;
     position: fixed;
-    background-color: #fff;
+    background-color: var(--white-color);
     left: 0;
     width: 20%;
 }
@@ -160,7 +182,7 @@ body.nav-off section.main-content {
 
 .nav h5 {
     display: inline-block;
-    color: #fff;
+    color: var(--white-color);
     line-height: 35px;
     font-size: 20px;
     margin: 0;
@@ -203,8 +225,8 @@ body.nav-off section.main-content {
 }
 
 .dashboard .nav-tabs>li.active>a {
-    background-color: #0084ff;
-    color: #fff;
+    background-color: var(--blue-color);
+    color: var(--white-color);
 }
 
 .numblock ul li {
@@ -216,18 +238,24 @@ body.nav-off section.main-content {
 
 body.dashboard .sidelft .navbar-nav>li i.fa {
     width: 34px;
-    background-color: #0084ff;
+    background-color: var(--blue-color);
     line-height: 32px;
     text-align: center;
     border-radius: 2px;
     font-size: 18px;
     padding: 2px;
-	color:#fff;
+	color:var(--white-color);
 }
 
-.navbar-default .navbar-nav> li >a:hover,
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-    background-color: #eee;
+.navbar-default .navbar-nav> li >a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    background-color: inherit;
+    color: var(--white-color);
+}
+
+.navbar-default .navbar-nav>li>a:hover i.fa,
+.navbar-default .navbar-nav>li.active>a i.fa {
+    background-color: var(--orange-color);
+    box-shadow: 0 0 0 4px #0f2240;
 }
 
 .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
@@ -243,7 +271,7 @@ body.dashboard .sidelft .navbar-nav>li i.fa {
     width: 20px;
     height: 20px;
     line-height: 20px;
-    color: #fff;
+    color: var(--white-color);
 }
 
 .scroldiv thead th {
@@ -255,10 +283,10 @@ body.dashboard .sidelft .navbar-nav>li i.fa {
 }
 
 .navbar-nav>li>a {
-    color: #fff;
+    color: var(--white-color);
 }
 .search-fom.expand-search [type="submit"] {
-    color: #FFF;
+    color: var(--white-color);
     BACKGROUND-COLOR: transparent;
 }
 
@@ -273,7 +301,7 @@ body.dashboard .sidelft .navbar-nav>li i.fa {
     border: 1px solid #ddd;
     min-height: 260px;
     padding: 15px;
-    background-color: #fff;
+    background-color: var(--white-color);
 }
 
 .main-content {
@@ -287,8 +315,8 @@ body.dashboard .sidelft .navbar-nav>li i.fa {
 }
 
 .btn-primary {
-    background-color: #0084ff;
-    color: #fff;
+    background-color: var(--blue-color);
+    color: var(--white-color);
 }
 
 .conver-area .btn {
@@ -336,7 +364,7 @@ body.dashboard .sidelft .navbar-nav>li i.fa {
 }
 
 .dailer__inr {
-    background-color: #fff;
+    background-color: var(--white-color);
     float: left;
     width: 225px;
     height: 386px;
@@ -375,14 +403,14 @@ body.dashboard .sidelft .navbar-nav>li i.fa {
 
 .numblock ul li strong {
     display: block;
-    color: #0084ff;
+    color: var(--blue-color);
     font-size: 22px;
     font-weight: 100;
     line-height: 20px;
 }
 
 button.add-btn {
-    color: #0084ff;
+    color: var(--blue-color);
     background-color: transparent;
     right: 0 !important;
     left: auto !important;
@@ -408,20 +436,20 @@ button.add-btn {
 
 
 .dailer__fom {
-    background-color: #0084ff;
+    background-color: var(--blue-color);
 }
 
 .dailer__inr .nav-tabs>li>a, .dailer__inr .nav-tabs>li.active>a {
-    background-color: #0084ff;
-    color: #fff;
+    background-color: var(--blue-color);
+    color: var(--white-color);
     border: 0;
     font-size: 18px;
-    border-bottom: 4px solid #0084ff;
+    border-bottom: 4px solid var(--blue-color);
     padding: 5px;
 }
 
 .dailer__inr .nav-tabs>li.active>a {
-    border-color: #fff;
+    border-color: var(--white-color);
 }
 
 .fom-area.numbers .form-control, .fom-area.numbers .btn {
@@ -457,7 +485,7 @@ button:focus {
     height: 44px;
     border-radius: 50%;
     background-color: #4ac81e;
-    color: #fff;
+    color: var(--white-color);
     font-size: 26px;
     border: 0;
     margin: 0 0 5px;
@@ -501,7 +529,7 @@ body .dailer__inr .tab-content {
 button#hideMobile {
     top: 170px;
     background-color: #5cb85c;
-    color: #fff;
+    color: var(--white-color);
     right: 19px;
 	display:none;
 }
@@ -532,15 +560,15 @@ button#hideMobile {
 	    border: 1px solid #ccc;
 }
 
-.counter__inr:before {content: "";background-color: #fff;position: absolute;height: 100%;width: 100%;left: 0;z-index: -1;opacity: .6;top: 0;}
+.counter__inr:before {content: "";background-color: var(--white-color);position: absolute;height: 100%;width: 100%;left: 0;z-index: -1;opacity: .6;top: 0;}
 
 .counter__inr:hover {
     background-position: 0px;
 }
 
 .counter__bot a {
-    color: #fff;
-    background-color: #0084ff;
+    color: var(--white-color);
+    background-color: var(--blue-color);
     padding: 7px 10px;
     display: inline-block;
     border-radius: 4px;
@@ -559,7 +587,22 @@ button#hideMobile {
     background-attachment: fixed;
 }
 
-/*==============gmkmobqur===============*/
+
+li.dropdown .dropdown-menu {
+    max-height: 0;
+    transition: max-height 1s ease-out !important;
+    overflow: hidden;
+	    height: unset !important;
+}
+
+li.dropdown:hover .dropdown-menu {
+    max-height: 500px;
+    transition: max-height 1s ease-in !important;
+	height: unset !important;
+}
+
+
+/*=============================*/
 /* 24" large Screens */
 @media only screen and (max-width : 1920px) {	}
 
@@ -843,6 +886,24 @@ body .fom-bodered {padding: 0 0 15px;}
 }
 
 	}
+
+
+	
+	li.dropdown.user-menu .dropdown-toggle > .dp, li.dropdown.user-menu .dropdown-toggle > .dp img {
+    border-radius: 4px;
+}
+
+.btn-default{
+	color:var(--blue-color);
+}
+
+.navbar.navbar-default {
+    background-color: var(--dark-blue-color);
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: var(--white-color);
+}
 
 
 /* iPhone 6 portrait (375x667) */
