@@ -19,7 +19,7 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 
 | Versions_History          | Notes      |           |
 |------------------|---------------------|--------------|
-| Frontized        |  Startup as a Bootstrap Extended |    |
+| Frontized        |  Why Skip Version 1? Startup as a Bootstrap Extended |    |
 | Frontized 2     | "Frontized" without the "Extended" referring to versions 2 and up.  |    |
 | Frontized 4     |  Skipping 3 to avoid a confusion due to the misalignment of the router package's version which was already distributed as v3.3.0 |    |
 | Frontized 5     |   |    |

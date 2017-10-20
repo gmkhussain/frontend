@@ -1456,6 +1456,13 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 
 
 
+/**Checkbox align with labels**/
+input[type=checkbox], input[type=radio] { vertical-align: middle; position: relative; bottom: 1px; }
+input[type=radio] { bottom: 2px; }
+/**./Checkbox align with labels**/
+
+
+
 /**.fnc__checkbox fancy checkbox**/
 body .fnc__checkbox:before {
     top: 0;
