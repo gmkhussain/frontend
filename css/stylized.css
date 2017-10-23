@@ -1457,6 +1457,7 @@ input[type="checkbox"]:checked ~ .checkylbl label::after{
 
 
 /**Checkbox align with labels**/
+/* ie: https://codepen.io/pen/qPvPBJ */
 input[type=checkbox], input[type=radio] { vertical-align: middle; position: relative; bottom: 1px; }
 input[type=radio] { bottom: 2px; }
 /**./Checkbox align with labels**/

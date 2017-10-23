@@ -338,7 +338,7 @@ jQuery(".fnc-uplaod [type=file]").on("change", function() {
 
 
 /*Add class on parent of Checked input*/ /*	ie: https://codepen.io/pen/KqeGje	*/
-jQuery(".checker-area input:checkbox").change(function() {
+jQuery(document).on("change", ".checker-area input:checkbox", function() {
   if (jQuery(this).is(':checked')) {
     jQuery(this).parents(".checker-area").addClass("is-active");
   }else if (jQuery(this).prop('checked', false)){
@@ -347,7 +347,7 @@ jQuery(".checker-area input:checkbox").change(function() {
 });
 
 	/*checker-area for radio button*/
-	jQuery('.checker-area input:radio').click(function() {
+	jQuery(document).on("click", '.checker-area input:radio', function() {
 		jQuery('input:radio[name='+ jQuery(this).attr('name')+']').parents(".checker-area").removeClass('is-active');
 		jQuery(this).parents(".checker-area").addClass('is-active');
 	});
