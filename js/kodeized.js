@@ -888,13 +888,15 @@ jQuery(function(){
 
 
 /**TH text add on TDs for attribute mobile responsive**/
-jQuery('table th').each(function (i) {
-	//adding 0 to 1
-	i=i+1;
-	tableTitle = jQuery( "table th:nth-child("+i+")" ).text();
-	jQuery( "table th:nth-child("+i+")" ).attr("for", tableTitle);
-	jQuery( "table td:nth-child("+i+")" ).attr("for", tableTitle);
-	//i=i+1;
+jQuery('table').each(function() {
+    var $table = $(this);
+        $rows = $table.children('tbody').children();
+    $table.children('thead').children().children().each(function(i) {
+        var text = $(this).text();
+        $rows.each(function() {
+            jQuery(this).children().eq(i).attr('for', text);
+        });
+    });
 });
 /**./TH text add on TDs for attribute mobile responsive**/
 
