@@ -606,16 +606,14 @@ jQuery(".navbar-toggle").on("click", function (e) { jQuery("body").toggleClass("
 
 
 
-/**add class on multilevels of dropdown in navbar **/	
+/**[.levelized] add class on multilevels of dropdown in navbar **/	
 /*
 ie: https://codepen.io/pen/RgdgGy
 */
-var navLevel1 = $( "ul.nav" );
-navLevel1.addClass( " --- level1" );
-
-jQuery(".level1 > li > ul").addClass(" --- level2");
-jQuery(".level2 > li > ul").addClass(" --- level3");
-/**./add class on multilevels of dropdown in navbar **/	
+jQuery('.levelized ul').addClass(function(){
+   return "level"+$(this).parents('ul').length;
+});
+/**./[.levelized] add class on multilevels of dropdown in navbar **/	
 	
 
 
