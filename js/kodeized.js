@@ -1,10 +1,10 @@
-/* 
-* Kodeized v1.06 MX
+/*! 
+* Kodeized v1.7
 * Coding made effortless.
 * This file contains works for many various kinds of tasks 
 */
 
-/**preloader**/
+/**!preloader**/
 jQuery(window).on('load', function() {
   jQuery('#preloader__status').fadeOut();
   jQuery('#preloader').delay(350).fadeOut('slow'); 
@@ -14,7 +14,7 @@ jQuery(window).on('load', function() {
 
 
 
-/**preloader--off**/
+/**!preloader--off**/
 if (jQuery("section, div").hasClass("preloader--off")) {
 	jQuery("body").addClass("preloader--off");
 }
@@ -31,7 +31,7 @@ jQuery("#page-content").on('click', function(event) {
 
 
 
-/**hint**/
+/**!hint**/
 	/*
 	 Ctrl + ~ for preview
 	*/
@@ -43,8 +43,8 @@ jQuery(document).keydown(function(e) {
 /**./hint**/
 
 
-/**hint--gridized**/
-	/*
+/**!hint--gridized**/
+	/*!
 	 Ctrl + ' for preview
 	*/
 jQuery(document).keydown(function(e) {
@@ -61,7 +61,7 @@ jQuery(document).keydown(function(e) {
 
 
 
-/**Detect Localhost connection**/
+/**!Detect Localhost connection**/
 if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
     jQuery("html").attr("connection", "local");
 	}else{
@@ -885,7 +885,10 @@ jQuery(function(){
 
 
 
-/**TH text add on TDs for attribute mobile responsive**/
+/**!TH text add on TDs for attribute mobile responsive**/
+/*!
+	https://codepen.io/pen/XzXrGy
+*/
 jQuery('table').each(function() {
     var $table = $(this);
         $rows = $table.children('tbody').children();

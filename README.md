@@ -1,4 +1,4 @@
-# Frontized 
+# Frontized™
 [<span class="font-size: 20px;"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" style="position: relative;
     top: 5px;" height="32" /> @GMKHussain</span>](http://twitter.com/gmkhussain)
 
@@ -200,6 +200,38 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 
 ## Bootcamp™
 * Short Guideline
+
+
+###  Nested Sortable
+is a jQuery plugin that extends jQuery Sortable UI functionalities to nested lists.
+
+```
+<ol class="sortable">
+	<li><div>Some content</div></li>
+	<li>
+		<div>Some content</div>
+		<ol>
+			<li><div>Some sub-item content</div></li>
+			<li><div>Some sub-item content</div></li>
+		</ol>
+	</li>
+	<li><div>Some content</div></li>
+</ol>
+
+	$(document).ready(function(){
+
+		$('.sortable').nestedSortable({
+			handle: 'div',
+			items: 'li',
+			toleranceElement: '> div'
+		});
+
+	});
+//Please note: every <li> must have either one or two direct children, the first one being a container element (such as <div> in the above example), and the (optional) second one being the nested list. The container element has to be set as the 'toleranceElement' in the options, and this, or one of its children, as the 'handle'.
+```
+
+Also, the default list type is <ol>
+
 
 ### How to clear cache on each page when it loads in the browser?
 ```

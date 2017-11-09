@@ -592,7 +592,7 @@ li.dropdown .dropdown-menu {
     max-height: 0;
     transition: max-height 1s ease-out !important;
     overflow: hidden;
-	    height: unset !important;
+	height: unset !important;
 }
 
 li.dropdown:hover .dropdown-menu {
