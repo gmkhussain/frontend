@@ -91,6 +91,13 @@ Additional file list:
 ```
 
 
+
+### Disable click outside of Bootstrap Modal area to close modal
+```
+// Use data-backdrop="static"
+<button class="btn btn-xs btn-success" data-backdrop="static" data-toggle="modal" data-target="#composedModal"><i class="ion-md-add"></i> <span>Composed</span></button>
+```
+
 ### On keypress do something on entire document but not inside inputs and textareas
 ```html
 $(document).on('keypress', function(e) {
