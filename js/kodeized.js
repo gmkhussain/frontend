@@ -429,9 +429,9 @@ jQuery(window).on('load', function() {
 		jQuery(window).scroll(function(){
 		   jQuery('header, section, footer, [class*="-area"], div').each(function () {
 			  if (isScrolledIntoView(this) === true){
-				  jQuery(this).addClass("/ in-view");
+				  jQuery(this).addClass(" --- in-view");
 			  }else{
-				  jQuery(this).removeClass("/ in-view");
+				  jQuery(this).removeClass(" --- in-view");
 			  }
 		   });
 		});

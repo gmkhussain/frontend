@@ -420,6 +420,13 @@ body .tab-content { border: 1px solid #ccc; border-top: 0; min-height: 150px;}
 body [class*="flaticon-"]::before {margin: 0;}
 
 /**borders**/
+
+.bt, .bb, .bl, .br{ border-color:#ddd; }
+.bt { border-top-style: solid; border-top-width: 1px; }
+.bb { border-bottom-style: solid; border-bottom-width: 1px; }
+.br { border-right-style: solid; border-right-width: 1px; }
+.bl { border-left-style: solid; border-left-width: 1px; }
+
 body .bdr0{ border: 0px; }
 .bdr1 { border: 1px solid #ddd; }
 .bdr-next~* { border-left: 1px solid #999; } /*add divider on every element that are preceded .bdr-next*/
