@@ -92,6 +92,18 @@ Additional file list:
 
 
 
+### [data-toggle="collapse"] on Click to show and scroll to content
+
+
+```
+$(document).on('shown.bs.collapse', function(event){
+	//console.log( "in! print e: " +event.type);
+	event.target.scrollIntoView();
+	});
+```
+		
+
+
 ### Disable click outside of Bootstrap Modal area to close modal
 ```
 // Use data-backdrop="static"
