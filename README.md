@@ -98,8 +98,11 @@ Additional file list:
 ```
 $(document).on('shown.bs.collapse', function(event){
 	//console.log( "in! print e: " +event.type);
-	event.target.scrollIntoView();
+	event.target.scrollIntoView(); //without animation
+	event.target.scrollIntoView({ behavior: 'smooth' }); //with animation
 	});
+	
+	
 ```
 		
 
@@ -219,6 +222,17 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 
 ## Bootcamp™
 * Short Guideline
+
+
+
+### Detect event changes on DataTable
+```
+$('#example').on('draw.dt', function() {
+    //do something.. on Detect event changes on DataTable
+});
+```
+
+
 
 
 ###  Nested Sortable
