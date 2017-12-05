@@ -415,7 +415,7 @@ jQuery(window).on('load', function() {
 		/*./section-centralized*/  
   
 
-		/*add .in-view class when element in viewport*/
+		/* ::DEPRECATED:: add .in-view class when element in viewport
 		function isScrolledIntoView(elem) {
 			var docViewTop = jQuery(window).scrollTop();
 			var docViewBottom = docViewTop + jQuery(window).height();
@@ -435,7 +435,7 @@ jQuery(window).on('load', function() {
 			  }
 		   });
 		});
-		/*./add .in-view class when element in viewport*/
+		./ ::DEPRECATED:: add .in-view class when element in viewport*/
 
 });
 /**./detect page height**/
