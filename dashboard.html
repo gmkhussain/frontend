@@ -559,8 +559,32 @@
 					<h4>List of</h4>
 					<h2>Components</h2>
 				</div>
+				
+				
+				
+				
+				
 				<div class="step__cont colors-area list-col-5">
+				
+
+					<div class="tags">
+						<button class="badge">table</button>
 					
+						<script>
+							$(".tags .badge").on("click", function(){
+								var value = $(this).html();
+								var e = $.Event( "keypress", { which: 13 } );
+								var table = $('#example').DataTable();
+								
+								$("#myDataTable_filter input").val(value);
+								
+								setTimeout(function(){
+									   table.search( value ).draw();;
+								});
+								});
+						</script>
+					
+					</div>
 					
 					<div class="component-status clrlist ">
 					  <ul class="component-status__icon-list">

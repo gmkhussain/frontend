@@ -92,6 +92,16 @@ Additional file list:
 
 
 
+### How to move an element into another element?
+```javascript
+//MOVE:
+jQuery("#NodesToMove").detach().appendTo('#DestinationContainerNode')
+
+//COPY:
+jQuery("#NodesToMove").appendTo('#DestinationContainerNode')
+```
+
+
 ### [data-toggle="collapse"] on Click to show and scroll to content
 
 
@@ -228,6 +238,7 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 ### Detect event changes on DataTable
 ```
 $('#example').on('draw.dt', function() {
+
     //do something.. on Detect event changes on DataTable
 });
 ```
