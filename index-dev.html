@@ -2104,8 +2104,9 @@
 
 	<section class="tabs-area " data-navitemlimit="4" id="tabsArea">
 		<div class="container">
+	
 			<h2>Tabs Area</h2>
-				<div class="tabs-more-area col-sm-6 shad-dp20 anime-left nav-tabs-url-handler tabs-change--hover">
+				<div class="tabs-more-area col-sm-6 shad-dp20 anime-left nav-tabs-url-handler tabs-change--hover tab-area">
 					<h3><b>.tabs-more-area</b> Tabs item with limits</h3>
 					<h3><b>.nav-tabs-url-handler</b> active tabs by #ID from url</h3>
 					
@@ -2132,6 +2133,31 @@
 					  <div class="tab-pane" id="tab3">Veuismod non purus adipiscing platea a a parturient proin.Suspendisse eu maecenas convallis magna scelerisque lacus.</div>
 					  <div class="tab-pane" id="tab4">Purus adipiscing platea a a parturient proin.Suspendisse </div>
 					</div>
+					
+					<div class="form-group">
+						<h3>.nav-tabs-selector</h3>
+						<select class="form-control nav-tabs-selector has-value" name="paymentType" id="paymentType">
+									<option id="0" value="0">Tab One</option>
+									<option id="1" value="American Express">Tab II</option>
+									<option id="2" value="Mastercard">Tab 3</option>
+						</select>
+<pre>
+jQuery('.nav-tabs-selector').on('change', function (t) {
+	var selectedOption = jQuery(this).children("option:selected").attr('id');
+	var selectedLink = jQuery(this).closest(".tab-area").find('.nav-tabs li a').eq(selectedOption).tab('show');
+});
+</pre>
+						
+						<script>
+							jQuery('.nav-tabs-selector').on('change', function (t) {
+								var selectedOption = jQuery(this).children("option:selected").attr('id');
+								var selectedLink = jQuery(this).closest(".tab-area").find('.nav-tabs li a').eq(selectedOption).tab('show');
+							});
+						</script>
+					</div>			
+					
+				
+					
 				</div>
 
 				
