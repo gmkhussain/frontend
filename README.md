@@ -105,7 +105,7 @@ jQuery("#NodesToMove").appendTo('#DestinationContainerNode')
 ### [data-toggle="collapse"] on Click to show and scroll to content
 
 
-```
+```javascript
 $(document).on('shown.bs.collapse', function(event){
 	//console.log( "in! print e: " +event.type);
 	event.target.scrollIntoView(); //without animation
@@ -118,13 +118,13 @@ $(document).on('shown.bs.collapse', function(event){
 
 
 ### Disable click outside of Bootstrap Modal area to close modal
-```
+```javascript
 // Use data-backdrop="static"
 <button class="btn btn-xs btn-success" data-backdrop="static" data-toggle="modal" data-target="#composedModal"><i class="ion-md-add"></i> <span>Composed</span></button>
 ```
 
 ### On keypress do something on entire document but not inside inputs and textareas
-```html
+```javascript
 $(document).on('keypress', function(e) {
     var tag = e.target.tagName.toLowerCase();
     if ( e.which === 73 && tag != 'input' && tag != 'textarea') 
@@ -132,7 +132,7 @@ $(document).on('keypress', function(e) {
 });
 ```
 
-```html
+```javascript
 //Find Tag Type *Optional
 selectype = jQuery(".form-group > select").prop('tagName'); 
 alert (selectype);
@@ -145,7 +145,7 @@ Demo: https://jsfiddle.net/gmkhussain/103bLo53/
 <hr/>
 
 
-```html
+```javascript
 //move out all element with content from p tag
 jQuery('footer p > *').unwrap();
 alert("remove extra p tags from footer")
@@ -181,7 +181,7 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 
 
 ### Multiple Instances of Swiper on Same page
-```html
+```javascript
 		var sliders = [];
 			$('.swiper-container').each(function(index, element){
 				$(this).addClass('s'+index);
@@ -236,20 +236,27 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 
 
 ### Detect event changes on DataTable
-```
+```javascript
 $('#example').on('draw.dt', function() {
-
     //do something.. on Detect event changes on DataTable
 });
 ```
 
 
 
+### Closing popup window after 5 seconds
+```javascript
+var win = window.open("http://www.google.com", '1366002941508','width=500,height=200,left=375,top=330');
+
+setTimeout(function () { win.close();}, 5000);
+```
+
+
 
 ###  Nested Sortable
 is a jQuery plugin that extends jQuery Sortable UI functionalities to nested lists.
 
-```
+```javascript
 <ol class="sortable">
 	<li><div>Some content</div></li>
 	<li>
@@ -278,7 +285,7 @@ Also, the default list type is <ol>
 
 
 ### How to clear cache on each page when it loads in the browser?
-```
+```html
 <!--Adding this meta tag will help you solve your problem.-->
 <meta http-equiv="cache-control" content="no-cache" />
 <meta http-equiv="Pragma" content="no-cache" />
@@ -287,7 +294,7 @@ Also, the default list type is <ol>
 
 
 ### Problem with position: fixed. ( i.e. https://codepen.io/pen/prQQpq ) 
-```
+```html
 // Problem
 I was trying to fix, turning fixed on and off as a way of sticking header nav element to the top of the page as it scrolled by.
 
@@ -302,7 +309,7 @@ Incase parent has above styling, child elements with position: fixed. will not w
 
 ### Encode Decode by jQuery
 link: https://codepen.io/pen/OmEmaL
-```html
+```javascript
 var str = "My Text";
     var enc = window.btoa(str);
     var dec = window.atob(enc);
@@ -310,7 +317,7 @@ var str = "My Text";
 ```
 
 ### Change hash (#) for slash (/) or another (string) on url
-```html
+```javascript
 if (location.href.indexOf("#prevHash") > -1) {
 	location.assign(location.href.replace('#prevHash', "#newHash")); 
  }
@@ -320,7 +327,7 @@ if (location.href.indexOf("#prevHash") > -1) {
 * Fixing
 * Conflicts ( ie. Tab Nav Header Nav )
 * Hard to use 
-```html
+```javascript
 //Inner Pages Filler Script
 <script>
 $(function () {
@@ -339,13 +346,13 @@ $(function () {
 
 ### Links not working properly on Swiper slides
 
-```
+```javascript
 var swiper1 = new Swiper('.s1', {
 		preventClicks: false,					
 	});
 ```
 
-```html
+```javascript
 //On Click Trigger Click on another element after few second
 	<script>
 	jQuery(".nav-tabs li a").click(function() {
