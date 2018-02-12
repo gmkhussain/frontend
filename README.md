@@ -50,7 +50,7 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 		<script src="{{asset('front/js/jquery-2.2.4.min.js')}}"></script>
 		
 		<script>
-		   $(window).load(function () {
+		   jQuery(window).load(function () {
 			   var endTime = (new Date()).getTime();
 			   var millisecondsLoading = endTime - startTime;
 			   // Put millisecondsLoading in a hidden form field
@@ -106,7 +106,7 @@ jQuery("#NodesToMove").appendTo('#DestinationContainerNode')
 
 
 ```javascript
-$(document).on('shown.bs.collapse', function(event){
+jQuery(document).on('shown.bs.collapse', function(event){
 	//console.log( "in! print e: " +event.type);
 	event.target.scrollIntoView(); //without animation
 	event.target.scrollIntoView({ behavior: 'smooth' }); //with animation
@@ -125,7 +125,7 @@ $(document).on('shown.bs.collapse', function(event){
 
 ### On keypress do something on entire document but not inside inputs and textareas
 ```javascript
-$(document).on('keypress', function(e) {
+jQuery(document).on('keypress', function(e) {
     var tag = e.target.tagName.toLowerCase();
     if ( e.which === 73 && tag != 'input' && tag != 'textarea') 
         alert("Do Something");
@@ -183,10 +183,10 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 ### Multiple Instances of Swiper on Same page
 ```javascript
 		var sliders = [];
-			$('.swiper-container').each(function(index, element){
-				$(this).addClass('s'+index);
+			jQuery('.swiper-container').each(function(index, element){
+				jQuery(this).addClass('s'+index);
 
-				$('.s'+index).swiper();    
+				jQuery('.s'+index).swiper();    
 		
 					var slider = new Swiper('.s'+index, { /* Options here */
 								pagination: '.swiper-pagination',
@@ -237,7 +237,7 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 
 ### Detect event changes on DataTable
 ```javascript
-$('#example').on('draw.dt', function() {
+jQuery('#example').on('draw.dt', function() {
     //do something.. on Detect event changes on DataTable
 });
 ```
@@ -269,9 +269,9 @@ is a jQuery plugin that extends jQuery Sortable UI functionalities to nested lis
 	<li><div>Some content</div></li>
 </ol>
 
-	$(document).ready(function(){
+	jQuery(document).ready(function(){
 
-		$('.sortable').nestedSortable({
+		jQuery('.sortable').nestedSortable({
 			handle: 'div',
 			items: 'li',
 			toleranceElement: '> div'
@@ -392,6 +392,23 @@ _svg.html
 You can add ?modestbranding=1 to your url. That will remove the logo.
 &showinfo=0 will remove the title bar.
 ```
+
+
+
+
+## How to set the tab to active class from outside of Bootstrap Tab
+ie: https://codepen.io/gmkhussain/pen/PQpoRe
+```javascript
+jQuery('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    var target = this.href.split('#');
+    jQuery('.nav a').filter('[href="#'+target[1]+'"]').tab('show');
+})
+```
+
+
+
+
+
 
 
 

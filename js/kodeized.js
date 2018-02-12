@@ -4,6 +4,7 @@
 * This file contains works for many various kinds of tasks 
 */
 
+
 /**!preloader**/
 jQuery(window).on('load', function() {
   jQuery('#preloader__status').fadeOut();
@@ -442,12 +443,6 @@ jQuery(window).on('load', function() {
 
 
 
-/*
-////////XTRA GPv3 SCRIPTS /////
-jQuery('.carousel').carousel({
-  interval: 8000
-})
-*/
 
 /*
 //Multipal slide//
@@ -694,19 +689,7 @@ jQuery(".tab-animate li").click(function() {
 
 
 
-/*
-//MOVING WIDE-DIV BACKGROUND IMAGES
-jQuery(document).ready(function(){
-  jQuery('.wide-box-holder').mousemove(function(e){
-        var x = e.pageX - this.offsetLeft;
-      if (x <= 600) {
-		  x = x - 700;
-       jQuery(this).children('div.section-bg').css({'right': x }); 
-//	    jQuery('div.section-bg').css({'right': x }); 
-      }
-  });
-});
-*/
+
 
 
 
@@ -840,26 +823,9 @@ jQuery(document).ready(function(){
 
 
 
-/**broken images fix
-// Replace source
-jQuery(window).ready(function() { 
-   jQuery("img").each(function(){
-      var image = jQuery(this); 
-      if(image.context.naturalWidth == 0 || 
-      image.readyState == 'uninitialized'){  
-			jQuery(this).unbind("error").addClass("broken-image");
-      } 
-   }); 
-});
-**/
 
 
 
-
-/////////TOOL TIP///////
-jQuery('body').tooltip({    
-    selector: "a[rel=tooltip]"
-})
 
 
 // Enabling Popover Example //
