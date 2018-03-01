@@ -160,6 +160,32 @@ jQuery(function() {
 
 
 
+
+
+/**Get open modal ID and add class on body tag**/
+jQuery( document ).ready(function() {
+
+	jQuery(".modal").each(function() {
+	
+		var modalId = jQuery(this).attr("id"); /* get all modal IDs */
+		
+		console.log(modalId);
+		
+		jQuery("#"+modalId).on('shown.bs.modal', function(){
+			jQuery("body").addClass("modal-"+modalId+"--open");
+		});
+		
+		jQuery("#"+modalId).on('hidden.bs.modal', function(){
+			jQuery("body").removeClass("modal-"+modalId+"--open");
+		})
+	});
+});
+/**./Get open modal ID and add class on body tag**/
+
+
+
+
+
 /**AnimateCSS**/
         jQuery(document).ready(function() {
             jQuery('.anime-in').addClass("hidden2").viewportChecker({
