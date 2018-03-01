@@ -408,6 +408,18 @@ jQuery('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
 
 
+## How to prevent a click on a '#' link from jumping to top of page?
+
+```
+'#' will take the user back to the top of the page, so I usually go with void(0).
+
+javascript:; also behaves like javascript:void(0);
+```
+
+
+
+
+
 
 
 

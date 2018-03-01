@@ -3131,7 +3131,7 @@ jQuery('.nav-tabs-selector').on('change', function (t) {
 			
 			<!-- Button trigger modal -->
 			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-			  Launch demo modal
+			  Launch demo modal 1
 			</button>
 
 			<!-- Modal -->
@@ -3175,6 +3175,31 @@ jQuery('.nav-tabs-selector').on('change', function (t) {
 
 
 </style>
+			
+
+			
+<script>
+
+jQuery( document ).ready(function() {
+
+	jQuery(".modal").each(function() {
+	
+		var modalId = jQuery(this).attr("id"); /* get all modal IDs */
+		
+		console.log(modalId);
+		
+		jQuery("#"+modalId).on('shown.bs.modal', function(){
+			jQuery("body").addClass("modal-"+modalId+"--open");
+		});
+		
+		jQuery("#"+modalId).on('hidden.bs.modal', function(){
+			jQuery("body").removeClass("modal-"+modalId+"--open");
+		})
+	});
+	
+});
+
+</script>
 			
 						<!-- Button trigger modal -->
 			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myFullScreen">
@@ -3235,7 +3260,7 @@ jQuery('.nav-tabs-selector').on('change', function (t) {
 			<!-- Large modal -->
 <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal with .modal-vcntr</button>
 
-<div class="modal modal-vcntr fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal modal-vcntr fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="modalVcntr">
 <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -3264,7 +3289,7 @@ jQuery('.nav-tabs-selector').on('change', function (t) {
 <!-- Small modal -->
 <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Fullscreen modal</button>
 
-<div class="modal fade fullscreen" tabindex="-1" role="dialog" aria-labelledby="myFullScreen" aria-hidden="true">
+<div class="modal fade fullscreen" tabindex="-1" role="dialog" aria-labelledby="myFullScreen" aria-hidden="true" id="fullscreen2">
 <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
