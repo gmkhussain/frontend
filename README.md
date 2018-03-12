@@ -386,6 +386,9 @@ jQuery(".fom-steps .btn-step").click(function(e) {
 
 
 
+### [.nav-tabs-selector] Tab Panes Toggle with <select> <option>
+https://codepen.io/pen/rYxBjJ
+
 
 /**Unconditional**/
 $('.fom-steps .btn-next').click(function(){
