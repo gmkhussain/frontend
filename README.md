@@ -102,20 +102,27 @@ jQuery("#NodesToMove").appendTo('#DestinationContainerNode')
 ```
 
 
+
+
 ### [data-toggle="collapse"] on Click to show and scroll to content
-
-
 ```javascript
 jQuery(document).on('shown.bs.collapse', function(event){
 	//console.log( "in! print e: " +event.type);
 	event.target.scrollIntoView(); //without animation
 	event.target.scrollIntoView({ behavior: 'smooth' }); //with animation
 	});
-	
-	
 ```
 		
 
+### [data-toggle="collapse"] dynamically created collapse trigger click event for open/close
+```javascript
+$(".btn-close").click(function(){
+  var thisData = $(this).data("target2");
+  var targetData = $('[data-target="'+thisData+'"]');
+  targetData.trigger( "click" )
+});
+```
+		
 
 ### Disable click outside of Bootstrap Modal area to close modal
 ```javascript
