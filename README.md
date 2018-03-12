@@ -106,11 +106,12 @@ jQuery("#NodesToMove").appendTo('#DestinationContainerNode')
 
 ### [data-toggle="collapse"] on Click to show and scroll to content
 ```javascript
-jQuery(document).on('shown.bs.collapse', function(event){
+/* $(".collapse-animate").on('shown.bs.collapse', function(event){ // individual use */
+jQuery(document).on('shown.bs.collapse', function(event){  // global use
 	//console.log( "in! print e: " +event.type);
 	event.target.scrollIntoView(); //without animation
 	event.target.scrollIntoView({ behavior: 'smooth' }); //with animation
-	});
+});
 ```
 		
 
@@ -369,6 +370,33 @@ var swiper1 = new Swiper('.s1', {
 		});
 	</script>
 ```
+
+
+
+### [.fom-steps] Form steps with Bootstrap Tabs
+
+https://codepen.io/pen/OxPomo
+```javascript
+/**Conditional**/
+jQuery(".fom-steps .btn-step").click(function(e) {
+  e.preventDefault();
+  var targetTab = jQuery(this).attr("href");
+  jQuery('.fom-steps a[href="' + targetTab + '"]').tab("show");
+});
+
+
+
+
+/**Unconditional**/
+$('.fom-steps .btn-next').click(function(){
+  $('.fom-steps .nav-tabs > .active').next('li').find('a').trigger('click');
+});
+
+$('.fom-steps .btn-prev').click(function(){
+  $('.fom-steps .nav-tabs > .active').prev('li').find('a').trigger('click');
+});
+```
+
 
 ## Hazing
 * Unclear
