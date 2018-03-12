@@ -1029,24 +1029,16 @@ ie: http://codepen.io/pen/QqNrzm
 */
 jQuery('.moreless-area .moreless-btn').click(function() {
 
-  var lessData = jQuery(this).attr("data-less");
-
   if (jQuery(this).hasClass("less")) {
     jQuery(this).removeClass("less");
-    jQuery(this).html("Read more");
+	
     jQuery(this).parent().children(".moreless").addClass("on");
   } else {
     jQuery(this).addClass("less");
 
-		if (lessData != null){
-			jQuery(this).html(lessData);
-		}else{
-			jQuery(this).html("read less");
-		}
-
     jQuery(this).parent().children(".moreless").removeClass("on");
   }
-    jQuery('html, body').animate({	scrollTop: jQuery(this).parent(".moreless-area").offset().top	}, 800);
+    jQuery('html, body').animate({	scrollTop: jQuery(this).parent(".moreless-area.animate").offset().top	}, 800);
 	
 });
 /**./read more read less content**/
@@ -1128,7 +1120,7 @@ jQuery(multiLangLink).click(function() {
 
 /***WordPress SubMenu Styling**/
 jQuery( document ).ready(function() {
-	jQuery( ".menu-item-has-children" ).addClass( "dropdown gmk" );
+	jQuery( ".menu-item-has-children" ).addClass( "dropdown" );
 	jQuery( ".menu-item-has-children > a" ).addClass( "dropdown-toggle" );
 	jQuery( ".menu-item-has-children > a" ).attr( "data-toggle", "dropdown" );
 	jQuery( ".menu-item-has-children ul" ).addClass( "dropdown-menu" );

@@ -273,6 +273,15 @@ section[class*="-area"] {position: relative; clear:both; }
   text-overflow: ellipsis;
 }
 
+.moreless-btn.less span { display: none; }
+
+.moreless-btn em { display: none; }
+.moreless-btn.less em {
+    display: inline-block;
+    font-style: normal;
+}
+
+
 .has-quotes:after,
 .has-quotes:before {
   content: "\f10d";
@@ -2244,7 +2253,7 @@ body a, body a:active, body  a:focus, body  a:hover {
 
 /*
 For Mobile Friendly Navigation
-http://jsfiddle.net/gmkhussain/awqs01zc/
+http://jsfiddle.net/awqs01zc/
 */
 /****Note: add above Class for hover***/
 
