@@ -11,6 +11,14 @@ body label { font-weight: 600;}
 
 
 /*==============Media Queries==============*/
+
+/* 4K large Screens */
+@media (min-width : 1921px) and (max-width : 3840px) {
+	
+
+}
+
+
 /* 24" large Screens */
 @media only screen and (max-width : 1920px) {	}
 

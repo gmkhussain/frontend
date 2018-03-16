@@ -40,6 +40,28 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 	jQuery('body').toggleClass('is_index home', /\/$/.test(location.pathname));
 ```
 
+
+
+
+### How to use '$(this)' In a jQuery function
+The this that you refer to in myFunction is the context of the myFunction function.
+
+```javascript
+function myFunction(that) {
+    $(that).addClass("something");
+	...
+}
+	
+jQuery(".btn").on("click", function() {
+	myFunction(this);
+}	
+```
+
+
+
+
+
+
 ## How to get page load time with jQuery
 ```
 		//add in head tag as early as possible.
@@ -389,15 +411,14 @@ jQuery(".fom-steps .btn-step").click(function(e) {
 ### [.nav-tabs-selector] Tab Panes Toggle with <select> <option>
 https://codepen.io/pen/rYxBjJ
 
-
-/**Unconditional**/
-$('.fom-steps .btn-next').click(function(){
-  $('.fom-steps .nav-tabs > .active').next('li').find('a').trigger('click');
-});
-
-$('.fom-steps .btn-prev').click(function(){
-  $('.fom-steps .nav-tabs > .active').prev('li').find('a').trigger('click');
-});
+```javascript
+	$('.nav-tabs-selector').on('change', function (e) {
+		
+		var vv = $(this).children("option:selected").attr('id');
+		
+		var aa = $(this).closest(".tab-area").find('.nav-tabs li a').eq(vv).tab('show'); 
+		
+	});
 ```
 
 
