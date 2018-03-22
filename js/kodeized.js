@@ -1129,6 +1129,14 @@ jQuery( document ).ready(function() {
 
 
 
+/** How to find OL/UL has child OL/UL **/
+	jQuery('ul li:has(ul)').addClass('has-child');
+	jQuery('ol li:has(ol)').addClass('has-child');
+/**./How to find OL/UL has child OL/UL **/
+
+
+
+
 /***remove blank <P> tags***/
 jQuery('p:empty').remove();
 

@@ -819,9 +819,9 @@ body .l--{ left:auto; }
 
 body iframe, body img, .ovrimg-mx img { max-width: 100%; }
 
-.modal iframe { width: 100%; min-height:70vh; }
+/* .modal iframe { width: 100%; min-height:70vh; } */
 
-.filter-white { -webkit-filter: brightness(1000%); }
+.filter-white { -webkit-filter: brightness(0) invert(1); filter: brightness(0) invert(1); }
 .color-gray,.grayedout { -webkit-filter: grayscale(1); filter: grayscale(1); }
 .color-invert { -webkit-filter: invert(1); filter: invert(1); }
 
@@ -2273,7 +2273,12 @@ body.modal-open .modal { margin-right: -1.2em;}
 
 
 /*modal-fullscreen*/
-.modal-fullscreen .modal-dialog { width: 99%; margin: 0; height: 100vh; }
+.modal-fullscreen .modal-dialog {
+	width: 100%;
+    margin: 0;
+    height: 100vh;
+    top: 0; 
+}
 .modal-fullscreen .modal-content { height: 100vh; }
 body.modal-open { overflow: hidden; }
 .modal-fullscreen .modal-body { min-height: 80vh; }

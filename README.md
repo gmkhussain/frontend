@@ -54,7 +54,12 @@ function myFunction(that) {
 	
 jQuery(".btn").on("click", function() {
 	myFunction(this);
-}	
+}
+```
+
+// You can use alternate option apply to set the value of this in the function
+```javascript
+myFunction.apply(this)
 ```
 
 
