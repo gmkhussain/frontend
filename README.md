@@ -451,6 +451,25 @@ _svg.html
 * Extra files/scripts
 * [viewportchecker.js] (viewportchecker.js) - Detects if an element is in the viewport and DO SOMETHING.
 
+
+### How to Cache-Control with .htaccess leverage browser caching
+How to Fix “Specify a Vary: Accept-Encoding Header” Warning
+```html
+# One month for most static assets
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
+Header set Cache-Control "max-age=2628000, public"
+</filesMatch>
+
+<IfModule mod_headers.c>
+  <FilesMatch ".(js|css|xml|gz|html)$">
+    Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
+```
+
+
+
 ### Remove youtube branding after embedding video
 ```html
 You can add ?modestbranding=1 to your url. That will remove the logo.
