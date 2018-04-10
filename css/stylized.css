@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*!
- * Stylized v1.7
+ * Stylized v1.8.4
  * Styling made effortless.
  * This file contains works for many various kinds of tasks
  */
@@ -1319,6 +1319,10 @@ input[type="checkbox"]:checked ~ .checkylbl label {
 .checkylbl, label {  border-radius: 50px;}
 .form-group.hidden-checkbox .checkylbl label { top: 1px;left: 2px;}
 
+
+
+
+
 /*'un':checked state*/
 .checkylbl {
     height: 30px;
@@ -1365,6 +1369,53 @@ input[type="checkbox"]:checked ~ .checkylbl label {
   background: rgba(43,43,43,1);
   border-radius: 5px; display:none;
 }
+
+
+
+
+
+
+
+
+.checkylbl { background-color: #d00; width: 60px; }
+.checkylbl { position: relative; }
+.checkylbl.sm { width: 50px; height: 24px;}
+.checkylbl.sm label { height: 22px; width: 22px; }
+
+.checkylbl:after {
+    content: "✖";
+    position: absolute;
+    right: 8px;
+    color: #fff;
+}
+.is-active .checkylbl:after { content: "✓"; right: auto; left: 8px; }
+
+.checkylbl:after { line-height: 30px; }
+.checkylbl.sm:after { line-height: 24px;}
+
+.checkylbl+label { line-height: 28px; }
+.checkylbl.sm+label{ line-height: 22px; }
+
+.dt .checkylbl+label {
+    margin-left: 8px;
+    float: left;
+    margin-bottom: 0;
+    margin-top: 2px;
+}
+
+
+
+.dt { display: table; }
+body .dt>* { display: table-cell; }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1580,6 +1631,7 @@ body .fnc__checkbox:before {
     border-radius: 50%;
 }
 
+.checker-area.is-active .fnc__checkbox:before,
 .fnc__checkbox.is-active:before {
     content: "\f00c";
     color: #fff;
@@ -1592,7 +1644,7 @@ body .fnc__checkbox:before {
 .fnc__checkbox.is-radio:before {
     border-radius: 50%;
 }
-
+.checker-area.is-active .fnc__checkbox:before,
 .fnc__checkbox.is-radio.is-active:before {
     content:"\f111";
 }

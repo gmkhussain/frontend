@@ -74,7 +74,7 @@ if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
 
 
 /*addClass if URL is Root url (is Home page)*/
-jQuery('body').toggleClass('is_index home', /\/$/.test(location.pathname));
+jQuery('body').toggleClass('is_index home index-page', /\/$/.test(location.pathname));
 
 
 
