@@ -64,6 +64,19 @@ myFunction.apply(this)
 
 
 
+## How to reload script after Ajax call
+add following code in ajax file <code>ajax/your-ajax-response.php</code>
+```javascript
+<script id="ajaxReloadJS">
+  $.getScript( "{{ asset('front/assets/js/kodeized.js') }}" )
+                .done(function( script, textStatus ) {
+                    console.log( "-> Kodeized  Reloaded : status " + textStatus );
+                })
+                .fail(function( jqxhr, settings, exception ) {
+                    console.log( "-> Kodeized Reloaded : Failed " + textStatus );
+                });
+</script>
+```
 
 
 
@@ -103,7 +116,6 @@ Additional file list:
 <script src="js/kodeized.js"></script>
 ```
 
-<img src="https://github.com/gmkhussain/frontend/blob/master/images/favicon.png" width="auto" height="40" alt="favicon">
 
 
 
