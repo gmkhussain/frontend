@@ -1249,13 +1249,18 @@ jQuery(".hoverized *").on("mouseout", function (e) {
 
 
 
-/**Detect iFrame embedding, Image & video inside DIV**/
-jQuery("div").each(function (checkMediaType) {
-	jQuery( this ).contents().find( "img" ).parent("div").addClass( "has-image" );
-	jQuery( this ).contents().find( "iframe" ).parent("div").addClass( "has-iframe" );
-	jQuery( this ).contents().find( "video" ).parent("div").addClass( "has-video" );
+/**CheckElementChildType**/
+/*
+Detect iFrame embedding, Image & video inside DIV
+*/
+jQuery("div").each(function (CheckElementChildType) {
+	jQuery(this).contents().find(".fa, .icon, [class^='ion-']").parent("td, div").addClass("has-icon");
+    jQuery(this).contents().find(".btn").parent("td, div").addClass("has-btn");
+	jQuery( this ).contents().find( "img" ).parent("td, div").addClass( "has-image" );
+	jQuery( this ).contents().find( "iframe" ).parent("td, div").addClass( "has-iframe" );
+	jQuery( this ).contents().find( "video" ).parent("td, div").addClass( "has-video" );
 });
-/**./Detect iFrame embedding, images & video inside DIV**/
+/**./CheckElementChildType**/
 
 
 

@@ -22,13 +22,13 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 | Frontized        |  Why Skip Version 1? Startup as a Bootstrap Extended |    |
 | Frontized 2     | "Frontized" without the "Extended" referring to versions 2 and up.  |    |
 | Frontized 4     |  Skipping 3 to avoid a confusion due to the misalignment of the router package's version which was already distributed as v3.3.0 |    |
-| Frontized 5     |   |    |
+<!--| Frontized 5     |   |    |
 | Frontized 5.5     |   |    |
 | Frontized 6 MX     |   |    |
 | Frontized 7     |   |    |
 | Frontized 8 Pro    |   |    |
 | Frontized 8.1    |   |    |
-| Frontized X     |  There no 9 because... Seven ate Nine. * CLEVER AND SUBTLE MARKETING TRICK:   simply going to call it the Frontized X and not pronounce it as Frontized Ten. |    |
+| Frontized X     |  There no 9 because... Seven ate Nine. * CLEVER AND SUBTLE MARKETING TRICK:   simply going to call it the Frontized X and not pronounce it as Frontized Ten. |    |-->
 
 
 
