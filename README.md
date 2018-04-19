@@ -516,6 +516,30 @@ javascript:; also behaves like javascript:void(0);
 
 
 
+## VSCode not matching HTML Tags
+<img src="https://i.stack.imgur.com/A3JdJ.png" alt="" />
+
+Need to do some changes in setting
+Goto <code>file->preferences->setting</code>
+You can now see <code>User settings</code> in the right hand side
+add the following code
+```javascript
+{
+...
+	,"files.associations": {
+		// extension name : html
+		"*.php": "html",
+		"*.html": "html"
+	}
+...
+}
+```
+
+
+Output
+<img src="https://i.stack.imgur.com/hZDQe.png" alt="" />
+
+
 
 
 
