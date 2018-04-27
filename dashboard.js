@@ -8,3 +8,22 @@ dashsubmenu = jQuery("body .dropdown-menu");
 				//jQuery(this).parent().addClass("open");
 			});
 jQuery('li.active').parent().addClass('open');
+
+
+
+
+
+
+
+/**How to fix Bootstrap multilevel dropdown menu but submenu is going out of screen issue **/
+
+    jQuery(document).ready(function(){
+        jQuery('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+			//jQuery(this).parent().addClass("open");
+            event.preventDefault(); 
+            event.stopPropagation(); 
+            jQuery(this).parent().siblings().removeClass('open');
+            //jQuery(this).parent().toggleClass('open');
+        });
+    });
+/**./How to fix Bootstrap multilevel dropdown menu but submenu is going out of screen issue **/

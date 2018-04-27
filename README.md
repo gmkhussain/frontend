@@ -130,6 +130,12 @@ Additional file list:
 ```
 
 
+### Clickable Table row like a link
+```html
+<tr onclick="document.location = 'links.html';">
+```
+
+
 
 ### How to move an element into another element?
 ```javascript
@@ -492,7 +498,7 @@ You can add ?modestbranding=1 to your url. That will remove the logo.
 
 
 ## How to set the tab to active class from outside of Bootstrap Tab
-ie: https://codepen.io/gmkhussain/pen/PQpoRe
+ie: https://codepen.io/pen/PQpoRe
 ```javascript
 jQuery('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     var target = this.href.split('#');

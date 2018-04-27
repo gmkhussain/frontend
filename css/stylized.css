@@ -2179,6 +2179,7 @@ body a, body a:active, body  a:focus, body  a:hover {
 	cursor: pointer;
 }
 
+[onclick] { cursor: pointer; }
 
 
 .hoverized--active { background: yellow; }
@@ -2449,9 +2450,9 @@ body .dontfly.swiper-container .swiper-slide img {max-width: 100%;max-height: 12
 
 
 /*** datepicker ***/
-.datepicker.datepicker-dropdown {background-color: #fff; padding: 10px; text-align: center;}
-.datepicker.datepicker-dropdown td, .datepicker.datepicker-dropdown th {border: 1px solid #fff;text-align: center;}
-.datepicker.datepicker-dropdown td, .datepicker.datepicker-dropdown th {border: 1px solid #ccc; text-align: center; padding: 10px !important;}
+.datepicker.datepicker-dropdown {background-color: #fff; padding: 0px; text-align: center; border-radius: 0; }
+body .datepicker.datepicker-dropdown th {border-top: 1px solid transparent;text-align: center;}
+.datepicker.datepicker-dropdown td, .datepicker.datepicker-dropdown th {border: 1px solid #ccc; text-align: center; border-radius: 0; color: initial; padding: 2px !important; }
 .datepicker.datepicker-dropdown td.active.day,
 .datepicker.datepicker-dropdown td:hover { background-color: #39c; font-weight: bold; cursor: pointer; color:#fff;}
 .datepicker-dropdown span.month { border: 1px solid #ccc; padding: 5px; width: 60px; display: block; float: left; margin: -1px -1px 0 0; }
