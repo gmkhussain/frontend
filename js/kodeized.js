@@ -186,6 +186,26 @@ jQuery( document ).ready(function() {
 
 
 
+/** Expand accordion with hashtag OR Retain collapse on page refresh **/
+jQuery(document).ready(function () {
+    if(location.hash != null && location.hash != ""){
+        jQuery('.collapse').removeClass('in');
+        jQuery(location.hash + '.collapse').collapse('show');
+    }
+});
+/**./Expand accordion with hashtag OR Retain collapse on page refresh **/
+
+
+
+
+
+
+
+
+
+
+
+
 /**AnimateCSS**/
         jQuery(document).ready(function() {
             jQuery('.anime-in').addClass("hidden2").viewportChecker({
