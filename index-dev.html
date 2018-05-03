@@ -130,8 +130,37 @@
   </head>
   <body class="transition nav-plusminus slide-navbar slide-navbar--right preloadized ">
 
+  	  <div class="progress">
+		<div class="progress-view">aa</div>
+		  	<script>
+p=0;	
+function timeout_trigger() {
+
+   $(".progress").css("max-width",p+"%");
+   $(".progress-view").html(p+"%");
+   if(p!=100) {
+       setTimeout('timeout_trigger()', 50);
+   }
+   p++;
+}
+timeout_trigger();
+	</script>
+	<style>
+	.progress {
+    position: fixed;
+    z-index: 9999999999999999 !important;
+    width: 100%;
+}
+</style>
+	  </div>
+	  
+
+	
 	<div id="preloader">
+
 	  <div id="preloader__status">
+	
+	  
 		<i class="fa fa-spin"><img src="images/preloading.png" alt="" /></i>
 	  </div>
 	</div>
@@ -2423,6 +2452,36 @@ jQuery('.nav-tabs-selector').on('change', function (t) {
 							
 		<hr class="dvr">
 		
+		
+				<div class="area">
+						<h4>Toggle YES/NO</h4>
+						<h5></h5>
+					<div class="form-group hidden-checkbox checker-area">
+						<input type="checkbox" id="toggle"/>
+						<div class="checkylbl --txt">
+						  <label for="toggle"></label>
+						</div>
+					</div>
+					
+				</div>
+				
+				
+				 <div class="form-group col-sm-12 checker-area dt">
+					   <input type="checkbox" class="form-control hidden" id="parentCapture" name="parentCapture" value="1" />
+						<div class="checkylbl sm">
+						  <label for="parentCapture"></label>
+						</div>
+					<label for="parentCapture">Toggle small .sm</label>
+				</div>
+
+				<div class="form-group col-sm-12 checker-area dt">
+				   <input class="hidden" type="checkbox" id="parentView" name="parentView" value="1" /> 
+					 <div class="checkylbl">
+						  <label for="parentView"></label>
+					 </div>
+					 <label for="parentView">Default Toggle </label>
+				</div>
+		
 		<h3>form <b>.inline-control</b></h3>
 		<div class="control-group inline-control" id="inlineControl">
 		  <label class="control-label">Choose Rates:</label>
@@ -2599,30 +2658,6 @@ jQuery('.nav-tabs-selector').on('change', function (t) {
 						  <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
 				</div>
 						
-				<div class="form-group hidden-checkbox">
-					<input type="checkbox" id="toggle"/>
-					<div class="checkylbl">
-					  <label for="toggle"></label>
-					</div>
-				</div>
-				
-				
-				
-				 <div class="form-group col-sm-12 checker-area dt">
-					   <input type="checkbox" class="form-control hidden" id="parentCapture" name="parentCapture" value="1" />
-						<div class="checkylbl sm">
-						  <label for="parentCapture"></label>
-						</div>
-					<label for="parentCapture">Submitted By Parents</label>
-				</div>
-
-				<div class="form-group col-sm-12 checker-area dt">
-				   <input class="hidden" type="checkbox" id="parentView" name="parentView" value="1" /> 
-					 <div class="checkylbl">
-						  <label for="parentView"></label>
-					 </div>
-					 <label for="parentView">Shared With Parent</label>
-				</div>
 				
 
 				<div class="form-group">
@@ -3584,6 +3619,10 @@ jQuery( document ).ready(function() {
 			});
 		</script>
 	<!--./Text Animation-->
+	
+
+	
+	
 	
 
 	

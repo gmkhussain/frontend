@@ -1321,6 +1321,8 @@ input[type="checkbox"]:checked ~ .checkylbl label {
 
 
 
+.checkylbl.--txt::after { content: "NO"; font-size: 0.7em; width: 34%; text-align:right; }
+.is-active .checkylbl.--txt::after { content: "YES"; font-size: 0.7em; text-align:left; }
 
 
 /*'un':checked state*/
