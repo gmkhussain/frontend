@@ -478,6 +478,28 @@ body .bdr0{ border: 0px; }
 border-style: solid;}
 
 
+.br0 { border-radius: 0; }
+.br5 { border-radius: 5px; }
+.br10 { border-radius: 10px; }
+.br15 { border-radius: 15px; }
+.br20 { border-radius: 20px; }
+.br25 { border-radius: 25px; }
+.br30 { border-radius: 30px; }
+.br35 { border-radius: 35px; }
+.br40 { border-radius: 40px; }
+.br45 { border-radius: 45px; }
+.br50 { border-radius: 50px; }
+.br55 { border-radius: 55px; }
+.br60 { border-radius: 60px; }
+.br65 { border-radius: 65px; }
+.br70 { border-radius: 70px; }
+.br75 { border-radius: 75px; }
+.br80 { border-radius: 80px; }
+.br85 { border-radius: 85px; }
+.br90 { border-radius: 90px; }
+.br95 { border-radius: 95px; }
+.br100 { border-radius: 100px; }
+
 
 /**positions**/
 .posabs {position: absolute;}
@@ -1324,6 +1346,8 @@ input[type="checkbox"]:checked ~ .checkylbl label {
 .checkylbl.--txt::after { content: "NO"; font-size: 0.7em; width: 34%; text-align:right; }
 .is-active .checkylbl.--txt::after { content: "YES"; font-size: 0.7em; text-align:left; }
 
+
+.checkylbl.br0 label { border-radius: 2px; }
 
 /*'un':checked state*/
 .checkylbl {
