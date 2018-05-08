@@ -27,3 +27,26 @@ jQuery('li.active').parent().addClass('open');
         });
     });
 /**./How to fix Bootstrap multilevel dropdown menu but submenu is going out of screen issue **/
+
+
+
+
+
+
+/**mark code**/
+$("[data-code]").each(function(index) {
+  var id = "#" + $(this).attr("data-code");
+  var content = $(this).html();
+  $(id).html(content);
+});
+
+
+$("[data-html]").each(function(index) {
+	var id = "#" + $(this).attr("data-html");
+    var $this = $(this);
+    var t = $this.html();
+    var t2 = t.replace(/\</g,'&lt;').replace(/\>/g, '&gt;');
+	$(id).html(t2);
+
+});
+

@@ -21,10 +21,11 @@
 		<!--link rel="stylesheet" type="text/css" href="css/flaticon.css"--> 
 	<link rel="stylesheet" href="css/swiper.min.css">
 	
-	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/atelier-dune-light.min.css">
 
 	<!-- jQuery -->
 	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 	
 	
 	<link rel="stylesheet" href="extralized/jquery.dataTables.min.css">
@@ -244,6 +245,58 @@
 
 .step__cont h2:before {content: "";display: block;width: 50%;height: 4px;background: #0084ff;position: absolute;top: -10px;}
 </style>
+
+		<div class="intro-area bg-cvr p100 bg-white text-center" style="background-image:url('dashboard/scatter.svg');">
+			<h2>Wondering how to contribute?</h2>
+			<p>We welcome all feedback, designs, or ideas in order to produce the best possible experience for our users. If you're interested in contributing</p>
+		
+		</div>
+
+		<div class="step-area" id="ContentArea">
+
+		
+				<div class="step__hed clrhm">
+					<h4>Content Area</h4>
+					<h2>Typography & Iconography</h2>
+				</div>
+				
+				<div class="step__cont0 bg-white hed-cntr">
+				 	
+			<section data-html="crossline">	
+				<div class="hed crossline amoos">
+					<h2>Crossline Heading amooe</h2><hr>
+				</div>
+			</section>
+			
+			<pre><code class="html" id="crossline"></code></pre>
+			
+			
+			<section data-html="lndotln">
+				<div class="hed lndotln">
+					<h2><strong>.lndotln</strong> heading</h2>
+					<hr/>
+				</div>
+			</section>
+			
+			<pre><code class="html" id="lndotln"></code></pre>
+			
+			<section data-html="underline-mini">
+				<div class="hed underline-mini">
+					<h2><b>.underline-mini</b> heading</h2>
+				</div>
+			</section>
+			<pre><code class="html" id="underline-mini"></code></pre>
+			
+			<section data-code="underline-mini--double">
+				<div class="hed underline-mini--double">
+					<h2><b>.underline-mini--double</b> heading</h2>
+				</div>
+			</section>
+			<textarea id="underline-mini--double"></textarea>
+			
+				</div>
+		</div>
+
 			<div class="step-area" id="startup">
 				
 				<div class="step__hed clrhm">
@@ -1930,7 +1983,13 @@ use class <b>"tag-badge"</b> simply it will be show your text as tag mark in a t
 		$('#myDataTable').DataTable();
 	});
 
-	</script>
+	
+function custom(){
+ hljs.initHighlightingOnLoad();
+}
+custom();
+
+</script>
 	
 	
 	
