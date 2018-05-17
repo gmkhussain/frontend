@@ -1983,7 +1983,6 @@ body.page-height-short footer { position: static; }
 
 
 .dropdown.open .dropdown-menu, .dropdown > .dropdown-menu { position: static; float: none; width: 100%; background-color:#fff; }
-.navbar a{ text-align:center; }
 
 /*--(hover disable for mobile)-- .dropdown > a:hover + .dropdown-menu { display: none;}*/
 

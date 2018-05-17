@@ -131,6 +131,23 @@ Additional file list:
 
 
 
+### Add 'is-active' Class on Bootstrap Accordion Active
+```javascript
+    (function () {
+        jQuery(".panel").on("show.bs.collapse hide.bs.collapse", function (e) {
+            if (e.type == 'show') {
+                jQuery(this).addClass('is-active');
+            } else {
+                jQuery(this).removeClass('is-active');
+            }
+        });
+    }).call(this);
+```
+
+
+
+
+
 
 ### How to change Date Range Picker "custom range" or any other label text ?
 ```javascript
