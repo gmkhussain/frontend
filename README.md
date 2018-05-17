@@ -147,6 +147,21 @@ Additional file list:
 
 
 
+### How to detect bootstrap collapse is opening or closing?
+
+```javascript
+    jQuery('#accordion').on('shown.bs.collapse', function () {
+        console.log("Opened")
+        jQuery(this).attr("data-expend", "open");
+    });
+
+    jQuery('#accordion').on('hidden.bs.collapse', function () {
+        console.log("Closed")
+        jQuery(this).attr("data-expend", "close");
+    });
+```
+
+
 
 
 ### How to change Date Range Picker "custom range" or any other label text ?
