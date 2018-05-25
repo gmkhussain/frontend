@@ -131,6 +131,19 @@ Additional file list:
 
 
 
+## How to show the datepicker on input when click on icon
+How to focus on form-control when click on input-group-addon
+```html
+<div class="input-group">
+    <input type="text" id="myInputId" name="mydate" class="form-control" value="">
+    <label class="input-group-addon btn" for="myInputId">
+       <span class="fa fa-calendar"></span>
+    </label>                    
+</div>
+```
+
+
+
 ### Add 'is-active' Class on Bootstrap Accordion Active
 ```javascript
     (function () {

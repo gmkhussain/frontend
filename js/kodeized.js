@@ -23,7 +23,7 @@ if (jQuery("section, div").hasClass("preloader--off")) {
 
 
 
-/**on menu open mode Trigger menu button when click body area
+/**!on menu open mode Trigger menu button when click body area
 jQuery("#page-content").on('click', function(event) { 
 		event.preventDefault(); 
 		jQuery(".slide-navbar--active .navbar-toggle").click(); 
@@ -79,7 +79,7 @@ jQuery('body').toggleClass('is_index home index-page', /\/$/.test(location.pathn
 
 
 
-/**URL added on body tag as a Class**/
+/**!URL added on body tag as a Class**/
 jQuery(function() {
   var locReal = window.location.pathname; // returns the full URL
 	var loc = locReal.replace(".", "/");
@@ -94,8 +94,8 @@ jQuery(function() {
 	jQuery('body').addClass(active_locLast + "-page");
 	
 	
-	/*[.nav--activized] added*/
-		/*
+	/*![.nav--activized] added*/
+		/*!
 			Find domain.com/LastURLname in body and addClass .LastURLname.is-active
 		*/
 		window.setTimeout(function(){
@@ -107,9 +107,9 @@ jQuery(function() {
 		}, 200);
 	/*./[.nav--activized] added*/
 	
-	//jQuery('body nav').addClass(active_locLast + "-nav");
+	/*!jQuery('body nav').addClass(active_locLast + "-nav");*/
 
-  var urlParameters = window.location.search; // returns the URL Parameters
+  var urlParameters = window.location.search; /*! returns the URL Parameters */
 	var split_urlParameters = urlParameters.split(/[ .=:;?!~,`"&|()<>{}\[\]\r\n/\\]+/);
 	urlParametersLast= split_urlParameters[split_urlParameters.length-1];
 	urlParametersLast2= split_urlParameters[split_urlParameters.length-2];
@@ -126,13 +126,13 @@ jQuery(function() {
 
 	
 });
-/**./URL added on body tag as a Class**/
+/**!./URL added on body tag as a Class**/
 
 
 
 
-/**Show Modal dialog by Hash URL**/
-  jQuery(function(){ /*shortcut for $(document).ready */
+/**!Show Modal dialog by Hash URL**/
+  jQuery(function(){ /*!shortcut for $(document).ready */
     var hashUrl = window.location.hash
 	
 	if(jQuery(hashUrl).hasClass("modal")){
@@ -153,7 +153,7 @@ jQuery(function() {
 		});
 	}
   });
-/**./Show Modal dialog by Hash URL**/
+/**!./Show Modal dialog by Hash URL**/
 
 
 
@@ -162,7 +162,7 @@ jQuery(function() {
 
 
 
-/**Get open modal ID and add class on body tag**/
+/**!Get open modal ID and add class on body tag**/
 jQuery( document ).ready(function() {
 
 	jQuery(".modal").each(function() {
@@ -180,20 +180,20 @@ jQuery( document ).ready(function() {
 		})
 	});
 });
-/**./Get open modal ID and add class on body tag**/
+/**!./Get open modal ID and add class on body tag**/
 
 
 
 
 
-/** Expand accordion with hashtag OR Retain collapse on page refresh **/
+/**! Expand accordion with hashtag OR Retain collapse on page refresh **/
 jQuery(document).ready(function () {
     if(location.hash != null && location.hash != ""){
         jQuery('.collapse').removeClass('in');
         jQuery(location.hash + '.collapse').collapse('show');
     }
 });
-/**./Expand accordion with hashtag OR Retain collapse on page refresh **/
+/**!./Expand accordion with hashtag OR Retain collapse on page refresh **/
 
 
 
@@ -206,7 +206,7 @@ jQuery(document).ready(function () {
 
 
 
-/**AnimateCSS**/
+/**!AnimateCSS**/
         jQuery(document).ready(function() {
             jQuery('.anime-in').addClass("hidden2").viewportChecker({
                 classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
@@ -279,13 +279,13 @@ jQuery(document).ready(function () {
                }); 
 		});
 
-/**./AnimateCSS**/
+/**!./AnimateCSS**/
 
 
 
 
 
-/**input-number**/
+/**!input-number**/
 jQuery(document).ready(function() {
   window.inputNumber = function(el) {
    var min = el.attr('min') || false;
@@ -319,12 +319,12 @@ jQuery(document).ready(function() {
   inputNumber(jQuery('.input-number'));
 });
 
-/**./.input-number**/
+/**!./.input-number**/
 
 
 
 
-/**.form-group--active on parent of .form-control**/
+/**!.form-group--active on parent of .form-control**/
 jQuery(".form-control").focus(function() {
   jQuery(this).parent().addClass("form-group--active");
 });
@@ -332,12 +332,12 @@ jQuery(".form-control").focus(function() {
 jQuery(".form-control").blur(function() {
   jQuery(this).parent().removeClass("form-group--active");
 });
-/**./.form-group--active on parent of .form-control**/
+/**!./.form-group--active on parent of .form-control**/
 
 
 
 
-/**.has-value added if .form-control have value**/
+/**!.has-value added if .form-control have value**/
 jQuery(document).ready(function() {
 	
 	jQuery(".form-control").each(function(){
@@ -348,7 +348,7 @@ jQuery(document).ready(function() {
 		}
 	});
 });
-/**./has-value added if .form-control have value**/			
+/**!./has-value added if .form-control have value**/			
 
 
 
@@ -361,12 +361,12 @@ jQuery(document).ready(function() {
 		jQuery(this).addClass("has-value");
         }else{ jQuery(this).removeClass("has-value"); }
 	});
-/**./fnc-fom label animation**/
+/**!./fnc-fom label animation**/
 
 
 
 
-/**fnc-upload**/
+/**!fnc-upload**/
 jQuery(".fnc-uplaod [type=file]").on("change", function() {
   /*
 	Name of file will show in label as text *input#ID need to = label[for=#ID]
@@ -379,33 +379,56 @@ jQuery(".fnc-uplaod [type=file]").on("change", function() {
     jQuery(this).next().text(fileName);
   }
 });
-/**./fnc-upload**/
+/**!./fnc-upload**/
 
 
 
 
-/*Add class on parent of Checked input*/ /*	ie: https://codepen.io/pen/KqeGje	*/
+
+
+/*!Add class on parent of Checked input*/
+/*!	ie: https://codepen.io/pen/KqeGje	*/
+
+/*
+ if checkbox checked add class to parent element
+*/
+jQuery( document ).ready(function() {
+	jQuery( ".checker-area" ).each(function() {
+		jQuery(this).find('input:checked').closest('.checker-area').addClass('is-active');
+	});
+});
+
+/*
+ Reset Added
+*/
+jQuery(document).on("click", "[type='reset']", function(e){
+  e.preventDefault();
+  form = e.toElement.form;
+  form.reset();  
+  jQuery("input",form).trigger("change");
+});
+
 jQuery(document).on("change", ".checker-area input:checkbox", function() {
   if (jQuery(this).is(':checked')) {
-    jQuery(this).parents(".checker-area").addClass("is-active");
+    jQuery(this).closest(".checker-area").addClass("is-active");
   }else if (jQuery(this).prop('checked', false)){
-	jQuery(this).parents(".checker-area").removeClass("is-active");
+	jQuery(this).closest(".checker-area").removeClass("is-active");
   }
 });
 
-	/*checker-area for radio button*/
+	/*!checker-area for radio button*/
 	jQuery(document).on("click", '.checker-area input:radio', function() {
-		jQuery('input:radio[name='+ jQuery(this).attr('name')+']').parents(".checker-area").removeClass('is-active');
-		jQuery(this).parents(".checker-area").addClass('is-active');
+		jQuery('input:radio[name='+ jQuery(this).attr('name')+']').closest(".checker-area").removeClass('is-active');
+		jQuery(this).closest(".checker-area").addClass('is-active');
 	});
 
-/*./Add class on parent of Checked input*/
+/*!./Add class on parent of Checked input*/
 
 
 
 
 
-/**detect page height**/
+/**!detect page height**/
 jQuery(window).on('load', function() {
 
 		var footerHeight = jQuery("footer").height();
@@ -424,7 +447,7 @@ jQuery(window).on('load', function() {
 	console.log("document height:" + documentHeight + " with footer " + documentHeight_withFooter );
 	console.log("Body height:" + bodyHeight + " with footer " + bodyHeight_withFooter );
 
-		/*
+		/*!
 		 Place footer at bottom only if page is "short"
 		*/
 		if( documentHeight_withFooter < windowHeight   || bodyHeight_withFooter < windowHeight ){
@@ -436,7 +459,7 @@ jQuery(window).on('load', function() {
 		}
 		
 		
-		/*
+		/*!
 		footerHeight: for short pages, style required as per site theme.
 		*/
 		var footerHeight = jQuery("footer").height();
@@ -444,7 +467,7 @@ jQuery(window).on('load', function() {
 		console.log("Footer height: " +footerHeight);
 
 
-		/*section-centralized
+		/*!section-centralized
 		- highlight unique section when it is center of window */	
 		  
 		 jQuery(window).scroll(function() {
@@ -459,10 +482,10 @@ jQuery(window).on('load', function() {
 			  }
 			});
 		  });
-		/*./section-centralized*/  
+		/*!./section-centralized*/  
   
 
-		/* ::DEPRECATED:: add .in-view class when element in viewport
+		/*! ::DEPRECATED:: add .in-view class when element in viewport
 		function isScrolledIntoView(elem) {
 			var docViewTop = jQuery(window).scrollTop();
 			var docViewBottom = docViewTop + jQuery(window).height();
@@ -485,12 +508,12 @@ jQuery(window).on('load', function() {
 		./ ::DEPRECATED:: add .in-view class when element in viewport*/
 
 });
-/**./detect page height**/
+/**!./detect page height**/
 
 
 
 
-/*
+/*!
 //Multipal slide//
 jQuery('.testimoCarousel .item').each(function(){
   var next = jQuery(this).next();
@@ -551,7 +574,7 @@ function scroll() {
 
 
 
-/**sticky4all**/
+/**!sticky4all**/
 if (jQuery(".sticky")[0]){
 	var $window = jQuery(window),
        $stickyEl = jQuery('.sticky'),
@@ -566,7 +589,7 @@ if (jQuery(".sticky")[0]){
 
 
 	
-/**Sticky Header**/
+/**!Sticky Header**/
 jQuery(window).scroll(function() {
 if (jQuery(this).scrollTop() > 1){
     jQuery('.hdr--sticky').addClass("hdr--sticky-active");
@@ -589,7 +612,7 @@ if (jQuery(this).scrollTop() > 1){
 
 
 
-/**detect scrollized direction --up & --down **/
+/**!detect scrollized direction --up & --down **/
 var lastScrollizedTop = 0;
 jQuery(window).scroll(function(event) {
   var scrollizedTop = jQuery(this).scrollTop();
@@ -608,22 +631,22 @@ jQuery(window).scroll(function(event) {
 
 
 
-/**nav-folderized**/
+/**!nav-folderized**/
 jQuery(".nav-folderized h4").click(function(){
 	jQuery(this).parent(".nav").toggleClass("open"); 
 	jQuery('html, body').animate({ scrollTop: jQuery(this).offset().top - 170 }, 1500 );
 });
-/**./nav-folderized**/
+/**!./nav-folderized**/
 
 
 
   
-/**Blind Footer**/
+/**!Blind Footer**/
 jQuery( document ).ready(function() {
 	var ftrBlind = jQuery(".ftr-blinder .ftr--blind").height();
 	jQuery(".ftr-blinder footer").css("padding-top", ftrBlind );
 });
-/**./Blind Footer**/
+/**!./Blind Footer**/
 
 
 
@@ -634,7 +657,7 @@ jQuery(".navbar-toggle").on("click", function (e) { jQuery("body").toggleClass("
 
 
 
-/**find current page link and add .active class on navbar link**/
+/**!find current page link and add .active class on navbar link**/
     jQuery(document).ready(function () {
         var url = window.location;
         jQuery('ul.nav a[href="'+ url +'"]').parent().addClass('active');
@@ -642,19 +665,19 @@ jQuery(".navbar-toggle").on("click", function (e) { jQuery("body").toggleClass("
              return this.href == url;
         }).parent().addClass('active');
     });
-/**./find current page link and add .active class on navbar link**/
+/**!./find current page link and add .active class on navbar link**/
 
 
 
 
-/**[.levelized] add class on multilevels of dropdown in navbar **/	
-/*
+/**![.levelized] add class on multilevels of dropdown in navbar **/	
+/*!
 ie: https://codepen.io/pen/RgdgGy
 */
 jQuery('.levelized ul').addClass(function(){
    return "level"+$(this).parents('ul').length;
 });
-/**./[.levelized] add class on multilevels of dropdown in navbar **/	
+/**!./[.levelized] add class on multilevels of dropdown in navbar **/	
 	
 
 	
@@ -662,7 +685,7 @@ jQuery('.levelized ul').addClass(function(){
 	
 	
 	
-/**How to fix Bootstrap multilevel dropdown menu but submenu is going out of screen issue **/
+/**!How to fix Bootstrap multilevel dropdown menu but submenu is going out of screen issue **/
 (function($){
     $(document).ready(function(){
         $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
@@ -673,12 +696,12 @@ jQuery('.levelized ul').addClass(function(){
         });
     });
 })(jQuery);
-/**./How to fix Bootstrap multilevel dropdown menu but submenu is going out of screen issue **/
+/**!./How to fix Bootstrap multilevel dropdown menu but submenu is going out of screen issue **/
 
 
 
 
-/**[.slider--hash] Slider with hashtag URL ID**/
+/**![.slider--hash] Slider with hashtag URL ID**/
 /***-- slider .item ID required --***/
 	var slideUrl = document.location.toString();
 	if (slideUrl.match('#')) {
@@ -696,19 +719,19 @@ jQuery('.levelized ul').addClass(function(){
 
 
 
-/**.dwn-scroll**/
+/**!.dwn-scroll**/
 jQuery(".dwn-scroll").click(function() {
     jQuery('html, body').animate({
         scrollTop: jQuery(".dwn-scroll").offset().top
     }, 1500);
 });
-/**./.dwn-scroll**/
+/**!./.dwn-scroll**/
 
 
 
 
-/**.tab-animate**/
-/*
+/**!.tab-animate**/
+/*!
 Tab slide up/dwon on click
 */
 jQuery(".tab-animate li").click(function() {
