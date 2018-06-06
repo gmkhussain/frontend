@@ -130,6 +130,24 @@ Additional file list:
 ```
 
 
+## Bootstrap modal appearing behind backdrop
+<img src="https://i.stack.imgur.com/qSypO.png" alt="" />
+
+The issue has to do with the positioning of the parent containers. You can easily "move" modal out from these containers before displaying it. Here's how to do it if you were showing modal using JS.
+
+```javascript
+jQuery( document ).ready(function() {
+    setTimeout(function(){ /* Timeout is optional (*need to in some case if its not work) */
+        jQuery( ".modal" ).each(function( modals ) {
+        var modalId = "#"+$(this).attr("id");
+        console.log("--> " + modalId + " - has been appended to body");
+        jQuery(modalId).appendTo("body");
+        });
+    },4000);
+});
+```
+
+
 
 ## How to show the datepicker on input when click on icon
 How to focus on form-control when click on input-group-addon
