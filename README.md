@@ -385,6 +385,20 @@ jQuery('#example').on('draw.dt', function() {
 
 
 
+### Change Pagination Text in DataTable
+
+```javascript
+$('#the_table').DataTable({
+  language: {
+    paginate: {
+      next: 'Next >', //image <img src="images/arrow.png"> 
+      previous: '<i class="fa fa-fw fa-long-arrow-left">'  // icon
+    }
+  }
+});
+```
+
+
 ### Closing popup window after 5 seconds
 ```javascript
 var win = window.open("http://www.google.com", '1366002941508','width=500,height=200,left=375,top=330');
