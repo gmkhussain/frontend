@@ -33,6 +33,19 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 
 
 
+# Basic tools for Frontend development
+
+<img src="http://www.iconarchive.com/download/i66117/mybaco/baco-flurry/XAMPP.ico" height="32px" /> 
+XAMPP
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2000px-Git_icon.svg.png" height="32px" /> Git: version control
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/TortoiseGit_icon.png" height="32px" /> TortoiseGit: Windows Shell Interface with context menu
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png" height="32px" /> VScode: IDE
+
+<img src="https://chocolatey.org/content/packageimages/nodejs.10.5.0.png" height="32px" /> NodeJS (optional)
+
 
 
 ## addClass if URL is Root url (is Home page)
