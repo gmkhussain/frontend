@@ -34,15 +34,7 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 
 
 # Basic tools for Frontend development
-| <img src="http://www.iconarchive.com/download/i66117/mybaco/baco-flurry/XAMPP.ico" height="32px" /> | XAMPP |
-
-| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2000px-Git_icon.svg.png" height="32px" /> | Git: version control |
-
-| <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/TortoiseGit_icon.png" height="32px" /> TortoiseGit: Windows Shell Interface with context menu
-
-| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png" height="32px" /> | VScode: IDE |
-
-| <img src="https://chocolatey.org/content/packageimages/nodejs.10.5.0.png" height="32px" /> | NodeJS (optional) |
+<img src="http://www.iconarchive.com/download/i66117/mybaco/baco-flurry/XAMPP.ico" height="32px" title="XAMPP" /> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2000px-Git_icon.svg.png" height="32px" /> <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/TortoiseGit_icon.png" height="32px" title=" TortoiseGit: Windows Shell Interface with context menu" /> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png" height="32px" /> <img src="https://chocolatey.org/content/packageimages/nodejs.10.5.0.png" height="32px" />
 
 
 
@@ -664,6 +656,26 @@ Benefit: Browser will not block rendering until external CSS file are loaded.
 ...
 ```
 
+## Usage of Asynchronous and Deferred JavaScript
+
+```html
+//Normal Execution
+...
+<script src="script.js">
+...
+
+
+//Asynchronous : Script load parallel with the HTML document.
+/*
+ You should use [async] for scripts which can be executed in any order.
+*/
+<script async src="script.js">
+
+
+//Deferred :  only execute once the HTML document has been fully loaded.
+<script defer src="script.js">
+```
+
 
 
 
@@ -698,7 +710,7 @@ Output
 
 
 
-###Credits:
+### Credits:
 * Bootstrap - http://getbootstrap.com
 * jQuery - http://jquery.com
 * Font awesome icon - http://fortawesome.github.io/Font-Awesome/
