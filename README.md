@@ -34,17 +34,15 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 
 
 # Basic tools for Frontend development
+| <img src="http://www.iconarchive.com/download/i66117/mybaco/baco-flurry/XAMPP.ico" height="32px" /> | XAMPP |
 
-<img src="http://www.iconarchive.com/download/i66117/mybaco/baco-flurry/XAMPP.ico" height="32px" /> 
-XAMPP
+| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2000px-Git_icon.svg.png" height="32px" /> | Git: version control |
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2000px-Git_icon.svg.png" height="32px" /> Git: version control
+| <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/TortoiseGit_icon.png" height="32px" /> TortoiseGit: Windows Shell Interface with context menu
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/TortoiseGit_icon.png" height="32px" /> TortoiseGit: Windows Shell Interface with context menu
+| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png" height="32px" /> | VScode: IDE |
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png" height="32px" /> VScode: IDE
-
-<img src="https://chocolatey.org/content/packageimages/nodejs.10.5.0.png" height="32px" /> NodeJS (optional)
+| <img src="https://chocolatey.org/content/packageimages/nodejs.10.5.0.png" height="32px" /> | NodeJS (optional) |
 
 
 
@@ -630,6 +628,40 @@ jQuery('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 '#' will take the user back to the top of the page, so I usually go with void(0).
 
 javascript:; also behaves like javascript:void(0);
+```
+
+
+
+
+## Optimize CSS delivery delay the time to first render
+
+Before the browser can render content it must process all CSS files.
+
+Benefit: Browser will not block rendering until external CSS file are loaded.
+
+```html
+...
+</head>
+<body>
+...
+	<noscript id="deferred-styles">
+		<link rel="stylesheet" type="text/css" href="external.css"/>
+	</noscript>
+	<script>
+		 var loadDeferredStyles = function() {
+			var addStylesNode = document.getElementById("deferred-styles");
+			var replacement = document.createElement("div");
+			replacement.innerHTML = addStylesNode.textContent;
+			document.body.appendChild(replacement)
+			addStylesNode.parentElement.removeChild(addStylesNode);
+		  };
+		  var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+			  window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+		  if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+		  else window.addEventListener('load', loadDeferredStyles);
+	</script>
+</body>
+...
 ```
 
 
