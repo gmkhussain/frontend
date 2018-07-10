@@ -706,6 +706,18 @@ Output
 
 
 
+## VSCode: Your repository has no remotes configured to push to
+
+Type following command on your terminal (Ctrl+`)
+```
+git remote add origin https://github.com/user/repo.git
+# Set a new remote
+
+git remote -v
+# Verify new remote (will return related repository detail )
+```
+
+
 
 
 
