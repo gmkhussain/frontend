@@ -1400,6 +1400,92 @@ jQuery(".count-child").each(function() {
 
 
 
+
+
+
+/**colset--slider**/
+jQuery( ".firstlast-area").each(function() {
+  jQuery(this).find(".colset").first().addClass("first");
+  jQuery(this).find(".colset").last().addClass("last");
+});
+
+
+function addingLeftRight(that) {
+  var colsetParent = jQuery(that).closest(".colset--slider");
+  colsetParent.find(".colset").removeClass("right");
+  colsetParent.find(".colset").removeClass("left");
+  colsetParent.find(".active").next().addClass("right");
+  colsetParent.find(".active").prev().addClass("left");
+}  
+
+
+jQuery(".colset__actions .next").on("click",function() {
+  
+  if (jQuery(this).hasClass("disabled")){
+    return "button disabled";
+  }
+  
+  var colsetParent = jQuery(this).closest(".colset--slider");
+  
+  colsetParent.find(".colset.active").removeClass("active").next(".colset").addClass("active");
+  
+  addingLeftRight(this);
+  
+  colsetParent.find(".colset__actions  .prev").removeClass("disabled");
+
+  var lastQ = colsetParent.find(".colset.last").hasClass("active");
+
+  if (lastQ) {
+    colsetParent.find(".next").addClass("disabled");
+  } else {
+    colsetParent.find(".next").removeClass("disabled");
+  }
+  
+});
+
+jQuery(".colset__actions .prev").on("click",function() {
+  if (jQuery(this).hasClass("disabled")){
+    return "button disabled";
+  }
+  
+  var colsetParent = jQuery(this).closest(".colset--slider");
+    colsetParent.find(".colset.active").removeClass("active").prev(".colset").addClass("active");
+  
+  addingLeftRight(this);
+  
+    var firstQ = colsetParent.find(".colset.first").hasClass("active");
+  
+  if (firstQ) {
+    colsetParent.find(".prev").addClass("disabled");
+  } else {
+    colsetParent.find(".prev").removeClass("disabled");
+  }
+  colsetParent.find(".next").removeClass("disabled");
+  
+});
+
+jQuery(".colset__actions .all").on("click",function() {
+  var colsetParent = $(this).closest(".colset--slider");
+  colsetParent.toggleClass("no-active");
+  jQuery('html, body').animate({ scrollTop: jQuery(this).offset().top - 170 }, 1500 );
+});
+
+
+
+/*$(document).ready(function() { }); */
+/*counting each colset inside parent and assign data-id*/
+jQuery(".colset--slider").each(function(pID) {
+    jQuery(this).find(".colset").each(function(cID){
+      jQuery(this).attr("data-id", cID++)
+    });
+});
+/**./colset--slider**/
+
+
+
+
+
+
 /**[.pagination--key] Pagination with right/left arrow keys**/
 (function ($) {
     $('body').keyup(function (event) 
