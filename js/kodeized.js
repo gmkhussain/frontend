@@ -730,6 +730,40 @@ jQuery(".dwn-scroll").click(function() {
 
 
 
+
+
+
+
+
+
+/* Tabs linking from outside : fom-steps : Tabs with next button */
+/*
+ Conditional
+*/
+jQuery(".fom-steps .btn-step").click(function(e) {
+  e.preventDefault();
+  var targetTab = jQuery(this).attr("href");
+  jQuery('.fom-steps a[href="' + targetTab + '"]').tab("show");
+});
+
+/*
+ Unconditional
+ */
+$('.fom-steps .btn-next').click(function(){
+  $('.fom-steps .nav-tabs > .active').next('li').find('a').trigger('click');
+});
+
+$('.fom-steps .btn-prev').click(function(){
+  $('.fom-steps .nav-tabs > .active').prev('li').find('a').trigger('click');
+});
+/* ./Tabs linking from outside : fom-steps : Tabs with next button */
+
+
+
+
+
+
+
 /**!.tab-animate**/
 /*!
 Tab slide up/dwon on click
