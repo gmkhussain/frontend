@@ -611,6 +611,27 @@ Using !important not work properly.
 
 
 
+### How to print a specific part of a HTML page using JavaScript / CSS
+
+Use specific ID ```#printThisSection```
+
+```javascript
+document.getElementById("Print").onclick = function () {
+    printElement(document.getElementById("printThisSection"));
+};
+
+function printElement(elem) {
+    window.print();
+}
+```
+
+
+
+
+
+
+
+
 ### How to Cache-Control with .htaccess leverage browser caching
 How to Fix “Specify a Vary: Accept-Encoding Header” Warning
 ```html
