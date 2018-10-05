@@ -569,10 +569,46 @@ _svg.html
 ```
 
 
-## Overload
+
+
+
+
+
+
+
+
+
+# Overload
 * Optional 
 * Extra files/scripts
 * [viewportchecker.js] (viewportchecker.js) - Detects if an element is in the viewport and DO SOMETHING.
+
+
+
+
+### Background color not showing in print preview
+
+Using !important not work properly.
+
+```css
+@media print {
+
+    * {
+        -webkit-print-color-adjust: exact;
+    }
+
+    .tab-content>.tab-pane {
+        display: block !important;
+    }
+    
+    ul.nav.nav-tabs {
+        display: none;
+    }
+}
+```
+
+
+
 
 
 ### How to Cache-Control with .htaccess leverage browser caching
