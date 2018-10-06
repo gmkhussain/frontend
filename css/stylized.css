@@ -1927,7 +1927,7 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 
 /*dropdown-menu*/
 /*submenu for desktop*/
-.dropdown:hover  > .dropdown-menu { display: block; }
+.dropdown-hover--desktop .dropdown:hover  > .dropdown-menu { display: block; }
 
 .dropdown > a::after { color: inherit; content: "\f107"; font-family: "fontawesome"; font-size: 1em; line-height: initial; margin-left:2px; position: static; width: 10px; display: inline-block; text-align: center;}
 .dropdown.open > a::after { content: "\f105"; }
