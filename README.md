@@ -152,6 +152,11 @@ jQuery( document ).ready(function() {
 
 
 
+
+
+
+
+
 ## How to show the datepicker on input when click on icon
 How to focus on form-control when click on input-group-addon
 ```html
@@ -162,6 +167,43 @@ How to focus on form-control when click on input-group-addon
     </label>                    
 </div>
 ```
+
+
+
+
+
+
+## Change Date formate in Datepicker
+
+1. Global option
+```javascript
+$('.datepicker').datepicker({
+    format: 'yyyy-mm-dd',
+});
+```
+
+
+2. Individual options 
+```javascript
+<input class="datepicker" data-date-format="mm/dd/yyyy">
+```
+
+
+
+
+
+
+## Close datepicker after select date
+
+```javascript
+$('.datepicker').on('changeDate', function(){
+    $(this).datepicker('hide');
+});
+```
+
+
+
+
 
 
 
