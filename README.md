@@ -817,6 +817,25 @@ git remote -v
 ```
 
 
+<h1 align="center" id="errors">
+	<img src="https://cdn.iconscout.com/icon/free/png-256/warning-272-830593.png"  height="80" width="auto" />
+	Issues / Errors / Mistakes
+</h1>
+
+
+## Div buttons / role="button" not working on Iphone or Ipad
+
+```html
+	<div id="button" class="my_button" role="button">Click Here</div>
+```
+
+NOTE: Use a <button> or <input type="button"> tag instead of a div. 
+<div> button functionality may work in some browsers, it can be a bit of a hack compared to the traditional button tags.
+
+
+
+
+
 
 
 
