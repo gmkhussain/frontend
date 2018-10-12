@@ -33,6 +33,31 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 
 
 
+
+
+<table>
+  <tr>
+	<td>
+		<a href="#sass">
+			<img src="https://cdn.iconscout.com/icon/free/png-256/warning-272-830593.png"  height="80" width="auto" />
+			<br/>
+			Issues
+		</a>
+	</td>
+	<td>
+		<a href="#sass">
+			<img src="https://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png"  height="80" width="auto" />
+			<br/>
+			Sass / SCSS
+		</a>
+	</td>
+  </tr>
+</table>
+
+
+
+
+
 # Basic tools for Frontend development
 <img src="http://www.iconarchive.com/download/i66117/mybaco/baco-flurry/XAMPP.ico" height="32px" title="XAMPP" /> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2000px-Git_icon.svg.png" height="32px" /> <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/TortoiseGit_icon.png" height="32px" title=" TortoiseGit: Windows Shell Interface with context menu" /> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png" height="32px" /> <img src="https://chocolatey.org/content/packageimages/nodejs.10.5.0.png" height="32px" />
 
@@ -817,6 +842,58 @@ git remote -v
 ```
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 align="center" id="sass">
+	<img src="https://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png"  height="80" width="auto" />
+	<br/>
+	Sass / SCSS
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h1 align="center" id="errors">
 	<img src="https://cdn.iconscout.com/icon/free/png-256/warning-272-830593.png"  height="80" width="auto" />
 	Issues / Errors / Mistakes
@@ -831,6 +908,35 @@ git remote -v
 
 NOTE: Use a <button> or <input type="button"> tag instead of a div. 
 <div> button functionality may work in some browsers, it can be a bit of a hack compared to the traditional button tags.
+
+
+
+
+
+
+## Jumping textarea (message) when click on form-control
+
+Using <img src="https://static.grammarly.com/assets/files/997ea3a3690bda688b2a6d7407bb5eb9/logo.svg" height="40" width="auto" alt="" /> ```grammarly extension```  ?
+
+Disable the ```Grammarly``` extension by adding attr ```data-gramm_editor="false"``` in the textarea.
+```html
+<textarea class="form-control" data-gramm_editor="false">data</textarea>
+```
+
+#### OR
+
+
+Custom HTML component ```<grammarly-ghost>``` is inserted in the DOM by Grammarly extension
+```css
+grammarly-ghost {
+    display: none !important;
+}
+```
+
+
+
+
+
 
 
 
