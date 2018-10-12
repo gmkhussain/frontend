@@ -53,49 +53,42 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 			<br/>
 			Sass / SCSS
 		</a>
-	</td>
-	
+	</td>	
 	<td>
 		<a href="#jQuery">
 			<img src="https://programarfacil.com/wp-content/uploads/2015/08/jQurery.png"  height="80" width="auto" />
 			<br/>
 			jQuery
 		</a>
-	</td>
-	
+	</td>	
 	<td>
 		<a href="#jQueryUI">
 			<img src="http://jqueryto.com/2013/assets/i/icon-jqueryui.png"  height="80" width="auto" />
 			<br/>
 			jQuery UI
 		</a>
-	</td>
-	
+	</td>	
 	<td>
 		<a href="#Ajax">
 			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd_B5bTO32ufTEBsyrA8GW9i9wocgAFq3aSzBoO5QI5tvA_S1xXA"  height="80" width="auto" />
 			<br/>
 			Ajax
 		</a>
-	</td>
-	
+	</td>	
 	<td>
 		<a href="#Swiper">
 			<img src="https://idangero.us/i/open/swiper.jpg" height="80" width="auto" />
 			<br/>
 			Swiper
 		</a>
-	</td>
-		
+	</td>		
 	<td>
 		<a href="#DataTable">
 			<img src="https://www.opencodez.com/wp-content/uploads/2017/02/datatable.png" height="80" width="auto" />
 			<br/>
 			DataTable
 		</a>
-	</td>
-	
-	
+	</td>	
   </tr>
 </table>
 
