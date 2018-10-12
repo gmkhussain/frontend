@@ -28,7 +28,10 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 | Frontized 7     |   |    |
 | Frontized 8 Pro    |   |    |
 | Frontized 8.1    |   |    |
-| Frontized X     |  There no 9 because... Seven ate Nine. * CLEVER AND SUBTLE MARKETING TRICK:   simply going to call it the Frontized X and not pronounce it as Frontized Ten. |    |-->
+| Frontized X     |  There no 9 because... Seven ate Nine. * CLEVER AND SUBTLE MARKETING TRICK:   simply going to call it the Frontized X and not pronounce it as Frontized Ten.
+
+Didn’t skip 9, Just made a creative name for 10th anniversary.
+ |    |-->
 
 
 
@@ -38,19 +41,61 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 <table>
   <tr>
 	<td>
-		<a href="#sass">
+		<a href="#Errors">
 			<img src="https://cdn.iconscout.com/icon/free/png-256/warning-272-830593.png"  height="80" width="auto" />
 			<br/>
 			Issues
 		</a>
 	</td>
 	<td>
-		<a href="#sass">
+		<a href="#Sass">
 			<img src="https://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png"  height="80" width="auto" />
 			<br/>
 			Sass / SCSS
 		</a>
 	</td>
+	
+	<td>
+		<a href="#jQuery">
+			<img src="https://programarfacil.com/wp-content/uploads/2015/08/jQurery.png"  height="80" width="auto" />
+			<br/>
+			jQuery
+		</a>
+	</td>
+	
+	<td>
+		<a href="#jQueryUI">
+			<img src="http://jqueryto.com/2013/assets/i/icon-jqueryui.png"  height="80" width="auto" />
+			<br/>
+			jQuery UI
+		</a>
+	</td>
+	
+	<td>
+		<a href="#Ajax">
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd_B5bTO32ufTEBsyrA8GW9i9wocgAFq3aSzBoO5QI5tvA_S1xXA"  height="80" width="auto" />
+			<br/>
+			Ajax
+		</a>
+	</td>
+	
+	<td>
+		<a href="#Swiper">
+			<img src="https://idangero.us/i/open/swiper.jpg" height="80" width="auto" />
+			<br/>
+			Swiper
+		</a>
+	</td>
+		
+	<td>
+		<a href="#DataTable">
+			<img src="https://www.opencodez.com/wp-content/uploads/2017/02/datatable.png" height="80" width="auto" />
+			<br/>
+			DataTable
+		</a>
+	</td>
+	
+	
   </tr>
 </table>
 
@@ -481,6 +526,8 @@ setTimeout(function () { win.close();}, 5000);
 ###  Nested Sortable
 is a jQuery plugin that extends jQuery Sortable UI functionalities to nested lists.
 
+Link: http://ilikenwf.github.io/example.html(http://ilikenwf.github.io/example.html)
+
 ```javascript
 <ol class="sortable">
 	<li><div>Some content</div></li>
@@ -892,10 +939,9 @@ git remote -v
 
 
 
-
-
 <h1 align="center" id="errors">
 	<img src="https://cdn.iconscout.com/icon/free/png-256/warning-272-830593.png"  height="80" width="auto" />
+	<br/>
 	Issues / Errors / Mistakes
 </h1>
 
@@ -916,7 +962,7 @@ NOTE: Use a <button> or <input type="button"> tag instead of a div.
 
 ## Jumping textarea (message) when click on form-control
 
-Using <img src="https://static.grammarly.com/assets/files/997ea3a3690bda688b2a6d7407bb5eb9/logo.svg" height="40" width="auto" alt="" /> ```grammarly extension```  ?
+Using <img src="https://static.grammarly.com/assets/files/997ea3a3690bda688b2a6d7407bb5eb9/logo.svg" style="    position: relative; top: 10px; height:30px" width="auto" alt="" /> ```grammarly extension```  ?
 
 Disable the ```Grammarly``` extension by adding attr ```data-gramm_editor="false"``` in the textarea.
 ```html
@@ -940,6 +986,25 @@ grammarly-ghost {
 
 
 
+## maxlength attribute of input does not work on Android Phone
+
+```javascript
+$('html.android .input_limit').unbind('keyup change input paste').bind('keyup change input paste', function (e) {
+  var $this = $(this);
+  var val = $this.val();
+  var valLength = val.length;
+  var maxCount = $this.attr('maxlength');
+  
+  if (valLength > maxCount) {
+    $this.val($this.val().substring(0, maxCount));
+  }
+});
+```
+
+
+
+
+
 
 
 
@@ -951,6 +1016,7 @@ grammarly-ghost {
 * jQuery - http://jquery.com
 * Font awesome icon - http://fortawesome.github.io/Font-Awesome/
 * Animate.css - http://daneden.me/animate
+* DataTable - https://datatables.net/
 * FleXcroll.js - http://hesido.com/web.php?page=customscrollbar
 * JScrollpane.js - http://jscrollpane.kelvinluck.com/
 
