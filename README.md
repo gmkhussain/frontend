@@ -109,6 +109,9 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 
 
 
+
+
+
 ### How to use '$(this)' In a jQuery function
 The this that you refer to in myFunction is the context of the myFunction function.
 
@@ -130,6 +133,14 @@ myFunction.apply(this)
 
 
 
+
+
+
+
+
+
+
+
 ## How to reload script after Ajax call
 add following code in ajax file <code>ajax/your-ajax-response.php</code>
 ```javascript
@@ -143,6 +154,14 @@ add following code in ajax file <code>ajax/your-ajax-response.php</code>
                 });
 </script>
 ```
+
+
+
+
+
+
+
+
 
 
 
@@ -185,6 +204,14 @@ Additional file list:
 
 
 
+
+
+
+
+
+
+
+
 ## Newbies
 * Well defined
 ```html
@@ -194,6 +221,14 @@ Additional file list:
 		});
 	</script>
 ```
+
+
+
+
+
+
+
+
 
 
 ## Bootstrap modal appearing behind backdrop
@@ -256,6 +291,8 @@ $('.datepicker').datepicker({
 
 
 
+
+
 ## Close datepicker after select date
 
 ```javascript
@@ -286,6 +323,11 @@ $('.datepicker').on('changeDate', function(){
 
 
 
+
+
+
+
+
 ### How to detect bootstrap collapse is opening or closing?
 
 ```javascript
@@ -299,6 +341,13 @@ $('.datepicker').on('changeDate', function(){
         jQuery(this).attr("data-expend", "close");
     });
 ```
+
+
+
+
+
+
+
 
 
 
@@ -326,10 +375,24 @@ $('.datepicker').on('changeDate', function(){
 
 
 
+
+
+
+
+
+
+
 ### Clickable Table row like a link
 ```html
 <tr onclick="document.location = 'links.html';">
 ```
+
+
+
+
+
+
+
 
 
 
@@ -345,6 +408,13 @@ jQuery("#NodesToMove").appendTo('#DestinationContainerNode')
 
 
 
+
+
+
+
+
+
+
 ### [data-toggle="collapse"] on Click to show and scroll to content
 ```javascript
 /* $(".collapse-animate").on('shown.bs.collapse', function(event){ // individual use */
@@ -355,6 +425,13 @@ jQuery(document).on('shown.bs.collapse', function(event){  // global use
 });
 ```
 		
+		
+		
+		
+		
+		
+		
+		
 
 ### [data-toggle="collapse"] dynamically created collapse trigger click event for open/close
 ```javascript
@@ -364,13 +441,28 @@ $(".btn-close").click(function(){
   targetData.trigger( "click" )
 });
 ```
-		
+
+
+
+
+
+
+
+
 
 ### Disable click outside of Bootstrap Modal area to close modal
 ```javascript
 // Use data-backdrop="static"
 <button class="btn btn-xs btn-success" data-backdrop="static" data-toggle="modal" data-target="#composedModal"><i class="ion-md-add"></i> <span>Composed</span></button>
 ```
+
+
+
+
+
+
+
+
 
 ### On keypress do something on entire document but not inside inputs and textareas
 ```javascript
@@ -414,6 +506,14 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 
 
 
+
+
+
+
+
+
+
+
 ### Multiple Instances of Swiper on Same page
 ```html
 //can do that easier just with different classes
@@ -427,6 +527,16 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 	var swiper3 = new Swiper('.s3', { /* Options here */ })
 </script>
 ```
+
+
+
+
+
+
+
+
+
+
 
 
 ### Multiple Instances of Swiper on Same page
@@ -479,8 +589,23 @@ demo: http://jsfiddle.net/gmkhussain/xd081nre/
 
 
 
+
+
+
+
+
+
+
+
+
+
 ## Bootcamp™
 * Short Guideline
+
+
+
+
+
 
 
 
@@ -490,6 +615,11 @@ jQuery('#example').on('draw.dt', function() {
     //do something.. on Detect event changes on DataTable
 });
 ```
+
+
+
+
+
 
 
 
@@ -507,12 +637,23 @@ $('#the_table').DataTable({
 ```
 
 
+
+
+
+
+
+
 ### Closing popup window after 5 seconds
 ```javascript
 var win = window.open("http://www.google.com", '1366002941508','width=500,height=200,left=375,top=330');
 
 setTimeout(function () { win.close();}, 5000);
 ```
+
+
+
+
+
 
 
 
@@ -549,6 +690,13 @@ Link: http://ilikenwf.github.io/example.html(http://ilikenwf.github.io/example.h
 Also, the default list type is <ol>
 
 
+
+
+
+
+
+
+
 ### How to clear cache on each page when it loads in the browser?
 ```html
 <!--Adding this meta tag will help you solve your problem.-->
@@ -556,6 +704,13 @@ Also, the default list type is <ol>
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="-1" />
 ```
+
+
+
+
+
+
+
 
 
 ### Problem with position: fixed. ( i.e. https://codepen.io/pen/prQQpq ) 
@@ -572,6 +727,14 @@ Incase parent has above styling, child elements with position: fixed. will not w
     
 ```
 
+
+
+
+
+
+
+
+
 ### Encode Decode by jQuery
 link: https://codepen.io/pen/OmEmaL
 ```javascript
@@ -581,12 +744,31 @@ var str = "My Text";
 	console.log(enc);
 ```
 
+
+
+
+
+
+
+
+
+
 ### Change hash (#) for slash (/) or another (string) on url
 ```javascript
 if (location.href.indexOf("#prevHash") > -1) {
 	location.assign(location.href.replace('#prevHash', "#newHash")); 
  }
 ``` 
+
+
+
+
+
+
+
+
+
+
 
 ## Brats®
 * Fixing
@@ -609,6 +791,16 @@ $(function () {
 </script>
 ```
 
+
+
+
+
+
+
+
+
+
+
 ### Links not working properly on Swiper slides
 
 ```javascript
@@ -630,6 +822,14 @@ var swiper1 = new Swiper('.s1', {
 
 
 
+
+
+
+
+
+
+
+
 ### [.fom-steps] Form steps with Bootstrap Tabs
 
 https://codepen.io/pen/OxPomo
@@ -640,6 +840,14 @@ jQuery(".fom-steps .btn-step").click(function(e) {
   var targetTab = jQuery(this).attr("href");
   jQuery('.fom-steps a[href="' + targetTab + '"]').tab("show");
 });
+
+
+
+
+
+
+
+
 
 
 
@@ -657,13 +865,39 @@ https://codepen.io/pen/rYxBjJ
 ```
 
 
+
+
+
+
+
+
+
+
+
+
 ## Hazing
 * Unclear
+
+
+
+
+
+
+
+
+
 
 
 ## Overdose
 * Speed-less
 * Mess-up code
+
+
+
+
+
+
+
 
 ### Metabolic
 
@@ -685,10 +919,16 @@ _svg.html
 
 
 
+
+
+
 # Overload
 * Optional 
 * Extra files/scripts
 * [viewportchecker.js] (viewportchecker.js) - Detects if an element is in the viewport and DO SOMETHING.
+
+
+
 
 
 
@@ -718,6 +958,14 @@ Using !important not work properly.
 
 
 
+
+
+
+
+
+
+
+
 ### How to print a specific part of a HTML page using JavaScript / CSS
 
 Use specific ID ```#printThisSection```
@@ -731,6 +979,9 @@ function printElement(elem) {
     window.print();
 }
 ```
+
+
+
 
 
 
@@ -757,7 +1008,15 @@ Header set Cache-Control "max-age=2628000, public"
 
 
 
-### Remove youtube branding after embedding video
+
+
+
+
+
+
+
+### <img src="http://joelfanmusic.com/content/uploads/2014/10/youtube.png" style="top: 8px; height: 30px; position: relative;" /> Remove youtube branding after embedding video
+
 ```html
 You can add ?modestbranding=1 to your url. That will remove the logo.
 &showinfo=0 will remove the title bar.
@@ -766,8 +1025,16 @@ You can add ?modestbranding=1 to your url. That will remove the logo.
 
 
 
+
+
+
+
+
+
+
 ## How to set the tab to active class from outside of Bootstrap Tab
 ie: https://codepen.io/pen/PQpoRe
+
 ```javascript
 jQuery('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     var target = this.href.split('#');
@@ -778,13 +1045,27 @@ jQuery('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
 
 
+
+
+
+
+
+
+
 ## How to prevent a click on a '#' link from jumping to top of page?
 
-```
+```javascript
 '#' will take the user back to the top of the page, so I usually go with void(0).
 
 javascript:; also behaves like javascript:void(0);
 ```
+
+
+
+
+
+
+
 
 
 
@@ -820,6 +1101,13 @@ Benefit: Browser will not block rendering until external CSS file are loaded.
 ...
 ```
 
+
+
+
+
+
+
+
 ## Usage of Asynchronous and Deferred JavaScript
 
 ```html
@@ -839,6 +1127,12 @@ Benefit: Browser will not block rendering until external CSS file are loaded.
 //Deferred :  only execute once the HTML document has been fully loaded.
 <script defer src="script.js">
 ```
+
+
+
+
+
+
 
 
 
@@ -870,10 +1164,18 @@ Output
 
 
 
+
+
+
+
+
+
+
 ## VSCode: Your repository has no remotes configured to push to
 
 Type following command on your terminal (Ctrl+`)
-```
+
+```javascript
 git remote add origin https://github.com/user/repo.git
 # Set a new remote
 
@@ -939,6 +1241,9 @@ git remote -v
 </h1>
 
 
+
+
+
 ## Div buttons / role="button" not working on Iphone or Ipad
 
 ```html
@@ -947,6 +1252,9 @@ git remote -v
 
 NOTE: Use a <button> or <input type="button"> tag instead of a div. 
 <div> button functionality may work in some browsers, it can be a bit of a hack compared to the traditional button tags.
+
+
+
 
 
 
@@ -971,6 +1279,8 @@ grammarly-ghost {
     display: none !important;
 }
 ```
+
+
 
 
 

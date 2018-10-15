@@ -1,5 +1,5 @@
 /*! 
-* Kodeized v1.7
+* Kodeized v4.10
 * Coding made effortless.
 * This file contains works for many various kinds of tasks 
 */
@@ -29,6 +29,12 @@ jQuery("#page-content").on('click', function(event) {
 		jQuery(".slide-navbar--active .navbar-toggle").click(); 
 });
 **/
+
+
+
+
+
+
 
 
 
@@ -62,6 +68,12 @@ jQuery(document).keydown(function(e) {
 
 
 
+
+
+
+
+
+
 /**!Detect Localhost connection**/
 if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
     jQuery("html").attr("connection", "local");
@@ -69,12 +81,21 @@ if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
 		jQuery("html").attr("connection", "live");
 	}
 /**./Detect Localhost connection**/
-	
+
+
+
+
+
+
 
 
 
 /*addClass if URL is Root url (is Home page)*/
 jQuery('body').toggleClass('is_index home index-page', /\/$/.test(location.pathname));
+
+
+
+
 
 
 
@@ -131,6 +152,11 @@ jQuery(function() {
 
 
 
+
+
+
+
+
 /**!Show Modal dialog by Hash URL**/
   jQuery(function(){ /*!shortcut for $(document).ready */
     var hashUrl = window.location.hash
@@ -154,6 +180,7 @@ jQuery(function() {
 	}
   });
 /**!./Show Modal dialog by Hash URL**/
+
 
 
 
@@ -186,6 +213,10 @@ jQuery( document ).ready(function() {
 
 
 
+
+
+
+
 /**! Expand accordion with hashtag OR Retain collapse on page refresh **/
 jQuery(document).ready(function () {
     if(location.hash != null && location.hash != ""){
@@ -194,15 +225,6 @@ jQuery(document).ready(function () {
     }
 });
 /**!./Expand accordion with hashtag OR Retain collapse on page refresh **/
-
-
-
-
-
-
-
-
-
 
 
 
@@ -251,6 +273,11 @@ jQuery(document).ready(function() {
 
 
 
+
+
+
+
+
 /**!.form-group--active on parent of .form-control**/
 jQuery(".form-control").focus(function() {
   jQuery(this).parent().addClass("form-group--active");
@@ -260,6 +287,11 @@ jQuery(".form-control").blur(function() {
   jQuery(this).parent().removeClass("form-group--active");
 });
 /**!./.form-group--active on parent of .form-control**/
+
+
+
+
+
 
 
 
@@ -280,6 +312,11 @@ jQuery(document).ready(function() {
 
 
 
+
+
+
+
+
 /**fnc-fom label animation**/
 	jQuery('.fnc-fom .form-control').focusout(function(){
 	var text_value=jQuery(this).val();
@@ -289,6 +326,11 @@ jQuery(document).ready(function() {
         }else{ jQuery(this).removeClass("has-value"); }
 	});
 /**!./fnc-fom label animation**/
+
+
+
+
+
 
 
 
@@ -313,21 +355,24 @@ jQuery(".fnc-uplaod [type=file]").on("change", function() {
 
 
 
-/*!Add class on parent of Checked input*/
-/*!	ie: https://codepen.io/pen/KqeGje	*/
 
-/*
- if checkbox checked add class to parent element
-*/
+
+
+/*!Add class on parent of Checked input*/
+  /*!	ie: https://codepen.io/pen/KqeGje	*/
+
+  /*
+    if checkbox checked add class to parent element
+  */
 jQuery( document ).ready(function() {
 	jQuery( ".checker-area" ).each(function() {
 		jQuery(this).find('input:checked').closest('.checker-area').addClass('is-active');
 	});
 });
 
-/*
- Reset Added
-*/
+  /*
+    Reset Added
+  */
 jQuery(document).on("click", "[type='reset']", function(e){
   e.preventDefault();
   form = e.toElement.form;
@@ -355,6 +400,10 @@ jQuery(document).on("change", ".checker-area input:checkbox", function() {
 
 
 
+
+
+
+
 /**!detect page height**/
 jQuery(window).on('load', function() {
 
@@ -375,7 +424,7 @@ jQuery(window).on('load', function() {
 	console.log("Body height:" + bodyHeight + " with footer " + bodyHeight_withFooter );
 
 		/*!
-		 Place footer at bottom only if page is "short"
+		  Place footer at bottom only if page is "short"
 		*/
 		if( documentHeight_withFooter < windowHeight   || bodyHeight_withFooter < windowHeight ){
 			console.log("--> short page");
@@ -387,7 +436,7 @@ jQuery(window).on('load', function() {
 		
 		
 		/*!
-		footerHeight: for short pages, style required as per site theme.
+		  footerHeight: for short pages, style required as per site theme.
 		*/
 		var footerHeight = jQuery("footer").height();
 			jQuery("footer").attr("data-height", footerHeight );
@@ -501,6 +550,12 @@ function scroll() {
 
 
 
+
+
+
+
+
+
 /**!sticky4all**/
 if (jQuery(".sticky")[0]){
 	var $window = jQuery(window),
@@ -512,6 +567,11 @@ if (jQuery(".sticky")[0]){
     });
 } else { /* do something if class does not exist */ }
 /**./sticky4all**/	
+
+
+
+
+
 
 
 
@@ -539,6 +599,11 @@ if (jQuery(this).scrollTop() > 1){
 
 
 
+
+
+
+
+
 /**!detect scrollized direction --up & --down **/
 var lastScrollizedTop = 0;
 jQuery(window).scroll(function(event) {
@@ -558,12 +623,21 @@ jQuery(window).scroll(function(event) {
 
 
 
+
+
+
+
 /**!nav-folderized**/
 jQuery(".nav-folderized h4").click(function(){
 	jQuery(this).parent(".nav").toggleClass("open"); 
 	jQuery('html, body').animate({ scrollTop: jQuery(this).offset().top - 170 }, 1500 );
 });
 /**!./nav-folderized**/
+
+
+
+
+
 
 
 
@@ -578,9 +652,20 @@ jQuery( document ).ready(function() {
 
 
 
+
+
+
+
+
 /**navbar--open when navbar-toggle open add class on body**/
 jQuery(".navbar-toggle").on("click", function (e) { jQuery("body").toggleClass(" --- navbar--open"); });
 /**./navbar--open when navbar-toggle open add class on body**/
+
+
+
+
+
+
 
 
 
@@ -597,15 +682,19 @@ jQuery(".navbar-toggle").on("click", function (e) { jQuery("body").toggleClass("
 
 
 
+
+
 /**![.levelized] add class on multilevels of dropdown in navbar **/	
-/*!
-ie: https://codepen.io/pen/RgdgGy
-*/
-jQuery('.levelized ul').addClass(function(){
-   return "level"+$(this).parents('ul').length;
-});
+  /*!
+    ie: https://codepen.io/pen/RgdgGy
+  */
+  jQuery('.levelized ul').addClass(function(){
+    return "level"+$(this).parents('ul').length;
+  });
 /**!./[.levelized] add class on multilevels of dropdown in navbar **/	
-	
+
+
+
 
 	
 	
@@ -628,21 +717,34 @@ jQuery('.levelized ul').addClass(function(){
 
 
 
-/**![.slider--hash] Slider with hashtag URL ID**/
-/***-- slider .item ID required --***/
+
+
+
+
+
+/**! [.slider--hash] Slider with hashtag URL ID **/
+  /*
+    NOTE: slider .item ID required
+  */
 	var slideUrl = document.location.toString();
 	if (slideUrl.match('#')) {
 		jQuery('.slider--hash .item.active').removeClass('active');
-			var slideIndex = slideUrl.split('#')[1];
-			jQuery('#' + slideIndex).addClass('active');
-		}
+	  var slideIndex = slideUrl.split('#')[1];
+		jQuery('#' + slideIndex).addClass('active');
+  }
 		
 		jQuery('.slider--hash').bind('slid', function (e) {
 			var item = jQuery('.slider--hash .item.active').attr('id');
-			
+
 			if (item) window.location.hash = "#" + item;
 		});
 /**./[.slider--hash] Slider with hashtag URL ID**/
+
+
+
+
+
+
 
 
 
@@ -662,27 +764,28 @@ jQuery(".dwn-scroll").click(function() {
 
 
 
+/*! Tabs linking from outside : fom-steps : Tabs with next button */
 
-/* Tabs linking from outside : fom-steps : Tabs with next button */
-/*
- Conditional
-*/
+  /*
+   Conditional
+  */
 jQuery(".fom-steps .btn-step").click(function(e) {
   e.preventDefault();
   var targetTab = jQuery(this).attr("href");
   jQuery('.fom-steps a[href="' + targetTab + '"]').tab("show");
 });
 
-/*
- Unconditional
- */
-$('.fom-steps .btn-next').click(function(){
-  $('.fom-steps .nav-tabs > .active').next('li').find('a').trigger('click');
+  /*
+   Unconditional
+  */
+jQuery('.fom-steps .btn-next').click(function(){
+  jQuery('.fom-steps .nav-tabs > .active').next('li').find('a').trigger('click');
 });
 
-$('.fom-steps .btn-prev').click(function(){
-  $('.fom-steps .nav-tabs > .active').prev('li').find('a').trigger('click');
+jQuery('.fom-steps .btn-prev').click(function(){
+  jQuery('.fom-steps .nav-tabs > .active').prev('li').find('a').trigger('click');
 });
+
 /* ./Tabs linking from outside : fom-steps : Tabs with next button */
 
 
@@ -692,9 +795,9 @@ $('.fom-steps .btn-prev').click(function(){
 
 
 /**!.tab-animate**/
-/*!
-Tab slide up/dwon on click
-*/
+  /*!
+    Tab slide up/dwon on click
+  */
 jQuery(".tab-animate li").click(function() {
    jQuery('html, body').animate({ scrollTop: jQuery(".tab-content").offset().top - 170 }, 1500 );
 });
@@ -703,31 +806,42 @@ jQuery(".tab-animate li").click(function() {
 
 
 
+
+
+
+
+
 /**.active-tab-move-area**/
 	/*
-	Active Tab Nav move to center on click
+	  Active Tab Nav move to center on click
 	*/
-    jQuery(document).ready(function(){
-      jQuery(".active-tab-move-area .nav-tabs li").click(function() {
-        jQuery(".active-tab-move-area .nav-tabs li.active").removeClass("c_active");
+  jQuery(document).ready(function(){
+    jQuery(".active-tab-move-area .nav-tabs li").click(function() {
+      jQuery(".active-tab-move-area .nav-tabs li.active").removeClass("c_active");
 		// Remove any "active" class
 		// jQuery(".our-values .nav-tabs li.active > div").css("display","block");
 	    var $active = jQuery(this).detach().addClass("c_active"),
-            $lis = jQuery(".active-tab-move-area .nav-tabs li");
+        $lis = jQuery(".active-tab-move-area .nav-tabs li");
         $active.insertBefore($lis.eq(Math.floor($lis.length / 2)));
-      });
     });
+  });
 /**./.active-tab-move-area**/
 
+
+
+
 	
-	
-/**[.tabs-change--hover] tabs change on hover without click**/
+
+
+
+
+/**! [.tabs-change--hover] tabs change on hover without click **/
 	jQuery(document).on('mouseenter', '.tabs-change--hover [data-toggle="tab"]', function () {
-		jQuery(this).tab('show');
-    });
+	  jQuery(this).tab('show');
+  });
 
 	/*
-	 Dropdown items in nav tabs can get stuck in .active mode
+    Dropdown items in nav tabs can get stuck in .active mode
 	*/
 	jQuery('.tabs-change--hover  .nav-tabs').on('shown.bs.tab', 'a', function (e) {
 		if (e.relatedTarget) {
@@ -743,54 +857,63 @@ jQuery(".tab-animate li").click(function() {
 
 
 
-/**scrollToTop**/
-	jQuery(document).ready(function(){
-		/*
-		 Check to see if the window is top if not then display button
-		*/
-		jQuery(window).scroll(function(){
-			if (jQuery(this).scrollTop() > 100) {
-				jQuery('.scrollToTop').fadeIn();
-			} else {
-				jQuery('.scrollToTop').fadeOut();
-			}
-		});
+
+/**! scrollToTop **/
+jQuery(document).ready(function(){
+  /*
+	  Check to see if the window is top if not then display button
+	*/
+	jQuery(window).scroll(function(){
+	  if (jQuery(this).scrollTop() > 100) {
+		  jQuery('.scrollToTop').fadeIn();
+    } else {
+	    jQuery('.scrollToTop').fadeOut();
+	  }
+	});
 		
 		/*
 		 Click event to scroll to top
 		*/
-		jQuery('.scrollToTop').click(function(){
-			jQuery('html, body').animate({scrollTop : 0},800);
-			return false;
+  jQuery('.scrollToTop').click(function(){
+	  jQuery('html, body').animate({scrollTop : 0},800);
+		  return false;
 		});
 	});
 
 	/*if stop scrolling '.ScrollToTop' push to corner*/
-			jQuery(function() {
-				var $output = jQuery( ".scrollToTop .fa" ),
-					scrolling = "<span id='scrolling'>Scrolling</span>",
-					stopped = "<span id='stopped'>Stopped</span>";
+	  jQuery(function() {
+		  var $output = jQuery( ".scrollToTop .fa" ),
+			scrolling = "<span id='scrolling'>Scrolling</span>",
+			stopped = "<span id='stopped'>Stopped</span>";
 
-					jQuery( window ).scroll(function() {
-						$output.html( scrolling );
-							jQuery('.scrollToTop').removeClass('has-stop');
+			jQuery( window ).scroll(function() {
 
-						clearTimeout( $.data( this, "scrollCheck" ) );
+			  $output.html( scrolling );
+				jQuery('.scrollToTop').removeClass('has-stop');
+  			clearTimeout( $.data( this, "scrollCheck" ) );
 						
 						$.data( this, "scrollCheck", setTimeout(function() {
-							$output.html( stopped );
+              
+              $output.html( stopped );
 							setTimeout(function() {
 								jQuery('.scrollToTop').addClass('has-stop');
 							}, 2000);
 							
-						}, 250) );
-					});
+            }, 250) );
+            
 			});
+		});
 /**./scrollToTop**/
 			
 
+			
+		
 
-/**.btn-effect--ripple Button ripple effects on click**/
+
+
+
+
+/**! .btn-effect--ripple Button ripple effects on click **/
 jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripple a").click(function (e) {
   jQuery(".ripple").remove();/*Remove any old one*/
   var posX = jQuery(this).offset().left,
@@ -805,7 +928,9 @@ jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripp
     buttonWidth = buttonHeight; 
   }
   
-  /*Get the center of the element*/
+  /*
+    Get the center of the element
+  */
   var x = e.pageX - posX - buttonWidth / 2;
   var y = e.pageY - posY - buttonHeight / 2;
   
@@ -821,7 +946,12 @@ jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripp
 
 
 
-/**links scrolling animation**/
+
+
+
+
+
+/**! links scrolling animation **/
 	jQuery(function() {
 		jQuery('.scrolink a').click(function() {
 		  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -829,7 +959,7 @@ jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripp
 			target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
 			if (target.length) {
 			  jQuery('html, body').animate({
-				scrollTop: target.offset().top + (-100) //Additional pixels to the scrollTop
+				scrollTop: target.offset().top + (-100) /* Additional pixels to the scrollTop */
 			  }, 1000);
 			  return false;
 			}
@@ -841,14 +971,19 @@ jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripp
 
 
 
-/**Inner Pages Filler Script**/
+
+
+
+
+
+/**! Inner Pages Filler Script **/
 jQuery(function () {
     jQuery(window).scroll(function () {
         var $myDiv = jQuery('.fill__move');
         var y = jQuery(this).scrollTop();
         jQuery('#fill__value').text(y);
 		
-		/*Y Round by 100*/
+		/* Y Round by 100 */
 		var Yroundby100 = Math.floor(y / 100) * 100;  
 		
 		jQuery('html').attr("y-pos",Yroundby100);
@@ -863,7 +998,12 @@ jQuery(function () {
 
 
 
-/**section height =screen**/
+
+
+
+
+
+/**! section height =screen **/
 jQuery(document).ready(function(){
     jQuery('.screen-area').css("min-height", jQuery(window).height() + 10);
 });
@@ -900,10 +1040,12 @@ jQuery(function(){
 
 
 
-/**!TH text add on TDs for attribute mobile responsive**/
-/*!
-	https://codepen.io/pen/XzXrGy
-*/
+
+
+/**! TH text add on TDs for attribute mobile responsive **/
+  /*!
+	  https://codepen.io/pen/XzXrGy
+  */
 jQuery('table').each(function() {
     var $table = $(this);
         $rows = $table.children('tbody').children();
@@ -920,37 +1062,47 @@ jQuery('table').each(function() {
 
 
 
+
+
+
+
 /**More Navbar Item Limitation**/
 jQuery( document ).ready(function() {
-moreNavLimit = jQuery(".hdr-area").attr("data-navitemlimit");
+  moreNavLimit = jQuery(".hdr-area").attr("data-navitemlimit");
 
-jQuery(".navbar-main > li").each(function (i) {
-	i=i+1; //Counting Total Nav Items
+  jQuery(".navbar-main > li").each(function (i) {
+	  i=i+1; /* Counting Total Nav Items */
 
-	//Adding Class for Extra ILs
-	if(i > moreNavLimit){
-    jQuery(this).addClass("moreMover");
-  }
+	  /* Adding Class for Extra ILs */
+	  if(i > moreNavLimit){
+      jQuery(this).addClass("moreMover");
+    }
 	
-  //Adding SubMenu for Extra ILs
-  if(i == moreNavLimit){
-  nv = "<li class='dropdown' id='moreMenu'><a href='#' class='dropdown-toggle' data-toggle='dropdown'>More... <span class='new badge'>" + moreNavLimit + "</span></a><ul id='moreSubMenu' class='dropdown-menu'></ul></li>";
-   // nv="<li><a>MO</a></li>";
-  	jQuery( nv ).insertAfter( this );
-  	//jQuery( this ).append( "<li>d</li>" );
-  }
+    /* Adding SubMenu for Extra ILs */
+    if(i == moreNavLimit){
+      nv = "<li class='dropdown' id='moreMenu'><a href='#' class='dropdown-toggle' data-toggle='dropdown'>More... <span class='new badge'>" + moreNavLimit + "</span></a><ul id='moreSubMenu' class='dropdown-menu'></ul></li>";
+      /* nv="<li><a>MO</a></li>"; */
+  	  jQuery( nv ).insertAfter( this );
+  	  /*jQuery( this ).append( "<li>d</li>" ); */
+    }
   
-  jQuery("li.moreMover").appendTo("#moreSubMenu");
+    jQuery("li.moreMover").appendTo("#moreSubMenu");
   
-  jQuery(this).addClass("knav" +i+"");
-});  
+    jQuery(this).addClass("knav" +i+"");
+  });
+
 });
 /**./More Navbar Item Limitation**/
 
 
 
 
-/**tabs nav responsive **/
+
+
+
+
+
+/**! tabs nav responsive **/
 (function($) {
   'use strict';
   $(document).on('show.bs.tab', '.nav-tabs-rwd [data-toggle="tab"]', function(e) {
@@ -982,10 +1134,15 @@ jQuery(".navbar-main > li").each(function (i) {
 
 
 
-/**.tabs-more-area**/
+
+
+
+
+
+/**! .tabs-more-area **/
 jQuery(document).ready(function() {
-  //moreTabLimit = jQuery(".tabs-area").attr("data-navitemlimit");
-  //alert(moreTabLimit);
+  /* moreTabLimit = jQuery(".tabs-area").attr("data-navitemlimit"); */
+  
   moreTabLimit = 4;
   jQuery(".tabs-more-area .nav-tabs > li").each(function(i) {
     i = i + 1;
@@ -996,18 +1153,17 @@ jQuery(document).ready(function() {
       jQuery(this).addClass("IMOK");
     }
 
-    //Adding SubMenu for Extra ILs
+    /* Adding SubMenu for Extra ILs */
     if (i == moreTabLimit+1) {
       Tabnv = "<li class='dropdown'><a href='#' id='myTabDrop1' class='dropdown-toggle' data-toggle='dropdown'>More...</a><ul class='dropdown-menu' role='menu' aria-labelledby='myTabDrop1' id='moreTabSubMenu'></ul></li>";
-      // nv="<li><a>MO</a></li>";
+      /* nv="<li><a>MO</a></li>"; */
       jQuery(Tabnv).insertAfter(this);
-      //jQuery( this ).append( "<li>d</li>" );
+      /* jQuery( this ).append( "<li>d</li>" ); */
     }
 
     jQuery(this).addClass("KNav" + i + "");
     last = i;
 
-		// alert(last);
 		if (last >= moreTabLimit) {
 			jQuery("li.moreTabMover").appendTo("#moreTabSubMenu");
 		}
@@ -1019,10 +1175,15 @@ jQuery(document).ready(function() {
 
 
 
-/**handle nav-tabs by url**/
+
+
+
+
+
+/**! handle nav-tabs by url **/
 	jQuery(document).ready(function() {
 
-			var tabs_url = window.location.hash; // returns the URL Parameters
+			var tabs_url = window.location.hash; /* returns the URL Parameters */
 			var split_tabs_url= tabs_url.split(/[ .=:;?!~,`"&|()<>{}\[\]\r\n/\\]+/);
 			tabs_urlLast= split_tabs_url[split_tabs_url.length-1];
 			
@@ -1037,7 +1198,7 @@ jQuery(document).ready(function() {
 						
 						jQuery(this).removeClass('active');
 						jQuery(this).find('[href="'+tabs_urlLast+'"]').parent("li").addClass('active');
-						//jQuery(this).parents("li").removeClass('active');
+						/* jQuery(this).parents("li").removeClass('active'); */
 				});		
 		}
 	});
@@ -1046,22 +1207,23 @@ jQuery(document).ready(function() {
 
 
 
-/**read more read less content**/
-/*
-ie: http://codepen.io/pen/QqNrzm
-*/
+
+
+/**! read more read less content **/
+  /*
+    ie: http://codepen.io/pen/QqNrzm
+  */
 jQuery('.moreless-area .moreless-btn').click(function() {
 
   if (jQuery(this).hasClass("less")) {
     jQuery(this).removeClass("less");
-	
     jQuery(this).parent().children(".moreless").addClass("on");
   } else {
     jQuery(this).addClass("less");
-
     jQuery(this).parent().children(".moreless").removeClass("on");
   }
-    jQuery('html, body').animate({	scrollTop: jQuery(this).parent(".moreless-area.animate").offset().top	}, 800);
+  
+  jQuery('html, body').animate({	scrollTop: jQuery(this).parent(".moreless-area.animate").offset().top	}, 800);
 	
 });
 /**./read more read less content**/
@@ -1070,7 +1232,12 @@ jQuery('.moreless-area .moreless-btn').click(function() {
 
 
 
-/**.accordion active add class**/
+
+
+
+
+
+/**! .accordion active add class **/
 jQuery('.panel-heading a').click(function() {
   jQuery('.panel-default').removeClass('active');
   jQuery(this).parents('.panel-default').addClass('active');
@@ -1080,24 +1247,35 @@ jQuery('.panel-heading a').click(function() {
 
 
 
-/**smart alert bar**/
+
+
+
+
+
+/**! smart alert bar **/
 	jQuery('.alert-pin-btn').click(function() {
 		jQuery(this).parent('.alert-bar').toggleClass('alert--pinned');
 	});
-/**./smart alert bar**/
+/**./smart alert bar **/
 
 
 
-/**navbar-move active navbar item**/
+
+
+
+
+
+
+/**! navbar-move active navbar item **/
 jQuery( document ).ready(function() {
-	/*hover mark to nav item*/
+	/* hover mark to nav item */
 	jQuery(".navbar-move > li").hover(function( event ) {
 	  jQuery( ".navbar-move li" ).removeClass("yahan");
 	  jQuery( this ).addClass("yahan");
 	  var p = jQuery( ".yahan" );
 	  var position = p.position();
-		  //var offset = jQuery( this ).offset();
-		  //var corlft = offset.left;
+		  /* var offset = jQuery( this ).offset(); */
+		  /* var corlft = offset.left; */
 	  var corwid =  jQuery( this ).outerWidth();
 	 
 	  jQuery("#mark").css( "left", position.left);
@@ -1105,15 +1283,15 @@ jQuery( document ).ready(function() {
 	  jQuery("#mark").css("width", corwid);
 	});
 
-	/*return mark to active nav item*/
+	/* return mark to active nav item */
 	jQuery(".navbar-move > li").mouseout(function( event ) {
 	  var acti = ".navbar-move li.active";
 		jQuery( this ).removeClass("yahan");
 	  jQuery( acti ).addClass("yahan");
 	  var p = jQuery( ".yahan" );
 	  var position = p.position();
-		  //var offset = jQuery( acti ).offset();
-		  //var corlft = offset.left;
+		  /* var offset = jQuery( acti ).offset(); */
+		  /* var corlft = offset.left; */
 	  var corwid =  jQuery( acti ).outerWidth();
 	  
 	  jQuery("#mark").css( "left", position.left);
@@ -1121,12 +1299,17 @@ jQuery( document ).ready(function() {
 	  jQuery("#mark").css("width", corwid);
 	});
 });
-/**./navbar-move active navbar item**/
+/**./navbar-move active navbar item **/
 
 
 
 
-/**mutilang**/
+
+
+
+
+
+/**! mutilang **/
 var multiLangLink = ".lang.btn-group .dropdown-menu li a";
 var multiLangLabel = ".lang.btn-group .btn span:not(.caret)";
 jQuery(multiLangLink).click(function() {
@@ -1134,25 +1317,34 @@ jQuery(multiLangLink).click(function() {
   jQuery(this).addClass("selctd-lang");
   jQuery(multiLangLabel).html(jQuery(this).html());
 });
-/**./mutilang**/
+/**./mutilang **/
 
 
 
 
 
 
-/***WordPress SubMenu Styling**/
+
+
+
+/**! WordPress SubMenu Styling **/
 jQuery( document ).ready(function() {
 	jQuery( ".menu-item-has-children" ).addClass( "dropdown" );
 	jQuery( ".menu-item-has-children > a" ).addClass( "dropdown-toggle" );
 	jQuery( ".menu-item-has-children > a" ).attr( "data-toggle", "dropdown" );
 	jQuery( ".menu-item-has-children ul" ).addClass( "dropdown-menu" );
 });
-/***./WordPress SubMenu Styling**/
+/**./WordPress SubMenu Styling **/
 
 
 
-/** How to find OL/UL has child OL/UL **/
+
+
+
+
+
+
+/**! How to find OL/UL has child OL/UL **/
 	jQuery('ul li:has(ul)').addClass('has-child');
 	jQuery('ol li:has(ol)').addClass('has-child');
 /**./How to find OL/UL has child OL/UL **/
@@ -1160,7 +1352,12 @@ jQuery( document ).ready(function() {
 
 
 
-/***remove blank <P> tags***/
+
+
+
+
+
+/**! remove blank <P> tags **/
 jQuery('p:empty').remove();
 
 jQuery('.p-blank--remove p').each(function() {
@@ -1168,34 +1365,38 @@ jQuery('.p-blank--remove p').each(function() {
   if ($this.html().replace(/\s|&nbsp;/g, '').length == 0)
     $this.remove();
 });
-/***./remove blank P tags***/
+/**./remove blank P tags **/
 
 
 
 
-/***remove &nbsp; from any element***/
+
+
+/**! remove &nbsp; from any element **/
 jQuery('.remove-nbsp').html(function(i,h){
     console.log(i,h);
     return h.replace(/&nbsp;/g,'');
 });
-/***./remove &nbsp; from any element***/
+/**./remove &nbsp; from any element **/
 
 
 
 
-/**Live Detect Browser Size**/
-var windowTitle = jQuery(document).prop('title'); // Original Title
+
+
+/**! Live Detect Browser Size **/
+var windowTitle = jQuery(document).prop('title'); /* Original Title */
 if (jQuery('html').hasClass("livewindowsize")) {
 	
 	jQuery('body').mouseleave(function() {
 		function LiveDetectWindowSize(){
-			// Get the dimensions of the viewport
+			/* Get the dimensions of the viewport */
 			var windowWidth = jQuery(window).width();
 			jQuery('body').addClass("width-"+windowWidth);
 			jQuery(document).prop('title', windowTitle+" - "+windowWidth );
 		};
-	  jQuery(document).ready(LiveDetectWindowSize);    // When the page first loads
-	  jQuery(window).resize(LiveDetectWindowSize);     // When the browser changes size
+	  jQuery(document).ready(LiveDetectWindowSize);    /* When the page first loads */
+	  jQuery(window).resize(LiveDetectWindowSize);     /* When the browser changes size */
 	});
 	
 	jQuery('body').mouseenter(function() {
@@ -1203,45 +1404,63 @@ if (jQuery('html').hasClass("livewindowsize")) {
 	});
 
 };
-/**./Live Detect Browser Size**/
+/**./Live Detect Browser Size **/
 
 
 
 
-/**making a specific page unresponsive**/
+
+
+
+
+
+/**! making a specific page unresponsive **/
 jQuery( document ).ready(function() {
 	
 	var rwdDisableCode = '<meta name="viewport" content="width=1440, initial-scale=0,maximum-scale=1">';
 	var rwdDisableMode = jQuery("section, div").hasClass("page--no-rwd");
 
 	/*
-	type: url.com?norwd -> disable responsive mode "?norwd" query string
+	  type: url.com?norwd -> disable responsive mode "?norwd" query string
 	*/
 	if (jQuery("body").hasClass("parameter--norwd")) {
-		jQuery("body").append(rwdDisableCode);
-	  }
+	  jQuery("body").append(rwdDisableCode);
+	}
 	  
 	if (rwdDisableMode) {
 	  if (!jQuery("body").hasClass("parameter--rwd")) {
-		jQuery("body").append(rwdDisableCode);
+		  jQuery("body").append(rwdDisableCode);
 	  }
-	}
+  }
+  
 });
 /**./making a specific page unresponsive**/
 
 
 
-/**Video stop when Modal Close**/
+
+
+
+
+
+
+/**! Video stop when Modal Close **/
 	jQuery('.modal').on('hidden.bs.modal', function () {
 		var src = jQuery(this).find('iframe').attr('src');
 		jQuery(this).find('iframe').attr('src', '');
 		jQuery(this).find('iframe').attr('src', src);
 	});
-/**./Video stop when Modal Close**/
+/**./Video stop when Modal Close **/
 
 
 
-/**hoverized**/
+
+
+
+
+
+
+/**! hoverized **/
 jQuery(".hoverized *").on("mouseenter", function (e) {
 	jQuery(this).addClass("hoverized--active");
 });
@@ -1249,14 +1468,16 @@ jQuery(".hoverized *").on("mouseenter", function (e) {
 jQuery(".hoverized *").on("mouseout", function (e) {
 	jQuery(this).removeClass("hoverized--active");
 });
-/**./hoverized**/
+/**./hoverized **/
 
 
 
-/**CheckElementChildType**/
-/*
-Detect iFrame embedding, Image & video inside DIV
-*/
+
+
+/**! CheckElementChildType **/
+  /*
+    Detect iFrame embedding, Image & video inside DIV
+  */
 jQuery("div").each(function (CheckElementChildType) {
 	jQuery(this).contents().find(".fa, .icon, [class^='ion-']").parent("td, div").addClass("has-icon");
     jQuery(this).contents().find(".btn").parent("td, div").addClass("has-btn");
@@ -1268,7 +1489,13 @@ jQuery("div").each(function (CheckElementChildType) {
 
 
 
-/**Detecting AJAX request start and loaded**/
+
+
+
+
+
+
+/**! Detecting AJAX request start and loaded **/
 jQuery(document).ajaxStart(function() {
 	jQuery("body").removeClass("ajax--loaded").addClass("ajax--loading"); 
 });
@@ -1280,7 +1507,13 @@ jQuery(document).ajaxStart(function() {
 
 
 
-/**selectized**/
+
+
+
+
+
+
+/**! selectized **/
 	jQuery(".selectized").click(function(a){
 		jQuery("body").toggleClass("selectized--open");
 	});
@@ -1294,9 +1527,9 @@ jQuery(document).ajaxStart(function() {
 									
 	jQuery(document).on("click",".selectized--open", function(e) {
 		
-	 /*
-		detecting seleteized open state or close option.
-	 */
+	  /*
+		  detecting seleteized open state or close option.
+	  */
 		var Checker = $(".selectized-option").hasClass("in");
 		var Target = $(".selectized-option");
 		if (Checker){
@@ -1305,11 +1538,17 @@ jQuery(document).ajaxStart(function() {
 				}
 			return false;
 	});
-/**selectized**/
+/**./ selectized **/
 
 
 
-/**time--day & --night **/
+
+
+
+
+
+
+/**! time--day & --night **/
 now = new Date();
 hour = now.getHours();
 if (hour > 4 && hour < 18) {
@@ -1322,26 +1561,36 @@ if (hour > 4 && hour < 18) {
 
 
 
-/**image-orientation-checker**/
+
+
+
+/**! image-orientation-checker **/
 jQuery('.image-orientation-checker img').each(function(){
     jQuery(this).addClass(this.width > this.height ? 'orientation--landscape' : 'orientation--portrait');
 });
-/**./image-orientation**/
+/**./image-orientation **/
 
 
 
 
-/**zoomized**/
+
+
+
+
+
+/**! zoomized **/
 var zoomizedIcon = jQuery(".zoomized button")
 jQuery(".zoomized").click(function(){
   jQuery(this).toggleClass("is-active");
 });
-/**./zoomized**/
+/**./zoomized **/
 
 
 
 
-/**count-child**/
+
+
+/**! count-child **/
 /*
  NOTE: First child should be <div>
  i.e. https://codepen.io/pen/Mvexoz
@@ -1356,7 +1605,7 @@ jQuery(".count-child").each(function() {
   );
 
 });
-/**./count-child**/
+/**./count-child **/
 
 
 
@@ -1364,13 +1613,20 @@ jQuery(".count-child").each(function() {
 
 
 
-/**colset--slider**/
+
+
+/**! colset--slider **/
+/*
+  Adding first & last class on elements
+*/
 jQuery( ".firstlast-area").each(function() {
   jQuery(this).find(".colset").first().addClass("first");
   jQuery(this).find(".colset").last().addClass("last");
 });
 
-
+/*
+  Managing left & right class beside active element
+*/
 function addingLeftRight(that) {
   var colsetParent = jQuery(that).closest(".colset--slider");
   colsetParent.find(".colset").removeClass("right");
@@ -1379,7 +1635,9 @@ function addingLeftRight(that) {
   colsetParent.find(".active").prev().addClass("left");
 }  
 
-
+/*
+  Next button
+*/
 jQuery(".colset__actions .next").on("click",function() {
   
   if (jQuery(this).hasClass("disabled")){
@@ -1404,6 +1662,9 @@ jQuery(".colset__actions .next").on("click",function() {
   
 });
 
+/*
+  Prev button
+*/
 jQuery(".colset__actions .prev").on("click",function() {
   if (jQuery(this).hasClass("disabled")){
     return "button disabled";
@@ -1440,14 +1701,17 @@ jQuery(".colset--slider").each(function(pID) {
       jQuery(this).attr("data-id", cID++)
     });
 });
-/**./colset--slider**/
+/**./colset--slider **/
 
 
 
 
 
 
-/**[.pagination--key] Pagination with right/left arrow keys**/
+
+
+
+/**! [.pagination--key] Pagination with right/left arrow keys **/
 (function ($) {
     $('body').keyup(function (event) 
     {
@@ -1461,21 +1725,31 @@ jQuery(".colset--slider").each(function(pID) {
         }
     });    		
 })(jQuery);
-/**./[.pagination--key] Pagination with right/left arrow keys**/
+/**./[.pagination--key] Pagination with right/left arrow keys **/
 
 
 
 
-/**Datepicker close after picking a date**/
+
+
+
+
+
+/**! Datepicker close after picking a date **/
 jQuery('[data-provide="datepicker"]').on('change', function () {
-        jQuery('.datepicker').hide();
+  jQuery('.datepicker').hide();
 });
-/**./Datepicker close after picking a date**/
+/**./Datepicker close after picking a date **/
 
 
 
 
-/**Detecting Browser, Device & OS detail**/
+
+
+
+
+
+/**! Detecting Browser, Device & OS detail **/
 function browser_and_OS(u) {
   var ua = u.toLowerCase(),
     is = function(t) {
@@ -1551,4 +1825,4 @@ function browser_and_OS(u) {
   return c;
 }
 browser_and_OS(navigator.userAgent);
-/**./Detecting Browser, Device & OS detail**/
+/**./Detecting Browser, Device & OS detail **/
