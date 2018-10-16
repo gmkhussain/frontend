@@ -96,6 +96,58 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 
 
 
+
+
+
+
+<h1 align="center" id="sass">
+	<img src="https://user-images.githubusercontent.com/49339/32078472-5053adea-baa7-11e7-9034-519002f12ac7.png"  height="80" width="auto" />
+	<br/>
+	IDE & Extension
+</h1>
+
+
+Install following extension
+
+### w3c validation: https://marketplace.visualstudio.com/items?itemName=Umoxfo.vscode-w3cvalidation
+
+### CSSTree: https://github.com/csstree/validator
+
+### SassLint: https://github.com/sasstools/sass-lint
+
+#### Install globally
+```javascript
+npm install -g sass-lint
+```
+
+#### Configuring
+
+Sass-lint can be configured from a ```.sass-lint.yml``` or ```.sasslintrc``` file in your project.
+
+Create file ```sasslintrc```
+
+```javascript
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "sasslintConfig": "PATH/TO/YOUR/CONFIG/FILE"
+}
+```
+
+```javascript
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "sasslintConfig": "dist/**/*.s+(a|c)ss"
+}
+```
+
+#### Disabling Linters
+// sass-lint:disable-all
+
+
+
+
 # Basic tools for Frontend development
 <img src="http://www.iconarchive.com/download/i66117/mybaco/baco-flurry/XAMPP.ico" height="32px" title="XAMPP" /> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2000px-Git_icon.svg.png" height="32px" /> <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/TortoiseGit_icon.png" height="32px" title=" TortoiseGit: Windows Shell Interface with context menu" /> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png" height="32px" /> <img src="https://chocolatey.org/content/packageimages/nodejs.10.5.0.png" height="32px" />
 

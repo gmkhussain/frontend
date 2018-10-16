@@ -813,6 +813,47 @@ body .l--{ left:auto; }
 .w100{width:100%;}
 
 
+
+.w5px { width: 5px; }
+.w10px { width: 10px; }
+.w15px { width: 15px; }
+.w20px { width: 20px; }
+.w25px { width: 25px; }
+.w30px { width: 30px; }
+.w35px { width: 35px; }
+.w40px { width: 40px; }
+.w45px { width: 45px; }
+.w50px { width: 50px; }
+.w55px { width: 55px; }
+.w60px { width: 60px; }
+.w65px { width: 65px; }
+.w70px { width: 70px; }
+.w75px { width: 75px; }
+.w80px { width: 80px; }
+.w85px { width: 85px; }
+.w90px { width: 90px; }
+.w95px { width: 95px; }
+
+
+.w100px { width: 100px; }
+.w110px { width: 110px; }
+.w120px { width: 120px; }
+.w130px { width: 130px; }
+.w140px { width: 140px; }
+.w150px { width: 150px; }
+.w160px { width: 160px; }
+.w170px { width: 170px; }
+.w180px { width: 180px; }
+.w190px { width: 190px; }
+
+.w200px { width: 200px; }
+.w210px { width: 210px; }
+.w220px { width: 220px; }
+.w230px { width: 230px; }
+.w240px { width: 240px; }
+.w250px { width: 250px; }
+
+
 /* Max Width Pixel */
 .mw50px { max-width: 50px; }
 .mw100px { max-width: 100px; }
