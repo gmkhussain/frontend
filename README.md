@@ -107,6 +107,13 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 </h1>
 
 
+
+
+
+
+
+
+
 Install following extension
 
 ### w3c validation: https://marketplace.visualstudio.com/items?itemName=Umoxfo.vscode-w3cvalidation
@@ -144,6 +151,10 @@ Create file ```sasslintrc```
 
 #### Disabling Linters
 // sass-lint:disable-all
+
+
+
+
 
 
 
@@ -1258,6 +1269,50 @@ git remote -v
 
 
 
+## Simple example with button states
+
+```scss
+
+/* Variables */
+
+$color-white : #fff;
+$color-darkGrey: #232939;
+$color-black: #000000;
+$color-purple: #3745b9;
+
+$color-purpleShadeY: linear-gradient(#2ea0bd 0%, #5f5ad9 100%);
+$color-purpleShadeX: linear-gradient(to right, #5f5ad9 0%, #2ea0bd 100%);
+
+
+/* Nesting */
+.btn {
+        line-height: 44px;
+        height: 44px;
+        min-width: 180px;
+        border-radius: 0;
+        padding: 0;
+        background-color: $color-white;
+        border: 0;
+
+        &:hover { /*--> .btn:hover */
+            border: 0;
+            background-color: $color-white;
+        }
+
+        &.btn-primary { /*--> .btn.btn-primary */
+			background: $color-purpleShadeX;
+			
+            .icon {
+                background-color: rgba(255, 255, 255, .2);
+
+                .fa {
+                    color: #fff;
+                }
+            }
+        }
+
+	}
+```
 
 
 
@@ -1265,6 +1320,65 @@ git remote -v
 
 
 
+
+
+## Media Queries in Sass / SCSS
+
+```scss
+/* Using SCSS variables to store breakpoints */
+	/*
+	  Tablets 		: 768px / 1024px 
+	  iPhoneX 		: 375px / 812px 
+	  iPhone 6 Plus : 414px / 736px 
+	  iPhone 6 		: 375px / 667px 
+	  iPhone 5		: 320px / 568px 
+	*/
+
+$breakpoint-tablet: 1024px; 
+$breakpoint-mobile: 768px; 
+
+@media (min-width: $breakpoint-mobile) {
+	/*
+		Write here your style
+	*/
+}
+```
+
+
+
+
+
+
+
+
+
+## Input Placeholder Style in SCSS ( Using Mixin )
+
+```scss
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+```
 
 
 
