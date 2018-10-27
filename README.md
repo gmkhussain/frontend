@@ -100,7 +100,111 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 
 
 
-<h1 align="center" id="sass">
+
+
+
+
+
+<h1 align="center" id="ide">
+	<img src="http://www.iconarchive.com/download/i95319/custom-icon-design/flatastic-5/Binary-tree.ico"  height="80" width="auto" />
+	<br/>
+	Folder structure
+</h1>
+
+
+## Folder structure 
+Folder structure standard conventions varies by build system and programming language.
+
+#### src/: 
+"source" files to build and develop the project. This is where the original source files are located, before being compiled into fewer files to dist/, public/ or build/.
+
+#### dist/: = Assets folder
+"distribution", the compiled code/library, also named public/ or build/. The files meant for production or public use are usually located here.
+
+#### lib/:
+external dependencies (when included directly).
+
+#### test/:
+the project's tests scripts, mocks, etc.
+
+#### vendor/:
+dependencies are usually put here via dependency management.
+
+#### bin/:
+files that get added to your PATH when installed.
+
+
+
+#### package.json:
+describes library and dependencies (if a JS package).
+
+#### composer.json:
+same as above but for PHP packages via composer.
+
+#### .travis.yml:
+config file for the Travis CI environment.
+
+#### .gitignore:
+Specification of the files meant to be ignored by Git.
+
+
+
+```html
+<Root>
+|   gulpfile.js
+|   index.html
+|   package.json
+|   
++---src
+|   +---css
+|   |       bootstrap.min.css
+|   |       stylized.css
+|   |       
+|   +---images
+|   |   |   contact-area-bg.jpg
+|   |   |   slide1.jpg
+|   |   |   
+|   |   \---image-subfolder
+|   |           project1.jpg
+|   |           project2.jpg
+|   |           
+|   +---js
+|   |       bootstrap.min.js
+|   |       customized.js
+|   |       jquery-2.2.4.min.js
+|   |       kodeized.js
+|   |       
+|   \---scss
+|           style.scss
+|           
++---dist
+    +---css
+    |       style.bundle.css
+    |       style.css
+    |       
+    +---images
+    |   |   contact-area-bg.jpg
+    |   |   dashboard1.jpg
+    |   |   
+    |   \---portfolio
+    |           project1.jpg
+    |           project2.jpg
+    |           
+    \---js
+            footer.bundle.js
+            header.bundle.js
+
+```
+
+
+
+
+
+
+
+
+
+<h1 align="center" id="ide">
 	<img src="https://user-images.githubusercontent.com/49339/32078472-5053adea-baa7-11e7-9034-519002f12ac7.png"  height="80" width="auto" />
 	<br/>
 	IDE & Extension
@@ -1407,6 +1511,20 @@ $breakpoint-mobile: 768px;
 </h1>
 
 
+## Uncaught Error: Bootstrap's JavaScript requires jQuery
+
+Make sure the order of files, It should be like below..
+
+```javascript
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/your-script.js"></script>
+```
+
+
+
+
+
 
 
 
@@ -1429,7 +1547,7 @@ NOTE: Use a <button> or <input type="button"> tag instead of a div.
 
 ## Jumping textarea (message) when click on form-control
 
-Using <img src="https://static.grammarly.com/assets/files/997ea3a3690bda688b2a6d7407bb5eb9/logo.svg" style="    position: relative; top: 10px; height:30px" width="auto" alt="" /> ```grammarly extension```  ?
+Using <img src="https://static.grammarly.com/assets/files/997ea3a3690bda688b2a6d7407bb5eb9/logo.svg" style="    position: relative; top: 10px;" width="30" alt="" /> ```grammarly extension```  ?
 
 Disable the ```Grammarly``` extension by adding attr ```data-gramm_editor="false"``` in the textarea.
 ```html
