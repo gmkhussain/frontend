@@ -1492,6 +1492,43 @@ $breakpoint-mobile: 768px;
 
 
 
+## CSS Animation property stays after animating
+
+it should fade in and once the animation has completed but it fade out.
+
+Note: for retain style use ```animation-fill-mode``` values set by the last keyframe encountered during animation.
+
+
+```css
+.myAnimatedDiv {
+  animation: fadeIn 1s ease-in-out 3s;
+  animation-fill-mode: forwards;  
+}
+```
+
+
+
+## Looping a CSS keyframe animation
+
+```css
+.myAnimatedDiv {
+  animation: fadeIn 1s ease-in-out 3s;
+  animation-iteration-count: infinite;
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
