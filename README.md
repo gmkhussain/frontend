@@ -1521,6 +1521,76 @@ Note: for retain style use ```animation-fill-mode``` values set by the last keyf
 
 
 
+## SCSS Loops
+
+```css
+@for $i from 1 through 7 {
+    .process-box:nth-of-type(#{$i}) {
+        
+        position: relative;
+        opacity: 0;
+
+        animation: Anime#{$i} 1s linear;
+        animation-delay: ($i * 1.5)+s;
+        animation-fill-mode: forwards; 
+
+
+        @keyframes Anime#{$i} {
+            0% {
+                  left: -100px;
+                  opacity: 0;
+            }
+            100%
+                {
+                left: 0px;  
+                opacity: 1;
+              }
+        }
+
+    }
+  }
+  
+```
+
+
+
+
+
+##  Animate elements if visible in viewport on Page Scroll
+
+```javascript
+/**
+ * inViewport jQuery plugin by Roko C.B.
+ * http://stackoverflow.com/a/26831113/383904
+ * Returns a callback function with an argument holding
+ * the current amount of px an element is visible in viewport
+ * (The min returned value is 0 (element outside of viewport)
+ */
+;(function($, win) {
+    $.fn.inViewport = function(cb) {
+        return this.each(function(i,el){
+            function visPx(){
+                var elH = $(el).outerHeight(),
+                    H = $(win).height(),
+                    r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
+                return cb.call(el, Math.max(0, t>0? Math.min(elH, H-t) : Math.min(b, H)));  
+            } visPx();
+            $(win).on("resize scroll", visPx);
+        });
+    };
+}(jQuery, window));
+
+
+window.onscroll = function () {
+	$(".process-box").inViewport(function(px){
+		console.log(this.id+' '+px);
+		if(px) { $(this).removeClass("preload") ; }
+	});
+};
+```
+
+
+
 
 
 
