@@ -1358,7 +1358,66 @@ git remote -v
 
 
 
+<h1 align="center" id="jQuery">
+	<img src="https://programarfacil.com/wp-content/uploads/2015/08/jQurery.png"  height="80" width="auto" />
+	<br/>
+	jQuery / JavaScript
+</h1>
 
+
+## Lazysizes :  lazy loader for images
+
+```javascript
+	<script src="lazysizes.min.js" async=""></script>
+```
+
+Does not need any JS configuration: Add the "lazyload" class on images/iframes tag with a ```data-src``` and/or ```data-srcset``` attribute. Optionally you can also add a src attribute with a low quality image.
+
+
+```html
+<!-- non-responsive: -->
+<img data-src="image.jpg" class="lazyload" />
+```
+
+```html
+<!-- responsive example with automatic sizes calculation: -->
+<img
+    data-sizes="auto"
+    data-src="image2.jpg"
+    data-srcset="image1.jpg 300w,
+    image2.jpg 600w,
+    image3.jpg 900w" class="lazyload" />
+```
+
+```html
+<!-- retina optimized image: -->
+<img data-srcset="responsive-image1.jpg 1x, responsive-image2.jpg 2x" class="lazyload" />
+```
+
+
+```html
+<!-- iframe example -->
+<iframe frameborder="0"
+	class="lazyload"
+    allowfullscreen=""
+    data-src="//www.youtube.com/embed/ZfV-aYdU4uE">
+</iframe>
+```
+
+
+lazysizes adds the class lazyloading while the images are loading and the class lazyloaded as soon as the image is loaded. This can be used to add unveil effects:
+
+```css
+/* fade image in after load */
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+.lazyloaded {
+	opacity: 1;
+	transition: opacity 300ms;
+}
+```
 
 
 
