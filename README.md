@@ -1424,6 +1424,131 @@ lazysizes adds the class lazyloading while the images are loading and the class 
 
 
 
+
+
+
+## Scroll to section by section
+
+```html
+<section class="section-a inView">
+  A
+</section>
+<section class="section-b">
+  B
+</section>
+<section class="section-c">
+  C
+</section>
+<section class="section-d">
+  D
+</section>
+<section class="section-e">
+  E
+</section>
+
+<div class="bottom-controller-area">
+  <a href="javascript:;" class="bottom-controller scrollToBottom ">
+			<span></span>BB
+			<i class="fa fa-angle-down"></i>
+		</a>
+  <a href="javascript:;" class="bottom-controller scrollToTop">
+			<i class="fa fa-angle-up"></i>TT
+			<span></span>
+		</a>
+</div>
+```
+
+
+
+```javascript
+/**! Scroll to section by section **/
+function isScrolledIntoView(elem) {
+	var docViewTop = jQuery(window).scrollTop();
+	var docViewBottom = docViewTop + jQuery(window).height();
+
+	var elemTop = jQuery(elem).offset().top;
+	var elemBottom = elemTop + jQuery(elem).height();
+
+	return ((elemTop <= docViewTop) && (elemBottom >= docViewTop));
+}
+
+
+jQuery(window).scroll(function () {
+	jQuery('section').each(function () {
+		if (isScrolledIntoView(this) === true) {
+			jQuery(".inView").removeClass('inView');
+			jQuery(this).addClass('inView');
+		} else {
+			jQuery(this).removeClass('inView');
+		}
+	});
+});
+
+
+
+jQuery('.scrollToBottom').click(function () {
+
+	var nextSection = $(".inView").removeClass("inView").next('section').addClass("inView");
+
+	jQuery('html, body').animate({
+		scrollTop: nextSection.offset().top - 70 // Added additional pixels to the scrollTop
+	}, 2000);
+
+});
+
+/**!./ Scroll to section by section **/
+```
+
+<mark>Bug</mark>: Uncaught TypeError: Cannot read property 'top' of undefined
+Soon will resolve
+
+I.e: https://codepen.io/pen/eQNbGL 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h1 align="center" id="sass">
 	<img src="https://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png"  height="80" width="auto" />
 	<br/>
