@@ -1512,7 +1512,14 @@ I.e: https://codepen.io/pen/eQNbGL
 
 
 
+## Bootstrap dropdown menu keep open when click on outside
 
+```javascript
+var navbarSelector = ".navbar-nav--keeper"; 
+jQuery( navbarSelector ).on('hide.bs.dropdown', function () {
+    return false;
+});
+```
 
 
 
