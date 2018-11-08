@@ -1529,6 +1529,36 @@ jQuery( navbarSelector ).on('hide.bs.dropdown', function () {
 
 
 
+## DataTable's search filter with multi select box values
+
+```html
+<div class="btn-group" id="postedHrJobs_filterOptions">
+    <span class="btn no--after bdr1">Filter By:</span>
+    <label class="btn bg-blue white checker-area is-active">
+        <input type="radio" name="radioFilter" value="" />
+        All</label>
+    <label class="btn bg-blue white checker-area">
+        <input type="radio" name="radioFilter" value="Active" />
+        Active</label>
+    <label class="btn bg-green white checker-area">
+        <input type="radio" name="radioFilter" value="Close" />
+        Close</label>
+</div>
+```
+
+```javascript
+// If DataTables .draw() not firing properly
+jQuery("#postedHrJobs_filterOptions input").on("click", function(){
+    var filterText = $(this).val();
+	jQuery("#postedHrJobs_filter").find("input").val(filterText).keyup();
+});
+```
+
+
+
+
+
+
 
 
 
