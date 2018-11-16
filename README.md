@@ -1561,8 +1561,30 @@ jQuery("#postedHrJobs_filterOptions input").on("click", function(){
 
 
 
+## Error in Sending Form file with form using AJAX in Firefox
+TypeError: Argument 1 of FormData.constructor does not implement interface HTMLFormElement FIREFOX
 
 
+```javascript
+//DONT USE LIKE THIS
+var formData = new FormData($(this)[0]);
+```
+
+
+```javascript
+// Use like this
+var	formData = new FormData();
+	formData.append($(this)[0]);
+    data:  formData
+```
+
+
+```javascript
+// Use like this
+var formData = new FormData();
+formData.append('file', $('input[type=file]')[0].files[0]);
+data:  formData
+```
 
 
 
