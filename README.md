@@ -1595,6 +1595,30 @@ data:  formData
 
 
 
+<h1 align="center" id="swiper">
+	<img src="https://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png"  height="80" width="auto" />
+	<br/>
+	Swiper
+</h1>
+
+
+## Swiper slider not working unless page is resized
+
+```javascript
+// ...
+	observeParents: true,
+	observeParents: true,
+// ...
+```
+observer Set to true to enable Mutation Observer on Swiper and its elements. In this case Swiper will be updated (reinitialized) each time if you change its style (like hide/show) or modify its child elements (like adding/removing slides)
+
+observeParents Set to true if you also need to watch Mutations for Swiper parent elements
+
+
+You can try to call the method too.
+```javascript
+	swiper.update();
+```
 
 
 
