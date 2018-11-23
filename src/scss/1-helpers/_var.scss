@@ -1,0 +1,45 @@
+
+$font-stack: "Poppins",
+"Helvetica"Arial,
+sans-serif;
+
+$color-trans : transparent;
+$color-white : #ffffff;
+
+$color-grey : #43445d;
+$color-greyLightest : #eee;
+$color-greyLighter : #dddfeb;
+$color-greyLight : #9d9d9d;
+$color-greyDark : #232939;
+$color-greyDarker : #191919;
+
+$color-greenLight: #9fc459;
+$color-green: #94bd46;
+$color-greenDark:#88ad40;
+$color-greenDarker: #759932;
+
+$color-greyGradientRadial: -webkit-radial-gradient(50% 50%, circle closest-side, rgb(255, 250, 250) 0%, rgb(225, 231, 250) 100%);
+
+$color-orange : #ff8326;
+$color-orangeDark : #e87a33;
+$color-orangeDarker : #c56829;
+
+$color-black : #000000;
+$color-purple : #3745b9;
+$color-blue : #2131b1;
+$color-blueLight : #1590d2;
+
+
+$color-purpleLight: #a56d9a;
+$color-purple: #9b5c8f;
+$color-purpleDark:#8d5382;
+$color-purpleDarker: #854f7b;
+
+
+$color-purpleShadeY : linear-gradient(#2ea0bd 0%, #5f5ad9 100%);
+$color-purpleShadeX : linear-gradient(to right, #5f5ad9 0%, #2ea0bd 100%);
+
+
+$breakpoint-tablet : 1024px;
+$breakpoint-mobile : 768px;
+

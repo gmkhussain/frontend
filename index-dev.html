@@ -48,21 +48,21 @@
 
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	
-    <!-- Bootstrap --><link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap --><link href="src/css/bootstrap.min.css" rel="stylesheet">
 	
-	<link rel="stylesheet" href="css/stylized.css">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="css/colorized.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/slidenav.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="src/css/stylized.css">
+	<link rel="stylesheet" href="src/style.css">
+	<link rel="stylesheet" href="src/css/colorized.css">
+	<link rel="stylesheet" href="src/css/animate.css">
+	<link rel="stylesheet" href="src/css/slidenav.css">
+	<link rel="stylesheet" href="src/css/font-awesome.min.css">
 		<!--link rel="stylesheet" href="css/foundation-icons.css"-->
 		<!--link rel="stylesheet" type="text/css" href="css/flaticon.css"--> 
-	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="src/css/swiper.min.css">
 
 	<!-- jQuery -->
 	<!--[if (!IE)|(gt IE 8)]><!-->
-	  <script src="js/jquery-2.2.4.min.js"></script>
+	  <script src="src/js/jquery-2.2.4.min.js"></script>
 	<!--<![endif]-->
 
 
@@ -79,29 +79,29 @@
     <![endif]-->
 	
 	<!--scrollreveal-->
-	<script src="extralized/scrollreveal.min.js"></script>
+	<script src="src/js/vendor/scrollreveal.min.js"></script>
 	<script>
 	//	window.scrollReveal = new scrollReveal();
 	</script>
 	<!--./scrollreveal-->
 	
 	<!--isotope-->
-		<script src="extralized/isotope.pkgd.min.js"></script>
-		<script src="extralized/isotope.kode.js"></script>
-		<link rel="stylesheet" href="extralized/isotope.css">
+		<script src="src/js/vendor/isotope.pkgd.min.js"></script>
+		<script src="src/js/vendor/isotope.kode.js"></script>
+		<link rel="stylesheet" href="src/js/vendor/isotope.css">
 	<!--./isotope-->
 	
 	<!--modernizr-->
-	<script src="extralized/modernizr.min.js"></script>
+	<script src="src/js/vendor/modernizr.min.js"></script>
 	
 	
 	<!--DatePicker-->
-	<script src="extralized/bootstrap-datepicker.js"></script>
+	<script src="src/js/vendor/bootstrap-datepicker.js"></script>
 
 	
 	<!--datetimepicker-->
-	<script type="text/javascript" src="extralized/moment.min.js"></script>
-	<script type="text/javascript" src="extralized/bootstrap-datetimepicker.js"></script><!--//required moment.js-->
+	<script type="text/javascript" src="src/js/vendor/moment.min.js"></script>
+	<script type="text/javascript" src="src/js/vendor/bootstrap-datetimepicker.js"></script><!--//required moment.js-->
 	<link href='extralized/bootstrap-datetimepicker.css' rel='stylesheet' />
 		<script type="text/javascript">
 			jQuery(function () {
@@ -112,19 +112,19 @@
 
 
 	<!--daterangepicker-->
-	<link rel="stylesheet" href="extralized/daterangepicker.css">
-	<script src="extralized/daterangepicker.js"></script>
+	<link rel="stylesheet" href="src/js/vendor/daterangepicker.css">
+	<script src="src/js/vendor/daterangepicker.js"></script>
 	<!--./daterangepicker-->
 
 
 	<!--highcharts-->
-	<script type="text/javascript" src="extralized/highcharts.js"></script>
+	<script type="text/javascript" src="src/js/vendor/highcharts.js"></script>
 	<!--./highcharts-->
 
 
 	<!--Chartist-->
-		<link rel="stylesheet" href="extralized/chartist.min.css">
-		<script src="extralized/chartist.min.js"></script>
+		<link rel="stylesheet" href="src/js/vendor/chartist.min.css">
+		<script src="src/js/vendor/chartist.min.js"></script>
 	<!--./Chartist-->
 
   </head>
@@ -161,7 +161,7 @@ timeout_trigger();
 	  <div id="preloader__status">
 	
 	  
-		<i class="fa fa-spin"><img src="images/preloading.png" alt="" /></i>
+		<i class="fa fa-spin"><img src="src/images/preloading.png" alt="" /></i>
 	  </div>
 	</div>
 
@@ -221,7 +221,7 @@ timeout_trigger();
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				  </button>
-					<a class="navbar-brand" href="./"><img src="images/logo.png" alt="logo" class="broken-image"/></a>
+					<a class="navbar-brand" href="./"><img src="src/images/logo.png" alt="logo" class="broken-image"/></a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -268,12 +268,12 @@ timeout_trigger();
 						<ul class="nav navbar-nav pul-rgt">
 					  		<li class="dropdown user user-menu pul-rgt">
 							<a href="#usr-name" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-							  <span class="dp"><img src="images/usr.jpg" alt="user" ></span>
+							  <span class="dp"><img src="src/images/usr.jpg" alt="user" ></span>
 							  <span class="usr-name">Robert</span>
 							</a>
 									<ul class="dropdown-menu p20">
 									  <li class="user-header">
-										<span class="dp radius50"><img src="images/usr.jpg" alt="user"></span>
+										<span class="dp radius50"><img src="src/images/usr.jpg" alt="user"></span>
 										<p>Robert <small>- Instructor</small></p>
 										<small>Member since 31 March. 2013</small>
 									  </li>
@@ -315,25 +315,25 @@ timeout_trigger();
 		  <span class="carousel-indicators indicators-arr next">Next</span>
 		  
 		  <ol class="carousel-indicators thumbs">
-			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="1"><img src="images/slide2.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="3"><img src="images/slide2.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="4"><img src="images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="5"><img src="images/slide2.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="6"><img src="images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="1"><img src="images/slide2.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="7"><img src="images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="8"><img src="images/slide2.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="9"><img src="images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="10"><img src="images/slide2.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="11"><img src="images/slide2.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="images/slide1.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="12"><img src="images/slide2.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="13"><img src="images/slide1.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="14"><img src="images/slide2.jpg" alt="..."></li>
-			<li data-target="#carousel-example-generic" data-slide-to="15"><img src="images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="src/images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"><img src="src/images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="src/images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="src/images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="3"><img src="src/images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="4"><img src="src/images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="src/images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="5"><img src="src/images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="6"><img src="src/images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="src/images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"><img src="src/images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="7"><img src="src/images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="src/images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="8"><img src="src/images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="9"><img src="src/images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="src/images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="10"><img src="src/images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="src/images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="src/images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="11"><img src="src/images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"><img src="src/images/slide1.jpg" alt="..."></li><li data-target="#carousel-example-generic" data-slide-to="0" class="active"><img src="src/images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="12"><img src="src/images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="13"><img src="src/images/slide1.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="14"><img src="src/images/slide2.jpg" alt="..."></li>
+			<li data-target="#carousel-example-generic" data-slide-to="15"><img src="src/images/slide1.jpg" alt="..."></li>
 		  </ol>
 
 		  <!-- Wrapper for slides -->
@@ -341,11 +341,11 @@ timeout_trigger();
 
 
 			<div class="item active" id="item1">
-			  <img src="images/slide1.jpg" alt="...">
+			  <img src="src/images/slide1.jpg" alt="...">
 			</div>
 
 			<div class="item color-invert" id="item2">
-			  <img src="images/slide2.jpg" alt="...">
+			  <img src="src/images/slide2.jpg" alt="...">
 			  <div class="container posrel">
 				  <div class="caro-caps">
 				  	<h1>I am a <span class="morphext">So Simple, Very Doge, Much Wow, Such Cool</span> Text Rotator</h1>
@@ -358,7 +358,7 @@ timeout_trigger();
 			
 
 			<div class="item color-gray"  id="item3">
-			  <img src="images/slide1.jpg" alt="...">
+			  <img src="src/images/slide1.jpg" alt="...">
 			  <div class="container posrel">
 				  <div class="caro-caps">
 				  	<h1>I am a <span class="morphext">So Simple, Very Doge, Much Wow, Such Cool</span> Text Rotator</h1>
@@ -371,73 +371,73 @@ timeout_trigger();
 			
 			
 			<div class="item">
-			  <img src="images/slide1.jpg" alt="...">
+			  <img src="src/images/slide1.jpg" alt="...">
 			</div>
 			
 			 
 			 
 			<div class="item">
-			  <img src="images/slide1.jpg" alt="...">
+			  <img src="src/images/slide1.jpg" alt="...">
 			</div>
 			
 			 
 			 
 			<div class="item">
-			  <img src="images/slide1.jpg" alt="...">
+			  <img src="src/images/slide1.jpg" alt="...">
 			</div>
 			
 			 
 			 
 			<div class="item">
-			  <img src="images/slide1.jpg" alt="...">
+			  <img src="src/images/slide1.jpg" alt="...">
 			</div>
 			
 			 
 			 
 			<div class="item">
-			  <img src="images/slide1.jpg" alt="...">
+			  <img src="src/images/slide1.jpg" alt="...">
 			</div>
 			
 			 
 			 
 			<div class="item">
-			  <img src="images/slide1.jpg" alt="...">
+			  <img src="src/images/slide1.jpg" alt="...">
 			</div>
 			
 			 
 			 
 			<div class="item">
-			  <img src="images/slide1.jpg" alt="...">
+			  <img src="src/images/slide1.jpg" alt="...">
 			</div>
 			
 			 
 			 
 			<div class="item">
-			  <img src="images/slide1.jpg" alt="...">
+			  <img src="src/images/slide1.jpg" alt="...">
 			</div>
 			
 			 
 			 
 			<div class="item">
-			  <img src="images/slide1.jpg" alt="...">
+			  <img src="src/images/slide1.jpg" alt="...">
 			</div>
 			
 			 
 			 
 			<div class="item">
-			  <img src="images/slide1.jpg" alt="...">
+			  <img src="src/images/slide1.jpg" alt="...">
 			</div>
 			
 			 
 			 
 			<div class="item">
-			  <img src="images/slide1.jpg" alt="...">
+			  <img src="src/images/slide1.jpg" alt="...">
 			</div>
 			
 			 
 			 
 			<div class="item">
-			  <img src="images/slide1.jpg" alt="...">
+			  <img src="src/images/slide1.jpg" alt="...">
 			</div>
 			
 			 
@@ -1097,7 +1097,7 @@ timeout_trigger();
 				</div>
 				
 				<div class="random__rgt col-sm-5">
-					<img src="images/preloading.png" alt="" />
+					<img src="src/images/preloading.png" alt="" />
 				</div>
 			</div>
 		</div>
@@ -1110,7 +1110,7 @@ timeout_trigger();
 				</div>
 			
 				<div class="random__rgt col-sm-5">
-					<img src="images/preloading.png" alt="" />
+					<img src="src/images/preloading.png" alt="" />
 				</div>
 			</div>
 		</div>
@@ -1124,7 +1124,7 @@ timeout_trigger();
 				</div>
 				
 				<div class="random__rgt col-sm-5">
-					<img src="images/preloading.png" alt="" />
+					<img src="src/images/preloading.png" alt="" />
 				</div>
 			</div>
 		</div>
@@ -1153,8 +1153,8 @@ timeout_trigger();
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner">
 					<div class="item active">
-						<div class="testimo-pic"><img src="images/favicon.png" alt="" /></div>
-						<div class="testimo__rating"><img src="images/select_ctrl_down.png" alt="" /></div>
+						<div class="testimo-pic"><img src="src/images/favicon.png" alt="" /></div>
+						<div class="testimo__rating"><img src="src/images/select_ctrl_down.png" alt="" /></div>
 					  <div class="testimo__cont col-sm-10 col-sm-offset-1">
 						<hr class="w80">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ullamcorper sollicitudin congue. Quisque et iaculis libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent pellentesque mollis diam, nec sagittis sem feugiat ac.</p>
@@ -1164,8 +1164,8 @@ timeout_trigger();
 					</div>
 					
 					<div class="item ">
-						<div class="testimo-pic"><img src="images/favicon.png" alt="" /></div>
-						<div class="testimo__rating"><img src="images/select_ctrl_down.png" alt="" /></div>
+						<div class="testimo-pic"><img src="src/images/favicon.png" alt="" /></div>
+						<div class="testimo__rating"><img src="src/images/select_ctrl_down.png" alt="" /></div>
 					  <div class="testimo__cont col-sm-10 col-sm-offset-1">
 						<hr class="w80">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ullamcorper sollicitudin congue. Quisque et iaculis libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent pellentesque mollis diam, nec sagittis sem feugiat ac.</p>
@@ -1200,25 +1200,25 @@ timeout_trigger();
 			<div class="trio__inr col-sm-12 p0">
 				<ul class="carousel">
 					<li class="items main-pos" id="1">
-					  <img alt="" src="images/slide1.jpg" />
+					  <img alt="" src="src/images/slide1.jpg" />
 					</li>
 					<li class="items right-pos" id="2">
-					  <img alt="" src="images/slide1.jpg" />
+					  <img alt="" src="src/images/slide1.jpg" />
 					</li>
 					<li class="items back-pos" id="3">
-					 <img alt="" src="images/slide1.jpg" />
+					 <img alt="" src="src/images/slide1.jpg" />
 					</li>
 					<li class="items back-pos" id="4">
-					<img alt="" src="images/slide1.jpg" />
+					<img alt="" src="src/images/slide1.jpg" />
 					</li>
 					<li class="items back-pos" id="5">
-					 <img alt="" src="images/slide1.jpg" />
+					 <img alt="" src="src/images/slide1.jpg" />
 					</li>
 					<li class="items back-pos" id="6">
-					  <img alt="" src="images/slide1.jpg" />
+					  <img alt="" src="src/images/slide1.jpg" />
 					</li>
 					<li class="items left-pos" id="7">
-					<img alt="" src="images/slide1.jpg" />
+					<img alt="" src="src/images/slide1.jpg" />
 					</li>
 				  </ul>
 
@@ -1612,18 +1612,18 @@ timeout_trigger();
 			
 			<div class="swiper-container dontfly s1">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="images/burger.svg" alt="... 123"></div>
-					<div class="swiper-slide"><img src="images/donut.svg" alt="..."></div>
-					<div class="swiper-slide"><img src="images/cheers.svg" alt="..."></div>
-					<div class="swiper-slide"><img src="images/chips.svg" alt="..."></div>
-					<div class="swiper-slide"><img src="images/burger.svg" alt="... 123"></div>
-					<div class="swiper-slide"><img src="images/donut.svg" alt="..."></div>
-					<div class="swiper-slide"><img src="images/cheers.svg" alt="..."></div>
-					<div class="swiper-slide"><img src="images/chips.svg" alt="..."></div>
-					<div class="swiper-slide"><img src="images/burger.svg" alt="... 123"></div>
-					<div class="swiper-slide"><img src="images/donut.svg" alt="..."></div>
-					<div class="swiper-slide"><img src="images/cheers.svg" alt="..."></div>
-					<div class="swiper-slide"><img src="images/chips.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/burger.svg" alt="... 123"></div>
+					<div class="swiper-slide"><img src="src/images/donut.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/cheers.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/chips.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/burger.svg" alt="... 123"></div>
+					<div class="swiper-slide"><img src="src/images/donut.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/cheers.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/chips.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/burger.svg" alt="... 123"></div>
+					<div class="swiper-slide"><img src="src/images/donut.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/cheers.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/chips.svg" alt="..."></div>
 				</div>
 				<!-- Add Pagination -->
 				<div class="swiper-pagination hidden"></div>
@@ -1645,18 +1645,18 @@ timeout_trigger();
 			
 			<div class="swiper-container dontfly s2">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="images/burger.svg" alt="... 123"></div>
-					<div class="swiper-slide"><img src="images/donut.svg" alt="..."></div>
-					<div class="swiper-slide"><img src="images/cheers.svg" alt="..."></div>
-					<div class="swiper-slide"><img src="images/chips.svg" alt="..."></div>
-					<div class="swiper-slide"><img src="images/burger.svg" alt="... 123"></div>
-					<div class="swiper-slide"><img src="images/donut.svg" alt="..."></div>
-					<div class="swiper-slide"><img src="images/cheers.svg" alt="..."></div>
-					<div class="swiper-slide"><img src="images/chips.svg" alt="..."></div>
-					<div class="swiper-slide"><img src="images/burger.svg" alt="... 123"></div>
-					<div class="swiper-slide"><img src="images/donut.svg" alt="..."></div>
-					<div class="swiper-slide"><img src="images/cheers.svg" alt="..."></div>
-					<div class="swiper-slide"><img src="images/chips.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/burger.svg" alt="... 123"></div>
+					<div class="swiper-slide"><img src="src/images/donut.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/cheers.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/chips.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/burger.svg" alt="... 123"></div>
+					<div class="swiper-slide"><img src="src/images/donut.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/cheers.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/chips.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/burger.svg" alt="... 123"></div>
+					<div class="swiper-slide"><img src="src/images/donut.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/cheers.svg" alt="..."></div>
+					<div class="swiper-slide"><img src="src/images/chips.svg" alt="..."></div>
 				</div>
 				<!-- Add Pagination -->
 				<div class="swiper-pagination hidden"></div>
@@ -1765,7 +1765,7 @@ timeout_trigger();
 				
 				<div class="bg-blue">
 								
-					<img src="images/logo.png" class="filter-white" alt="" />
+					<img src="src/images/logo.png" class="filter-white" alt="" />
 					
 				</div>
 				
@@ -1902,7 +1902,7 @@ timeout_trigger();
 				
 				<br/><a href="tel:1-408-555-5555">Call +923343069159</a>
 				<br/><a href="sms:1-408-555-1212">Message +923343069159</a>
-				<br/><a href="#"><h3>Im Heading with Link</h3> <img src="images/favicon.png" alt="..."> Image </a>
+				<br/><a href="#"><h3>Im Heading with Link</h3> <img src="src/images/favicon.png" alt="..."> Image </a>
 				
 				
 				<div class="clearfix"></div>
@@ -2322,7 +2322,7 @@ jQuery('.nav-tabs-selector').on('change', function (t) {
 					<p>image file upload preview</p>
 					
 					<div class="upload-preview__img mb30 col-sm-3 ">
-						<img class="image" src="images/slide1.jpg" alt="" />
+						<img class="image" src="src/images/slide1.jpg" alt="" />
 					</div>
 					
 					<input type="file" class="file-input" />
@@ -3012,18 +3012,18 @@ jQuery('.nav-tabs-selector').on('change', function (t) {
 
 			<div class="broken-img col-sm-3">
 				<h2>Broken Image</h2>
-				<img src="images/broken-image.jpg" alt="Broken Image">
+				<img src="src/images/broken-image.jpg" alt="Broken Image">
 			</div>
 			
 			<div id="zoomjs" class="col-sm-3">
-				<img src="images/slide1.jpg" alt="" data-action="zoom" />
+				<img src="src/images/slide1.jpg" alt="" data-action="zoom" />
 			</div>
 			
 			
 					<div class="featured-box col-sm-3 imgzoom--hover scale--hover">
 						<div class="featured__inr shad-dp20">
 							<div class="featured__img" style="height: 90px; overflow: hidden;">
-								<img src="images/slide1.jpg" alt="" />
+								<img src="src/images/slide1.jpg" alt="" />
 							</div>
 							<div class="featured__cont">
 								<h3><b>.imgzoom--hover</b></h3>
@@ -3039,7 +3039,7 @@ jQuery('.nav-tabs-selector').on('change', function (t) {
 					
 					<div class="posrel ovrflw col-sm-6 p0 rotate-img--hover">
 						<div class="vdo__img">
-							<img src="images/slide2.jpg" alt="" class="obj_fill">
+							<img src="src/images/slide2.jpg" alt="" class="obj_fill">
 						</div>
 						<div class="vdo__cont posabs z10 t0 l0 w100 text-center">
 							<h2>.rotate-img--hover</h2>
@@ -3052,7 +3052,7 @@ jQuery('.nav-tabs-selector').on('change', function (t) {
 					<div class="featured-box flashcross--hover col-sm-3">
 						<div class="featured__inr shad-dp20">
 							<div class="featured__img">
-								<img src="images/slide1.jpg" alt="" />
+								<img src="src/images/slide1.jpg" alt="" />
 							</div>
 						</div>
 					</div>
@@ -3062,7 +3062,7 @@ jQuery('.nav-tabs-selector').on('change', function (t) {
 					<div class="featured-box slashflash--hover col-sm-3 bg-purple">
 						<div class="featured__inr ">
 							<div class="featured__img">
-								<img src="images/slide1.jpg" alt="" />
+								<img src="src/images/slide1.jpg" alt="" />
 							</div>
 						</div>
 					</div>
@@ -3072,7 +3072,7 @@ jQuery('.nav-tabs-selector').on('change', function (t) {
 					<div class="featured-box squareframe--hover col-sm-3 bg-orange">
 						<div class="featured__inr ">
 							<div class="featured__img">
-								<img src="images/slide1.jpg" alt="" />
+								<img src="src/images/slide1.jpg" alt="" />
 							</div>
 						</div>
 					</div>
@@ -3298,11 +3298,11 @@ jQuery( document ).ready(function() {
 					  <div class="carousel-inner">
 						
 						<div class="item active">
-						  <img src="images/slide1.jpg" alt="...">
+						  <img src="src/images/slide1.jpg" alt="...">
 						</div>
 						
 						<div class="item ">
-						  <img src="images/slide1.jpg" alt="...">
+						  <img src="src/images/slide1.jpg" alt="...">
 						</div>
 						
 						
@@ -3396,8 +3396,8 @@ jQuery( document ).ready(function() {
 			<div class="container">
 				<div class="ftr__box col-sm-2 ftr__logo">
 					<h4>Footer Logo</h4>
-					<div class="ftr-logo gray-img"><img src="images/favicon.png" alt="ftr logo" /></div>
-					<div class="ftr-logo"><img src="images/favicon.png" class="drp-shad" alt="" /></div>
+					<div class="ftr-logo gray-img"><img src="src/images/favicon.png" alt="ftr logo" /></div>
+					<div class="ftr-logo"><img src="src/images/favicon.png" class="drp-shad" alt="" /></div>
 					
 				</div>
 				<div class="ftr__box ftr__links col-sm-4 list-col-2 clrlist listview dotlist">
@@ -3468,7 +3468,7 @@ jQuery( document ).ready(function() {
 					<span class="bottom__txt">Created &amp; Developed </span>
 					<span class="bottom__logo clrlist">
 						<ul>
-							<li><img src="images/favicon.png"></li>
+							<li><img src="src/images/favicon.png"></li>
 							<li>Company Name</li>
 						</ul>
 					</span>
@@ -3527,17 +3527,17 @@ jQuery( document ).ready(function() {
 
     
 	<!--Bootstrap-->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="src/js/bootstrap.min.js"></script>
 	<!--./Bootstrap-->
 	
 	<!--Major Scripts-->
-	<script src="js/viewportchecker.js"></script>
-    <script src="js/kodeized.js"></script>
-	<script src="js/customized.js"></script>
+	<script src="src/js/viewportchecker.js"></script>
+    <script src="src/js/kodeized.js"></script>
+	<script src="src/js/customized.js"></script>
 	<!--./Major Scripts-->
 
 	<!--Swiper Slider-->
-	<script src="js/swiper.jquery.min.js"></script>
+	<script src="src/js/swiper.jquery.min.js"></script>
 		<script>
 				var swiper1 = new Swiper('.s1', {
 							pagination: '.swiper-pagination',
@@ -3580,8 +3580,8 @@ jQuery( document ).ready(function() {
 	<!--./Swiper Slider -->
 	
 	<!--trio_slider-->
-	<link rel="stylesheet" href="extralized/trio_slider.css">
-	<script src="extralized/trio_slider.js"></script>
+	<link rel="stylesheet" href="src/js/vendor/trio_slider.css">
+	<script src="src/js/vendor/trio_slider.js"></script>
 	<!--./trio_slider-->
 	
 
@@ -3595,17 +3595,17 @@ jQuery( document ).ready(function() {
 
 	
 	<!--ZoomJS-->
-		<script src="extralized/zoom.js"></script>
+		<script src="src/js/vendor/zoom.js"></script>
 		<style>.zoom-img-wrap{position: relative; z-index: 333;}</style>
     <!--./ZoomJS-->
 
 
 	<!--Masked Inputs-->
-	<script src="extralized/masked-input.js"></script>
+	<script src="src/js/vendor/masked-input.js"></script>
 
 	
 	<!--GentleForm-->
-	<script src="extralized/gentleform.js"></script>
+	<script src="src/js/vendor/gentleform.js"></script>
 	<script>
 		  var element = document.getElementById('myform') /*form ID*/
 		  var form = GentleForm(element, function (event) {
@@ -3617,7 +3617,7 @@ jQuery( document ).ready(function() {
 
 	
 	<!--Text Animation-->
-	<script src="extralized/morphext.js"></script>
+	<script src="src/js/vendor/morphext.js"></script>
 		<script>
 			jQuery(".morphext").Morphext({
 			  animation: "bounceIn",

@@ -1,0 +1,50 @@
+
+.has-image .lazyload,
+.has-image .lazyload0 {
+    top: 100% !important;
+    z-index: 6;
+}
+
+.has-image .lazyload,
+.has-image .lazyload0 {
+    position: relative;
+}
+
+.lazyload0,
+.lazyload {
+    max-height: 50px;
+    opacity: .2 !important;
+    display: block;
+    width: auto !important;
+    margin: auto !important;
+}
+
+
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+  }
+  
+
+
+
+.home .casestudies-area, .index-page .casestudies-area {
+    margin-bottom: 40px;
+}
+
+  
+body {
+    font-family: $font-stack;
+    font-size: 16px;
+    padding-right: 0 !important;
+
+    @media (max-width: $breakpoint-mobile) {
+        overflow-x: hidden !important;
+    }
+
+    .bg-none {
+        background: none !important;
+    }
+}

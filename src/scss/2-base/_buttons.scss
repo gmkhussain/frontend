@@ -1,0 +1,162 @@
+
+    .btn {
+        line-height: 44px;
+        height: 44px;
+        min-width: 180px;
+        border-radius: 0;
+        padding: 0;
+        background-color: $color-white;
+        border: 0;
+        
+        * {
+            @include multiple-transition(all, 0.3s);
+        }
+
+        &:hover {
+            border: 0;
+            background-color: $color-white;
+            
+        }
+
+        &.btn-arrow {
+            position: relative;
+            overflow: hidden;
+            padding-right: 50px;
+
+            &:hover {
+                .icon {
+                    right: -5px;
+                }
+            }
+
+            .icon {
+                float: right;
+                display: block;
+                height: 44px;
+                line-height: 44px;
+                width: 60px;
+                color: $color-black;
+                font-size: 18px;
+                background-color: $color-greyLight;
+                transform: skewX(15deg);
+                position: absolute;
+                right: -8px;
+                top: 0;
+                padding-right: 8px;
+
+                .fa {
+                    transform: skewX(-15deg);
+                }
+            }
+
+        }
+
+
+        &.btn-default {
+            &:hover {
+                background: $color-grey;
+                color: $color-white;
+
+                .icon {
+                    background-color: $color-greyDark;
+
+                    .fa:before {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+
+
+
+        &.btn-primary {
+            background: $color-orange;
+
+            .icon {
+                background-color: $color-orangeDark;
+
+                .fa {
+                    color: $color-white;
+                }
+            }
+
+            &:hover {
+                background-color: $color-orangeDark;
+
+                .icon {
+                    background-color: $color-orangeDarker;
+                }
+            }
+
+
+        }
+
+
+
+        &.btn-green {
+            background: $color-green;
+
+            .icon {
+                background-color: $color-greenDark;
+
+                .fa {
+                    color: $color-white;
+                }
+            }
+
+            &:hover {
+                background-color: $color-greenDark;
+
+                .icon {
+                    background-color: $color-greenDarker;
+                }
+            }
+        }
+
+        
+
+        &.btn-purple {
+            background: $color-purple;
+
+            .icon {
+                background-color: $color-purpleDark;
+
+                .fa {
+                    color: $color-white;
+                }
+            }
+
+            &:hover {
+                background-color: $color-purpleDark;
+
+                .icon {
+                    background-color: $color-purpleDarker;
+                }
+            }
+        }
+
+
+
+        &.btn-grey {
+
+            background: $color-greyDark;
+
+            .icon {
+                background-color: $color-grey;
+
+                .fa {
+                    color: $color-white;
+                }
+            }
+
+            &:hover {
+                background-color: $color-greyDarker;
+
+                .icon {
+                    background-color: $color-greyDark;
+                }
+            }
+        }
+
+
+    }

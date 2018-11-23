@@ -88,7 +88,17 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 			<br/>
 			DataTable
 		</a>
-	</td>	
+	</td>
+	<td>
+		<a href="#git">
+			<img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"  height="80" width="auto" />
+			<br/>
+			Git / Tortoisegit
+		</a>
+	</td>
+
+
+	
   </tr>
 </table>
 
@@ -1894,6 +1904,49 @@ window.onscroll = function () {
 
 
 
+<h1 align="center" id="git">
+	<img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"  height="80" width="auto" />
+	<br/>
+	Git / Tortoisegit
+</h1>
+
+
+## When push in github, why git didn't ask me to type username and password ?
+
+
+You can manually unset credential.helper by running below command.
+
+```git config --global --unset credential.helper```
+use ```--global``` or ```--local``` or ```--system``` as per your needs.
+
+Then pushing in github will ask for username and password.
+
+If you are on windows one other way to do this is as below but note that it will again save your credentials if you use credential.helper with git.
+
+Go to ```control panel -> Credential Manager ->``` Windows Credentials and remove your git credential entry/entries. 
+
+<img src="https://i.stack.imgur.com/w8alR.png" alt="" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1980,6 +2033,28 @@ $('html.android .input_limit').unbind('keyup change input paste').bind('keyup ch
   }
 });
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
