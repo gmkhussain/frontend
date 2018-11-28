@@ -103,7 +103,8 @@ jQuery('body').toggleClass('is_index home index-page', /\/$/.test(location.pathn
 /**!URL added on body tag as a Class**/
 jQuery(function() {
   var locReal = window.location.pathname; // returns the full URL
-	var loc = locReal.replace(".", "/");
+	var locRemoveExt = locReal.replace(".php","");
+	var loc = locRemoveExt.replace(".", "/");
 	var split_loc = loc.split('/');
 	active_locLastParent2 = split_loc[split_loc.length-3];
 	active_locLastParent = split_loc[split_loc.length-2];
