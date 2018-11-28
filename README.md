@@ -1378,6 +1378,34 @@ git remote -v
 </h1>
 
 
+## Click events firing multiple times in jQuery
+
+Use ``.unbind()`` to make sure a click only actions once.
+
+```javascript
+jQuery(".button").unbind().click(function() {
+    //write your code..
+});
+```
+
+Or try ```.off().on()``
+
+```javascript
+jQuery(".button").off().on( "click", function() {
+    //write your code..
+	console.log("it's work");
+});
+
+```
+
+
+
+
+
+
+
+
+
 ## Set option 'selected' if url string matches
 
 ```javascript
