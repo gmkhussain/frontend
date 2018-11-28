@@ -157,6 +157,30 @@ jQuery(function() {
 
 
 
+/**! hint--mockup **/
+/*
+ Ctrl + / for preview
+ Note: paste mockup jpg file in '_mockup' folder --> '_mockup/your-mockup-name.jpg'
+*/
+jQuery(document).keydown(function (e) {
+  if (e.keyCode == 191 && e.ctrlKey) {
+    var fileName = "_mockup/" + active_locLast + ".jpg";
+    var myMockupMatcher = '<div id="mockupMatcher" style="background-image:url(' + fileName + '); position: absolute; top: 0; width: 100%; z-index:898 ;height: 1000vh; opacity: .2 ;background-position: center top;"></div>';
+    jQuery("#mockupMatcher").remove();
+    jQuery("html").toggleClass("hint--mockup");
+    jQuery("html.hint--mockup body").append(myMockupMatcher);
+  }
+});
+/**./ hint--mockup **/
+
+
+
+
+
+
+
+
+
 /**!Show Modal dialog by Hash URL**/
   jQuery(function(){ /*!shortcut for $(document).ready */
     var hashUrl = window.location.hash
