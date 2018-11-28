@@ -230,11 +230,14 @@ Specification of the files meant to be ignored by Git.
 
 Install following extension
 
-### w3c validation: https://marketplace.visualstudio.com/items?itemName=Umoxfo.vscode-w3cvalidation
+### w3c validation: https://marketplace.visualstudio.com/items?itemName=Umoxfo.vscode-w3cvalidation ( .html extension only )
 
-### CSSTree: https://github.com/csstree/validator
+### HTMLHint: https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint ( .html & .php )
+
+### CSSTree validator: https://github.com/csstree/validator
 
 ### SassLint: https://github.com/sasstools/sass-lint
+
 
 #### Install globally
 ```javascript
@@ -1373,6 +1376,28 @@ git remote -v
 	<br/>
 	jQuery / JavaScript
 </h1>
+
+
+## Set option 'selected' if url string matches
+
+```javascript
+jQuery( "#button" ).on('click', function(){
+	if( active_locLastParent == '' ) {
+		console.log("Its not product page, select product");
+	}else{
+	
+		function toTitleCase(str) { // to title case..
+			return str.replace(/(?:^|\s)\w/g, function(match) {
+				return match.toUpperCase();
+			});
+		}
+		var ProductTitle = toTitleCase(active_locLastParent.replace(/-/g , ' '));
+		var SelectedProduct = ProductTitle;
+		jQuery('[name="post_select-182"]').val(SelectedProduct);
+		jQuery('.select2-selection__rendered').text(SelectedProduct);
+	}
+});
+```
 
 
 ## Lazysizes :  lazy loader for images
