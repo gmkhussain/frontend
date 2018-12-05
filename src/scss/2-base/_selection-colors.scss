@@ -1,0 +1,10 @@
+::selection {
+  background: lighten($primary-color, 10%);
+  color: $color-white;
+} /* Safari */
+
+
+::-moz-selection {
+  background: lighten($primary-color, 10%);
+  color: $color-white;
+} /* Firefox */

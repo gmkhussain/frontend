@@ -1,5 +1,10 @@
 
-    .btn {
+    .btn,
+    .button,
+    button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"] {
         line-height: 44px;
         height: 44px;
         min-width: 180px;
@@ -12,10 +17,12 @@
             @include multiple-transition(all, 0.3s);
         }
 
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
+            outline: 0;
             border: 0;
             background-color: $color-white;
-            
         }
 
         &.btn-arrow {
@@ -157,6 +164,5 @@
                 }
             }
         }
-
 
     }

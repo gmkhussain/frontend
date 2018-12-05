@@ -2,7 +2,7 @@
 [<span class="font-size: 20px;"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" style="position: relative;
     top: 5px;" height="32" /> @GMKHussain</span>](http://twitter.com/gmkhussain)
 
-### Low-level Front-End Toolkit with useful additional CSS and JS Scripts
+### Frontend Starter kit with useful additional CSS and JS Scripts
 I realised I was doing the same thing over and over when starting a new build so decided to create my own mini package which has the basics for starting a simple static or dynamic web site.
 #### The first version of Frontized, (at that time named Bootstrap Extended, later referred to as Frontized) made its debut on Sep 10, 2015.
 
@@ -1830,6 +1830,18 @@ $breakpoint-mobile: 768px;
   @include optional-at-root(':-ms-input-placeholder') {
     @content;
   }
+}
+```
+
+
+```scss
+// Usage
+.your-input-class {
+
+  @include placeholder {
+    color: darkblue;
+  }
+
 }
 ```
 
