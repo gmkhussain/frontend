@@ -1,6 +1,3 @@
-::selection 	{ background: lighten($primary-color, 10%); color: $color-white ; } /* Safari */ 
-::-moz-selection { background: lighten($primary-color, 10%);  color: $color-white; } /* Firefox */
-
 body {
   //delete the background to apply your won style
   background: $color-white;

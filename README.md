@@ -97,8 +97,6 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 		</a>
 	</td>
 
-
-	
   </tr>
 </table>
 
@@ -1376,6 +1374,35 @@ git remote -v
 	<br/>
 	jQuery / JavaScript
 </h1>
+
+
+
+
+
+
+
+
+
+## Switch active class in group of anchors base on click event.
+
+```html
+<div class="row link-group--active">
+  <a href="#Link_1">Link 1</a>
+  <a href="#Link_2" data-offset='100'>Link 2</a>
+  <a href="#Link_3" data-offset="200">Link 3</a>
+</div>
+```
+Note: See <b>.scrolink</b> for detail of ```data-offset=```
+
+```javascript
+	jQuery(".link-group--active a").on("click", function(){
+		jQuery(".link-group--active a").removeClass("active");
+		jQuery(this).addClass("active");
+	});
+```
+
+
+
 
 
 ## Click events firing multiple times in jQuery

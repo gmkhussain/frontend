@@ -981,16 +981,23 @@ jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripp
 		jQuery('.scrolink a').click(function() {
 		  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = jQuery(this.hash);
+
+      let dataOffset = jQuery(this).attr('data-offset'); /* <a data-offset="Any Number">Link</a> */
+      
+      if(dataOffset='undefined'){
+        dataOffset=0;     
+      }
+
 			target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
 			if (target.length) {
 			  jQuery('html, body').animate({
-				scrollTop: target.offset().top + (-100) /* Additional pixels to the scrollTop */
+				scrollTop: target.offset().top + (-dataOffset) /* Additional pixels to the scrollTop */
 			  }, 1000);
 			  return false;
 			}
 		  }
 		});
-	  });
+  });
 /**./links scrolling animation**/
 
 
