@@ -80,8 +80,32 @@ body, html{ height: 100%; padding: 0;}
 **/
 .page-height-short footer { position: absolute; bottom: 0; left: 0; right: 0; width: 100%; }
 
+@media only screen and (max-width : 767px) {
+ .page-height-short footer { position: static; }
+}
 
 
+
+
+/**! footer--sticky 
+ Footer keep at bottom of the browser window. 
+ If page height longer then window height push the footer lower.
+**/
+html, body {
+  height: 100%;
+}
+.footer--sticky #body-wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+.footer--sticky main#page-content {
+  flex: 1 0 auto;
+}
+.footer--sticky #footer {
+  flex-shrink: 0;
+}
+/**!./sticky footer **/
 
 
 
@@ -202,7 +226,7 @@ html.hint a:after {
 
 body .navbar-brand {padding: 5px; max-width: 200px;}
 
-body{ overflow-x: hidden;}
+body { overflow-x: hidden;}
 
 section[class*="-area"] {position: relative; clear:both; }
 
@@ -246,7 +270,7 @@ section[class*="-area"] {position: relative; clear:both; }
 .underline-mini--double h2:before {content: "";height: 3px;width: 50px;display: block;background-color: #1db899;z-index: 1;bottom: 0;margin: 0 auto;position: relative;top: 51px;}
 .underline-mini--double h2:after { content: ""; display: block; background-color: #ccc; width: 160px; height: 1px; bottom: -10px; margin: 15px auto 0; }
 
-.inkd{font-family:"Zeyada";}
+.inkd { font-family:"Zeyada"; }
 
 
 
@@ -2202,7 +2226,6 @@ body .arr-toggle .navbar-toggle.collapsed .icon-bar{ left:0px; top:0px; transfor
 
 /*submenu for mobile*/
 @media only screen and (max-width : 767px) {
-  body.page-height-short footer { position: static; }
 
 
   /**nav-expand for footer with head and ul**/

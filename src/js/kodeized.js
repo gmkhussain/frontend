@@ -982,10 +982,10 @@ jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripp
 		  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = jQuery(this.hash);
 
-      let dataOffset = jQuery(this).attr('data-offset'); /* <a data-offset="Any Number">Link</a> */
-      
-      if(dataOffset='undefined'){
-        dataOffset=0;     
+      if (dataOffset == 'undefined') {
+        dataOffset = 0;
+      }else{
+        var dataOffset = jQuery(this).attr('data-offset'); /* <a data-offset="Any Number">Link</a> */
       }
 
 			target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
