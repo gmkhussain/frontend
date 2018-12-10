@@ -144,18 +144,19 @@ html.ie8:before {
 
 
 
-/**! hint **/
+/**! hintized **/
   /*
     Note: Ctrl + ~ for Preview
   */
 
-html.hint * { box-shadow: 0 0 0 1px #d00; }
-html.hint a { box-shadow: 1px 0 12px 0px #006dd3 inset; }
-html.hint a[href="#"]:after, html.hint a[href=""]:after { content: "# No Link"; position: absolute; font-size: 10px; background-color: #d00; z-index: 2; padding: 2px 4px; margin-top: 1.5em; color: #fff; }
-html.hint [src*="localhost"] { box-shadow: 0 0 10px 10px #ff8800; }
-html.hint [href*="localhost"]:after { content: "localhost link"; position: absolute; margin-top: 2em; font-weight: 600; font-size: 11px; background-color: orange; color: #fff; padding: 0 7px; z-index: 1;}
+html.hintized * { box-shadow: 0 0 0 1px #d00; }
+html.hintized a { box-shadow: 1px 0 12px 0px #006dd3 inset; }
+html.hintized a[href="#"]:after,
+html.hintized a[href=""]:after { content: "# No Link"; position: absolute; font-size: 10px; background-color: #d00; z-index: 2; padding: 2px 4px; margin-top: 1.5em; color: #fff; }
+html.hintized [src*="localhost"] { box-shadow: 0 0 10px 10px #ff8800; }
+html.hintized [href*="localhost"]:after { content: "localhost link"; position: absolute; margin-top: 2em; font-weight: 600; font-size: 11px; background-color: orange; color: #fff; padding: 0 7px; z-index: 1;}
 
-html.hint a:after {
+html.hintized a:after {
   content: " --- "attr(href) " --- ";
   font-size: 0.8em;
   margin-top: 15px;
@@ -165,13 +166,13 @@ html.hint a:after {
   position: absolute;
 }
 
-/**./hint **/
+/**./hintized **/
 
 
 
-/** hint--mockup **/
-.hint--mockup body:hover #body-wrapper { z-index: 5555; position: relative; }
-/**./hint--mockup**/
+/** hintized--mockup **/
+.hintized--mockup body:hover #body-wrapper { z-index: 5555; position: relative; }
+/**./hintized--mockup**/
 
 
 
