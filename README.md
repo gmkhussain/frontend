@@ -1378,7 +1378,28 @@ git remote -v
 
 
 
+## Highlight the potential drop areas in sortable before drop in jQuey UI?
 
+```javascript
+  $(function() {
+    $( "#mySortableList" ).sortable({
+      axis: "x", // only move on X axis
+      placeholder: 'anyNameForPlaceHolder', // optional default name: ui-sortable-placeholder
+      change: function(event, ui) { ui.placeholder.css({visibility: 'visible', border : '1px solid #ccc'}); }
+    });
+  });
+```
+
+```css
+  .ui-sortable-placeholder {
+	background-color: #999 !important;
+  }
+  
+  .ui-sortable-helper {
+	position: relative;
+	top: -28px !important;
+  }
+```
 
 
 
