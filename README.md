@@ -1376,6 +1376,19 @@ git remote -v
 </h1>
 
 
+## Alert auto closing after few seconds
+
+```javascript
+jQuery(".alert-autoclose").fadeTo(2000, 500).slideUp(500, function(){
+    jQuery(".alert-autoclose").alert('close');
+});
+```
+
+
+
+
+
+
 
 
 ## Highlight the potential drop areas in sortable before drop in jQuey UI?
