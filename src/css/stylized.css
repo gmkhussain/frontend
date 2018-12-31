@@ -2840,14 +2840,26 @@ li.dropdown.user-menu li.user-footer { padding: 10px; float: left; width: 100%;}
 }
 
 
-@media(max-width:797px){
-	.colset__actions .btn:hover { box-shadow: 0 0 10px #ccc; opacity: 1; }
-	  
+@media(max-width:797px) {	  
 	.colset--slider:not(.no-active) .colset{ display:none; }
 
 	.colset--slider.no-active .next,
 	.colset--slider.no-active .prev{ display:none; }
-	.colset--slider .colset.active{ display:block;}
+  .colset--slider .colset.active{ display:block;}
+
+  .colset__actions {
+    clear: both;
+    width: 100%;
+    text-align: center;
+  }
+
+  .colset__actions .btn {
+      min-width: 80px;
+      margin: 0 10px;
+      display: inline-block;
+  }
+	.colset__actions .btn:hover { box-shadow: 0 0 10px #ccc; opacity: 1; }
+
 }
 /**./colset--slider**/
 
