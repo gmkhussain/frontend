@@ -1,5 +1,7 @@
 @import "1-helpers/_1-helpers.scss";
 
+@import "0-plugin/_0-plugin.scss"; // on second place because using var from `1-helpers`
+
 @import "2-base/_2-base.scss";
 
 @import "3-layout/_3-layout.scss";
@@ -7,3 +9,6 @@
 @import "4-modules/_4-modules.scss";
 
 @import "5-templates/_5-templates.scss";
+
+
+
