@@ -1,6 +1,5 @@
 # Frontized™
-[<span class="font-size: 20px;"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" style="position: relative;
-    top: 5px;" height="32" /> @GMKHussain</span>](http://twitter.com/gmkhussain)
+
 
 ### Frontend Starter kit with useful additional CSS and JS Scripts
 I realised I was doing the same thing over and over when starting a new build so decided to create my own mini package which has the basics for starting a simple static or dynamic web site.
@@ -96,6 +95,15 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 			Git / Tortoisegit
 		</a>
 	</td>
+	<td>
+		<a href="#npmScripts">
+			<img src="https://i.pinimg.com/564x/ae/65/58/ae6558271292e42fc13be92bc0256656.jpg"  height="80" width="auto" />
+			<br/>
+			NPM Scripts
+		</a>
+	</td>
+
+
 
   </tr>
 </table>
@@ -125,6 +133,9 @@ Folder structure standard conventions varies by build system and programming lan
 
 #### src/: 
 "source" files to build and develop the project. This is where the original source files are located, before being compiled into fewer files to dist/, public/ or build/.
+
+NOTE: The advantage on using partials is that you can use many files to organize your code and everything will be compiled on a single file. see SCSS folder for understanding
+
 
 #### dist/: = Assets folder
 "distribution", the compiled code/library, also named public/ or build/. The files meant for production or public use are usually located here.
@@ -182,7 +193,8 @@ Specification of the files meant to be ignored by Git.
 |   |       jquery-2.2.4.min.js
 |   |       kodeized.js
 |   |       
-|   \---scss
+|   +---scss
+|				
 |           style.scss
 |           
 +---dist
@@ -478,6 +490,40 @@ $('.datepicker').on('changeDate', function(){
     $(this).datepicker('hide');
 });
 ```
+
+
+
+
+
+
+
+
+## Bootstrap Datepicker - Months and Years Only
+
+```javascript
+$(".monthpicker").datepicker( {
+    format: "mm-yyyy",
+    viewMode: "months", 
+    minViewMode: "months"
+});
+```
+
+
+For version 1.2.0 and newer, viewMode has changed to startView, so use:
+```javascript
+$(".monthpicker").datepicker( {
+    format: "mm-yyyy",
+    startView: "months", 
+    minViewMode: "months"
+});
+```
+
+
+```html
+	<input type="text" class="form-control monthpicker" />
+```
+
+
 
 
 
@@ -2069,18 +2115,49 @@ Go to ```control panel -> Credential Manager ->``` Windows Credentials and remov
 
 
 
-
-
-
-
-
-
-
 <h1 align="center" id="errors">
 	<img src="https://cdn.iconscout.com/icon/free/png-256/warning-272-830593.png"  height="80" width="auto" />
 	<br/>
 	Issues / Errors / Mistakes
 </h1>
+
+
+
+## npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+try ```npm rebuild node-sass```
+OR
+```npm uninstall gulp --save```
+
+Then once that is complete run:
+
+```npm install```
+
+then:
+
+```npm run build```
+
+Then ```npm run production``` should work.
+
+
+
+
+
+
+## Change 'size()' function calls to 'length' | bootstrap-datetimepicker
+
+```size()``` has been removed from jQuery 3
+
+Fix this issue by replacing input.size() with input.length
+
+See details here : https://github.com/Eonasdan/bootstrap-datetimepicker/commit/0202134958a7d08b79658fbc4aa4e15b3f407515
+
+
+
+
+
+
+
 
 
 ## Uncaught Error: Bootstrap's JavaScript requires jQuery
@@ -2167,6 +2244,18 @@ $('html.android .input_limit').unbind('keyup change input paste').bind('keyup ch
 
 
 
+
+<h1 align="center" id="errors">
+	<img src="http://www.iconsalot.com/asset/icons/freepik/contact-us/512/008-faq-icon.png"  height="80" width="auto" />
+	<br/>
+	FAQ
+</h1>
+
+
+
+## Why put _ in front of the file name in SCSS?
+
+The _ (underscore) is a partial for SCSS. That means this file going to be imported (@import) to a main stylesheet 
 
 
 
