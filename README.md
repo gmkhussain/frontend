@@ -2112,6 +2112,116 @@ Go to ```control panel -> Credential Manager ->``` Windows Credentials and remov
 
 
 
+<h1 align="center" id="npmScripts">
+	<img src="https://i.pinimg.com/564x/ae/65/58/ae6558271292e42fc13be92bc0256656.jpg"  height="80" width="auto" />
+	<br/>
+	NPM Scripts
+</h1>
+
+
+1. open CMD and type ```npm init```
+
+2. It will create ```packages.json```, open JSON file.
+
+3. install following packages ```npm node-sass nodemon browserify --save-dev```
+
+
+```json
+{
+  "name": "npms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:clean": "rimraf build/js/*, build/js/*",
+    "build:css": "node-sass --include-path scss src/scss/main.scss build/css/main.min.css",
+    "build-header:js": "browserify src/js/header.js > build/js/header.min.js",
+    "build-footer:js": "browserify src/js/footer.js > build/js/footer.min.js",
+    "build:js": "concurrently --kill-others \"npm run build-header:js\" \"npm run build-footer:js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "nodesass": "0.0.2-security"
+  }
+}
+
+```
+NOTE: <a href="#ide">See folder structure</a> for more understanding
+
+
+
+
+
+## The system cannot find the path specified. browserify | When run build js
+```
+npm config set script-shell bash
+npm config delete script-shell bash
+```
+
+then run
+```npm run build:js```
+Works fine for me.
+
+```json
+//Package.json
+...
+   "build:js": "browserify src/js/kodeized.js>build/js/main.min.js" 
+...
+
+```
+
+
+
+## how to import js files into js for NPM Scripts 
+
+#### How to manage js files
+```javascript
+//header.js
+require('./jquery.js');
+```
+
+
+
+```javascript
+//footer.js
+require('./bootstrap.js');
+require('./kodeized.js');
+```
+
+#### How to create build for header and footer in package.json
+
+```
+// see above example package.json file.
+...
+    "build-header:js": "browserify src/js/header.js > build/js/header.min.js",
+    "build-footer:js": "browserify src/js/footer.js > build/js/footer.min.js",
+    "build:js": "concurrently --kill-others \"npm run build-header:js\" \"npm run build-footer:js\""
+...
+
+```
+
+
+
+
+
+## How can I run multiple npm scripts in parallel?
+
+1. Open CMD and ```npm i concurrently --save-dev```
+
+2. Then setup your npm run ```"build:js": "concurrently --kill-others \"npm run build-header:js\" \"npm run build-footer:js\""```
+
+
+
+
+
+
+
+
 
 
 
