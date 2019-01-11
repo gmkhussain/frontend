@@ -75,6 +75,48 @@
 /**./preloader-off **/
 
 
+
+/**! loaderized **/
+.loaderized-area {
+  background-color: rgba(255,255,255,.8);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+
+.loaderized {
+  animation: loaderized-rotation 0.5s infinite linear;
+  border-bottom: 3px solid #d8d8d8;
+  border-left: 3px solid #d8d8d8;
+  border-radius: 100%;
+  border-right: 3px solid #d8d8d8;
+  border-top: 3px solid #008fb4;
+  height: 60px;
+  left: 50%;
+  margin-left: -33px;
+  margin-top: -33px;
+  position: absolute;
+  top: 50%;
+  width: 60px;
+}
+
+
+@keyframes loaderized-rotation {
+  0% { transform: rotate(0deg); } to { transform: rotate(359deg); }
+}
+/** loaderized **/
+
+
+
+
+
+
+
+
+
 /**for 100% heights
 body, html{ height: 100%; padding: 0;}
 **/

@@ -1,0 +1,23 @@
+.nav-tabs{
+    border-bottom-color: $color-primary;    
+
+    >li {
+        >a {
+            background-color: $color-smoke; 
+            border-radius: 0;
+            color: $color-black;
+            top: -1px;
+        }
+    }
+
+    >li.active{
+        >a, 
+        >a:focus,
+        >a:hover {
+           border-radius: 0;
+           background-color: $color-primary;
+           color: $color-white;
+           border-color: $color-primary;
+       }   
+    }
+}

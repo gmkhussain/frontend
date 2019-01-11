@@ -1,0 +1,29 @@
+.form-group.has-error .help-block {
+    display: block;
+    float: left;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  .has-feedback {
+    transition: all 0.5s;
+    .form-control-feedback {
+      border-radius: 4px;
+      margin-right: 3px;
+      margin-top: -1px;
+    }
+  
+    &.has-success {
+      .form-control-feedback {
+        background: #97f433;
+      }
+    }
+  
+    &.has-error {
+      .form-control-feedback {
+        background-color: #f9124d;
+        color: #fff;
+      }
+    }
+  }
+  

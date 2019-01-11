@@ -1,0 +1,36 @@
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tfoot > tr > td {
+    background-color: $color-skyBlueLightest;
+    font-weight: 500;
+}
+
+
+
+.table {
+    font-size: 14px;
+    >tbody {
+        >tr{
+            &:nth-child(odd) {
+                background: #fbfbfb;
+            }
+        }
+    }
+}
+
+
+.table-report {
+    .fa-arrow-down:before {
+        color: #d00;
+    }
+    .fa-arrow-right:before {
+        color: #f9c419;
+    }
+    
+    .fa-arrow-up:before {
+        color: #28bb09;
+    }
+}
+
