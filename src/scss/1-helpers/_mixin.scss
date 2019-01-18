@@ -1,32 +1,52 @@
-
 @mixin transform($property) {
-    /*
+  /*
       mixin: allow to reuse group of css attributes
       Usage: @include transform(rotate(-10deg));
     */
-    -webkit-transform: $property;
-    -ms-transform: $property;
-    transform: $property;
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
 }
 
-
-@mixin multiple-transition($properties: all, $duration: 200ms, $method: ease, $delay: 0ms) {
-    $prefixes: -webkit- -moz- -ms- -o-;
-    @each $prefix in $prefixes {
-        $value: ();
-        @each $property in $properties {
-            @if length($value) > 0 {
-                $value: append($value, unquote(",") #{$property} $duration $method $delay);
-            }
-            @else {
-                $value: append($value, #{$property} $duration $method $delay);
-            }
-        }
-        #{$prefix}transition: $value;
+@mixin multiple-transition(
+  $properties: all,
+  $duration: 200ms,
+  $method: ease,
+  $delay: 0ms
+) {
+  $prefixes: -webkit- -moz- -ms- -o-;
+  @each $prefix in $prefixes {
+    $value: ();
+    @each $property in $properties {
+      @if length($value) > 0 {
+        $value: append(
+          $value,
+          unquote(",") #{$property} $duration $method $delay
+        );
+      } @else {
+        $value: append($value, #{$property} $duration $method $delay);
+      }
     }
+    #{$prefix}transition: $value;
+  }
 }
 
 
-@mixin transition--0_15{
-    transition: (all 0.15s ease-out 0s);
+
+
+
+/* Usage */
+.transition-element {
+  @include multiple-transition(width height margin background-color, 500ms);
+
+  &:hover {
+    /* do styling */
   }
+}
+
+
+
+
+@mixin transition--0_15 {
+  transition: (all 0.15s ease-out 0s);
+}

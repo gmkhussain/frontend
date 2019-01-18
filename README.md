@@ -1,5 +1,9 @@
 # Frontized™
 
+<div style="position:relative; height:280px; margin-bottom:30px">
+
+<img src="dashboard/smallpdf.png" alt="" style="position:absolute; left:0; top:0" />
+
 
 ### Frontend Starter kit with useful additional CSS and JS Scripts
 I realised I was doing the same thing over and over when starting a new build so decided to create my own mini package which has the basics for starting a simple static or dynamic web site.
@@ -12,7 +16,7 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 
 ### ⌘ GH-Pages {ㅤ ㅤ ㅤㅤ ㅤ ㅤ ㅤㅤ}
 
-
+</div>
 
 ### Versions
 
@@ -886,7 +890,7 @@ is a jQuery plugin that extends jQuery Sortable UI functionalities to nested lis
 
 Link: http://ilikenwf.github.io/example.html(http://ilikenwf.github.io/example.html)
 
-```javascript
+```html
 <ol class="sortable">
 	<li><div>Some content</div></li>
 	<li>
@@ -898,16 +902,16 @@ Link: http://ilikenwf.github.io/example.html(http://ilikenwf.github.io/example.h
 	</li>
 	<li><div>Some content</div></li>
 </ol>
+```
 
-	jQuery(document).ready(function(){
-
-		jQuery('.sortable').nestedSortable({
-			handle: 'div',
-			items: 'li',
-			toleranceElement: '> div'
-		});
-
-	});
+```javascript
+jQuery(document).ready(function(){
+  jQuery('.sortable').nestedSortable({
+    handle: 'div',
+	items: 'li',
+	toleranceElement: '> div'
+ });
+});
 //Please note: every <li> must have either one or two direct children, the first one being a container element (such as <div> in the above example), and the (optional) second one being the nested list. The container element has to be set as the 'toleranceElement' in the options, and this, or one of its children, as the 'handle'.
 ```
 
@@ -1035,13 +1039,11 @@ var swiper1 = new Swiper('.s1', {
 
 ```javascript
 //On Click Trigger Click on another element after few second
-	<script>
 	jQuery(".nav-tabs li a").click(function() {
 		  setTimeout(function() {
 			jQuery("#allbtn").trigger("click");
 		  }, 10);
 		});
-	</script>
 ```
 
 
@@ -1064,6 +1066,7 @@ jQuery(".fom-steps .btn-step").click(function(e) {
   var targetTab = jQuery(this).attr("href");
   jQuery('.fom-steps a[href="' + targetTab + '"]').tab("show");
 });
+```
 
 
 
@@ -1115,29 +1118,6 @@ https://codepen.io/pen/rYxBjJ
 ## Overdose
 * Speed-less
 * Mess-up code
-
-
-
-
-
-
-
-
-### Metabolic
-
-```html
-//Can Delete
-_smoothState.js (folder)
-_angular.html
-_smoothstate.html
-_svg.html
-```
-
-
-
-
-
-
 
 
 
@@ -1785,7 +1765,7 @@ data:  formData
 
 
 <h1 align="center" id="swiper">
-	<img src="https://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png"  height="80" width="auto" />
+	<img src="https://idangero.us/i/open/swiper.jpg"  height="80" width="auto" />
 	<br/>
 	Swiper
 </h1>
