@@ -3,7 +3,7 @@
 .table > tfoot > tr > th,
 .table > thead > tr > td,
 .table > tfoot > tr > td {
-    background-color: $color-skyBlueLightest;
+    background-color: $color-primaryLightest;
     font-weight: 500;
 }
 
@@ -11,8 +11,8 @@
 
 .table {
     font-size: 14px;
-    >tbody {
-        >tr{
+    > tbody {
+        > tr{
             &:nth-child(odd) {
                 background: #fbfbfb;
             }

@@ -6,8 +6,8 @@
         &.next,
         &.datepicker-switch,
         &.prev {
-          background: $color-skyBlueLightest;
-          border-color: $color-skyBlueLightest;
+          background: $color-primaryLightest;
+          border-color: $color-primaryLightest;
           cursor: pointer;
         }
       }
@@ -16,14 +16,14 @@
         td,
         th {
           padding: 5px !important;
-          border-color: $color-smoke;
+          border-color: $color-neutral;
         }
    
     
         td {
           &.active.day,
           &:hover {
-            background-color: $color-blue;
+            background-color: $color-primary;
           }
         }
     }
@@ -38,10 +38,10 @@
         display: inline-block;
         padding: 0 10px;
         padding: 5px;
-        border: 1px solid #ccc;
+        border: 1px solid $color-neutral;
         
         &:hover{
-            background-color: $color-blue;
+            background-color: $color-primary;
             color: $color-white;
             cursor: pointer;
         }

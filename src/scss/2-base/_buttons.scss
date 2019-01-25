@@ -77,10 +77,10 @@
 
 
         &.btn-primary {
-            background: $color-orange;
+            background: $color-primary;
 
             .icon {
-                background-color: $color-orangeDark;
+                background-color: $color-primaryDark;
 
                 .fa {
                     color: $color-white;
@@ -88,10 +88,10 @@
             }
 
             &:hover {
-                background-color: $color-orangeDark;
+                background-color: $color-primaryDark;
 
                 .icon {
-                    background-color: $color-orangeDarker;
+                    background-color: $color-primaryDarker;
                 }
             }
 
@@ -100,11 +100,11 @@
 
 
 
-        &.btn-green {
-            background: $color-green;
+        &.btn-secondary {
+            background: $color-secondary;
 
             .icon {
-                background-color: $color-greenDark;
+                background-color: $color-secondaryDark;
 
                 .fa {
                     color: $color-white;
@@ -112,44 +112,22 @@
             }
 
             &:hover {
-                background-color: $color-greenDark;
+                background-color: $color-secondaryDark;
 
                 .icon {
-                    background-color: $color-greenDarker;
-                }
-            }
-        }
-
-        
-
-        &.btn-purple {
-            background: $color-purple;
-
-            .icon {
-                background-color: $color-purpleDark;
-
-                .fa {
-                    color: $color-white;
-                }
-            }
-
-            &:hover {
-                background-color: $color-purpleDark;
-
-                .icon {
-                    background-color: $color-purpleDarker;
+                    background-color: $color-secondaryDarker;
                 }
             }
         }
 
 
+    
+        &.btn-neutral {
 
-        &.btn-grey {
-
-            background: $color-greyDark;
+            background: $color-neutralDark;
 
             .icon {
-                background-color: $color-grey;
+                background-color: $color-neutral;
 
                 .fa {
                     color: $color-white;
@@ -157,10 +135,10 @@
             }
 
             &:hover {
-                background-color: $color-greyDarker;
+                background-color: $color-neutralDarker;
 
                 .icon {
-                    background-color: $color-greyDark;
+                    background-color: $color-neutralDark;
                 }
             }
         }

@@ -101,6 +101,11 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 			Git / Tortoisegit
 		</a>
 	</td>
+	
+	</tr>
+	
+	
+	<tr>	
 	<td>
 		<a href="#npmScripts">
 			<img src="https://i.pinimg.com/564x/ae/65/58/ae6558271292e42fc13be92bc0256656.jpg"  height="80" width="auto" />
@@ -108,7 +113,7 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 			NPM Scripts
 		</a>
 	</td>
-	</tr>
+	
 	<td>
 	<img src="https://cdn4.iconfinder.com/data/icons/X-Mac/security/png/400/input_validation.png"  height="80" width="auto" />
 	<br/>
@@ -1084,7 +1089,7 @@ jQuery(".fom-steps .btn-step").click(function(e) {
 
 
 
-### [.nav-tabs-selector] Tab Panes Toggle with <select> <option>
+### [.nav-tabs-selector] Tab Panes Toggle with select option
 https://codepen.io/pen/rYxBjJ
 
 ```javascript

@@ -6,10 +6,10 @@
     margin-bottom: 0;
     border-radius: 3px;
     margin-left: 1px;
-    margin-bottom: 10px;
-    
+    margin-bottom: 10px;    
     font-size: 14px;
 }
+
 
 .dataTables_length label select {
     border: 1px solid $color-greyLightest;
@@ -57,9 +57,9 @@ table.dataTable.no-footer {
 
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
-    background: $color-blue !important;
+    background: $color-primary !important;
     padding: 2px 8px;
-    border-color: $color-blue;
+    border-color: $color-primary;
     color: $color-white !important;
     font-size: 14px;
 }
@@ -71,8 +71,8 @@ table.dataTable.no-footer {
 
 
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-    background: $color-blue;
-    border-color: $color-blue;
+    background: $color-primary;
+    border-color: $color-primary;
     /* transform: scale(1); */
     padding: 2px 8px;
 }
