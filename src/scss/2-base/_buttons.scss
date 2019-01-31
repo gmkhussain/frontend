@@ -76,9 +76,16 @@
 
 
 
+
+
         &.btn-primary {
             background: $color-primary;
 
+            &--outline {
+                border:1px solid $color-primary;
+                color: $color-primary;
+            }
+            
             .icon {
                 background-color: $color-primaryDark;
 
@@ -94,14 +101,17 @@
                     background-color: $color-primaryDarker;
                 }
             }
-
-
         }
 
 
 
         &.btn-secondary {
             background: $color-secondary;
+            
+            &--outline {
+                border:1px solid $color-secondary;
+                color: $color-secondary;
+            }
 
             .icon {
                 background-color: $color-secondaryDark;
@@ -122,10 +132,15 @@
 
 
     
+        
         &.btn-neutral {
-
             background: $color-neutralDark;
 
+            &--outline {
+                border:1px solid $color-neutralDark;
+                color: $color-neutralDark;
+            }
+            
             .icon {
                 background-color: $color-neutral;
 
@@ -144,3 +159,4 @@
         }
 
     }
+
