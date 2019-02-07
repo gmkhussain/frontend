@@ -1,0 +1,29 @@
+.form-group {
+  .switch-group {
+    border: 1px solid $color-smoke;
+    float: left;
+    border-radius: 4px;
+    height: 40px;
+    overflow: hidden;
+
+    input {
+      display: none;
+    }
+
+    input:checked + label {
+      background: $color-primary;
+      color: $color-white;
+    }
+
+    label {
+      background: transparent;
+      border-radius: 0;
+      position: relative;
+      padding: 8px 12px;
+      line-height: 22px;
+      height: 40px;
+      cursor: pointer;
+      border: 0px solid transparent;
+    }
+  }
+}
