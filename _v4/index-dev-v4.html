@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css" >
-	<link rel="stylesheet" href="../css/stylized.css" >
+	<link rel="stylesheet" href="../src/css/stylized.css" >
 	
 	<script src="js/jquery-3.3.1.min.js" ></script>
 
@@ -69,13 +69,13 @@
 		  </ol>
 		  <div class="carousel-inner">
 			<div class="carousel-item active" id="slide1">
-			  <img class="d-block w-100" src="../images/slide1.jpg" alt="First slide">
+			  <img class="d-block w-100" src="../src/images/slide1.jpg" alt="First slide" >
 			</div>
 			<div class="carousel-item" id="slide2">
-			  <img class="d-block w-100" src="../images/slide2.jpg" alt="Second slide">
+			  <img class="d-block w-100" src="../src/images/slide2.jpg" alt="Second slide">
 			</div>
 			<div class="carousel-item"  id="slide3">
-			  <img class="d-block w-100" src="../images/slide1.jpg" alt="Third slide">
+			  <img class="d-block w-100" src="../src/images/slide1.jpg" alt="Third slide" >
 			</div>
 		  </div>
 		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -87,11 +87,529 @@
 			<span class="sr-only">Next</span>
 		  </a>
 		</div>
+		
 	</section>
 	
 	
 	
-	<section class="abc-area">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<section class="counter-area scrolink scrollreveal fnc-underline hed-cntr hoverized blinked-links">
+		<div class="container">
+			
+			<div class="component-status clrlist listdvr">
+			  <ul class="component-status__icon-list">
+				<li>
+				  <i class="fa fa-check green"></i>
+				  <span>Ready</span>
+				</li>
+				<li>
+				  <i class="fa fa-warning orange"></i>
+				  <span>Under review</span>
+				</li>
+				<li>
+				  <i class="fa fa-ban red"></i>
+				  <span>Deprecated</span>
+				</li>
+				<li>
+				  <i class="fa fa-minus"></i>
+				  <span>Not applicable</span>
+				</li>
+			  </ul>
+			</div>
+	
+	<button class="btn-alert--show">Send Message</button>
+	
+	<div class="alert alert-danger alert-dismissable alert-sticky fade">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+	<script>
+		$('.btn-alert--show').click(function(){
+			$('.alert').show()
+		})
+	</script>
+	
+
+			<h3>.fnc-underline</h3>
+  <div class="metroflip-box col-sm-2 p0">
+    <div class="metroflip_inr pul-lft w100 ">
+      <div class="front pul-lft w100  bg-lime ">
+        <h3>.Metroflip-box</h3><h2>FRONT</h2>
+      </div>
+      <div class="back pul-lft w100 bg-red">
+        <h3>.Metroflip-box</h3><h2>BACK</h2>
+      </div>
+    </div>
+  </div>
+
+		<div class="row">
+
+			<div class="counter-box col-sm-2 ">
+				<div class="counter__inr shad-dp20 p10 bg-silver">
+			<a href="#randomLftRgt">		
+					<span class="counter__top ">
+						<i class="fa fa-clock-o"></i> Random Left/Right
+					</span>
+					<div class="counter__num h3 m0 shad-long">CSS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 7%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#reviews">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> 2nd Slider 
+					</span>
+					<div class="counter__num h3 m0">Bootstrap</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#chartistjs">
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Chartist.JS 
+					</span>
+					<div class="counter__num h3 m0">JS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#swiperSlider">
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Swiper Slider
+					</span>
+					<div class="counter__num h3 m0">Slider</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#swiperSlider">
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Isotope filter
+					</span>
+					<div class="counter__num h3 m0">Isotope</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#content">
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Content ...
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#girdBox">
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Gird Box
+					</span>
+					<div class="counter__num h3 m0">jQuery</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#valigner">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> valigner 
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+					
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#moreless">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> More Less 
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>		
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#accordion">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Accordion
+					</span>
+					<div class="counter__num h3 m0">Bootstrap</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#listArea">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> List Area
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#tabsArea">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Tabs Area
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#dateRangePicker">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Date Range Picker
+					</span>
+					<div class="counter__num h3 m0">JS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#dateTimePicker">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Date Time Picker
+					</span>
+					<div class="counter__num h3 m0">JS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#uploadPreview">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Upload Preview
+					</span>
+					<div class="counter__num h3 m0">JS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#inlineControl">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> inline Control
+					</span>
+					<div class="counter__num h3 m0">Bootstrap</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#fancyForm">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Fancy Form
+					</span>
+					<div class="counter__num h3 m0">CSS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#maskedInput">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Masked Input
+					</span>
+					<div class="counter__num h3 m0">JS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#downloadableLink">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> downloadable Link
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+
+
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#tableArea">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Table Area
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#colorArea">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Color Area
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#heights">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Heights
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-desc red"> 8%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#imagesArea">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Images Area
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#tooltipArea">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Tooltip Area
+					</span>
+					<div class="counter__num h3 m0">JS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+
+
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#pinterestStyle">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Pinterest Style
+					</span>
+					<div class="counter__num h3 m0">CSS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#modalArea">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Modal
+					</span>
+					<div class="counter__num h3 m0">Bootstrap</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#footer">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Footer
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			
+			
+			</div>
+			
+
+			<div class="hed crossline "><h2>Counter-area</h2><hr></div>
+			<div class="hed lndotln"><h2><strong>.lndotln</strong> heading</h2><hr/></div>
+			<div class="hed underline-mini"><h2><b>.underline-mini</b> heading</h2></div>
+			<div class="hed underline-mini--double"><h2><b>.underline-mini--double</b> heading</h2></div>
+			
+			
+			
+		</div>
+	</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	<section class="randomlftrgt-area" id="randomLftRgt" data-scroll-reveal="enter left and move 50px over 1.33s">
+			
+		<div class="random-box">
+			<div class="container">
+				<div class="random__lft col-sm-7">
+					<h2><b>.randomlftrgt</b> Randomized Content and Image</h2>
+					<p>Bibendum ad ante a eleifend nec at a accumsan at taciti adipiscing gravida ut curae rutrum sit ornare.Ultrices cras adipiscing ante per feugiat ultricies et lobortis adipisci</p>
+				</div>
+				
+				<div class="random__rgt col-sm-5">
+					<img src="src/images/preloading.png" alt="" />
+				</div>
+			</div>
+		</div>
+			
+		<div class="random-box">
+			<div class="container">
+				<div class="random__lft col-sm-7">
+					<h2>a accumsan at taciti</h2>
+					<p>Bibendum ad ante a eleifend nec at a accumsan at taciti adipiscing gravida ut curae rutrum sit ornare.Ultrices cras adipiscing ante per feugiat ultricies et lobortis adipisci</p>
+				</div>
+			
+				<div class="random__rgt col-sm-5">
+					<img src="src/images/preloading.png" alt="" />
+				</div>
+			</div>
+		</div>
+
+					
+		<div class="random-box">
+			<div class="container">
+				<div class="random__lft col-sm-7">
+					<h2>a accumsan at taciti</h2>
+					<p>Bibendum ad ante a eleifend nec at a accumsan at taciti adipiscing gravida ut curae rutrum sit ornare.Ultrices cras adipiscing ante per feugiat ultricies et lobortis adipisci</p>
+				</div>
+				
+				<div class="random__rgt col-sm-5">
+					<img src="src/images/preloading.png" alt="" />
+				</div>
+			</div>
+		</div>
+		
+		</div>
+	</section>
+	
+
+
+
+
+
+	
+	
+	<section class="abc-area" id="reviews">
 		<div class="container">
 			  <div class="row">
 			  
@@ -109,7 +627,10 @@
 			</div>
 	
 	
-		</div>	</div>
+		</div>	
+	</section>
+		
+		
 	</main>
 	
 
@@ -217,14 +738,16 @@
     <script src="js/popper.min.js" ></script>
     <script src="js/bootstrap.min.js" ></script>
 	
-	<script src="js/kodeized.v4.js" ></script>
+	<!--script src="js/kodeized.v4.js" ></script-->
+	<script src="../src/js/kodeized.js" ></script>
+	
 	<script>
 	if(navigator.onLine){
 	  console.log('online');
 	 } else {
 	  console.log('offline');
 	 }
- </script>
+	</script>
 	
   </body>
 </html>

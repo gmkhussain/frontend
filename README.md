@@ -263,6 +263,11 @@ Install following extension
 
 ### SassLint: https://github.com/sasstools/sass-lint
 
+### Web Accessibility:  https://marketplace.visualstudio.com/items?itemName=MaxvanderSchee.web-accessibility
+
+Preview: 
+<img src="https://raw.githubusercontent.com/mvdschee/web-accessibility/master/web-accessibility.gif" />
+
 
 #### Install globally
 ```javascript

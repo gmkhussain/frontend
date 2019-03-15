@@ -988,6 +988,8 @@ jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripp
         var dataOffset = jQuery(this).attr('data-offset'); /* <a data-offset="Any Number">Link</a> */
       }
 
+		alert(dataOffset);
+
 			target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
 			if (target.length) {
 			  jQuery('html, body').animate({
@@ -1000,7 +1002,22 @@ jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripp
   });
 /**./links scrolling animation**/
 
-
+/*
+$(function(){
+$('.scrolink a').click(function() {
+if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname) {
+        var $target = $(this.hash);
+        $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+        if ($target.length) {
+            var targetOffset = $target.offset().top;
+            $('html,body').animate({scrollTop: targetOffset - 30}, 1000);
+            return false;
+        }
+    }
+  });
+});
+*/
 
 
 
