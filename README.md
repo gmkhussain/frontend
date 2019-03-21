@@ -26,7 +26,7 @@ Useful libraries and codes for [OneBrand™ Frontend Preview](http://gmkhussain.
 |------------------|---------------------|--------------|
 | Frontized        |  Why Skip Version 1? Startup as a Bootstrap Extended |    |
 | Frontized 2     | "Frontized" without the "Extended" referring to versions 2 and up.  |    |
-| Frontized 4     |  Skipping 3 to avoid a confusion due to the misalignment of the router package's version which was already distributed as v3.3.0 |    |
+| Frontized 4     |  Frontized 3 happened, but it was never released as stable, Skipping 3 to avoid a confusion due to the missmatch of the BS version which was already used in v2  |    |
 <!--| Frontized 5     |   |    |
 | Frontized 5.5     |   |    |
 | Frontized 6 MX     |   |    |
@@ -46,19 +46,12 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 <table>
   <tr>
 	<td>
-		<a href="#Errors">
-			<img src="https://cdn.iconscout.com/icon/free/png-256/warning-272-830593.png"  height="80" width="auto" />
-			<br/>
-			Issues
-		</a>
-	</td>
-	<td>
 		<a href="#Sass">
 			<img src="https://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png"  height="80" width="auto" />
 			<br/>
 			Sass / SCSS
 		</a>
-	</td>	
+	</td>
 	<td>
 		<a href="#jQuery">
 			<img src="https://programarfacil.com/wp-content/uploads/2015/08/jQurery.png"  height="80" width="auto" />
@@ -72,21 +65,23 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 			<br/>
 			jQuery UI
 		</a>
-	</td>	
+	</td>
 	<td>
 		<a href="#Ajax">
 			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd_B5bTO32ufTEBsyrA8GW9i9wocgAFq3aSzBoO5QI5tvA_S1xXA"  height="80" width="auto" />
 			<br/>
 			Ajax
 		</a>
-	</td>	
+	</td>
+  </tr>
+  <tr>
 	<td>
 		<a href="#Swiper">
 			<img src="https://idangero.us/i/open/swiper.jpg" height="80" width="auto" />
 			<br/>
 			Swiper
 		</a>
-	</td>		
+	</td>
 	<td>
 		<a href="#DataTable">
 			<img src="https://www.opencodez.com/wp-content/uploads/2017/02/datatable.png" height="80" width="auto" />
@@ -95,17 +90,19 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 		</a>
 	</td>
 	<td>
+	<img src="https://cdn4.iconfinder.com/data/icons/X-Mac/security/png/400/input_validation.png"  height="80" width="auto" />
+	<br/>
+	Bootstrap Validator
+	</td>
+  </tr>
+  <tr>
+	<td>
 		<a href="#git">
 			<img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"  height="80" width="auto" />
 			<br/>
 			Git / Tortoisegit
 		</a>
 	</td>
-	
-	</tr>
-	
-	
-	<tr>	
 	<td>
 		<a href="#npmScripts">
 			<img src="https://i.pinimg.com/564x/ae/65/58/ae6558271292e42fc13be92bc0256656.jpg"  height="80" width="auto" />
@@ -113,15 +110,26 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 			NPM Scripts
 		</a>
 	</td>
-	
+  </tr>
+  <tr>
 	<td>
-	<img src="https://cdn4.iconfinder.com/data/icons/X-Mac/security/png/400/input_validation.png"  height="80" width="auto" />
-	<br/>
-	Bootstrap Validator
+    <a href="#Resources"><img src="https://www.fmcic.ca/wp-content/uploads/resources-icon.png"  height="80" width="auto" />
+    <br/>
+    Resources</a>
 	</td>
-
+  </tr>
+  <tr>
+	<td>
+		<a href="#Errors">
+			<img src="https://cdn.iconscout.com/icon/free/png-256/warning-272-830593.png"  height="80" width="auto" />
+			<br/>
+			Issues
+		</a>
+	</td>
   </tr>
 </table>
+
+
 
 
 
@@ -2037,7 +2045,7 @@ Note: for retain style use ```animation-fill-mode``` values set by the last keyf
 ```css
 .myAnimatedDiv {
   animation: fadeIn 1s ease-in-out 3s;
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards;
 }
 ```
 
@@ -2417,6 +2425,33 @@ $('html.android .input_limit').unbind('keyup change input paste').bind('keyup ch
 
 
 
+## Overflow:hidden applied to <body> not work on iPhone Safari?
+
+Put a wrapper ```#body-wrapper``` div around site content, just inside the ```body``` tag.
+
+```html
+<!DOCTYPE HTML>
+ <html>
+ <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <!-- other meta and head stuff here -->
+ <head>
+ <body>
+     <div id="body-wrapper">
+         <!-- Your site content here -->
+     </div>
+ </body>
+ </html>
+
+```
+
+
+
+
+
+
+
+
 
 
 
@@ -2450,9 +2485,16 @@ The _ (underscore) is a partial for SCSS. That means this file going to be impor
 
 
 
+<h1 align="center" id="Resources">
+	<img src="https://www.fmcic.ca/wp-content/uploads/resources-icon.png"  height="80" width="auto" />
+	<br/>
+	Resources
+</h1>
 
 
-
+## CSS 
+### Cubic-Vezier animation: http://cubic-bezier.com/
+### Easing functions https://github.com/ai/easings.net/
 
 
 
@@ -2466,6 +2508,7 @@ The _ (underscore) is a partial for SCSS. That means this file going to be impor
 * DataTable - https://datatables.net/
 * FleXcroll.js - http://hesido.com/web.php?page=customscrollbar
 * JScrollpane.js - http://jscrollpane.kelvinluck.com/
+
 
 
 <hr/>
