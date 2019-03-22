@@ -7,8 +7,8 @@
 
 /**!preloader**/
 jQuery(window).on('load', function() {
-  jQuery('#preloader__status').fadeOut();
-  jQuery('#preloader').delay(350).fadeOut('slow'); 
+  jQuery('#preloader__status').removeClass("hidden");
+  jQuery('#preloader').delay(350).addClass('hidden'); 
   jQuery('body').delay(350).css({'overflow':'visible'});
 })
 /**./preloader**/
@@ -17,7 +17,7 @@ jQuery(window).on('load', function() {
 
 /**!preloader--off**/
 if (jQuery("section, div").hasClass("preloader--off")) {
-  jQuery("body").addClass("preloader--off");
+	jQuery("body").addClass("preloader--off");
 }
 /**./preloader--off**/
 
@@ -38,30 +38,30 @@ jQuery("#page-content").on('click', function(event) {
 
 
 
-/**!hintized**/
- /*
- Ctrl + ~ for preview
- */
+/**!hint**/
+	/*
+	 Ctrl + ~ for preview
+	*/
 jQuery(document).keydown(function(e) {
   if (e.keyCode == 192 && e.ctrlKey) {
-    jQuery("html").toggleClass("hintized");
+    jQuery("html").toggleClass("hint");
   }
 });
-/**./hintized**/
+/**./hint**/
 
 
 /**!hint--gridized**/
-  /*!
-  Ctrl + ' for preview
-  */
+	/*!
+	 Ctrl + ' for preview
+	*/
 jQuery(document).keydown(function(e) {
   if (e.keyCode == 222 && e.ctrlKey) {
-
-    var myGridized = '<div id="gridized"><div class="container"><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div></div></div>';
-
-    jQuery("#gridized").remove();
-    jQuery("html").toggleClass("hint--gridized");
-    jQuery("html.hint--gridized body").append(myGridized);
+	  
+	var myGridized = '<div id="gridized"><div class="container"><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div></div></div>';
+	  
+	  jQuery("#gridized").remove();
+	  jQuery("html").toggleClass("hint--gridized");
+	  jQuery("html.hint--gridized body").append(myGridized);
   }
 });
 /**./hint--gridized**/
@@ -77,9 +77,9 @@ jQuery(document).keydown(function(e) {
 /**!Detect Localhost connection**/
 if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
     jQuery("html").attr("connection", "local");
-  } else {
-    jQuery("html").attr("connection", "live");
-  }
+	}else{
+		jQuery("html").attr("connection", "live");
+	}
 /**./Detect Localhost connection**/
 
 
@@ -90,7 +90,7 @@ if (location.hostname === "localhost" || location.hostname === "127.0.0.1"){
 
 
 
-/**! addClass if URL is Root url (is Home page) **/
+/*addClass if URL is Root url (is Home page)*/
 jQuery('body').toggleClass('is_index home index-page', /\/$/.test(location.pathname));
 
 
@@ -103,19 +103,18 @@ jQuery('body').toggleClass('is_index home index-page', /\/$/.test(location.pathn
 /**!URL added on body tag as a Class**/
 jQuery(function() {
   var locReal = window.location.pathname; // returns the full URL
-  var locRemoveExt = locReal.replace(".php","");
-  var loc = locRemoveExt.replace(".", "/");
-  var split_loc = loc.split('/');
-  active_locLastParent2 = split_loc[split_loc.length-3];
-  active_locLastParent = split_loc[split_loc.length-2];
-  active_locLast = split_loc[split_loc.length-1]; 
-
-
-  jQuery('body').addClass(active_locLastParent2 + "-page");
-  jQuery('body').addClass(active_locLastParent + "-page");
-  jQuery('body').addClass(active_locLast + "-page");
-
-
+	var loc = locReal.replace(".", "/");
+	var split_loc = loc.split('/');
+	active_locLastParent2 = split_loc[split_loc.length-3];
+	active_locLastParent = split_loc[split_loc.length-2];
+	active_locLast = split_loc[split_loc.length-1]; 
+	
+	
+	jQuery('body').addClass(active_locLastParent2 + "-page");
+	jQuery('body').addClass(active_locLastParent + "-page");
+	jQuery('body').addClass(active_locLast + "-page");
+	
+	
 	/*![.nav--activized] added*/
 		/*!
 			Find domain.com/LastURLname in body and addClass .LastURLname.is-active
@@ -149,30 +148,6 @@ jQuery(function() {
 	
 });
 /**!./URL added on body tag as a Class**/
-
-
-
-
-
-
-
-
-
-/**! hintized--mockup **/
-/*
- Ctrl + / for preview
- Note: paste mockup jpg file in '_mockup' folder --> '_mockup/your-mockup-name.jpg'
-*/
-jQuery(document).keydown(function (e) {
-  if (e.keyCode == 191 && e.ctrlKey) {
-    var fileName = "_mockup/" + active_locLast + ".jpg";
-    var myMockupMatcher = '<div id="mockupMatcher" style="background-image:url(' + fileName + '); position: absolute; top: 0; width: 100%; z-index:898 ;height: 1000vh; opacity: .4 ;background-position: center top;"></div>';
-    jQuery("#mockupMatcher").remove();
-    jQuery("html").toggleClass("hintized--mockup");
-    jQuery("html.hintized--mockup body").append(myMockupMatcher);
-  }
-});
-/**./ hintized--mockup **/
 
 
 
@@ -444,9 +419,9 @@ jQuery(window).on('load', function() {
 	var documentHeight_withFooter = documentHeight + footerHeight;
 	
 	
-/*	console.log("window height:" + windowHeight );
+	console.log("window height:" + windowHeight );
 	console.log("document height:" + documentHeight + " with footer " + documentHeight_withFooter );
-	console.log("Body height:" + bodyHeight + " with footer " + bodyHeight_withFooter ); */
+	console.log("Body height:" + bodyHeight + " with footer " + bodyHeight_withFooter );
 
 		/*!
 		  Place footer at bottom only if page is "short"
@@ -456,7 +431,7 @@ jQuery(window).on('load', function() {
 			jQuery("body").addClass("page-height-short");
 		}else{
 			jQuery("body").removeClass("page-height-short");
-		/*	console.log("--> long page"); */
+			console.log("--> long page");
 		}
 		
 		
@@ -465,7 +440,7 @@ jQuery(window).on('load', function() {
 		*/
 		var footerHeight = jQuery("footer").height();
 			jQuery("footer").attr("data-height", footerHeight );
-	/*	console.log("Footer height: " +footerHeight); */
+		console.log("Footer height: " +footerHeight);
 
 
 		/*!section-centralized
@@ -890,9 +865,9 @@ jQuery(document).ready(function(){
 	*/
 	jQuery(window).scroll(function(){
 	  if (jQuery(this).scrollTop() > 100) {
-		  jQuery('.scrollToTop').fadeIn();
+		  jQuery('.scrollToTop').addClass("fade");
     } else {
-	    jQuery('.scrollToTop').fadeOut();
+	    jQuery('.scrollToTop').removeClass("fade");
 	  }
 	});
 		
@@ -981,43 +956,19 @@ jQuery(".btn-effect--ripple button, .btn-effect--ripple .btn, .link-effect--ripp
 		jQuery('.scrolink a').click(function() {
 		  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = jQuery(this.hash);
-
-      if (dataOffset == 'undefined') {
-        dataOffset = 0;
-      }else{
-        var dataOffset = jQuery(this).attr('data-offset'); /* <a data-offset="Any Number">Link</a> */
-      }
-
-		alert(dataOffset);
-
 			target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
 			if (target.length) {
 			  jQuery('html, body').animate({
-				scrollTop: target.offset().top + (-dataOffset) /* Additional pixels to the scrollTop */
+				scrollTop: target.offset().top + (-100) /* Additional pixels to the scrollTop */
 			  }, 1000);
 			  return false;
 			}
 		  }
 		});
-  });
+	  });
 /**./links scrolling animation**/
 
-/*
-$(function(){
-$('.scrolink a').click(function() {
-if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-    && location.hostname == this.hostname) {
-        var $target = $(this.hash);
-        $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-        if ($target.length) {
-            var targetOffset = $target.offset().top;
-            $('html,body').animate({scrollTop: targetOffset - 30}, 1000);
-            return false;
-        }
-    }
-  });
-});
-*/
+
 
 
 
@@ -1545,6 +1496,7 @@ jQuery("div").each(function (CheckElementChildType) {
 
 
 /**! Detecting AJAX request start and loaded **/
+$(document).ajaxStart();
 jQuery(document).ajaxStart(function() {
 	jQuery("body").removeClass("ajax--loaded").addClass("ajax--loading"); 
 });
@@ -1793,16 +1745,6 @@ jQuery('[data-provide="datepicker"]').on('change', function () {
 
 
 
-
-
-
-
-
-/**! Detect Edge browser **/
-if (document.documentMode || /Edge/.test(navigator.userAgent)) {
-  jQuery("html").addClass("edge");
-}
-/**!./ Detect Edge browser **/
 
 
 

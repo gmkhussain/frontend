@@ -1,190 +1,92 @@
-<!DOCTYPE html>
-<html lang="en" class="broken-image-checker">
+<!doctype html>
+<html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!--iPhone from zooming form issue (maximum-scale=1, user-scalable=0)-->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="icon" type="image/png" href="src/images/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" >
+	<link rel="stylesheet" href="../src/css/stylized.css" >
 	
-    <!-- Bootstrap --><link href="src/css/bootstrap.min.css" rel="stylesheet">
-	
-	<link rel="stylesheet" href="src/css/stylized.css" data-content="animateCss, fontAwesome, ">
-	<link rel="stylesheet" href="src/style.css">
-	<link rel="stylesheet" href="src/css/font-awesome.min.css">
-	
-	<!-- jQuery -->
-	<!--[if (!IE)|(gt IE 8)]><!-->
-	  <script src="src/js/jquery-2.2.4.min.js"></script>
-	<!--<![endif]-->
+	<script src="js/jquery-3.3.1.min.js" ></script>
 
-
-	<!--[if lte IE 8]>
-	  <script src="src/js/jquery1.9.1.min.js"></script>
-	<![endif]-->
-	
-	
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="src/js/html5shiv.min.js"></script>
-      <script src="src/js/respond.min.js"></script>
-    <![endif]-->
-	
-
+    <title>Frontend v4</title>
   </head>
-  <body class="transition nav-plusminus hdr--sticky-mobile--off">
-
+  <body>
   <div id="body-wrapper">
 
 	<header>
-	<section class="hdr-area hdr-nav hdr--sticky cross-toggle bg-white">
-		<div class="container">
-			<nav class="navbar navbar-default" role="navigation" id="slide-nav">
-			  <div class="container-fluid">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#publicNavbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				  </button>
-					<a class="navbar-brand" href="./"><img src="src/images/logo.png" alt="logo" class="broken-image"/></a>
-				</div>
+		<section class="hdr-area">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div id="slidemenu">
-					<div class="collapse navbar-collapse" id="publicNavbar">
-					  <ul class="nav navbar-nav navbar-main dropdown-hover--desktop">
-						<li><a href="index.html">Link One</a></li>
-						<li class=""><a href="#!2">Link 2</a></li>
-						<li><a href="#!3">Link III</a></li>
-						<li><a href="#!6">Link 4</a></li>
-						<li><a href="#!5">Link_V</a></li>
-						<li><a href="#!6">Link SIX</a></li>
-						<li><a href="#!7">Link 7</a></li>
-						<li class="dropdown">
-						  <a href="#dropdown" class="dropdown-toggle" data-toggle="dropdown">Dropdown 2.0</a>
-						  <ul class="dropdown-menu">
-							<li><a href="#c">Action</a></li>
-							<li><a href="#c">Another action</a></li>
-							<li><a href="#c">Something else here</a></li>
-							<li class="divider"></li>
-							<li><a href="#c">Separated link</a></li>
-							<li class="divider"></li>
-							<li><a href="#c">One more separated link</a></li>
-						  </ul>
-						</li>
-					  </ul>
-					  
-						<ul class="nav navbar-nav pul-rgt">
-					  		<li class="dropdown user user-menu pul-rgt">
-							<a href="#usr-name" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-							  <span class="dp"><img src="images/usr.jpg" alt="user" ></span>
-							  <span class="usr-name">Robert</span>
-							</a>
-									<ul class="dropdown-menu p20">
-									  <li class="user-header">
-										<span class="dp"><img src="src/images/usr.jpg" alt="user"></span>
-										<p>Robert <small>- Instructor</small></p>
-										<small>Member since 31 March. 2013</small>
-									  </li>
-									  <li class="user-footer">
-										<div class="pull-left">
-										  <a href="my-account.php" class="btn btn-default btn-flat"><i class="fa fa-user"></i> Profile</a>
-										</div>
-										<div class="pull-right ">
-										  <a href="login.php" class="btn btn-default btn-flat bg-blue white"><i class="fa fa-sign-out"></i> Sign out</a>
-										</div>
-									  </li>
-									</ul>
-							</li>
-						</ul>
-						
-					<form action="#" class="search-fom expand-search expand-search--fullwidth pul-rgt col-sm-1">
-						<div class="form-group has-feedback">
-							<label for="search" class="sr-only">Search</label>
-							<input type="text" class="form-control" name="search" id="search" placeholder="Search">
-							<button type="submit"><i class="glyphicon glyphicon-search"></i> Find</button>
-						</div>
-					</form>
-
-
-					</div><!-- /.navbar-collapse -->
-				</div>
-			  </div><!-- /.container-fluid -->
-			</nav>
-		</div>
-	</section>
-</header>
-
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+		</section>
+	</header>
+	
 	<main id="page-content">
-
-	<section class="slider-area hover-ctrl fadeft " >
-		<div id="homeCarousel" class="carousel slide" data-ride="carousel">
-		
-		  <ol class="carousel-indicators thumbs">
-			<li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#homeCarousel" data-slide-to="1"></li>
-			<li data-target="#homeCarousel" data-slide-to="2"></li>
+	
+	
+	<section class="slider-area">
+	
+		<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+		  <ol class="carousel-indicators">
+			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 		  </ol>
-
-		  <!-- Wrapper for slides -->
-		  <div class="carousel-inner count-child">
-
-
-			<div class="item active bg-cntr" style="background-image:url('images/slide1.jpg');">
-			  
-			  <div class="caro-cap">
-				  <div class="container">
-				  	<h1>I am a <span class="morphext strong">Frontend, WordPress, Meganto</span> Developer</h1>
-					<h2>Slider Caption Here</h2>
-					<p>Slider text content here</p>
-					<div class="lnk-btn inline-block more-btn"><a href="#">Read More</a></div>
-				  </div>
-			  </div>
+		  <div class="carousel-inner">
+			<div class="carousel-item active" id="slide1">
+			  <img class="d-block w-100" src="../src/images/slide1.jpg" alt="First slide" >
 			</div>
-
-			<div class="item color-invert bg-cntr" style="background-image:url('images/slide1.jpg');">
-			  <div class="caro-cap">
-				  <div class="container">
-				  	<h1>I am a <span class="morphext">So Simple, Very Doge, Much Wow, Such Cool</span> Text Rotator</h1>
-					<h2>Slider Caption Two</h2>
-					<p>Slider text content here</p>
-					<div class="lnk-btn inline-block more-btn"><a href="#">Read More</a></div>
-				  </div>
-			  </div>
+			<div class="carousel-item" id="slide2">
+			  <img class="d-block w-100" src="../src/images/slide2.jpg" alt="Second slide">
 			</div>
-			
-
-			<div class="item color-gray  bg-cntr" style="background-image:url('images/slide1.jpg');">
-			  <div class="caro-cap">
-				  <div class="container">
-				  	<h1>I am a <span class="morphext">So Simple, Very Doge, Much Wow, Such Cool</span> Text Rotator</h1>
-					<h2>Slider Caption Two</h2>
-					<p>Slider text content here</p>
-					<div class="lnk-btn inline-block more-btn"><a href="#">Read More</a></div>
-				  </div>
-			  </div>
+			<div class="carousel-item"  id="slide3">
+			  <img class="d-block w-100" src="../src/images/slide1.jpg" alt="Third slide" >
 			</div>
-			
-
 		  </div>
-
-		  <a class="left carousel-control" href="#homeCarousel" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
+		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
 		  </a>
-		  <a class="right carousel-control" href="#homeCarousel" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
+		  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
 		  </a>
-		  
-		  
 		</div>
-		
-		<div class="dwn-scroll text-center h4">Go Ahead ( Frontized v1.7 ) Scroll <br> <i class="glyphicon glyphicon-chevron-down"></i></div>
 		
 	</section>
 	
@@ -192,105 +94,564 @@
 	
 	
 	
-	<section class="abcxyz-area bg-green p100 sticky accordion-arr anime-up " style="top: 50px;">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<section class="counter-area scrolink scrollreveal fnc-underline hed-cntr hoverized blinked-links">
 		<div class="container">
-			   <input type="text" ng-model="yourName" placeholder="Enter a name here" />
-      <hr>
-      <h1>Hello {{yourName}}!</h1>
-	  
-	  
-	  <div class="clrlist list-col-4 starrating-area">
-
-		<ul>
-			<li>amoos</li>
-			<li>amoos</li>
-			<li>amoos</li>
-			<li>amoos</li>
-		</ul>
-	  </div>
-	  
-			<div class="">I am section Sticky</div>
 			
-								<div class="panel-title selectized">
-									<a role="button" data-toggle="collapse" data-target="#selectPosition" class="collapsed">
-									<i class="fa fa-user"></i> Select Position </a>
-								</div>
-								
-								
-								<div id="selectPosition" class="selectized-option collapse ride ">
+			<div class="component-status clrlist listdvr">
+			  <ul class="component-status__icon-list">
+				<li>
+				  <i class="fa fa-check green"></i>
+				  <span>Ready</span>
+				</li>
+				<li>
+				  <i class="fa fa-warning orange"></i>
+				  <span>Under review</span>
+				</li>
+				<li>
+				  <i class="fa fa-ban red"></i>
+				  <span>Deprecated</span>
+				</li>
+				<li>
+				  <i class="fa fa-minus"></i>
+				  <span>Not applicable</span>
+				</li>
+			  </ul>
+			</div>
+	
+	<button class="btn-alert--show">Send Message</button>
+	
+	<div class="alert alert-danger alert-dismissable alert-sticky fade">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+	<script>
+		$('.btn-alert--show').click(function(){
+			$('.alert').show()
+		})
+	</script>
+	
 
-									<div class="form-group">
-										<input type="checkbox" value="" id="Autauga" /><mark></mark>
-										<label for="Autauga">Autauga County, Alabama</label>
-									</div>
-									
-									<div class="form-group">
-										<input type="checkbox" value="" id="Aleutians" /><mark></mark>
-										<label for="Aleutians">Aleutians East Borough, Alaska</label>
-									</div>
-									
-									<div class="form-group">
-										<input type="checkbox" value="" id="Apache" /><mark></mark>
-										<label for="Apache">Apache County, Arizona</label>
-									</div>
-									
-									<div class="form-group">
-										<input type="checkbox" value="" id="Arkansas" /><mark></mark>
-										<label for="Arkansas">Arkansas County, Arkansas</label>
-									</div>
-								
-								</div>
-								
-								
-								
-								
+			<h3>.fnc-underline</h3>
+  <div class="metroflip-box col-sm-2 p0">
+    <div class="metroflip_inr pul-lft w100 ">
+      <div class="front pul-lft w100  bg-lime ">
+        <h3>.Metroflip-box</h3><h2>FRONT</h2>
+      </div>
+      <div class="back pul-lft w100 bg-red">
+        <h3>.Metroflip-box</h3><h2>BACK</h2>
+      </div>
+    </div>
+  </div>
+
+		<div class="row">
+
+			<div class="counter-box col-sm-2 ">
+				<div class="counter__inr shad-dp20 p10 bg-silver">
+			<a href="#randomLftRgt">		
+					<span class="counter__top ">
+						<i class="fa fa-clock-o"></i> Random Left/Right
+					</span>
+					<div class="counter__num h3 m0 shad-long">CSS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 7%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#reviews">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> 2nd Slider 
+					</span>
+					<div class="counter__num h3 m0">Bootstrap</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#chartistjs">
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Chartist.JS 
+					</span>
+					<div class="counter__num h3 m0">JS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#swiperSlider">
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Swiper Slider
+					</span>
+					<div class="counter__num h3 m0">Slider</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#swiperSlider">
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Isotope filter
+					</span>
+					<div class="counter__num h3 m0">Isotope</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#content">
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Content ...
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#girdBox">
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Gird Box
+					</span>
+					<div class="counter__num h3 m0">jQuery</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#valigner">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> valigner 
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+					
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#moreless">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> More Less 
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>		
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#accordion">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Accordion
+					</span>
+					<div class="counter__num h3 m0">Bootstrap</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#listArea">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> List Area
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#tabsArea">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Tabs Area
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#dateRangePicker">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Date Range Picker
+					</span>
+					<div class="counter__num h3 m0">JS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#dateTimePicker">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Date Time Picker
+					</span>
+					<div class="counter__num h3 m0">JS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#uploadPreview">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Upload Preview
+					</span>
+					<div class="counter__num h3 m0">JS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#inlineControl">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> inline Control
+					</span>
+					<div class="counter__num h3 m0">Bootstrap</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#fancyForm">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Fancy Form
+					</span>
+					<div class="counter__num h3 m0">CSS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#maskedInput">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Masked Input
+					</span>
+					<div class="counter__num h3 m0">JS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#downloadableLink">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> downloadable Link
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+
+
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#tableArea">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Table Area
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#colorArea">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Color Area
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#heights">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Heights
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-desc red"> 8%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#imagesArea">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Images Area
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#tooltipArea">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Tooltip Area
+					</span>
+					<div class="counter__num h3 m0">JS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+
+
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#pinterestStyle">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Pinterest Style
+					</span>
+					<div class="counter__num h3 m0">CSS</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#modalArea">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Modal
+					</span>
+					<div class="counter__num h3 m0">Bootstrap</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			<div class="counter-box col-sm-2">
+				<div class="counter__inr shad-dp20 p10">
+			<a href="#footer">		
+					<span class="counter__top">
+						<i class="fa fa-clock-o"></i> Footer
+					</span>
+					<div class="counter__num h3 m0">HTML</div></a>
+					<span class="counter__bot">
+						<i class="fa fa-sort-asc"> 3%</i> From last Week
+					</span>
+				</div>	
+			</div>
+			
+			
+			
+			</div>
+			
+
+			<div class="hed crossline "><h2>Counter-area</h2><hr></div>
+			<div class="hed lndotln"><h2><strong>.lndotln</strong> heading</h2><hr/></div>
+			<div class="hed underline-mini"><h2><b>.underline-mini</b> heading</h2></div>
+			<div class="hed underline-mini--double"><h2><b>.underline-mini--double</b> heading</h2></div>
+			
+			
+			
+		</div>
+	</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	<section class="randomlftrgt-area" id="randomLftRgt" data-scroll-reveal="enter left and move 50px over 1.33s">
+			
+		<div class="random-box">
+			<div class="container">
+				<div class="random__lft col-sm-7">
+					<h2><b>.randomlftrgt</b> Randomized Content and Image</h2>
+					<p>Bibendum ad ante a eleifend nec at a accumsan at taciti adipiscing gravida ut curae rutrum sit ornare.Ultrices cras adipiscing ante per feugiat ultricies et lobortis adipisci</p>
+				</div>
 				
-				
+				<div class="random__rgt col-sm-5">
+					<img src="src/images/preloading.png" alt="" />
+				</div>
+			</div>
 		</div>
-	</section>
-	
-	<section class="abcxyz-area bg-lime p100 ">
-		<div class="container">
 			
-			I am section
+		<div class="random-box">
+			<div class="container">
+				<div class="random__lft col-sm-7">
+					<h2>a accumsan at taciti</h2>
+					<p>Bibendum ad ante a eleifend nec at a accumsan at taciti adipiscing gravida ut curae rutrum sit ornare.Ultrices cras adipiscing ante per feugiat ultricies et lobortis adipisci</p>
+				</div>
 			
+				<div class="random__rgt col-sm-5">
+					<img src="src/images/preloading.png" alt="" />
+				</div>
+			</div>
 		</div>
-	</section>
-	
-	<section class="abcxyz-area bg-yellow p100">
-		<div class="container">
-			
-			I am section
-			
-		</div>
-	</section>
-	
-	<section class="abcxyz-area bg-blue p100 ">
-		<div class="container">
-			
-			I am section
-			
-		</div>
-	</section>
-	
-	
-			
-</main>
 
+					
+		<div class="random-box">
+			<div class="container">
+				<div class="random__lft col-sm-7">
+					<h2>a accumsan at taciti</h2>
+					<p>Bibendum ad ante a eleifend nec at a accumsan at taciti adipiscing gravida ut curae rutrum sit ornare.Ultrices cras adipiscing ante per feugiat ultricies et lobortis adipisci</p>
+				</div>
+				
+				<div class="random__rgt col-sm-5">
+					<img src="src/images/preloading.png" alt="" />
+				</div>
+			</div>
+		</div>
+		
+		</div>
+	</section>
+	
+
+
+
+
+
+	
+	
+	<section class="abc-area" id="reviews">
+		<div class="container">
+			  <div class="row">
+			  
+		<h1>Hello, world!</h1>
+		
+		<div class="card col-sm-4" >
+		  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+		  <div class="card-body">
+			<h5 class="card-title">Card title</h5>
+			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			<a href="#" class="btn btn-primary">Go somewhere</a>
+		  </div>
+		</div>
+
+			</div>
+	
+	
+		</div>	
+	</section>
+		
+		
+	</main>
+	
+
+	
+	
+	
 	
 	<footer>
-		<section class="ftr-area ftr--blind" id="footer">
+		<section class="ftr-area nav-folderized" id="footer">
 			<div class="container">
-				<div class="ftr__box col-sm-2 ftr__logo">
+			  <div class="row">
+				<div class="ftr__box nav col-md-2 ftr__logo">
 					<h4>Footer Logo</h4>
-					<div class="ftr-logo gray-img"><img src="src/images/favicon.png" alt="ftr logo" /></div>
-					<div class="ftr-logo"><img src="src/images/favicon.png" class="drp-shad" alt="" /></div>
+					<div class="ftr-logo gray-img"><img src="images/favicon.png" alt="ftr logo" /></div>
+					<div class="ftr-logo"><img src="images/favicon.png" class="drp-shad" alt="" /></div>
 					
 				</div>
-				<div class="ftr__box ftr__links col-sm-4 list-col-2 clrlist listview dotlist">
+				<div class="ftr__box nav  ftr__links col-md-4 list-col-2 clrlist listview dotlist">
 					<h4>Useful links</h4>
 					<ul>
-						<li><a href="#">Ink®</a></li>
+						<li><a href="#">Inkμ/a></li>
 						<li><a href="#">Training</a></li>
 						<li><a href="#">Design Resources</a></li>
 						<li><a href="#">Notable</a></li>
@@ -298,7 +659,7 @@
 						<li><a href="#">Blog</a></li>
 					</ul>
 				</div>
-				<div class="ftr__box col-sm-3 clrlist listview dotlist--connect">
+				<div class="ftr__box nav  col-md-3 clrlist listview dotlist--connect">
 					<h4>Contact Us</h4>
 					<p><b>.dotlist--connect</b> with icons</p>
 					<ul>
@@ -308,7 +669,7 @@
 						<li><i class="fa fa-support fa-spin"></i> <a href="#"><span>Go Ahead Results</span></a></li>
 					</ul>
 				</div>
-				<div class="ftr__box shake-icon col-sm-3 social-area clrlist ">
+				<div class="ftr__box nav  shake-icon col-md-3 social-area clrlist social-colors">
 					<h4>Socialized</h4>
 					<div class="icon2x">
 						<h3>.icon2x</h3>
@@ -328,6 +689,7 @@
 							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
 						</ul>
 					</div>
 
@@ -337,51 +699,55 @@
 							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
 						</ul>
 					</div>
 					
 				</div>				
 			</div>
+			</div>
 		</section>
 		
 		
-		<section class="bottom-area bg-teal white">
+		<section class="bottom-area bottom-logo--slide p20 bg-teal white">
 			<div class="container">
-
-				<div class="cr fl">
-				Copyright &copy; <script>document.write(new Date().getFullYear());</script>  All rights reserved. 
-				</div>
+			  <div class="row">
 			
-				<a href="#" class="bottom__rgt fr" target="_blank">
+				<a href="#" class="bottom__rgt pul-rgt" target="_blank">
 					<span class="bottom__txt">Created &amp; Developed </span>
-					<span class="bottom__logo"><img src="src/images/logo.png" alt="" /></span>
+					<span class="bottom__logo clrlist">
+						<ul>
+							<li><img src="images/favicon.png"></li>
+							<li>Company Name</li>
+						</ul>
+					</span>
 				</a>
-				
+			  </div>
 			</div>
 		</section>
 		
 		<a href="" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
 		
-	</footer>
+		
 	
-	
-	
-   </div><!--body-wrapper-->
-   
-	<!--Bootstrap-->
-    <script src="src/js/bootstrap.min.js"></script>
-	<!--./Bootstrap-->
-	
-	<!--Major Scripts-->
-	
-  <script src="src/js/kodeized.js"></script>
-	<script src="src/js/viewportchecker.js"></script>
-	<script src="src/js/customized.js"></script>
-	<!--./Major Scripts-->
-	
-	
-	
+  </div>
 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js" ></script>
 	
-		</body>
+	<!--script src="js/kodeized.v4.js" ></script-->
+	<script src="../src/js/kodeized.js" ></script>
+	
+	<script>
+	if(navigator.onLine){
+	  console.log('online');
+	 } else {
+	  console.log('offline');
+	 }
+	</script>
+	
+  </body>
 </html>
