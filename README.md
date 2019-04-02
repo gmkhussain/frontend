@@ -1182,6 +1182,20 @@ Using !important not work properly.
 }
 ```
 
+Note: Sometime not showing inline style in print view.
+
+```css
+<span style="background-color: orange">
+  Background color not showing in print
+</span>
+```
+
+
+```
+<span style="background-color: orange !important">
+  Now works fine! :)
+</span>
+```
 
 
 
@@ -2295,6 +2309,19 @@ require('./kodeized.js');
 
 
 
+<h1 align="center" id="errors">
+	<img src="http://themicon.co/theme/centric/v2.0/assets/bs4.png"  height="80" width="auto" />
+	<br/>
+	Bootstrap4
+</h1>
+
+## Bootstrap4 carousel - external link to slide item / How to jump to a specific carousel item ?
+
+Note that ```data-slide-to``` index is based on 0, and it will on Bootstrap4
+```html
+<a data-target="#myCarousel" data-slide-to="1" href="#">Second</a>
+```
+https://codepen.io/pen/QPbOOB
 
 
 
@@ -2368,7 +2395,7 @@ Make sure the order of files, It should be like below..
 	<div id="button" class="my_button" role="button">Click Here</div>
 ```
 
-NOTE: Use a <button> or <input type="button"> tag instead of a div. 
+NOTE: Use a ```<button>``` or ```<input type="button">``` tag instead of a div. 
 <div> button functionality may work in some browsers, it can be a bit of a hack compared to the traditional button tags.
 
 
