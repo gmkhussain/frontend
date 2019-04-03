@@ -2335,6 +2335,23 @@ https://codepen.io/pen/QPbOOB
 
 
 
+## mousewheel event is not working in FireFox browser
+
+```javascript
+  var mousewheelevt=(/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel";
+  // FF doesn't recognize mousewheel as of FF3.x
+
+  $(document).on(mousewheelevt, function(evt) { 
+      alert("Its working...");
+  });
+```
+
+
+
+
+
+
+
 ## npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 try ```npm rebuild node-sass```

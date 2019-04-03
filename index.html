@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css" >
-	<link rel="stylesheet" href="../src/css/stylized.css" >
+    <link rel="stylesheet" href="src/css/bootstrap.css" >
+	<link rel="stylesheet" href="src/css/stylized.css" >
 	
-	<script src="js/jquery-3.3.1.min.js" ></script>
+	<script src="src/js/jquery-3.3.1.min.js" ></script>
 
     <title>Frontend v4</title>
   </head>
@@ -58,36 +58,41 @@
 	
 	<main id="page-content">
 	
-	
 	<section class="slider-area">
 	
 		<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
-		  <ol class="carousel-indicators">
-			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-		  </ol>
-		  <div class="carousel-inner">
-			<div class="carousel-item active" id="slide1">
-			  <img class="d-block w-100" src="../src/images/slide1.jpg" alt="First slide" >
-			</div>
-			<div class="carousel-item" id="slide2">
-			  <img class="d-block w-100" src="../src/images/slide2.jpg" alt="Second slide">
-			</div>
-			<div class="carousel-item"  id="slide3">
-			  <img class="d-block w-100" src="../src/images/slide1.jpg" alt="Third slide" >
-			</div>
-		  </div>
-		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		  </a>
-		  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		  </a>
-		</div>
 		
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			</ol>
+
+			<div class="carousel-inner">
+				<div class="carousel-item active" id="slide1">
+					<img class="d-block w-100" src="src/images/slide1.jpg" alt="First slide">
+				</div>
+				<div class="carousel-item" id="slide2">
+					<img class="d-block w-100" src="src/images/slide2.jpg" alt="Second slide">
+				</div>
+				<div class="carousel-item" id="slide3">
+					<img class="d-block w-100" src="src/images/slide1.jpg" alt="Third slide">
+				</div>
+			</div>
+
+
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+
+
+		</div>
+	
 	</section>
 	
 	
@@ -735,11 +740,11 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     
-    <script src="js/popper.min.js" ></script>
-    <script src="js/bootstrap.min.js" ></script>
+    <script src="src/js/popper.min.js" ></script>
+    <script src="src/js/bootstrap.min.js" ></script>
 	
 	<!--script src="js/kodeized.v4.js" ></script-->
-	<script src="../src/js/kodeized.js" ></script>
+	<script src="src/js/kodeized.js" ></script>
 	
 	<script>
 	if(navigator.onLine){
