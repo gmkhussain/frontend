@@ -2349,6 +2349,24 @@ https://codepen.io/pen/QPbOOB
 
 
 
+## Bootstrap4 shown.bs.tab / active tab change event not working
+
+for specific tab
+```javascript
+$('#Specific_Tab_ID').on('shown.bs.tab', function (e) {
+   alert("Specific_Tab_ID working...");
+});
+```
+
+for all of them.
+```javascript
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  alert(e.target.href + " working..." );
+});
+```
+
+
+
 
 
 
