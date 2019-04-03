@@ -1511,6 +1511,33 @@ See details: http://1000hz.github.io/bootstrap-validator/
 </h1>
 
 
+
+
+
+## How to get JSON data from external file in JavaScript?
+
+```javascript
+  function readJsonFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+      if (rawFile.readyState === 4 && rawFile.status == "200") {
+        callback(rawFile.responseText);
+      }
+    }
+      rawFile.send(null);
+    }
+                    
+  
+  /* usage */
+  readJsonFile("http://localhost/projects/frontend/RaceDeck/frontend/src/js/designertool/json/presetsize.json", function(text){
+    var data = JSON.parse(text);
+    console.log(data);
+  });
+```
+
+
 ## Alert auto closing after few seconds
 
 ```javascript
