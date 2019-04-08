@@ -52,6 +52,13 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 			Sass / SCSS
 		</a>
 	</td>
+  	<td>
+		<a href="#VanillaJS">			
+  	<img src="https://bs-uploads.toptal.io/blackfish-uploads/skill_page/content/logo_file/logo/6739/JS-4cbc745b515cd6427fcb71cc8fbe1fc7.png"  height="80" width="auto" />
+	    <br/>
+	    Vanilla JavaScript
+		</a>
+	</td>	
 	<td>
 		<a href="#jQuery">
 			<img src="https://programarfacil.com/wp-content/uploads/2015/08/jQurery.png"  height="80" width="auto" />
@@ -59,6 +66,7 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 			jQuery
 		</a>
 	</td>	
+
 	<td>
 		<a href="#jQueryUI">
 			<img src="http://jqueryto.com/2013/assets/i/icon-jqueryui.png"  height="80" width="auto" />
@@ -1504,6 +1512,76 @@ See details: http://1000hz.github.io/bootstrap-validator/
 
 
 
+
+
+
+
+<h1 align="center" id="VanillaJS">
+	<img src="https://bs-uploads.toptal.io/blackfish-uploads/skill_page/content/logo_file/logo/6739/JS-4cbc745b515cd6427fcb71cc8fbe1fc7.png"  height="80" width="auto" />
+	<br/>
+	Vanilla JavaScript
+</h1>
+
+
+
+## How to trigger multiple onclick event in JavaScript?
+
+1. Maintainable JavaScript is using a named function. it will make your code a lot easier to read and maintainable.
+
+```javascript
+var el = document.getElementById("myButtonId");
+
+// create named functions:
+function alertFirstFn() { alert('hello world'); };
+
+
+el.addEventListener("click", function(){alert("click1 triggered")}, false);
+
+// assign functions to the event listeners (recommended):
+el.addEventListener("click", alertFirstFn );
+
+
+// then you could remove either one of the functions using:
+el.removeEventListener('click', alertFirstFn);
+```
+
+2. Attaching the event handler to the DOM node through your Javascript code.
+
+```html
+onclick="doSomething();doSomethingElse();"
+```
+
+3. All functions link with 1 function defined
+```html
+<a href="#" onclick="someFunc()">Click me To fire some functions</a>
+```
+
+```javascript
+// Firing multiple functions from someFunc()
+function someFunc() {
+    showAlert();
+    validate();
+    anotherFunction();
+    YetAnotherFunction();
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h1 align="center" id="jQuery">
 	<img src="https://programarfacil.com/wp-content/uploads/2015/08/jQurery.png"  height="80" width="auto" />
 	<br/>
@@ -1528,7 +1606,6 @@ See details: http://1000hz.github.io/bootstrap-validator/
     }
       rawFile.send(null);
     }
-                    
   
   /* usage */
   readJsonFile("http://localhost/projects/frontend/RaceDeck/frontend/src/js/designertool/json/presetsize.json", function(text){
