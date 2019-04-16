@@ -2438,6 +2438,28 @@ https://codepen.io/pen/QPbOOB
 </h1>
 
 
+## How to disable auto Zoom In on from elements - Safari on iPhone
+
+Make sure you not allow scaling add this on meta tag ```maximum-scale=1.0, user-scalable=0"``` as your website is properly designed for a mobile device.
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+```
+
+
+iOS will still zoom, unless you use 16px on the input without the focus.
+```css
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px;
+    background: #eee;
+  }
+}
+```
+
+
 
 ## mousewheel event is not working in FireFox browser
 
