@@ -2438,6 +2438,8 @@ https://codepen.io/pen/QPbOOB
 </h1>
 
 
+
+
 ## How to disable auto Zoom In on from elements - Safari on iPhone
 
 Make sure you not allow scaling add this on meta tag ```maximum-scale=1.0, user-scalable=0"``` as your website is properly designed for a mobile device.
@@ -2458,6 +2460,16 @@ iOS will still zoom, unless you use 16px on the input without the focus.
   }
 }
 ```
+
+
+
+## HTML5 video not playing in Safari browser
+
+```html
+<video src="videos-name.mp4" playsinline loop muted autoplay></video>
+```
+
+
 
 
 
