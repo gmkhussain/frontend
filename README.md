@@ -1524,6 +1524,40 @@ See details: http://1000hz.github.io/bootstrap-validator/
 
 
 
+## IE error “SCRIPT1014: invalid character” where all other browsers work
+
+
+IE not supported  "`" (template strings) :  http://caniuse.com/#search=string
+
+
+instead of
+```javascript
+	`string text ${expression} string text`
+	
+	var nameStr = `I'm "Amoos" Jhon`;
+```
+
+write
+```javascript
+	"string text "+expression+" string text"
+	
+	var nameStr = 'I\'m "Amoos" Jhon';
+```
+
+
+NOTE: Backticks (`) are used to define template literals. Template literals are a new feature in ES6 to make working with strings easier.
+
+##### Features:
+we can interpolate any kind of expression in the template literals.
+They can be multi-line.
+
+we can easily use single quotes (') and double quotes (") inside the backticks (`).
+
+
+
+
+
+
 ## How to trigger multiple onclick event in JavaScript?
 
 1. Maintainable JavaScript is using a named function. it will make your code a lot easier to read and maintainable.
@@ -1567,6 +1601,33 @@ function someFunc() {
 ```
 
 
+
+<table>
+	<tr>
+		<th>
+			jQuery
+		</th>
+		<th>
+			Vanilla JS
+		<th>
+	</tr>
+	<tr>
+		<td>
+			$(this).attr("id");
+		</td>
+		<td>
+			this.getAttribute("id");
+		</td>
+	</tr>
+	<tr>
+		<td>
+			$("#doorFeet").val();
+		</td>
+		<td>
+			document.querySelector("#doorFeet").value;
+		</td>
+	</tr>
+</table>
 
 
 
