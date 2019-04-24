@@ -2480,6 +2480,31 @@ require('./kodeized.js');
 	Bootstrap4
 </h1>
 
+
+
+## Open specific Tab of bootstrap 4 from hashtag URL or external link
+
+```html
+	<a href="home.html#tabId_1">tab 1</a>
+	<a href="home.html#tabId_2">tab 2</a>
+	<a href="home.html#tabId_3">tab 3</a>
+```
+
+
+```javascript
+    jQuery(document).ready(function () {
+        let selectedTab = window.location.hash;
+        jQuery('.nav-link[href="' + selectedTab + '"]' ).trigger('click');
+    })
+
+```
+
+
+
+
+
+
+
 ## Bootstrap4 carousel - external link to slide item / How to jump to a specific carousel item ?
 
 Note that ```data-slide-to``` index is based on 0, and it will on Bootstrap4
