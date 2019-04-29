@@ -1581,13 +1581,14 @@ el.removeEventListener('click', alertFirstFn);
 
 2. Attaching the event handler to the DOM node through your Javascript code.
 
-```html
+```javascript
 onclick="doSomething();doSomethingElse();"
 ```
 
 3. All functions link with 1 function defined
+
 ```html
-<a href="#" onclick="someFunc()">Click me To fire some functions</a>
+  <a href="#" onclick="someFunc()">Click me To fire some functions</a>
 ```
 
 ```javascript
@@ -1602,32 +1603,103 @@ function someFunc() {
 
 
 
-<table>
-	<tr>
-		<th>
-			jQuery
-		</th>
-		<th>
-			Vanilla JS
-		<th>
-	</tr>
-	<tr>
-		<td>
-			$(this).attr("id");
-		</td>
-		<td>
-			this.getAttribute("id");
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$("#doorFeet").val();
-		</td>
-		<td>
-			document.querySelector("#doorFeet").value;
-		</td>
-	</tr>
-</table>
+
+
+## Vanilla JS equivalents of jQuery methods
+
+
+```javascript
+// jQuery
+$(document).ready(function() {
+  // do something
+})
+
+// Vanilla
+document.addEventListener('DOMContentLoaded', function() {
+  // do something
+})
+```
+
+
+
+
+
+
+
+```javascript
+
+/ jQuery
+$('.box').click(function() {
+  // do something
+})
+
+// Vanilla
+[].forEach.call(document.querySelectorAll('.box'), function(el) {
+  el.addEventListener('click', function() {
+  // do something
+  })
+})
+```
+
+
+
+
+
+```javascript
+//jQuery
+$(this).attr("id");
+
+
+
+//VanillaJS
+this.getAttribute("id");
+
+```
+
+
+```javascript
+//jQuery
+$("#myDivId").val();
+
+
+//VanillaJS
+document.querySelector("#myDivId").value;
+```
+
+
+
+
+```javascript
+//jQuery
+$(this).attr("onclick", updateBoxFn ); 
+
+
+//JavaScript
+this.setAttribute("onclick", updateBoxFn );
+
+```
+
+
+
+
+
+
+
+### .each(
+```javascript		
+//jQuery
+$(".box").each(function(){
+  $(this).attr("onclick", updateBoxFn ); 
+});
+
+
+//VanillaJS
+var allBoxes =  document.querySelector(".box");
+	for (var i = 0, len = allBoxes.length; i < len; i++) {
+		var thisBox = allBoxes[i];
+		thisBox.setAttribute("onclick", updateBoxFn);
+}
+```
 
 
 

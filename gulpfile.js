@@ -90,18 +90,26 @@ gulp.task('image', () => {
 
 
 
+// `gulp prod` CMD command
 gulp.task('prod', function() {
  
-
-  var css = gulp.src([`${srcPath}/css/bootstrap.min.css`, `${srcPath}/css/stylized.css`, `${srcPath}/css/swiper.min.css`, `${srcPath}/css/font-awesome.min.css`, `${destPath}/css/style.css`])
+  var css = gulp.src([`${srcPath}/css/bootstrap.min.css`, `${srcPath}/css/stylized.css`, `${srcPath}/css/swiper.min.css`, `${srcPath}/css/font-awesome.min.css`, `${srcPath}/scss/main.scss`])
+  .pipe(sourcemaps.init())
+  .pipe( plumber(err => console.error(err)) )
+  .pipe( sass({ style: 'compressed' }).on('error', sass.logError) )
+  .pipe( autoprefixer({ browsers: ['last 2 versions'] }) )
   .pipe(minifyCss())
   .pipe(concat('style.bundle.css'))
-  .pipe(gulp.dest(`./${destPath}/css`));
+  .pipe(sourcemaps.write(`./`))
+  .pipe(gulp.dest(`./${destPath}/css`))
+  ;
 
 
   var headerjs = gulp.src([`${srcPath}/js/jquery-2.2.4.min.js`, `${srcPath}/js/lazysizes.min.js`])
+    .pipe(sourcemaps.init())
     .pipe(concat('header.bundle1.js'))
   //  .pipe(minify())
+  .pipe(sourcemaps.write(`./${destPath}`))
     .pipe(gulp.dest(`./${destPath}/js`));
   
 
@@ -150,4 +158,5 @@ gulp.task('webp', () =>
   .pipe(webp())
   .pipe(gulp.dest(`./${destPath}/images-webp`))
 );
+
 
