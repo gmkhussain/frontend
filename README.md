@@ -2104,6 +2104,44 @@ data:  formData
 
 
 
+##  <img src="https://camo.githubusercontent.com/1d87b96613f02908edf2c72c9d269286f3ec25d9/687474703a2f2f72616e6765736c696465722e6a732e6f72672f72616e6765736c696465722e6a732e706e67" width="50" valign="middle" data-canonical-src="http://rangeslider.js.org/rangeslider.js.png" style="max-width:100%;"> rangeslider.js
+
+Documentation:  https://github.com/andreruffert/rangeslider.js
+
+
+```html
+<div class="form-group">
+     <label class="label" for="SalesPrice">Sales Price</label>
+     <span class="selected__value">
+	   $ <input type="number" step="1000" id="SalesPriceInput"  min="0" value="20" />
+	 </span>
+     <input name="SalesPrice" id="SalesPrice" type="text"  value="20" required max="2000000" />
+    
+    <div class="slider__value-area">
+	  <span class="range-slider__min-value">$ 0</span>
+	  <span class="range-slider__max-value">$ 2,000,000</span>
+	</div>
+</div>
+```
+
+
+
+```javascript
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
+	
+	
+	var $rangeslider1 = $('#SalesPrice');
+    var $amount1 = $('#SalesPriceInput');
+    $rangeslider1.rangeslider({polyfill: false}).on('input', function () {
+        $amount1[0].value = this.value; });
+
+    $amount1.on('input blur', function () {
+        $rangeslider1.val(this.value).change();
+    });
+	
+	//input = while type or enter any number
+```
+
 
 
 
