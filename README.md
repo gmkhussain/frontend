@@ -2110,6 +2110,77 @@ data:  formData
 
 
 
+
+
+
+
+
+
+
+
+<h1 align="center" id="jQueryUI">
+	<img src="http://jqueryto.com/2013/assets/i/icon-jqueryui.png"  height="80" width="auto" />
+	<br/>
+	jQuery UI
+</h1>
+
+
+
+## Input type number does not show increase/decrease spinner buttons on iPhone | Safari | iOS
+
+
+```css
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+```
+
+
+
+```html
+...
+<!--add following css and js file-->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<body>
+...
+	<input id="yourInputId" type="number" />
+...
+```
+
+```javascript
+<script>
+    $( "#yourInputId" ).spinner();
+</script>
+```
+
+
+
+
+
+
+
+## Getting step option of jQuery UI Spinner
+
+```javascript
+    $(function () {
+        $('#yourInputId').spinner({ step: 100 });
+    })
+```
+
+
+
+
+
+
+
+
+
+
 <h1 align="center" id="swiper">
 	<img src="https://idangero.us/i/open/swiper.jpg"  height="80" width="auto" />
 	<br/>
