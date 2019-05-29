@@ -2297,6 +2297,40 @@ You can try to call the method too.
 
 
 
+## Theme Color Schemes with Sass Mixin
+```css
+@mixin theme($name, $color, $bg-color) {
+  .#{$name} {
+    .element {
+      color: $color;
+      background: $bg-color;
+    }
+  }
+}
+
+@include theme(theme-banana, yellow, white);
+@include theme(theme-blueberry, purple, black);
+@include theme(theme-cherry, white, orange);
+```
+
+```css
+/* CSS OUTPUT */
+.theme-banana .element {
+  color: yellow;
+  background: white;
+}
+
+.theme-blueberry .element {
+  color: purple;
+  background: black;
+}
+
+.theme-cherry .element {
+  color: white;
+  background: orange;
+}
+```
+
 
 
 ## Simple example with button states
