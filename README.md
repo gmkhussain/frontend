@@ -1582,7 +1582,7 @@ el.removeEventListener('click', alertFirstFn);
 2. Attaching the event handler to the DOM node through your Javascript code.
 
 ```javascript
-onclick="doSomething();doSomethingElse();"
+  onclick="doSomething();doSomethingElse();"
 ```
 
 3. All functions link with 1 function defined
@@ -1608,6 +1608,7 @@ function someFunc() {
 ## Vanilla JS equivalents of jQuery methods
 
 
+### .ready()
 ```javascript
 // jQuery
 $(document).ready(function() {
@@ -1625,10 +1626,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
+### .click(
 ```javascript
 
-/ jQuery
+// jQuery
 $('.box').click(function() {
   // do something
 })
@@ -1644,19 +1645,19 @@ $('.box').click(function() {
 
 
 
-
+### .attr(
 ```javascript
 //jQuery
 $(this).attr("id");
 
 
-
 //VanillaJS
 this.getAttribute("id");
-
 ```
 
 
+
+### .val(
 ```javascript
 //jQuery
 $("#myDivId").val();
@@ -1674,7 +1675,7 @@ document.querySelector("#myDivId").value;
 $(this).attr("onclick", updateBoxFn ); 
 
 
-//JavaScript
+//VanillaJS
 this.setAttribute("onclick", updateBoxFn );
 
 ```
@@ -1705,6 +1706,32 @@ var allBoxes =  document.querySelector(".box");
 
 
 
+
+### .addClass()
+```javascript
+//jQuery
+$(".box").addClass("new-class");
+$(".box").removeClass("old-class");
+
+
+//VanillaJS
+ document.querySelector('.box').classList.add("new-class");
+ document.querySelector('.box').classList.remove("old-class");
+ ```
+
+
+
+
+
+### .trigger("click")
+```javascript
+//jQuery
+$("#boxID").trigger("click");
+
+
+//VanillaJS
+document.querySelector("#boxID").click();
+```
 
 
 
@@ -2264,6 +2291,14 @@ You can try to call the method too.
 
 
 
+
+
+
+
+
+
+
+
 ## Simple example with button states
 
 ```scss
@@ -2660,6 +2695,26 @@ require('./kodeized.js');
 	<br/>
 	Bootstrap4
 </h1>
+
+
+## Open bootstrap4 tab from inside or outside a tab
+
+```javascript
+jQuery('.tab-link').on('click', function(event) {
+    /* Prevent url change */
+      event.preventDefault();
+    
+    /* `this` is the clicked <a> tag */
+      var target = jQuery('[data-toggle="tab"][href="' + this.hash + '"]'); 
+  
+    /*opening tab*/
+      target.trigger('click');
+  
+    /* scrolling into view */
+    //  target[0].scrollIntoView(true); 
+});
+
+```
 
 
 
