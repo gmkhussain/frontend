@@ -1608,6 +1608,56 @@ function someFunc() {
 ## Vanilla JS equivalents of jQuery methods
 
 
+### .find()
+
+```javascript
+// jQuery
+$('.box').eq(2).find('.icon').css('background', 'pink')
+
+$('.box').find('.icon')
+
+
+// VanillaJS
+document.querySelectorAll('.box .icon')[2].style.background = 'pink'
+
+document.querySelectorAll('.box .icon')
+
+```
+
+
+
+### check OR uncheck a radio button
+
+```javascript
+// jQuery
+$(this).prop('checked', false);
+  // Note that the pre-jQuery 1.6 idiom was
+  // $(this).attr('checked', false);
+
+// VanillaJS
+this.checked = false;
+
+```
+
+
+
+
+
+### .remove()
+
+```javascript
+// jQuery
+$('#box').remove();
+
+
+//VanillaJS
+var elem = document.getElementById("box");
+elem.remove();
+
+```
+
+
+
 ### .ready()
 ```javascript
 // jQuery
@@ -1747,6 +1797,8 @@ document.querySelector("#boxID").click();
 	<br/>
 	jQuery / JavaScript
 </h1>
+
+
 
 
 
@@ -2188,6 +2240,37 @@ Documentation:  https://github.com/andreruffert/rangeslider.js
 	<br/>
 	jQuery UI
 </h1>
+
+
+
+## How to make draggable dynamically created elements ?
+
+``` javascript
+  $('.container').append($("<div class='className dynamicallyCreatedElement'></div>"));
+  $('.dynamicallyCreatedElement').draggable();
+```
+NOTE: incase above code not work, at time of creation put class "draggable" instead of "dynamicallyCreatedElement" or id in the element.
+
+
+
+
+
+
+
+## Enabling and disabling draggable elements
+
+```javascript
+// Draggable in the disabled state.
+$(".box").draggable({ disabled: true });
+// OR
+$('.box').draggable('disable');
+
+// Draggable in the enabled state.
+$(".box").draggable("enable");
+```
+
+
+
 
 
 
