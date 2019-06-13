@@ -522,7 +522,7 @@ $('.datepicker').datepicker({
 ## Close datepicker after select date
 
 ```javascript
-$('.datepicker').on('changeDate', function(){
+$('.datepicker').on('changeDate', function() {
     $(this).datepicker('hide');
 });
 ```
@@ -644,7 +644,7 @@ $(".monthpicker").datepicker( {
 
 ### Clickable Table row like a link
 ```html
-<tr onclick="document.location = 'links.html';">
+  <tr onclick="document.location = 'links.html';">
 ```
 
 
@@ -1523,6 +1523,38 @@ See details: http://1000hz.github.io/bootstrap-validator/
 </h1>
 
 
+## if else in a switch / Multi-case with single operation in JavaScript
+
+```javascript
+var box = 'green';
+switch (Animal) {
+  case 'red':
+  case 'white':
+    console.log('This animal will go on Noah\'s Ark.');
+    break;
+  case 'green':
+  default:
+    console.log(' Its green only do something else.'); 
+}
+```
+OR
+```javascript
+var box = 'green';
+switch (true) {
+  case (box === 'red' && box === 'white'):
+    console.log('Its Red&White.'); 
+    break;
+  case (foo === 'green'):
+    console.log(' Its green only do something else.'); 
+    break;
+  default:
+    // yada yada
+}
+```
+
+
+
+
 
 ## IE error “SCRIPT1014: invalid character” where all other browsers work
 
@@ -1605,7 +1637,76 @@ function someFunc() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Vanilla JS equivalents of jQuery methods
+
+
+### .hasClass()
+
+```javascript
+// jQuery
+if ( $(".box").hasClass("selected") ) {
+
+// VanillaJS
+  if ( document.querySelector(".box").classList.contains('selected') ) {
+
+
+// jQuery
+$('.box').addClass('thisClass');
+
+// VanillaJS
+document.querySelector(".box").classList.add('thisClass');
+
+
+// jQuery
+$('.box').removeClass('thatClass');
+
+// VanillaJS
+document.querySelector(".box").classList.remove('thatClass'); 
+  // "Cannot read property 'remove' of undefined"
+  // See NOTE for multiple elements
+
+// jQuery
+$('.box').toggleClass('anotherClass');
+
+// VanillaJS
+document.querySelector(".box").classList.toggle('anotherClass');
+
+```
+
+
+#### NOTE: ```.classList.remove``` 
+```querySelector``` to get only the first occurrence, ```document.getElementsByClassName``` returns an array-like object of all child elements which have all of the given class names.
+
+```javascript
+  // Or select the first one in the HTMLCollection by it's index like so
+  document.getElementsByClassName(".box")[0];
+```
+
+
+```javascript
+    var element = document.getElementsByClassName('box');
+    
+    for(var i = 0; i < element.length; i++) {
+
+      element[i].classList.remove('selected');
+      console.log(element[i].className);
+
+    }
+```
+
 
 
 ### .find()
@@ -1623,6 +1724,8 @@ document.querySelectorAll('.box .icon')[2].style.background = 'pink'
 document.querySelectorAll('.box .icon')
 
 ```
+
+
 
 
 
@@ -1650,11 +1753,14 @@ this.checked = false;
 $('#box').remove();
 
 
-//VanillaJS
+// VanillaJS
 var elem = document.getElementById("box");
 elem.remove();
 
 ```
+
+
+
 
 
 
@@ -1691,6 +1797,8 @@ $('.box').click(function() {
   })
 })
 ```
+
+
 
 
 
