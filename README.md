@@ -2483,6 +2483,15 @@ You can try to call the method too.
 
 
 
+## Remove Header and Footer from Print view window.print()
+
+```css
+  @page { margin: 0; }
+  body { margin: 1.6cm; }
+```
+
+
+
 
 
 
