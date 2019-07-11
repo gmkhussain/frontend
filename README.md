@@ -45,6 +45,13 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 
 <table>
   <tr>
+  	<td>
+		<a href="#Sass">
+			<img src="https://www.drupal.org/files/images/HTML5_Logo_256.png"  height="80" width="auto" />
+			<br/>
+			HTML / Markup
+		</a>
+	</td>
 	<td>
 		<a href="#Sass">
 			<img src="https://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png"  height="80" width="auto" />
@@ -1908,6 +1915,60 @@ document.querySelector("#boxID").click();
 
 
 
+## Storing and Retrieving data from LocalStorage in JSON format
+```javascript
+var boxId = 101;
+var boxContent = "XML";
+var myObj = [
+  {
+    name: boxId,
+    content: boxContent
+  }
+];
+
+console.log(myObj);
+
+if (window.localStorage) {
+  // converting object to JSON format
+  var myObj_serialized = JSON.stringify(myObj);
+  console.log(myObj_serialized + " <--JSON Format");
+
+  localStorage.setItem("myObj", myObj_serialized);
+
+  // localStorage data store into variable
+  var localListJson = localStorage.getItem("myObj");
+  var local_list = localListJson ? JSON.parse(localListJson) : [];
+
+  // Adding new data to LocalStorage
+  var new_data = { name: "102", content: "YML" };
+  local_list.push(new_data);
+  console.log(local_list);
+  console.log("^ Open above arrow sign");
+
+  var final_serialized = JSON.stringify(local_list);
+  console.log(final_serialized);
+}
+```
+
+
+
+
+
+
+
+## Open Print Dialog on click event
+
+```html
+<button onclick="printFn();">Print</button>
+```
+
+```javascript
+function printFn() {
+    window.print();
+}
+```
+
+
 
 
 
@@ -1933,6 +1994,23 @@ document.querySelector("#boxID").click();
     console.log(data);
   });
 ```
+
+
+NOTE: Use ```$.get``` instead of ```function``` this if you are getting data from external url.
+```javascript
+ $.getJSON("http://localhost/projects/frontend/RaceDeck/floor-tool-new/All_json", function(text) {
+
+   var PatternData = JSON.parse(JSON.stringify(text));
+
+// 
+//readJsonFile("http://localhost/projects/laravel/racedeck/public/src/json/pattern.json", function(text) {
+
+//var PatternData = JSON.parse(text);
+```
+
+
+
+
 
 
 ## Alert auto closing after few seconds
@@ -2467,6 +2545,26 @@ You can try to call the method too.
 
 
 
+
+<h1 align="center" id="sass">
+	<img src="https://www.drupal.org/files/images/HTML5_Logo_256.png"  height="80" width="auto" />
+	<br/>
+	HTML / Markup
+</h1>
+
+## How to disable HTML form input autocomplete and autofill 
+
+Add ```autocomplete="off"``` attribute on form tag.
+
+```html
+<form method="post" action="/form" autocomplete="off">
+<!-- ... -->
+</form>
+```
+OR
+```html
+<input name="search" type="text" autocomplete="off"/>
+```
 
 
 
