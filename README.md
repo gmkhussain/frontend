@@ -1915,6 +1915,21 @@ document.querySelector("#boxID").click();
 
 
 
+## :books: JavaScript with guides and tutorials
+
+developer.mozilla: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+JavaScript.info: https://javascript.info/
+
+
+
+
+
+## input type=“number” onchange event not working first time.
+```javascript
+$("input[type=number]").bind('keyup input', function(){
+  // handle event
+});
+```
 
 
 
@@ -1927,26 +1942,31 @@ Can use ```onmousedown``` it's fired before ```click``` event.
 
 ```javascript
 //jQuery
-$("#b").on("click", function(){
+$("#selector").on("click", function(){
     console.log('click');
 });
 
 
-$("#b").on("mousedown", function(){
+$("#selector").on("mousedown", function(){
     console.log('mousedown');
 });
 
 
 
 //Vanilla
-document.querySelector('.selector').addEventListener('mousedown', function(){
-    console.log('mousedown');
-}
-
-document.querySelector('.selector').addEventListener('click', function(){
+document.querySelector('#selector').addEventListener('click', function(){
     console.log('click');
 }
+
+document.querySelector('#selector').addEventListener('mousedown', function(){
+    console.log('mousedown');
+}
 ```
+
+
+
+
+
 
 
 
