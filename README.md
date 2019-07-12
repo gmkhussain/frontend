@@ -1915,6 +1915,42 @@ document.querySelector("#boxID").click();
 
 
 
+
+
+
+
+
+
+## Calling function before on click event handler in jQuery JS
+
+Can use ```onmousedown``` it's fired before ```click``` event.
+
+```javascript
+//jQuery
+$("#b").on("click", function(){
+    console.log('click');
+});
+
+
+$("#b").on("mousedown", function(){
+    console.log('mousedown');
+});
+
+
+
+//Vanilla
+document.querySelector('.selector').addEventListener('mousedown', function(){
+    console.log('mousedown');
+}
+
+document.querySelector('.selector').addEventListener('click', function(){
+    console.log('click');
+}
+```
+
+
+
+
 ## Storing and Retrieving data from LocalStorage in JSON format
 ```javascript
 var boxId = 101;
