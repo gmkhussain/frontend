@@ -1915,6 +1915,36 @@ document.querySelector("#boxID").click();
 
 
 
+## JavaScript running very slow 
+
+The reason of slow performance mostly because of loop is so. (for, do while, for in)
+
+Javascript runs in two passes. First sets up variables and functions and then the second run your code. 
+
+#### i.e
+```javascript
+element.innerHTML
+// OR
+element.append("new content");
+```
+
+```javascript
+while(i<input.files.length){
+    tmpContent +=input.files[i].name+'<br/>';
+    i++;
+ }
+$("#dataHolder").innerHTML += tmpContent;
+```
+
+NOTE: looked at the performance and memory usage graphs in chrome developer's tools for significant difference.
+
+
+
+
+
+
+
+
 ## :books: JavaScript with guides and tutorials
 
 developer.mozilla: https://developer.mozilla.org/en-US/docs/Web/JavaScript
@@ -1925,6 +1955,9 @@ JavaScript.info: https://javascript.info/
 
 
 ## input type=“number” onchange event not working first time.
+
+Following code covered keyboard input, mousewheel changes and button clicks.
+
 ```javascript
 $("input[type=number]").bind('keyup input', function(){
   // handle event
