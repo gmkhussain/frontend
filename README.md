@@ -1915,6 +1915,36 @@ document.querySelector("#boxID").click();
 
 
 
+
+## How to split a string at a particular character?
+
+JavaScript Prototype String.prototype.split(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) function:
+```javascript
+var input = 'Amoos John~New York~NY~10010';
+
+var fields = input.split('~');
+
+var name = fields[0];
+var city = fields[1];
+```
+
+
+```javascript
+// ES6
+var input = 'Amoos John~New York~NY~10010';
+
+var [name, city, state, zip] = input.split('~');
+
+console.log(name); // Amoos Jhon
+console.log(city); // New York
+console.log(state); // NY
+console.log(zip); // 10010
+```
+
+
+
+
+
 ## JavaScript running very slow 
 
 The reason of slow performance mostly because of loop is so. (for, do while, for in)
@@ -2667,6 +2697,21 @@ OR
 	Sass / SCSS
 </h1>
 
+## Change Color of SVG on Hover
+
+```html
+<svg class="icon">
+  <path fill="#5c5c5c" .../>
+</svg>
+```
+
+```css
+.icon {
+  &:hover {
+    fill: #ED4224;
+  } 
+}
+```
 
 
 
