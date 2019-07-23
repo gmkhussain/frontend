@@ -2697,6 +2697,48 @@ OR
 	Sass / SCSS
 </h1>
 
+
+## Horizontal scrolling container DIV without width
+
+Example: https://codepen.io/pen/pMgKae
+
+```html
+<div id="parentHorizontalScrolling">
+  <div class="child">
+    <span>A</span>
+  </div>
+  <div class="child">
+    <span>B</span>
+  </div>
+  <div class="child">
+    <span>C</span>
+  </div>
+  <div class="child">
+    <span>D</span>
+  </div>
+</div>
+```
+
+```css
+#parentHorizontalScrolling {
+	width: 150px;
+	display: inline-block;
+	white-space:
+	nowrap;
+	overflow:auto;
+}
+.child {
+    display: inline-block;
+    padding: 2px;
+    white-space: normal;
+    border:1px solid #444;
+}
+```
+
+
+
+
+
 ## Change Color of SVG on Hover
 
 ```html
