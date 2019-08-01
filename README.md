@@ -1657,7 +1657,23 @@ function someFunc() {
 
 
 
-## Vanilla JS equivalents of jQuery methods
+## VanillaJS equivalents of jQuery methods
+
+
+
+
+### .prop("checked" | Check a radio button
+```javascript
+// jQuery
+$("#box").prop("checked", true);
+
+
+// VanillaJS
+document.getElementById("box").checked = true;
+```
+
+
+
 
 
 ### .hasClass()
@@ -1713,6 +1729,9 @@ document.querySelector(".box").classList.toggle('anotherClass');
 
     }
 ```
+
+
+
 
 
 
@@ -1788,6 +1807,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+### Define variable
+
+```javascript
+//jQuery
+var divs = $("div");
+
+
+//VanillaJS
+var divs = document.querySelectorAll("div");
+```
+
+
+
+
+
+
+### Creating div
+
+```javascript
+//jQuery
+var newDiv = $("<div/>");
+
+
+
+//VanillaJS
+var newDiv = document.createElement("div");
+
+```
+
+
+
+
+
+
 
 ### .click(
 ```javascript
@@ -1797,13 +1850,133 @@ $('.box').click(function() {
   // do something
 })
 
-// Vanilla
+// Vanilla EX1
 [].forEach.call(document.querySelectorAll('.box'), function(el) {
   el.addEventListener('click', function() {
   // do something
   })
 })
+
+// Vanilla EX2
+
+document.getElementById('box').onclick = function(){
+    // do something
+}
+
 ```
+
+
+
+
+
+
+### .append( 
+```javascript
+//jQuery
+$("body").append($("<p/>"));
+$("#foo").append("<div>hello world</div>");
+$("<div>hello world</div>").appendTo("#foo");   
+
+
+//VanillaJS
+document.body.appendChild(document.createElement("p"));
+```
+
+
+
+
+
+### .filter(
+
+```javascript
+//jQuery
+$("img").filter(":first").attr("alt", "My image");
+
+
+//VanillaJS
+document.querySelector("img").setAttribute("alt", "My image");
+```
+
+
+
+
+
+
+### .parent(
+```javascript
+//jQuery
+var parent = $("#box").parent();
+
+
+//VanillaJS
+var parent = document.getElementById("box").parentNode;
+```
+
+
+
+
+
+
+### .clone(
+```javascript
+//jQuery
+var clonedElement = $("#box").clone();
+
+
+//VanillaJS
+var clonedElement = document.getElementById("box").cloneNode(true);
+```
+
+
+
+
+### .empty(
+
+```javascript
+//jQuery
+$("#wrap").empty();
+
+
+//VanillaJS
+var wrap = document.getElementById("wrap");
+while(wrap.firstChild) wrap.removeChild(wrap.firstChild);
+```
+
+
+
+
+
+
+
+### .is(
+
+```javascript
+//jQuery
+if($("#wrap").is(":empty"));
+
+
+//VanillaJS
+if(!document.getElementById("wrap").hasChildNodes())
+```
+
+
+
+
+
+
+
+
+### .next(
+```javascript
+
+//jQuery 
+var nextElement = $("#wrap").next();
+
+
+//VanillaJS
+var nextElement = document.getElementById("wrap").nextSibling;
+```
+
 
 
 
@@ -1822,6 +1995,10 @@ this.getAttribute("id");
 
 
 
+
+
+
+
 ### .val(
 ```javascript
 //jQuery
@@ -1835,6 +2012,7 @@ document.querySelector("#myDivId").value;
 
 
 
+### .attr(
 ```javascript
 //jQuery
 $(this).attr("onclick", updateBoxFn ); 
@@ -1887,6 +2065,20 @@ $(".box").removeClass("old-class");
 
 
 
+### .toggleClass(
+
+```javascript
+//jQuery
+$(".box").toggleClass("foo");
+
+
+//VanillaJS
+document.querySelector('.box').classList.toggle("foo");
+
+```
+
+
+
 
 ### .trigger("click")
 ```javascript
@@ -1912,6 +2104,46 @@ document.querySelector("#boxID").click();
 	<br/>
 	jQuery / JavaScript
 </h1>
+
+
+## Multiple input or element with same event OR Attaching any event to multiple elements at once
+
+See example: https://codepen.io/pen/RXVXev
+
+```javascript
+//VanillaJS EX1
+var allInputs = document.querySelectorAll(".parent-area .form-control");
+for (var i = 0; i < allInputs.length; i++) {
+  allInputs[i].addEventListener("blur", function() {
+    console.log("clicked // do something...");
+  });
+}
+
+
+
+
+//VanillaJS EX2
+var allInputs = document.getElementsByClassName('.parent-area .form-control');
+for (var i = 0; i < allInputs.length; i++) {
+    allInputs[i].addEventListener('click',outterFn,false);
+}
+function outterFn(){
+    alert(this.id);
+}
+
+
+// =================
+//jQuery
+  var allInputs = $(".parent-area .form-control");
+  $( allAreaInputs ).blur(function() {
+      console.log("clicked // do something...");
+  });
+```
+
+
+
+
+
 
 
 
@@ -2108,7 +2340,7 @@ function printFn() {
     }
   
   /* usage */
-  readJsonFile("http://localhost/projects/frontend/RaceDeck/frontend/src/js/designertool/json/presetsize.json", function(text){
+  readJsonFile("http://localhost/projects-name/my_data.json", function(text){
     var data = JSON.parse(text);
     console.log(data);
   });
@@ -2117,12 +2349,12 @@ function printFn() {
 
 NOTE: Use ```$.get``` instead of ```function``` this if you are getting data from external url.
 ```javascript
- $.getJSON("http://localhost/projects/frontend/RaceDeck/floor-tool-new/All_json", function(text) {
+ $.getJSON("http://localhost/projects-name/my_json", function(text) {
 
    var PatternData = JSON.parse(JSON.stringify(text));
 
 // 
-//readJsonFile("http://localhost/projects/laravel/racedeck/public/src/json/pattern.json", function(text) {
+//readJsonFile("http://localhost/project-name/json/my_data.json", function(text) {
 
 //var PatternData = JSON.parse(text);
 ```
