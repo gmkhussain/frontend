@@ -73,7 +73,6 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 			jQuery
 		</a>
 	</td>	
-
 	<td>
 		<a href="#jQueryUI">
 			<img src="http://jqueryto.com/2013/assets/i/icon-jqueryui.png"  height="80" width="auto" />
@@ -1530,6 +1529,109 @@ See details: http://1000hz.github.io/bootstrap-validator/
 </h1>
 
 
+## Toggle multiple CSS classes in one statement in VanillaJS
+
+We can't directly execute with ```.classList``` multiple classes.
+
+Need write your own "utility" function which does that we want.
+
+
+```html
+<div id="parent" class="c1">aa</div>
+<button id="btn">Click</button>
+```
+
+```javascript
+var toggleClassExprFn = function(element, class1, class2) {
+  element.classList.toggle(class1);
+  element.classList.toggle(class2);
+}
+
+var parentDiv = document.getElementById("parent");
+
+// init function
+toggleClassExprFn(parentDiv,'class_1', 'class_2');
+
+
+
+
+// Optional bind with button
+var btn = document.getElementById("btn");
+btn.addEventListener("click", function(){
+  //Callback function
+  toggleClassExprFn(parentDiv,'class_1', 'class_2');
+})
+```
+
+
+
+#### Toggle multiple classes with an array
+```javascript
+var parentDiv = document.getElementById("parent");
+var classes = [
+    "amoos",
+    "php",
+    "orange"
+  ]
+
+  for (var i = 0; i < classes.length; i++){
+    parentDiv.classList.toggle(classes[i])
+  }
+```
+
+
+
+#### with (...x) Spread Operators ✨
+```javascript
+var parentDiv = document.getElementById("parent");
+
+//with (...x) Spread Operators
+// NOTE: toggle not work for multiple classes
+const multi_classes = ["foo", "bar"];
+parentDiv.classList.add(...multi_classes);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## How to check if element exists and remove or create it
+
+```javascript
+var findElement = document.getElementById("elementId");
+var parentDiv = document.getElementById("parentDivId");
+
+if (document.contains( findElement )) {
+    findElement.remove();
+} else {
+    parentDiv.appendChild( findElement );  
+}
+```
+
+
+
+
 ## if else in a switch / Multi-case with single operation in JavaScript
 
 ```javascript
@@ -1676,7 +1778,7 @@ document.getElementById("box").checked = true;
 
 
 
-### .hasClass()
+### .hasClass( 
 
 ```javascript
 // jQuery
@@ -1684,15 +1786,28 @@ if ( $(".box").hasClass("selected") ) {
 
 // VanillaJS
   if ( document.querySelector(".box").classList.contains('selected') ) {
+```
 
 
+
+
+### .addClass( 
+
+```javascript
 // jQuery
 $('.box').addClass('thisClass');
 
 // VanillaJS
 document.querySelector(".box").classList.add('thisClass');
+```
 
 
+
+
+
+### .removeClass( 
+
+```javascript
 // jQuery
 $('.box').removeClass('thatClass');
 
@@ -1700,7 +1815,15 @@ $('.box').removeClass('thatClass');
 document.querySelector(".box").classList.remove('thatClass'); 
   // "Cannot read property 'remove' of undefined"
   // See NOTE for multiple elements
+```
 
+  
+  
+  
+
+### .toggleClass( 
+
+```javascript
 // jQuery
 $('.box').toggleClass('anotherClass');
 
@@ -1708,6 +1831,9 @@ $('.box').toggleClass('anotherClass');
 document.querySelector(".box").classList.toggle('anotherClass');
 
 ```
+
+
+
 
 
 #### NOTE: ```.classList.remove``` 
@@ -3770,6 +3896,7 @@ The _ (underscore) is a partial for SCSS. That means this file going to be impor
 * DataTable - https://datatables.net/
 * FleXcroll.js - http://hesido.com/web.php?page=customscrollbar
 * JScrollpane.js - http://jscrollpane.kelvinluck.com/
+
 
 
 
