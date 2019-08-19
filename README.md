@@ -3419,6 +3419,21 @@ window.onscroll = function () {
 </h1>
 
 
+## Pulling updates from remote git branch, when locally it does not exist.
+
+Fetch all remote branches without merging anything
+```git fetch```
+
+Then create a local branch (new_branch_name) from the remote (origin/new_branch_name) & checkout that branch to switch to it:
+```git checkout -b new_branch_name origin/new_branch_name```
+
+
+
+
+
+
+
+
 ## When push in github, why git didn't ask me to type username and password ?
 
 
@@ -3561,6 +3576,23 @@ require('./kodeized.js');
 	<br/>
 	Bootstrap4
 </h1>
+
+
+
+
+## Open modal using hash in URL in Bootstrap4
+
+```
+$(window.location.hash).modal('show');
+    $('li[data-toggle="modal"]').click(function(){
+       window.location.hash = $(this).attr('href');
+});
+
+```
+
+
+
+
 
 
 ## Open bootstrap4 tab from inside or outside a tab

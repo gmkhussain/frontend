@@ -17,6 +17,24 @@ var bodyTag = document.getElementsByTagName("body")[0];
 
 
 
+/**!preloader**/
+window.addEventListener('load', function() {
+  console.log('✨ All assets are loaded')
+  var preloader = document.getElementById("preloader");
+  var preloader__status = document.getElementById("preloader__status");
+  
+  if ( document.body.contains( preloader ) && document.body.contains( preloader__status ) ) {
+		preloader.classList.add("hide");
+  		preloader__status.classList.remove("hide");
+	} else {
+		console.warn("🌀 Preloader doesn't exsit!");
+	}
+});
+/**./preloader**/
+
+
+
+
 
 
 /**!hint**/
@@ -32,6 +50,50 @@ var bodyTag = document.getElementsByTagName("body")[0];
 
 document.onkeydown = hintFn;
 /**./hint**/
+
+
+
+
+
+
+
+
+
+/**!hint--gridized**/
+	/*!
+	 Ctrl + ' for preview
+	*/
+  function gridizedFn(e) {
+    var evtobj = window.event? event : e;
+    if (evtobj.keyCode == 222 && evtobj.ctrlKey){
+    
+      var gridizedContent = '<div class="container"><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div></div>';
+      
+      htmlTag.classList.toggle("hint--gridized");
+      
+      /*
+        Checking if already exist then remove it,
+        before creating new one.
+      */
+      var gridizedExist = document.getElementById("gridized");
+      if( document.contains( gridized ) ){
+        gridizedExist.remove();
+      }
+      
+      /* Creating Bootstrap Grid for hint */
+      var gridizedNew = document.createElement("div");
+          gridizedNew.setAttribute("id", "gridized");
+          gridizedNew.innerHTML = gridizedContent;
+          document.body.appendChild(gridizedNew);
+    }
+  }
+  
+  document.onkeydown = gridizedFn;
+/**./hint--gridized**/
+
+
+
+
 
 
 
@@ -66,9 +128,20 @@ document.onkeydown = hintFn;
 /**! URL added on body tag as a Class**/
 document.addEventListener('DOMContentLoaded', function() {
 
-  var locReal = window.location.pathname; // returns the full URL
+	var locReal = window.location.pathname; // returns the full URL
+	
+	/* removing file extention i.e .html .php etc. */
+	function removeUrlExtFn(urlExt){
+		return locReal.split(urlExt)[0];
+	}
+	
+	var locReal = removeUrlExtFn(".html");
+	var locReal = removeUrlExtFn(".php");
+	
 	var loc = locReal.replace(".", "/");
 	var split_loc = loc.split('/');
+	
+	
 	active_locLastParent2 = split_loc[split_loc.length-3];
 	active_locLastParent = split_loc[split_loc.length-2];
 	active_locLast = split_loc[split_loc.length-1]; 
@@ -117,7 +190,10 @@ bodyTag.addEventListener("keydown", function (e) {
   if (e.keyCode == 191 && e.ctrlKey) {
 	
 	// remove before create new one.	
-	document.getElementById("mockupMatcher").remove();
+	var mockupMatcherExist = document.getElementById("mockupMatcher");
+      if( document.contains( mockupMatcherExist ) ){
+        mockupMatcherExist.remove();
+    }
 
     var fileName = "_mockup/" + active_locLast + ".jpg";
     var mockupMatcherContent = '<div id="mockupFile" style="background-image:url(' + fileName + '); position: absolute; top: 0; width: 100%; z-index:898 ;height: 1000vh; opacity: .2 ;background-position: center top; background-repeat: no-repeat;"></div>';
@@ -130,6 +206,24 @@ bodyTag.addEventListener("keydown", function (e) {
 		htmlTag.classList.toggle("hint--mockup");
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
