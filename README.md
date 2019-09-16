@@ -1768,6 +1768,10 @@ function someFunc() {
 ```javascript
 // jQuery
 $("#box").prop("checked", true);
+//OR
+$( "input#box" ).attr( "checked" ); // Returns ‘true’ if present on the element, returns undefined if not present
+//OR
+$('input#box').is(':checked');
 
 
 // VanillaJS
@@ -1875,6 +1879,22 @@ document.querySelectorAll('.box .icon')[2].style.background = 'pink'
 
 document.querySelectorAll('.box .icon')
 
+```
+
+
+
+
+
+
+### .css(
+```js
+// jQuery
+$("#box").css("transform", "scale(1." + zoomValue + ")");
+
+
+// VanillaJS
+var boxElement = document.getElementById('box');
+    boxElement.style.transform = "scale(1." + zoomValue + ")";
 ```
 
 
@@ -2006,6 +2026,16 @@ $("<div>hello world</div>").appendTo("#foo");
 
 //VanillaJS
 document.body.appendChild(document.createElement("p"));
+
+html = "<div>New Data</div>";
+document.getElementById("#box").insertAdjacentHTML('beforeend', html);
+
+/*
+'beforebegin':  Before the element itself.
+'afterbegin':   Just inside the element, before its first child.
+'beforeend':    Just inside the element, after its last child.
+'afterend':     After the element itself.
+*/
 ```
 
 
@@ -2164,7 +2194,7 @@ $(".box").each(function(){
 
 
 //VanillaJS
-var allBoxes =  document.querySelector(".box");
+var allBoxes =  document.querySelectorAll(".box");
 	for (var i = 0, len = allBoxes.length; i < len; i++) {
 		var thisBox = allBoxes[i];
 		thisBox.setAttribute("onclick", updateBoxFn);
@@ -3656,6 +3686,15 @@ https://codepen.io/pen/QPbOOB
 	<br/>
 	Issues / Errors / Mistakes
 </h1>
+
+
+
+## Fonts not displayed correctly in PDF file / Laravel DomPdf Add Custom font-size
+```
+
+
+```
+
 
 
 
