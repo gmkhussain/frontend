@@ -187,6 +187,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 bodyTag.addEventListener("keydown", function (e) {
 
+  /*
+    ` Ctrl + / `
+  */
   if (e.keyCode == 191 && e.ctrlKey) {
 	
 	// remove before create new one.	
@@ -195,15 +198,16 @@ bodyTag.addEventListener("keydown", function (e) {
         mockupMatcherExist.remove();
     }
 
-    var fileName = "_mockup/" + active_locLast + ".jpg";
-    var mockupMatcherContent = '<div id="mockupFile" style="background-image:url(' + fileName + '); position: absolute; top: 0; width: 100%; z-index:898 ;height: 1000vh; opacity: .2 ;background-position: center top; background-repeat: no-repeat;"></div>';
+  var fileName = "_mockup/" + active_locLast + ".jpg";
+  var mockupMatcherContent = '<div id="mockupFile" style="background-image:url(' + fileName + '); position: absolute; top: 0; width: 100%; z-index:898 ;height: 1000vh; opacity: .2 ;background-position: center top; background-repeat: no-repeat;"></div>';
 
 	var mockupMatcherDiv = document.createElement('div');
-		mockupMatcherDiv.setAttribute("id", "mockupMatcher");
-		mockupMatcherDiv.innerHTML = mockupMatcherContent;
-		bodyTag.appendChild(mockupMatcherDiv);
- 
-		htmlTag.classList.toggle("hint--mockup");
+	  	mockupMatcherDiv.setAttribute("id", "mockupMatcher");
+		  mockupMatcherDiv.innerHTML = mockupMatcherContent;
+		  bodyTag.appendChild(mockupMatcherDiv);
+
+		  htmlTag.classList.toggle("hint--mockup");
+
   }
 });
 
@@ -211,6 +215,19 @@ bodyTag.addEventListener("keydown", function (e) {
 
 
 
+
+
+
+/*!
+  Scroll To View
+  Usage: <a onclick="scrollToViewFunc('sectionId')">Click me</a>
+*/
+function scrollToViewFunc(sectionId) {
+  document.getElementById(sectionId).scrollIntoView({
+	  behavior: 'smooth'
+  });
+}
+/*./Scroll To View*/
 
 
 
