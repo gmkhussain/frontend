@@ -124,6 +124,14 @@ Didn’t skip 9, Just made a creative name for 10th anniversary.
 			NPM Scripts
 		</a>
 	</td>
+  <td>
+		<a href="#htaccess">
+				<img src="https://www.askapache.com/htaccess-file/apple-touch-icon.png"  height="80" width="80" />
+	    <br/>
+	    .htaccess
+		</a>
+	</td>
+
   </tr>
   <tr>
 	<td>
@@ -1246,21 +1254,6 @@ function printElement(elem) {
 
 
 
-### How to Cache-Control with .htaccess leverage browser caching
-How to Fix “Specify a Vary: Accept-Encoding Header” Warning
-```html
-# One month for most static assets
-<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
-Header set Cache-Control "max-age=2628000, public"
-</filesMatch>
-
-<IfModule mod_headers.c>
-  <FilesMatch ".(js|css|xml|gz|html)$">
-    Header append Vary: Accept-Encoding
-  </FilesMatch>
-</IfModule>
-
-```
 
 
 
@@ -1761,6 +1754,40 @@ function someFunc() {
 
 ## VanillaJS equivalents of jQuery methods
 
+### Selecting elements
+
+```js
+// jQuery, select all instances of .box
+$(".box");
+
+// VanillaJS Instead, select the first instance of .box
+document.querySelector(".box");
+
+// …or select all instances of .box  
+document.querySelectorAll(".box");
+```
+
+
+
+
+
+
+
+
+### .hide(
+
+```js
+//jQuery Hide all instances of .box
+$(".box").hide();
+
+
+// VanillaJS Iterate over the nodelist of elements to hide all instances of .box
+document.querySelectorAll(".box").forEach(box => { box.style.display = "none" }
+```
+
+
+
+
 
 
 
@@ -1883,6 +1910,24 @@ document.querySelectorAll('.box .icon')
 
 
 
+```js
+// jQuery
+// Select the first instance of .box within .container
+var box = $(".box");
+    box.find(".icon");
+
+// VanillaJS
+// Select the first instance of .box within .container
+var box = document.querySelector(".box");
+    box.querySelector(".icon");
+```
+
+
+
+
+
+
+
 
 
 
@@ -1979,9 +2024,30 @@ var newDiv = $("<div/>");
 
 //VanillaJS
 var newDiv = document.createElement("div");
-
 ```
 
+
+
+
+
+
+
+
+
+
+
+### Mouse and keyboard events
+```js
+// jQuery
+$(".button").click(function(e) { /* handle click event */ });
+$(".button").mouseenter(function(e) {  /* handle click event */ });
+$(document).keyup(function(e) {  /* handle key up event */  });
+
+// VanillaJS
+document.querySelector(".button").addEventListener("click", (e) => { /* ... */ });
+document.querySelector(".button").addEventListener("mouseenter", (e) => { /* ... */ });
+document.addEventListener("keyup", (e) => { /* ... */ });
+```
 
 
 
@@ -2003,13 +2069,43 @@ $('.box').click(function() {
   })
 })
 
-// Vanilla EX2
 
+// Vanilla EX2
 document.getElementById('box').onclick = function(){
     // do something
 }
-
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+### Event listening for dynamically added elements
+```js
+// With jQuery
+// Handle click events .search-result elements, 
+// even when they're added to the DOM programmatically
+$(".box-container").on("click", ".box--result", handleClick);
+
+// VanillaJS
+// Create and add an element to the DOM
+var searchElement = document.createElement("div");
+document.querySelector(".box-container").appendChild(searchElement);
+// Add an event listener to the element
+searchElement.addEventListener("click", handleClick);
+```
+
+
+
+
+
 
 
 
@@ -2058,7 +2154,30 @@ document.querySelector("img").setAttribute("alt", "My image");
 
 
 
-### .parent(
+
+
+### Traversing the tree with parent(), next(), and prev()
+```js
+// jQuery
+// Return the next, previous, and parent element of .box
+$(".box").next();
+$(".box").prev();
+$(".box").parent();
+
+// VanillaJS
+// Return the next, previous, and parent element of .box
+var box = document.querySelector(".box");
+    box.nextElementSibling;
+    box.previousElementSibling;
+    box.parentElement;
+```
+
+
+
+
+
+
+#### .parent(
 ```javascript
 //jQuery
 var parent = $("#box").parent();
@@ -2067,6 +2186,23 @@ var parent = $("#box").parent();
 //VanillaJS
 var parent = document.getElementById("box").parentNode;
 ```
+
+
+
+### .next(
+```javascript
+//jQuery 
+var nextElement = $("#wrap").next();
+
+
+//VanillaJS
+var nextElement = document.getElementById("wrap").nextSibling;
+```
+
+
+
+
+
 
 
 
@@ -2122,16 +2258,6 @@ if(!document.getElementById("wrap").hasChildNodes())
 
 
 
-### .next(
-```javascript
-
-//jQuery 
-var nextElement = $("#wrap").next();
-
-
-//VanillaJS
-var nextElement = document.getElementById("wrap").nextSibling;
-```
 
 
 
@@ -2160,10 +2286,10 @@ this.getAttribute("id");
 //jQuery
 $("#myDivId").val();
 
-
 //VanillaJS
 document.querySelector("#myDivId").value;
 ```
+
 
 
 
@@ -2245,6 +2371,31 @@ $("#boxID").trigger("click");
 //VanillaJS
 document.querySelector("#boxID").click();
 ```
+
+
+```js
+// jQuery
+// Trigger myEvent on document and .box
+$(document).trigger("myEvent");
+$(".box").trigger("myEvent");
+
+// VanillaJS
+// Create and dispatch myEvent
+document.dispatchEvent(new Event("myEvent"));
+document.querySelector(".box").dispatchEvent(new Event("myEvent"));
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3452,14 +3603,25 @@ window.onscroll = function () {
 ## Pulling updates from remote git branch, when locally it does not exist.
 
 Fetch all remote branches without merging anything
-```git fetch```
+```js
+git fetch
+```
 
 Then create a local branch (new_branch_name) from the remote (origin/new_branch_name) & checkout that branch to switch to it:
-```git checkout -b new_branch_name origin/new_branch_name```
+```js
+git checkout -b new_branch_name origin/new_branch_name
+```
 
 
 
 
+
+## git fetch doesn't fetch all branches
+
+Note: run this command by terminal
+```js
+git fetch --prune
+```
 
 
 
@@ -3930,6 +4092,75 @@ The _ (underscore) is a partial for SCSS. That means this file going to be impor
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+<h1 align="center" id="htaccess">
+	<img src="https://www.askapache.com/htaccess-file/apple-touch-icon.png"  height="80" width="auto" />
+	<br/>
+	.htaccess
+</h1>
+
+
+### How to Cache-Control with .htaccess leverage browser caching
+How to Fix “Specify a Vary: Accept-Encoding Header” Warning
+```html
+# One month for most static assets
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
+Header set Cache-Control "max-age=2628000, public"
+</filesMatch>
+
+<IfModule mod_headers.c>
+  <FilesMatch ".(js|css|xml|gz|html)$">
+    Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
+```
+
+
+
+
+
+
+### Remove .php extension with .htaccess
+
+```html
+RewriteEngine on
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^ %{REQUEST_URI}.php [NC,L]
+```
+
+
+
+
+
+
+
+### Redirect .php URLs to URLs without extension 
+
+```html
+RewriteEngine On
+
+# browser requests PHP
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
+RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
+
+# Check to see if the request is for a PHP file:
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^/?(.*)$ /$1.php [L]
+```
 
 
 
