@@ -65,9 +65,9 @@ document.onkeydown = hintFn;
 	*/
   function gridizedFn(e) {
     var evtobj = window.event? event : e;
-    if (evtobj.keyCode == 222 && evtobj.ctrlKey){
+    if (evtobj.keyCode == 222 && evtobj.ctrlKey) {
     
-      var gridizedContent = '<div class="container"><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div></div>';
+      var gridizedContent = '<div class="container"><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div><div class="col-xs-1"><div></div></div></div><style>body:hover #gridized{ z-index:-10; } #gridized { position: fixed; z-index: 9999999; width: 100%; top:0;}#gridized > div { border-left: 1px solid rgba(225,225,0,.5); border-right: 1px solid rgba(225,225,0, 1); height: 100vh;}#gridized .col-xs-1 { position: relative; width: 8.333333%; float: left; border-left: 1px solid rgba(225,225,255,.8); border-right: 1px solid rgba(225,225,255,.8); height: 100vh;}#gridized .col-xs-1:before, .col-xs-1:after { content:" "; position: absolute; border-left: 1px solid rgba(225,225,225,.8); height: 100vh; }#gridized .col-xs-1:before { left: 15px;}.col-xs-1:after { right: 15px; top: 0; }</style>';
       
       htmlTag.classList.toggle("hint--gridized");
       
@@ -237,7 +237,20 @@ function scrollToViewFunc(sectionId) {
 
 
 
-
+/**!scrollized**/
+window.onscroll = function() {
+  
+  if ((window.innerHeight) >= document.body.scrollHeight) {
+     document.body.classList.add("scrollized--1stview");
+   } else if (window.scrollY > 0) {
+     document.body.classList.add("scrollized");
+   } else {
+     document.body.classList.remove("scrollized");
+     document.body.classList.remove("scrollized--1stview");
+   }
+   
+ };
+/**./scrollized**/
 
 
 

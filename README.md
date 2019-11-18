@@ -2184,7 +2184,13 @@ var parent = $("#box").parent();
 
 
 //VanillaJS
+//#1
 var parent = document.getElementById("box").parentNode;
+
+
+//#2
+var childEl = document.querySelector('#myChildDiv');
+    childEl.closest('div[someAtrr]');
 ```
 
 
