@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="src/css/bootstrap.css" >
+    <link rel="stylesheet" href="src/vendor/bootstrap/bootstrap.css" >
 	
 	<link rel="stylesheet" href="build/css/style.bundle.css" >
 	
-	<script src="src/js/jquery-3.3.1.min.js" ></script>
+	<script src="src/vendor/jquery/jquery-3.3.1.min.js" ></script>
 
     <title>Frontend v4</title>
   </head>
@@ -19,41 +19,47 @@
 
 	<header>
 		<section class="hdr-area">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+			<div class="container">
+
+					<nav class="navbar navbar-expand-lg navbar-light bg-light">
+							<a class="navbar-brand" href="#">Navbar</a>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							  <span class="navbar-toggler-icon"></span>
+							</button>
+						  
+							<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							  <ul class="navbar-nav mr-auto">
+								<li class="nav-item active">
+								  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item">
+								  <a class="nav-link" href="#">Link</a>
+								</li>
+								<li class="nav-item dropdown">
+								  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Dropdown
+								  </a>
+								  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="#">Action</a>
+									<a class="dropdown-item" href="#">Another action</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">Something else here</a>
+								  </div>
+								</li>
+								<li class="nav-item">
+								  <a class="nav-link disabled" href="#">Disabled</a>
+								</li>
+							  </ul>
+							  <form class="form-inline my-2 my-lg-0">
+								<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+								<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+							  </form>
+							</div>
+						  </nav>
+
+			</div>
+	
 		</section>
 	</header>
 	
@@ -640,6 +646,12 @@
 
 	
 	
+	<script type="module">
+		// script for each page place end of the page.
+		import { homeFunc } from './src/js/5-template/_home.js';
+		homeFunc();
+	</script>
+	
 	
 	
 	<footer>
@@ -710,8 +722,8 @@
 				</div>				
 			</div>
 			</div>
+			</div>
 		</section>
-		
 		
 		<section class="bottom-area bottom-logo--slide p20 bg-teal white">
 			<div class="container">
@@ -729,6 +741,7 @@
 			  </div>
 			</div>
 		</section>
+	</footer>
 		
 		<a href="" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
 		
@@ -739,11 +752,15 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     
-    <script src="src/js/popper.min.js" ></script>
-    <script src="src/js/bootstrap.min.js" ></script>
+    <script src="src/vendor/bootstrap/popper.min.js" ></script>
+    <script src="src/vendor/bootstrap/bootstrap.min.js" ></script>
 	
 	<!--script src="js/kodeized.v4.js" ></script-->
-	<script src="src/js/kodeized.js" ></script>
+	<script src="src/vendor/kodeized/kodeized.js" ></script>
+
+
+	<script type="module" src="src/js/main.js" ></script>
+	
 	
 	<script>
 	if(navigator.onLine){
