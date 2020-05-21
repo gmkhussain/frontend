@@ -333,7 +333,18 @@ Create file ```sasslintrc```
 
 
 
+### liveSassCompile:: auto compile unnecessary files issue solution
+we need to add following code in VS code setting
 
+```javascript
+	"liveSassCompile.settings.excludeList": [ 
+		"**/node_modules/**",
+		".vscode/**",
+		"adminpanel/**",
+		"resources/assets/**",
+		"vendor/**",
+   ]
+```   
 
 
 # Basic tools for Frontend development
