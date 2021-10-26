@@ -5,749 +5,102 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css" >
-	<link rel="stylesheet" href="../src/css/stylized.css" >
-	
-	<script src="js/jquery-3.3.1.min.js" ></script>
+    <!-- CSS only -->
+	<link href="src/vendor/bootstrap/bootstrap.min.css" rel="stylesheet" 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Frontend v4</title>
+    <title>Frontend v5</title>
   </head>
   <body>
   <div id="body-wrapper">
 
-	<header>
-		<section class="hdr-area">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+	<header id="header">
+		<section id="headerNav">
+			<div class="container">
+				
+				<nav class="navbar navbar-expand-lg">
+					<div class="container-fluid">
+					<a class="navbar-brand" href="#">Navbar</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Link</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Dropdown
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled">Disabled</a>
+						</li>
+						</ul>
+						<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success" type="submit">Search</button>
+						</form>
+					</div>
+					</div>
+				</nav>
+			
+			</div>
 		</section>
 	</header>
 	
 	<main id="page-content">
-	
-	
-	<section class="slider-area">
-	
-		<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
-		  <ol class="carousel-indicators">
-			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-		  </ol>
-		  <div class="carousel-inner">
-			<div class="carousel-item active" id="slide1">
-			  <img class="d-block w-100" src="../src/images/slide1.jpg" alt="First slide" >
-			</div>
-			<div class="carousel-item" id="slide2">
-			  <img class="d-block w-100" src="../src/images/slide2.jpg" alt="Second slide">
-			</div>
-			<div class="carousel-item"  id="slide3">
-			  <img class="d-block w-100" src="../src/images/slide1.jpg" alt="Third slide" >
-			</div>
-		  </div>
-		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		  </a>
-		  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		  </a>
-		</div>
-		
-	</section>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<section class="counter-area scrolink scrollreveal fnc-underline hed-cntr hoverized blinked-links">
-		<div class="container">
-			
-			<div class="component-status clrlist listdvr">
-			  <ul class="component-status__icon-list">
-				<li>
-				  <i class="fa fa-check green"></i>
-				  <span>Ready</span>
-				</li>
-				<li>
-				  <i class="fa fa-warning orange"></i>
-				  <span>Under review</span>
-				</li>
-				<li>
-				  <i class="fa fa-ban red"></i>
-				  <span>Deprecated</span>
-				</li>
-				<li>
-				  <i class="fa fa-minus"></i>
-				  <span>Not applicable</span>
-				</li>
-			  </ul>
-			</div>
-	
-	<button class="btn-alert--show">Send Message</button>
-	
-	<div class="alert alert-danger alert-dismissable alert-sticky fade">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        <strong>Whoops!</strong> There were some problems with your input.<br><br>
-        <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-	<script>
-		$('.btn-alert--show').click(function(){
-			$('.alert').show()
-		})
-	</script>
-	
 
-			<h3>.fnc-underline</h3>
-  <div class="metroflip-box col-sm-2 p0">
-    <div class="metroflip_inr pul-lft w100 ">
-      <div class="front pul-lft w100  bg-lime ">
-        <h3>.Metroflip-box</h3><h2>FRONT</h2>
-      </div>
-      <div class="back pul-lft w100 bg-red">
-        <h3>.Metroflip-box</h3><h2>BACK</h2>
-      </div>
-    </div>
-  </div>
-
-		<div class="row">
-
-			<div class="counter-box col-sm-2 ">
-				<div class="counter__inr shad-dp20 p10 bg-silver">
-			<a href="#randomLftRgt">		
-					<span class="counter__top ">
-						<i class="fa fa-clock-o"></i> Random Left/Right
-					</span>
-					<div class="counter__num h3 m0 shad-long">CSS</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 7%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#reviews">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> 2nd Slider 
-					</span>
-					<div class="counter__num h3 m0">Bootstrap</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#chartistjs">
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Chartist.JS 
-					</span>
-					<div class="counter__num h3 m0">JS</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#swiperSlider">
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Swiper Slider
-					</span>
-					<div class="counter__num h3 m0">Slider</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#swiperSlider">
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Isotope filter
-					</span>
-					<div class="counter__num h3 m0">Isotope</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#content">
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Content ...
-					</span>
-					<div class="counter__num h3 m0">HTML</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#girdBox">
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Gird Box
-					</span>
-					<div class="counter__num h3 m0">jQuery</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#valigner">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> valigner 
-					</span>
-					<div class="counter__num h3 m0">HTML</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-					
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#moreless">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> More Less 
-					</span>
-					<div class="counter__num h3 m0">HTML</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>		
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#accordion">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Accordion
-					</span>
-					<div class="counter__num h3 m0">Bootstrap</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#listArea">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> List Area
-					</span>
-					<div class="counter__num h3 m0">HTML</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#tabsArea">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Tabs Area
-					</span>
-					<div class="counter__num h3 m0">HTML</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#dateRangePicker">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Date Range Picker
-					</span>
-					<div class="counter__num h3 m0">JS</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#dateTimePicker">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Date Time Picker
-					</span>
-					<div class="counter__num h3 m0">JS</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#uploadPreview">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Upload Preview
-					</span>
-					<div class="counter__num h3 m0">JS</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#inlineControl">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> inline Control
-					</span>
-					<div class="counter__num h3 m0">Bootstrap</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#fancyForm">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Fancy Form
-					</span>
-					<div class="counter__num h3 m0">CSS</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#maskedInput">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Masked Input
-					</span>
-					<div class="counter__num h3 m0">JS</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#downloadableLink">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> downloadable Link
-					</span>
-					<div class="counter__num h3 m0">HTML</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-
-
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#tableArea">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Table Area
-					</span>
-					<div class="counter__num h3 m0">HTML</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#colorArea">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Color Area
-					</span>
-					<div class="counter__num h3 m0">HTML</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#heights">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Heights
-					</span>
-					<div class="counter__num h3 m0">HTML</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-desc red"> 8%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#imagesArea">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Images Area
-					</span>
-					<div class="counter__num h3 m0">HTML</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#tooltipArea">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Tooltip Area
-					</span>
-					<div class="counter__num h3 m0">JS</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-
-
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#pinterestStyle">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Pinterest Style
-					</span>
-					<div class="counter__num h3 m0">CSS</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#modalArea">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Modal
-					</span>
-					<div class="counter__num h3 m0">Bootstrap</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			<div class="counter-box col-sm-2">
-				<div class="counter__inr shad-dp20 p10">
-			<a href="#footer">		
-					<span class="counter__top">
-						<i class="fa fa-clock-o"></i> Footer
-					</span>
-					<div class="counter__num h3 m0">HTML</div></a>
-					<span class="counter__bot">
-						<i class="fa fa-sort-asc"> 3%</i> From last Week
-					</span>
-				</div>	
-			</div>
-			
-			
-			
-			</div>
-			
-
-			<div class="hed crossline "><h2>Counter-area</h2><hr></div>
-			<div class="hed lndotln"><h2><strong>.lndotln</strong> heading</h2><hr/></div>
-			<div class="hed underline-mini"><h2><b>.underline-mini</b> heading</h2></div>
-			<div class="hed underline-mini--double"><h2><b>.underline-mini--double</b> heading</h2></div>
-			
-			
-			
-		</div>
-	</section>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	<section class="randomlftrgt-area" id="randomLftRgt" data-scroll-reveal="enter left and move 50px over 1.33s">
-			
-		<div class="random-box">
+		<section class="abc-area" id="reviews">
 			<div class="container">
-				<div class="random__lft col-sm-7">
-					<h2><b>.randomlftrgt</b> Randomized Content and Image</h2>
-					<p>Bibendum ad ante a eleifend nec at a accumsan at taciti adipiscing gravida ut curae rutrum sit ornare.Ultrices cras adipiscing ante per feugiat ultricies et lobortis adipisci</p>
-				</div>
-				
-				<div class="random__rgt col-sm-5">
-					<img src="src/images/preloading.png" alt="" />
+				<div class="row">				
+					<h2>Hello, world!</h2>
 				</div>
 			</div>
-		</div>
-			
-		<div class="random-box">
-			<div class="container">
-				<div class="random__lft col-sm-7">
-					<h2>a accumsan at taciti</h2>
-					<p>Bibendum ad ante a eleifend nec at a accumsan at taciti adipiscing gravida ut curae rutrum sit ornare.Ultrices cras adipiscing ante per feugiat ultricies et lobortis adipisci</p>
-				</div>
-			
-				<div class="random__rgt col-sm-5">
-					<img src="src/images/preloading.png" alt="" />
-				</div>
-			</div>
-		</div>
-
-					
-		<div class="random-box">
-			<div class="container">
-				<div class="random__lft col-sm-7">
-					<h2>a accumsan at taciti</h2>
-					<p>Bibendum ad ante a eleifend nec at a accumsan at taciti adipiscing gravida ut curae rutrum sit ornare.Ultrices cras adipiscing ante per feugiat ultricies et lobortis adipisci</p>
-				</div>
-				
-				<div class="random__rgt col-sm-5">
-					<img src="src/images/preloading.png" alt="" />
-				</div>
-			</div>
-		</div>
-		
-		</div>
-	</section>
-	
-
-
-
-
-
-	
-	
-	<section class="abc-area" id="reviews">
-		<div class="container">
-			  <div class="row">
-			  
-		<h1>Hello, world!</h1>
-		
-		<div class="card col-sm-4" >
-		  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-		  <div class="card-body">
-			<h5 class="card-title">Card title</h5>
-			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<a href="#" class="btn btn-primary">Go somewhere</a>
-		  </div>
-		</div>
-
-			</div>
-	
-	
-		</div>	
-	</section>
-		
+		</section>
 		
 	</main>
-	
 
-	
-	
-	
-	
-	<footer>
-		<section class="ftr-area nav-folderized" id="footer">
+
+	<footer id="footer">
+		 
+		<section id="footerNav">
 			<div class="container">
-			  <div class="row">
-				<div class="ftr__box nav col-md-2 ftr__logo">
-					<h4>Footer Logo</h4>
-					<div class="ftr-logo gray-img"><img src="images/favicon.png" alt="ftr logo" /></div>
-					<div class="ftr-logo"><img src="images/favicon.png" class="drp-shad" alt="" /></div>
-					
+				<div class="row">	
+					<h4>Footer Nav</h4>
 				</div>
-				<div class="ftr__box nav  ftr__links col-md-4 list-col-2 clrlist listview dotlist">
-					<h4>Useful links</h4>
-					<ul>
-						<li><a href="#">Inkμ/a></li>
-						<li><a href="#">Training</a></li>
-						<li><a href="#">Design Resources</a></li>
-						<li><a href="#">Notable</a></li>
-						<li><a href="#">Support</a></li>
-						<li><a href="#">Blog</a></li>
-					</ul>
-				</div>
-				<div class="ftr__box nav  col-md-3 clrlist listview dotlist--connect">
-					<h4>Contact Us</h4>
-					<p><b>.dotlist--connect</b> with icons</p>
-					<ul>
-						<li><i class="fa fa-envelope"></i> <a href="#"><span>Ultimate Solution</span></a></li>
-						<li><i class="fa fa-umbrella"></i> <a href="#"><span>Deep Structure</span></a></li>
-						<li><i class="fa fa-tty"></i> <a href="#"><span>Bootcamp Workout</span></a></li>
-						<li><i class="fa fa-support fa-spin"></i> <a href="#"><span>Go Ahead Results</span></a></li>
-					</ul>
-				</div>
-				<div class="ftr__box nav  shake-icon col-md-3 social-area clrlist social-colors">
-					<h4>Socialized</h4>
-					<div class="icon2x">
-						<h3>.icon2x</h3>
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="#"><i class="fa fa-skype"></i></a></li>
-							<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-						</ul>
-					</div>
-					<div class="icon-boxed">
-						<h3>.icon-boxed</h3>
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-						</ul>
-					</div>
-
-					<div class="icon-boxed icon-rounded">
-					<h3>.icon-rounded</h3>
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-						</ul>
-					</div>
-					
-				</div>				
-			</div>
 			</div>
 		</section>
-		
-		
-		<section class="bottom-area bottom-logo--slide p20 bg-teal white">
+
+		<section id="footerBottom">
 			<div class="container">
-			  <div class="row">
-			
-				<a href="#" class="bottom__rgt pul-rgt" target="_blank">
-					<span class="bottom__txt">Created &amp; Developed </span>
-					<span class="bottom__logo clrlist">
-						<ul>
-							<li><img src="images/favicon.png"></li>
-							<li>Company Name</li>
-						</ul>
-					</span>
-				</a>
-			  </div>
+				<div class="row">	
+					<span>© 2022</span>
+				</div>
 			</div>
 		</section>
-		
+
 		<a href="" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
-		
-		
-	
+	</footer>
   </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     
-    <script src="js/popper.min.js" ></script>
-    <script src="js/bootstrap.min.js" ></script>
+    <!-- CSS only -->
+	<link href="./src/vendor/bootstrap/bootstrap.bundle.min.js" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	
 	<!--script src="js/kodeized.v4.js" ></script-->
-	<script src="../src/js/kodeized.js" ></script>
-	
-	<script>
-	if(navigator.onLine){
-	  console.log('online');
-	 } else {
-	  console.log('offline');
-	 }
-	</script>
-	
+	<script src="./src/vendor/kodeized.js" ></script>
+
   </body>
 </html>
