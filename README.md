@@ -352,6 +352,27 @@ we need to add following code in VS code setting
 
 
 
+
+
+## Breakpoints
+```css
+  --breakpointTabletLg: 1368px;
+  --breakpointTabletMd: 1200px;
+  --breakpointTabletMd: 1024px;
+  --breakpointTabletXs: 992px;
+
+  --breakpointMobileLg: 896px; /* iPhone XR */
+  --breakpointMobileMd: 736px; /* iPhone6/7/8 Landscape */
+  --breakpointMobileSm: 414px; /* iPhone6/7/8 */
+  --breakpointMobileXs: 360px; /* iPhone6/7/8 */
+```
+
+
+
+
+
+
+
 ## addClass if URL is Root url (is Home page)
 ```html
 	jQuery('body').toggleClass('is_index home', /\/$/.test(location.pathname));
